@@ -11,12 +11,13 @@ public class UI_TitleScene : UI_Scene
 {
 	private enum GameObjects
 	{
-		StartButton,
+		//StartButton,
 	}
 
 	private enum Texts
 	{
 		StatusText,
+		StartText,
 	}
 
 	private enum TitleSceneState
@@ -66,13 +67,13 @@ public class UI_TitleScene : UI_Scene
 		BindObjects(typeof(GameObjects));
 		BindTexts(typeof(Texts));
 
-		GetObject((int)GameObjects.StartButton).BindEvent((evt) =>
+		GetText((int)Texts.StartText).gameObject.BindEvent((evt) =>
 		{
 			Debug.Log("OnClick");
-			Managers.Scene.LoadScene(EScene.GameScene);
+			Managers.Scene.LoadScene(EScene.LoadingScene);
 		});
 
-		GetObject((int)GameObjects.StartButton).gameObject.SetActive(false);
+        GetText((int)Texts.StartText).gameObject.SetActive(false);
 	}
 
 	protected override void Start()
@@ -95,23 +96,25 @@ public class UI_TitleScene : UI_Scene
 
 	private void OnAssetLoaded()
 	{
-		State = TitleSceneState.AssetLoaded;
-		Managers.Data.Init();
+		//State = TitleSceneState.AssetLoaded;
+		//Managers.Data.Init();
 
-		Debug.Log("Connecting To Server");
-		State = TitleSceneState.ConnectingToServer;
+		//Debug.Log("Connecting To Server");
+		//State = TitleSceneState.ConnectingToServer;
 
-		IPAddress ipAddr = IPAddress.Parse("127.0.0.1");
-		IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
-		Managers.Network.GameServer.Connect(endPoint, OnConnectionSuccess, OnConnectionFailed);
-	}
+		//IPAddress ipAddr = IPAddress.Parse("127.0.0.1");
+		//IPEndPoint endPoint = new IPEndPoint(ipAddr, 7777);
+		//Managers.Network.GameServer.Connect(endPoint, OnConnectionSuccess, OnConnectionFailed);
+
+		OnConnectionSuccess();
+    }
 
 	private void OnConnectionSuccess()
 	{
 		Debug.Log("Connected To Server");
 		State = TitleSceneState.ConnectedToServer;
 
-		GetObject((int)GameObjects.StartButton).gameObject.SetActive(true);
+		GetText((int)Texts.StartText).gameObject.SetActive(true);
 
 		StartCoroutine(CoSendTestPackets());
 	}

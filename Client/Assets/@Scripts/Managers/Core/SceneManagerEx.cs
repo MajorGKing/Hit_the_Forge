@@ -29,7 +29,7 @@ public class SceneManagerEx
 
     }
 
-    private string GetSceneName(Define.EScene type)
+    public string GetSceneName(Define.EScene type)
     {
         string name = System.Enum.GetName(typeof(Define.EScene), type);
         return name;
