@@ -1,0 +1,20 @@
+{
+    "asset": "98af29a58eaa98d49bec7e57b4eb8dc4",
+    "fileName": "019a9bde-de84-7ce1-8058-c2c2d652956c.png",
+    "prompt": "Create a medieval-style 2D weapon illustration, laid horizontally with the handle on the right side and the weapon head on the left. The design should have a classic fantasy medieval aesthetic, detailed yet clean, suitable for game asset art. Soft shading and a hand-drawn 2D style.",
+    "negativePrompt": "",
+    "model": "5b5b2af1-6ea4-4266-b087-cc9f3bf4f450",
+    "modelName": "Flux.1 Dev",
+    "customSeed": -1,
+    "w3CTraceId": "b68680d876a1c5fb02e50bd6dc39dea7",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

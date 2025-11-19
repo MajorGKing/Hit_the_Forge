@@ -21,6 +21,8 @@ public class LoadingScene : BaseScene
     {
         base.Start();
 
+        _ui.SetSliderValue(0f);
+
         // Temp
         StartCoroutine(LoadNextScene());
 
@@ -162,8 +164,12 @@ public class LoadingScene : BaseScene
         {
             float progress = Mathf.Clamp01(operation.progress / 0.9f);
 
+            _ui.SetSliderValue(operation.progress);
+
             if (operation.progress >= 0.9f)
             {
+                _ui.SetSliderValue(1f);
+
                 // progressBar.value = 1f;
                 // progressText.text = "100%";
                 operation.allowSceneActivation = true;

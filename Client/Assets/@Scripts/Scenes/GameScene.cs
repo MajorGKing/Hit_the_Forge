@@ -17,6 +17,7 @@ public class GameScene : BaseScene
         Debug.Log("@>> GameScene Init()");
         SceneType = EScene.GameScene;
 
+
     }
     
     public override void Clear()

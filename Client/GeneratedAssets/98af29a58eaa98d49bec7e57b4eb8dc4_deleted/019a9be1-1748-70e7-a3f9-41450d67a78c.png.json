@@ -1,0 +1,20 @@
+{
+    "asset": "98af29a58eaa98d49bec7e57b4eb8dc4",
+    "fileName": "019a9be1-1748-70e7-a3f9-41450d67a78c.png",
+    "prompt": "Create a medieval-style 2D weapon illustration that is perfectly horizontal with a zero-degree angle. The weapon must be completely flat and fully parallel to the bottom edge of the frame, with no tilt, no rotation, and no diagonal orientation. The handle must be on the right side and the weapon head on the left. Display only the weapon with no background, no textures, and no additional elements—transparent or plain empty background. Use a clean, detailed medieval fantasy 2D game asset style with soft shading.",
+    "negativePrompt": "",
+    "model": "5b5b2af1-6ea4-4266-b087-cc9f3bf4f450",
+    "modelName": "Flux.1 Dev",
+    "customSeed": -1,
+    "w3CTraceId": "9c92a7bb93a688bbde831edad78834f7",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

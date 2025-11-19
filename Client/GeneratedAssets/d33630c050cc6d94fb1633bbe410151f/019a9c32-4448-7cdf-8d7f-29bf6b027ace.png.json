@@ -1,0 +1,29 @@
+{
+    "asset": "d33630c050cc6d94fb1633bbe410151f",
+    "fileName": "019a9c32-4448-7cdf-8d7f-29bf6b027ace.png",
+    "prompt": "\"Create a 2D illustration of an anvil viewed from above. The style should be simple, clean, and clearly readable from a top-down perspective, with soft shading and a hand-drawn 2D look. No background or extra elements—only the anvil.",
+    "negativePrompt": "",
+    "model": "a400c770-1d28-46bf-8ba4-788ca58f6cfb",
+    "modelName": "Colorful Digital Icons",
+    "customSeed": -1,
+    "w3CTraceId": "e15b522be166ddba3ebb8386a7af342a",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": [
+            {
+                "doodleReferenceType": 7,
+                "doodle": [],
+                "label": "Image",
+                "strength": 0.25,
+                "invertStrength": false,
+                "assetReferenceGuid": "50bbf8c45e1ae5e468e01723e0372cfc"
+            }
+        ]
+    },
+    "upscaleFactor": 0
+}
