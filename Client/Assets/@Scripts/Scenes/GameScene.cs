@@ -1,11 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using static Define;
 
 public class GameScene : BaseScene
 {
+    public WeaponController weapon;
+    public ForgeController forge;
     protected override void Awake()
     {
         base.Awake();
@@ -15,12 +13,28 @@ public class GameScene : BaseScene
 #endif
 
         Debug.Log("@>> GameScene Init()");
-        SceneType = EScene.GameScene;
-
-
+        SceneType = Define.EScene.GameScene;
     }
-    
+
+    protected override void Start()
+    {
+        weapon.Init(this);
+        forge.Init(this);
+
+        Managers.Game.StartWeaponMake("Dagger");
+    }
+
     public override void Clear()
     {
     }
+
+
+    public void HitForge()
+    {
+        var value = Managers.Game.CalcWeaponHit();
+
+        weapon.UpdateFill(value);
+    }
+
+
 }

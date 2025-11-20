@@ -1,7 +1,7 @@
 using System.Linq;
 using Data;
 using UnityEngine;
-using static Define;
+
 
 public class UI_GameScene : UI_Scene
 {
@@ -23,6 +23,9 @@ public class UI_GameScene : UI_Scene
 
     enum Texts
     {
+        Text_Gold,
+        Text_Iron,
+        Text_Coal,
         FpsText
     }
 
@@ -42,6 +45,8 @@ public class UI_GameScene : UI_Scene
         BindTexts(typeof(Texts));
         BindImages(typeof(Images));
         BindSliders(typeof(Sliders));
+
+        RefreshUI();
     }
 
     private float elapsedTime;
@@ -62,8 +67,26 @@ public class UI_GameScene : UI_Scene
         }
     }
 
+    private void OnEnable()
+    {
+        Managers.Player.OnCurrenciesChagned -= RefreshUI;
+        Managers.Player.OnCurrenciesChagned += RefreshUI;
+    }
+
+    private void OnDisable()
+    {
+        Managers.Player.OnCurrenciesChagned -= RefreshUI;
+    }
+
     public void SetInfo()
     {
 
+    }
+
+    public void RefreshUI()
+    {
+        GetText((int)Texts.Text_Gold).text = Managers.Player.GetCurrency(Define.ECurrency.Gold).ToString();
+        GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToString();
+        GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToString();
     }
 }

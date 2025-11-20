@@ -1,13 +1,10 @@
+using Cysharp.Threading.Tasks;
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using Data;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using static Define;
-using Object = UnityEngine.Object;
-using Random = UnityEngine.Random;
+
 
 public class GameManager
 {
@@ -28,13 +25,6 @@ public class GameManager
 
     public void Update()
     {
-        //if (_scene == null)
-        //    return;
-
-        //if (_nowGameScene == false)
-        //    return;
-
-        // �Է� ó��
         UpdateInput();
     }
 
@@ -82,23 +72,100 @@ public class GameManager
 
     int weaponMaxHp = 100;
     int weaponHp = 0;
+
+    bool isWork = false;
+    bool useCoal = false;
+    private CancellationTokenSource coalCTS;
+
+    Data.WeaponData currentWeaponInfo;
     public float CalcWeaponHit()
     {
+        if (isWork == false)
+            return 0f;
+
         if(weaponHp >= weaponMaxHp)
         {
             weaponHp = 0;
         }
 
-        weaponHp += 10;
+        // Check Coal
+        var needCoal = currentWeaponInfo.Coal;
+        
+        if(useCoal == false)
+        {
+            if (needCoal > Managers.Player.GetCurrency(Define.ECurrency.Coal))
+            {
+                // TODO 석탄 부족 표시
+                return (float)weaponHp / weaponMaxHp;
+            }
+
+            UseCoal().Forget();
+        }
+
+        weaponHp += Managers.Player.GetPlayerStat(Define.EPlayerStat.Str);
 
         if(weaponHp >= weaponMaxHp)
         {
             weaponHp = weaponMaxHp;
         }
 
-        Debug.Log(weaponHp);
+        //Debug.Log(weaponHp);
 
         return (float)weaponHp / weaponMaxHp;
     }
+
+    public bool StartWeaponMake(string weaponName)
+    {
+        var weaponInfo = Managers.Data.WeaponDict[weaponName];
+
+        if (weaponInfo == null)
+            return false;
+
+        if (weaponInfo.Iron > Managers.Player.GetCurrency(Define.ECurrency.Iron))
+            return false;
+
+
+        Managers.Player.CurrencySubtract(Define.ECurrency.Iron, weaponInfo.Iron);
+
+        isWork = true;
+        currentWeaponInfo = weaponInfo;
+
+        coalCTS?.Cancel();
+        coalCTS?.Dispose();
+
+        useCoal = false;
+
+        return true;
+    }
+
+    public async UniTaskVoid UseCoal()
+    {
+        // 이전 작업이 있다면 취소
+        coalCTS?.Cancel();
+        coalCTS?.Dispose();
+
+        // 새로운 CTS 생성
+        coalCTS = new CancellationTokenSource();
+
+        Managers.Player.CurrencySubtract(Define.ECurrency.Coal, currentWeaponInfo.Coal);
+
+        useCoal = true;
+
+        try
+        {
+            await UniTask.Delay(
+                Managers.Player.GetForgeStat(Define.EPlayerForgeStat.CoalTime),
+                cancellationToken: coalCTS.Token
+            );
+        }
+        catch (OperationCanceledException)
+        {
+            
+        }
+
+        useCoal = false;
+    }
+
+
     #endregion
 }

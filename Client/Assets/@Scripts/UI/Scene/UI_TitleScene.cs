@@ -86,8 +86,9 @@ public class UI_TitleScene : UI_Scene
 		Managers.Resource.LoadAllAsync<Object>("Preload", (key, count, totalCount) =>
 		{
 			GetText((int)Texts.StatusText).text = $"TODO ·ÎµùÁß : {key} {count}/{totalCount}";
+            Debug.Log(GetText((int)Texts.StatusText).text);
 
-			if (count == totalCount)
+            if (count == totalCount)
 			{
 				OnAssetLoaded();
 			}
@@ -96,6 +97,8 @@ public class UI_TitleScene : UI_Scene
 
 	private void OnAssetLoaded()
 	{
+		Managers.Data.Init();
+		Managers.Game.Init();
 		//State = TitleSceneState.AssetLoaded;
 		//Managers.Data.Init();
 

@@ -217,7 +217,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d33630c050cc6d94fb1633bbe410151f, type: 3}
+  m_Sprite: {fileID: 7185506992757895618, guid: 8b66bc700db51414293a23c9b988f678, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -237,8 +237,8 @@ Transform:
   m_GameObject: {fileID: 292749478}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 10, y: 10, z: 10}
+  m_LocalPosition: {x: -1.52, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -281,13 +281,13 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 3.72, y: 4.56}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 4, y: 5}
   m_EdgeRadius: 0
 --- !u!114 &292749482
 MonoBehaviour:
@@ -386,7 +386,7 @@ Transform:
   m_GameObject: {fileID: 881202892}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -401,9 +401,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 881202892}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dea50f2baa614402d9bc51aebd5ae8c2, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ea6217de2ea07a4aa0cafae00878eb0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ForgeController
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponController
 --- !u!224 &1045224221 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 953419340403880309, guid: 172cddd997ea6f649ba1a9b6f9cbc44b, type: 3}
@@ -453,6 +453,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e5a2a4ab56bf724faae15359b0ee526, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weapon: {fileID: 881202895}
+  forge: {fileID: 292749482}
 --- !u!1 &1236372151
 GameObject:
   m_ObjectHideFlags: 0
