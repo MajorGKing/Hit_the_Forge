@@ -13,11 +13,13 @@ public class Managers : MonoBehaviour
     private GameManager _game = new GameManager();
     private ObjectManager _object = new ObjectManager();
     private MapManager _map = new MapManager();
+    private PlayerManager _player = new PlayerManager();
 
     public static EventManager Event { get { return Instance?._event; } }
     public static GameManager Game { get { return Instance?._game; } }
     public static ObjectManager Object { get { return Instance?._object; } }
     public static MapManager Map { get { return Instance?._map; } }
+    public static PlayerManager Player { get { return Instance?._player; } }
     
     #endregion
 
@@ -90,6 +92,7 @@ public class Managers : MonoBehaviour
             DontDestroyOnLoad(go);
             s_instance = go.GetComponent<Managers>();
             s_instance._sound.Init();
+            s_instance._player.Init();
         }		
 	}
 

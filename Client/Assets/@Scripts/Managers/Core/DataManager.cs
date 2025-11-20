@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Data;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -17,8 +16,11 @@ public class DataManager
 {
     private HashSet<IValidate> _loaders = new HashSet<IValidate>();
 
+    public Dictionary<string, Data.WeaponData> WeaponDict { get; private set; } = new Dictionary<string, Data.WeaponData>();
+
     public void Init()
     {
+        WeaponDict = LoadJson<Data.WeaponDataLoader, string, Data.WeaponData>("WeaponData").MakeDict();
         Validate();
     }
 

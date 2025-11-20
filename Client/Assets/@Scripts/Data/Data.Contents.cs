@@ -54,4 +54,34 @@ namespace Data
     }
     #endregion
 
+    #region WeaponData
+    [Serializable]
+    public class WeaponData
+    {
+        public string WeaponName;
+        public int HP;
+        public int Iron;
+        public int Coal;
+        public int Price;
+    }
+
+    [Serializable]
+    public class WeaponDataLoader : ILoader<string, WeaponData>
+    {
+        public List<WeaponData> weapons = new List<WeaponData>();
+        public Dictionary<string, WeaponData> MakeDict()
+        {
+            Dictionary<string, WeaponData> dict = new Dictionary<string, WeaponData>();
+            foreach (WeaponData weapon in weapons)
+                dict.Add(weapon.WeaponName, weapon);
+            return dict;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+    }
+    #endregion
+
 }

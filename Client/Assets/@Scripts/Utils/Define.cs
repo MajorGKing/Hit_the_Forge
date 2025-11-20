@@ -76,4 +76,23 @@ public class Define
 		//
 		Projectile = 20,
 	}
+
+    public enum ECurrency
+    {
+        Gold,
+        Iron,
+        Coal,
+    }
+
+    public enum EPlayerStat
+    {
+        Str,
+        Skill,
+        Dex,
+    }
+
+    public enum EPlayerForgeStat
+    {
+        CoalTime,
+    }
 }

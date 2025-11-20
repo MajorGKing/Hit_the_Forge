@@ -1,0 +1,11 @@
+{
+  "weapons": [
+    {
+      "WeaponName": "Dagger",
+      "HP": 100,
+      "Iron": 100,
+      "Coal": 10,
+      "Price": 100
+    }
+  ]
+}

@@ -34,7 +34,7 @@ public class GameManager
         //if (_nowGameScene == false)
         //    return;
 
-        // ÀÔ·Â Ã³¸®
+        // ï¿½Ô·ï¿½ Ã³ï¿½ï¿½
         UpdateInput();
     }
 
@@ -49,14 +49,19 @@ public class GameManager
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("Touch Position: " + Input.mousePosition);
+            //Debug.Log("Touch Position: " + Input.mousePosition);
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
             if (hit.collider != null)
             {
-                Debug.Log(hit.transform.name);
+                //Debug.Log(hit.transform.name);
+
+                if (hit.transform.TryGetComponent<ForgeController>(out var forge))
+                {
+                    forge.HitForge();
+                }
             }
         }
     }
@@ -70,6 +75,30 @@ public class GameManager
         EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
 
         return results.Count > 0;
+    }
+    #endregion
+
+    #region GameScene
+
+    int weaponMaxHp = 100;
+    int weaponHp = 0;
+    public float CalcWeaponHit()
+    {
+        if(weaponHp >= weaponMaxHp)
+        {
+            weaponHp = 0;
+        }
+
+        weaponHp += 10;
+
+        if(weaponHp >= weaponMaxHp)
+        {
+            weaponHp = weaponMaxHp;
+        }
+
+        Debug.Log(weaponHp);
+
+        return (float)weaponHp / weaponMaxHp;
     }
     #endregion
 }
