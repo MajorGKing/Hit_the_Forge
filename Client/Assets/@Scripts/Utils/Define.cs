@@ -95,4 +95,13 @@ public class Define
     {
         CoalTime,
     }
+
+    public enum EPlayerTownStat
+    {
+        ShopBuyDiscount,
+        ShopSellBonus,
+        RegenerateIron,
+        RegenerateCoal,
+
+    }
 }

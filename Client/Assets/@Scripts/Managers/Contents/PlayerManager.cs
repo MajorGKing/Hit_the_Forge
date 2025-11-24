@@ -7,6 +7,8 @@ public class PlayerManager
     public int[] maxCurrency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
     private int[] playerStat = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] forgeStat = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
+    private int[] townStat = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
+    
 
     public void Clear()
     {
@@ -29,6 +31,10 @@ public class PlayerManager
         playerStat[(int)Define.EPlayerStat.Dex] = 10;
 
         forgeStat[(int)Define.EPlayerForgeStat.CoalTime] = 1000;
+
+        townStat[(int)Define.EPlayerTownStat.RegenerateIron] = 10;
+        townStat[(int)Define.EPlayerTownStat.RegenerateCoal] = 10;
+        
     }
 
     public void CurrencyAdd(Define.ECurrency type, int value)
@@ -89,6 +95,11 @@ public class PlayerManager
     public int GetForgeStat(Define.EPlayerForgeStat type)
     {
         return forgeStat[(int)type];
+    }
+
+    public int GetTownStat(Define.EPlayerTownStat type)
+    {
+        return townStat[(int)type];
     }
 
     #region Action

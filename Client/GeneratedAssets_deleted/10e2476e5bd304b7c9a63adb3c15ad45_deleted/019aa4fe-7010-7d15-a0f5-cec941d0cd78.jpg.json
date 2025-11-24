@@ -1,0 +1,20 @@
+{
+    "asset": "10e2476e5bd304b7c9a63adb3c15ad45",
+    "fileName": "019aa4fe-7010-7d15-a0f5-cec941d0cd78.jpg",
+    "prompt": "2D game hit effect, circular burst of bright yellow and orange metal sparks, small glowing particles radiating outward in all directions, short burst of energy, cartoon style, no weapons, no characters, only circular sparks, transparent background, high contrast, top-down or side view, slightly more expanded burst --v 6 --ar 1:1 --style 4a\n",
+    "negativePrompt": "",
+    "model": "df2c9d4d-b297-4b7d-ad6d-1e864928d71a",
+    "modelName": "VFX Hits",
+    "customSeed": -1,
+    "w3CTraceId": "f9794a1a2dafe56b35fed5f7581695f0",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

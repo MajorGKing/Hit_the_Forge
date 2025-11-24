@@ -59,7 +59,7 @@ public class Managers : MonoBehaviour
         switch (_language)
         {
             case Define.ELanguage.Korean:
-                break;
+                return Data.TextDict[textId].KOR;
             case Define.ELanguage.English:
                 break;
             case Define.ELanguage.French:

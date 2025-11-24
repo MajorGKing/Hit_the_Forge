@@ -1,0 +1,11 @@
+{
+    "asset": "844063bf861004c06b68bc8ec9528c3b",
+    "fileName": "019aa4e0-fd43-72c5-be19-0d3e40821c76.pose.json",
+    "prompt": "2D game effect where touching the screen creates a collision with a burst of flames",
+    "negativePrompt": "",
+    "model": "9e46c009-67d8-4254-a3a0-32e3168247ee",
+    "modelName": "Text to Motion",
+    "customSeed": 1875479209,
+    "w3CTraceId": "b52ca301a83ca90fca060ab5fcee661b",
+    "isTrimmed": false
+}

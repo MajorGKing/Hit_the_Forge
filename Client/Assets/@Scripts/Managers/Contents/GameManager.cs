@@ -1,21 +1,45 @@
 using Cysharp.Threading.Tasks;
+using DG.Tweening;
 using System;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using Random = UnityEngine.Random;
+
+
 
 
 public class GameManager
 {
+    private enum EWeaponMakeProcess
+    {
+        None,
+        BeginHold,
+        Progress,
+        Finish,
+        Enhancement,
+        Sell,
+    }
+
     #region Base
 
     private GameScene _scene;
     private bool _nowGameScene = true;
 
+    
+    float shakeCooldown = 0.4f;
+    float lastShakeTime = -10f;
+
     public void Clear()
     {
+        regenerateIronCTS?.Cancel();
+        regenerateIronCTS?.Dispose();
+        regenerateIronCTS = null;
 
+        regenerateCoalCTS?.Cancel();
+        regenerateCoalCTS?.Dispose();
+        regenerateCoalCTS = null;
     }
 
     public void Init()
@@ -51,9 +75,62 @@ public class GameManager
                 if (hit.transform.TryGetComponent<ForgeController>(out var forge))
                 {
                     forge.HitForge();
+
+                    Vector2 basePos = hit.point;
+
+                    float offsetRange = 1f; // 랜덤 Range
+                    float offsetX = Random.Range(-offsetRange, offsetRange);
+                    float offsetY = Random.Range(-offsetRange, offsetRange);
+
+                    Vector2 spawnPos = new Vector2(basePos.x + offsetX, basePos.y + offsetY);
+
+                    // 히트 이펙트 스폰
+                    SpawnHitEffect(spawnPos).Forget();
+
+                    TryShakeCameraRandom();
                 }
             }
         }
+    }
+
+    private async UniTaskVoid SpawnHitEffect(Vector2 pos)
+    {
+        if (makeProcess != EWeaponMakeProcess.BeginHold && makeProcess != EWeaponMakeProcess.Progress)
+            return;
+
+        var effect = Managers.Object.SpawnGameObject(pos, "HitEffect01");
+        await UniTask.Delay(100);
+        Managers.Resource.Destroy(effect);
+    }
+
+    private void TryShakeCameraRandom()
+    {
+        if (makeProcess == EWeaponMakeProcess.BeginHold || makeProcess == EWeaponMakeProcess.Progress)
+        {
+            if (Time.time - lastShakeTime < shakeCooldown)
+                return;
+
+            lastShakeTime = Time.time;
+
+            Camera.main.transform.DOShakePosition(
+                duration: 0.12f,
+                strength: 0.06f,
+                vibrato: 8,
+                randomness: 90f,
+                fadeOut: true
+            );
+        }
+        else if (makeProcess == EWeaponMakeProcess.Enhancement)
+        {
+            Camera.main.transform.DOShakePosition(
+                duration: 0.25f,
+                strength: 0.22f,
+                vibrato: 18,
+                randomness: 90f,
+                fadeOut: true
+            );
+        }
+
     }
 
     public bool IsPointerOverUIObject(Vector2 touchPos)
@@ -68,50 +145,85 @@ public class GameManager
     }
     #endregion
 
+    #region Action
+    public event Action OnWeaponHpChagned;
+    #endregion
+
     #region GameScene
 
     int weaponMaxHp = 100;
+    public int WeaponMaxHp
+    {
+        protected set { weaponMaxHp = value; OnWeaponHpChagned?.Invoke(); }
+        get { return weaponMaxHp; }
+    }
     int weaponHp = 0;
+    public int WeaponHp
+    {
+        protected set { weaponHp = value; OnWeaponHpChagned?.Invoke(); }
+        get { return weaponHp; }
+    }
 
-    bool isWork = false;
+    EWeaponMakeProcess makeProcess = EWeaponMakeProcess.None;
     bool useCoal = false;
     private CancellationTokenSource coalCTS;
 
     Data.WeaponData currentWeaponInfo;
+
+    private CancellationTokenSource regenerateIronCTS;
+    private CancellationTokenSource regenerateCoalCTS;
+
+
+    // 게임씬 들어가면 호출
+    public void GameInit()
+    {
+        regenerateIronCTS = new CancellationTokenSource();
+        regenerateCoalCTS = new CancellationTokenSource();
+
+        RegenerateResource(Define.ECurrency.Iron, Define.EPlayerTownStat.RegenerateIron, regenerateIronCTS.Token).Forget();
+        RegenerateResource(Define.ECurrency.Coal, Define.EPlayerTownStat.RegenerateCoal, regenerateCoalCTS.Token).Forget();
+    }
+
     public float CalcWeaponHit()
     {
-        if (isWork == false)
+        if (makeProcess != EWeaponMakeProcess.BeginHold && makeProcess != EWeaponMakeProcess.Progress)
             return 0f;
 
-        if(weaponHp >= weaponMaxHp)
-        {
-            weaponHp = 0;
-        }
+        makeProcess = EWeaponMakeProcess.Progress;
 
         // Check Coal
         var needCoal = currentWeaponInfo.Coal;
-        
-        if(useCoal == false)
+
+        if (useCoal == false)
         {
             if (needCoal > Managers.Player.GetCurrency(Define.ECurrency.Coal))
             {
                 // TODO 석탄 부족 표시
-                return (float)weaponHp / weaponMaxHp;
+                return (float)WeaponHp / WeaponMaxHp;
             }
 
             UseCoal().Forget();
         }
 
-        weaponHp += Managers.Player.GetPlayerStat(Define.EPlayerStat.Str);
+        var currentWeaponHp = WeaponHp + Managers.Player.GetPlayerStat(Define.EPlayerStat.Str);
 
-        if(weaponHp >= weaponMaxHp)
+        if (currentWeaponHp >= WeaponMaxHp)
         {
-            weaponHp = weaponMaxHp;
+            currentWeaponHp = WeaponMaxHp;
+            WeaponHp = currentWeaponHp;
+            MakeFinish();
+        }
+        else
+        {
+            int randomIndex = Random.Range(1, 5);
+            var effectSound = $"HitEffectSound{randomIndex}";
+            Managers.Sound.Play(Define.ESound.Effect, effectSound);
+            WeaponHp = currentWeaponHp;
         }
 
         //Debug.Log(weaponHp);
 
-        return (float)weaponHp / weaponMaxHp;
+        return (float)WeaponHp / WeaponMaxHp;
     }
 
     public bool StartWeaponMake(string weaponName)
@@ -127,22 +239,43 @@ public class GameManager
 
         Managers.Player.CurrencySubtract(Define.ECurrency.Iron, weaponInfo.Iron);
 
-        isWork = true;
+        makeProcess = EWeaponMakeProcess.BeginHold;
         currentWeaponInfo = weaponInfo;
 
         coalCTS?.Cancel();
-        coalCTS?.Dispose();
+        coalCTS = null;
 
         useCoal = false;
 
+        WeaponHp = 0;
+
         return true;
+    }
+
+    private void MakeFinish()
+    {
+        if (currentWeaponInfo == null)
+            return;
+
+        Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
+
+        // TODO Enhancement
+        makeProcess = EWeaponMakeProcess.Enhancement;
+        TryShakeCameraRandom();
+
+        // TODO Sell
+        makeProcess = EWeaponMakeProcess.Sell;
+        Managers.Player.CurrencyAdd(Define.ECurrency.Gold, currentWeaponInfo.Price);
+
+        // TODO Restart
+        StartWeaponMake(currentWeaponInfo.WeaponName);
     }
 
     public async UniTaskVoid UseCoal()
     {
         // 이전 작업이 있다면 취소
         coalCTS?.Cancel();
-        coalCTS?.Dispose();
+        coalCTS = null;
 
         // 새로운 CTS 생성
         coalCTS = new CancellationTokenSource();
@@ -160,12 +293,36 @@ public class GameManager
         }
         catch (OperationCanceledException)
         {
-            
+
         }
 
         useCoal = false;
     }
 
+    private async UniTaskVoid RegenerateIron()
+    {
+        while(true)
+        {
+            await UniTask.Delay(3000);
+            Managers.Player.CurrencyAdd(Define.ECurrency.Iron, Managers.Player.GetTownStat(Define.EPlayerTownStat.RegenerateIron));
+        }
+    }
 
+    private async UniTaskVoid RegenerateResource(Define.ECurrency currency, Define.EPlayerTownStat regenStat, CancellationToken token)
+    {
+        try
+        {
+            while (!token.IsCancellationRequested)
+            {
+                await UniTask.Delay(3000, cancellationToken: token);
+
+                Managers.Player.CurrencyAdd(currency, Managers.Player.GetTownStat(regenStat));
+            }
+        }
+        catch (OperationCanceledException)
+        {
+            
+        }
+    }
     #endregion
 }

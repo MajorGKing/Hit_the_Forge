@@ -1,0 +1,20 @@
+{
+    "asset": "94588448e0ecf4d43ad93a3db9dfb5da",
+    "fileName": "019aa4f9-78fd-79d8-b44f-60d70d550600.png",
+    "prompt": "2D game hit effect, bright yellow and orange metal sparks, small glowing particles flying outward, short burst of energy, dynamic impact, no weapons, no characters, only the sparks, cartoon style, fast motion, transparent background, high contrast, top-down or side view --v 6 --ar 1:1 --style 4a\n",
+    "negativePrompt": "",
+    "model": "409229d8-9653-42a8-b069-824d11ef6762",
+    "modelName": "8-bit Pixel",
+    "customSeed": -1,
+    "w3CTraceId": "b771d6a61e0e06503a5eb67661bff928",
+    "refinementMode": "Generation",
+    "pixelateTargetSize": 0,
+    "pixelateKeepImageSize": false,
+    "pixelatePixelBlockSize": 0,
+    "pixelateMode": 0,
+    "pixelateOutlineThickness": 0,
+    "doodles": {
+        "m_Items": []
+    },
+    "upscaleFactor": 0
+}

@@ -4,6 +4,7 @@ public class GameScene : BaseScene
 {
     public WeaponController weapon;
     public ForgeController forge;
+    public UI_BattleBarWorldSpace hpBar;
     protected override void Awake()
     {
         base.Awake();
@@ -20,6 +21,8 @@ public class GameScene : BaseScene
     {
         weapon.Init(this);
         forge.Init(this);
+
+        Managers.Game.GameInit();
 
         Managers.Game.StartWeaponMake("Dagger");
     }

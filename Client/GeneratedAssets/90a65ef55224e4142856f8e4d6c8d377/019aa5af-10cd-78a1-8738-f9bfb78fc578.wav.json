@@ -1,0 +1,13 @@
+{
+    "asset": "90a65ef55224e4142856f8e4d6c8d377",
+    "fileName": "019aa5af-10cd-78a1-8738-f9bfb78fc578.wav",
+    "prompt": "Short, sharp, metallic sound effect indicating a weapon has been completed, high-pitched clang or ding, very brief impact, crisp and clear, no echo, no background noise, conveys a sense of completion and finality, suitable for a 2D blacksmith forging game\n",
+    "negativePrompt": "",
+    "model": "ee31b223-3fe1-4ae6-bf54-d8a80bb4b0e1",
+    "modelName": "Text to Sound",
+    "customSeed": -1,
+    "w3CTraceId": "167478cc2cf0052d09d9f72313251d63",
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false
+}
