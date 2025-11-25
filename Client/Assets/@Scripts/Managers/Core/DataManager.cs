@@ -18,12 +18,12 @@ public class DataManager
 
     public Dictionary<string, Data.TextData> TextDict { get; private set; } = new Dictionary<string, Data.TextData>();
 
-    public Dictionary<string, Data.WeaponData> WeaponDict { get; private set; } = new Dictionary<string, Data.WeaponData>();
+    public Dictionary<int, Data.WeaponData> WeaponDict { get; private set; } = new Dictionary<int, Data.WeaponData>();
 
     public void Init()
     {
         TextDict = LoadJson<Data.TextDataLoader, string, Data.TextData>("TextData").MakeDict();
-        WeaponDict = LoadJson<Data.WeaponDataLoader, string, Data.WeaponData>("WeaponData").MakeDict();
+        WeaponDict = LoadJson<Data.WeaponDataLoader, int, Data.WeaponData>("WeaponData").MakeDict();
         Validate();
     }
 

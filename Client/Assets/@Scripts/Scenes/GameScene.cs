@@ -24,7 +24,7 @@ public class GameScene : BaseScene
 
         Managers.Game.GameInit();
 
-        Managers.Game.StartWeaponMake("Dagger");
+        Managers.Game.StartWeaponMake(1);
     }
 
     public override void Clear()

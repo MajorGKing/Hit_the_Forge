@@ -86,22 +86,24 @@ namespace Data
     [Serializable]
     public class WeaponData
     {
+        public int TemplateId;
         public string WeaponName;
         public int HP;
         public int Iron;
         public int Coal;
         public int Price;
+        public int NextTemplateId;
     }
 
     [Serializable]
-    public class WeaponDataLoader : ILoader<string, WeaponData>
+    public class WeaponDataLoader : ILoader<int, WeaponData>
     {
         public List<WeaponData> weapons = new List<WeaponData>();
-        public Dictionary<string, WeaponData> MakeDict()
+        public Dictionary<int, WeaponData> MakeDict()
         {
-            Dictionary<string, WeaponData> dict = new Dictionary<string, WeaponData>();
+            Dictionary<int, WeaponData> dict = new Dictionary<int, WeaponData>();
             foreach (WeaponData weapon in weapons)
-                dict.Add(weapon.WeaponName, weapon);
+                dict.Add(weapon.TemplateId, weapon);
             return dict;
         }
 

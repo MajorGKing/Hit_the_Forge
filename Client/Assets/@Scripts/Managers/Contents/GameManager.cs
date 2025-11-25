@@ -15,11 +15,12 @@ public class GameManager
     private enum EWeaponMakeProcess
     {
         None,
-        BeginHold,
-        Progress,
-        Finish,
-        Enhancement,
-        Sell,
+        BeginHold, // 무기를 고르기 전
+        Ready, // 무기를 고른 후
+        Progress, // 작업 중
+        Finish, // 무기 완성 후
+        Enhancement, // 무기 업그레이드 대기
+        Sell, // 판매
     }
 
     #region Base
@@ -44,7 +45,7 @@ public class GameManager
 
     public void Init()
     {
-
+        
     }
 
     public void Update()
@@ -95,7 +96,7 @@ public class GameManager
 
     private async UniTaskVoid SpawnHitEffect(Vector2 pos)
     {
-        if (makeProcess != EWeaponMakeProcess.BeginHold && makeProcess != EWeaponMakeProcess.Progress)
+        if (makeProcess != EWeaponMakeProcess.Ready && makeProcess != EWeaponMakeProcess.Progress)
             return;
 
         var effect = Managers.Object.SpawnGameObject(pos, "HitEffect01");
@@ -105,7 +106,7 @@ public class GameManager
 
     private void TryShakeCameraRandom()
     {
-        if (makeProcess == EWeaponMakeProcess.BeginHold || makeProcess == EWeaponMakeProcess.Progress)
+        if (makeProcess == EWeaponMakeProcess.Ready || makeProcess == EWeaponMakeProcess.Progress)
         {
             if (Time.time - lastShakeTime < shakeCooldown)
                 return;
@@ -177,6 +178,8 @@ public class GameManager
     // 게임씬 들어가면 호출
     public void GameInit()
     {
+        makeProcess = EWeaponMakeProcess.BeginHold;
+
         regenerateIronCTS = new CancellationTokenSource();
         regenerateCoalCTS = new CancellationTokenSource();
 
@@ -186,7 +189,7 @@ public class GameManager
 
     public float CalcWeaponHit()
     {
-        if (makeProcess != EWeaponMakeProcess.BeginHold && makeProcess != EWeaponMakeProcess.Progress)
+        if (makeProcess != EWeaponMakeProcess.BeginHold && makeProcess != EWeaponMakeProcess.Ready && makeProcess != EWeaponMakeProcess.Progress)
             return 0f;
 
         makeProcess = EWeaponMakeProcess.Progress;
@@ -226,9 +229,12 @@ public class GameManager
         return (float)WeaponHp / WeaponMaxHp;
     }
 
-    public bool StartWeaponMake(string weaponName)
+    public bool StartWeaponMake(int templateId)
     {
-        var weaponInfo = Managers.Data.WeaponDict[weaponName];
+        if(makeProcess != EWeaponMakeProcess.BeginHold) 
+            return false;
+
+        var weaponInfo = Managers.Data.WeaponDict[templateId];
 
         if (weaponInfo == null)
             return false;
@@ -239,7 +245,7 @@ public class GameManager
 
         Managers.Player.CurrencySubtract(Define.ECurrency.Iron, weaponInfo.Iron);
 
-        makeProcess = EWeaponMakeProcess.BeginHold;
+        makeProcess = EWeaponMakeProcess.Ready;
         currentWeaponInfo = weaponInfo;
 
         coalCTS?.Cancel();
@@ -248,6 +254,7 @@ public class GameManager
         useCoal = false;
 
         WeaponHp = 0;
+        WeaponMaxHp = currentWeaponInfo.HP;
 
         return true;
     }
@@ -258,17 +265,33 @@ public class GameManager
             return;
 
         Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
+        makeProcess = EWeaponMakeProcess.Finish;
 
         // TODO Enhancement
         makeProcess = EWeaponMakeProcess.Enhancement;
         TryShakeCameraRandom();
 
         // TODO Sell
-        makeProcess = EWeaponMakeProcess.Sell;
-        Managers.Player.CurrencyAdd(Define.ECurrency.Gold, currentWeaponInfo.Price);
+        SellWeapon();
 
         // TODO Restart
-        StartWeaponMake(currentWeaponInfo.WeaponName);
+        //StartWeaponMake(currentWeaponInfo.TemplateId);
+        makeProcess = EWeaponMakeProcess.BeginHold;
+    }
+
+    private void SellWeapon()
+    {
+        if (makeProcess != EWeaponMakeProcess.Finish && makeProcess != EWeaponMakeProcess.Enhancement)
+            return;
+
+        if (currentWeaponInfo == null)
+            return;
+
+        makeProcess = EWeaponMakeProcess.Sell;
+
+        Managers.Player.CurrencyAdd(Define.ECurrency.Gold, currentWeaponInfo.Price);
+
+        WeaponHp = 0;
     }
 
     public async UniTaskVoid UseCoal()

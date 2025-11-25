@@ -8,7 +8,7 @@ public class UI_GameScene : UI_Scene
     #region Enum
     enum GameObjects
     {
-
+        WeaponContent
     }
 
     enum Images
@@ -47,6 +47,8 @@ public class UI_GameScene : UI_Scene
         BindSliders(typeof(Sliders));
 
         RefreshUI();
+
+        WeaponSelectReset();
     }
 
     private float elapsedTime;
@@ -88,5 +90,16 @@ public class UI_GameScene : UI_Scene
         GetText((int)Texts.Text_Gold).text = Managers.Player.GetCurrency(Define.ECurrency.Gold).ToString();
         GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToString();
         GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToString();
+    }
+
+    private void WeaponSelectReset()
+    {
+        GetGameObject((int)GameObjects.WeaponContent).DestroyChildren();
+
+        foreach(var weapon in Managers.Data.WeaponDict.Values)
+        {
+            var item = Managers.UI.MakeSubItem<UI_WeaponSelectSubItem>(GetGameObject((int)GameObjects.WeaponContent).transform);
+            item.SetInfo(weapon.TemplateId);
+        }
     }
 }

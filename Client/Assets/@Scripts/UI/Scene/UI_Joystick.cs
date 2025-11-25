@@ -21,8 +21,8 @@ public class UI_Joystick : UI_Scene
 
 		BindObjects(typeof(GameObjects));
 
-		_background = GetObject((int)GameObjects.JoystickBG);
-		_cursor = GetObject((int)GameObjects.JoystickCursor);
+		_background = GetGameObject((int)GameObjects.JoystickBG);
+		_cursor = GetGameObject((int)GameObjects.JoystickCursor);
 		_radius = _background.GetComponent<RectTransform>().sizeDelta.y / 5;
 
 		gameObject.BindEvent(OnPointerDown, type: ETouchEvent.PointerDown);

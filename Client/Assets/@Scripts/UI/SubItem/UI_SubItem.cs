@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -14,6 +15,7 @@ public class UI_SubItem : UI_Base
         _parentScrollRect = Utils.FindAncestor<ScrollRect>(gameObject);
     }
 
+    
     public void OnBeginDrag(PointerEventData eventData)
     {
         _parentScrollRect.OnBeginDrag(eventData);
@@ -28,4 +30,5 @@ public class UI_SubItem : UI_Base
     {
         _parentScrollRect.OnEndDrag(eventData);
     }
+
 }

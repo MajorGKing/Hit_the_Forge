@@ -1,11 +1,31 @@
 {
   "weapons": [
     {
+      "TemplateId": 1,
       "WeaponName": "Dagger",
       "HP": 100,
       "Iron": 100,
       "Coal": 10,
-      "Price": 100
+      "Price": 100,
+      "NextTemplateId": 2
+    },
+    {
+      "TemplateId": 2,
+      "WeaponName": "Sword",
+      "HP": 1000,
+      "Iron": 1000,
+      "Coal": 10,
+      "Price": 1000,
+      "NextTemplateId": 3
+    },
+    {
+      "TemplateId": 3,
+      "WeaponName": "Shild",
+      "HP": 500,
+      "Iron": 1000,
+      "Coal": 50,
+      "Price": 1000,
+      "NextTemplateId": 0
     }
   ]
 }
