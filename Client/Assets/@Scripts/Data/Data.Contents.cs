@@ -57,7 +57,7 @@ namespace Data
     #region TextData
     public class TextData
     {
-        public string TemplateId;
+        public string DataId;
         public string KOR;
     }
 
@@ -70,7 +70,7 @@ namespace Data
         {
             Dictionary<string, TextData> dict = new Dictionary<string, TextData>();
             foreach (TextData text in texts)
-                dict.Add(text.TemplateId, text);
+                dict.Add(text.DataId, text);
 
             return dict;
         }
