@@ -114,4 +114,33 @@ namespace Data
     }
     #endregion
 
+    #region EnhancementData
+    [Serializable]
+    public class EnhancementData
+    {
+        public int EnhancementLevel;
+        public int EnhancementSucess;
+        public int BasicSucess;
+        public float Price;
+    }
+
+    [Serializable]
+    public class EnhancementDataLoader : ILoader<int, EnhancementData>
+    {
+        public List<EnhancementData> enhancements = new List<EnhancementData>();
+        public Dictionary<int, EnhancementData> MakeDict()
+        {
+            Dictionary<int, EnhancementData> dict = new Dictionary<int, EnhancementData>();
+            foreach (EnhancementData enhancement in enhancements)
+                dict.Add(enhancement.EnhancementLevel, enhancement);
+            return dict;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+    }
+    #endregion
+
 }

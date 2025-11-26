@@ -1,0 +1,244 @@
+{
+  "enhancements": [
+    {
+      "EnhancementLevel": 1,
+      "EnhancementSucess": 90000000,
+      "BasicSucess": 100000000,
+      "Price": 1.21
+    },
+    {
+      "EnhancementLevel": 2,
+      "EnhancementSucess": 81000000,
+      "BasicSucess": 100000000,
+      "Price": 1.46
+    },
+    {
+      "EnhancementLevel": 3,
+      "EnhancementSucess": 72900000,
+      "BasicSucess": 100000000,
+      "Price": 1.77
+    },
+    {
+      "EnhancementLevel": 4,
+      "EnhancementSucess": 65610000,
+      "BasicSucess": 100000000,
+      "Price": 2.14
+    },
+    {
+      "EnhancementLevel": 5,
+      "EnhancementSucess": 59049000,
+      "BasicSucess": 100000000,
+      "Price": 2.59
+    },
+    {
+      "EnhancementLevel": 6,
+      "EnhancementSucess": 53144100,
+      "BasicSucess": 100000000,
+      "Price": 3.14
+    },
+    {
+      "EnhancementLevel": 7,
+      "EnhancementSucess": 47829690,
+      "BasicSucess": 100000000,
+      "Price": 3.8
+    },
+    {
+      "EnhancementLevel": 8,
+      "EnhancementSucess": 43046721,
+      "BasicSucess": 100000000,
+      "Price": 4.59
+    },
+    {
+      "EnhancementLevel": 9,
+      "EnhancementSucess": 38742049,
+      "BasicSucess": 100000000,
+      "Price": 5.56
+    },
+    {
+      "EnhancementLevel": 10,
+      "EnhancementSucess": 34867844,
+      "BasicSucess": 100000000,
+      "Price": 6.73
+    },
+    {
+      "EnhancementLevel": 11,
+      "EnhancementSucess": 31381060,
+      "BasicSucess": 100000000,
+      "Price": 8.14
+    },
+    {
+      "EnhancementLevel": 12,
+      "EnhancementSucess": 28242954,
+      "BasicSucess": 100000000,
+      "Price": 9.85
+    },
+    {
+      "EnhancementLevel": 13,
+      "EnhancementSucess": 25418658,
+      "BasicSucess": 100000000,
+      "Price": 11.92
+    },
+    {
+      "EnhancementLevel": 14,
+      "EnhancementSucess": 22876792,
+      "BasicSucess": 100000000,
+      "Price": 14.42
+    },
+    {
+      "EnhancementLevel": 15,
+      "EnhancementSucess": 20589113,
+      "BasicSucess": 100000000,
+      "Price": 17.45
+    },
+    {
+      "EnhancementLevel": 16,
+      "EnhancementSucess": 18530202,
+      "BasicSucess": 100000000,
+      "Price": 21.11
+    },
+    {
+      "EnhancementLevel": 17,
+      "EnhancementSucess": 16677182,
+      "BasicSucess": 100000000,
+      "Price": 25.55
+    },
+    {
+      "EnhancementLevel": 18,
+      "EnhancementSucess": 15009464,
+      "BasicSucess": 100000000,
+      "Price": 30.91
+    },
+    {
+      "EnhancementLevel": 19,
+      "EnhancementSucess": 13508517,
+      "BasicSucess": 100000000,
+      "Price": 37.4
+    },
+    {
+      "EnhancementLevel": 20,
+      "EnhancementSucess": 12157665,
+      "BasicSucess": 100000000,
+      "Price": 45.26
+    },
+    {
+      "EnhancementLevel": 21,
+      "EnhancementSucess": 10941899,
+      "BasicSucess": 100000000,
+      "Price": 54.76
+    },
+    {
+      "EnhancementLevel": 22,
+      "EnhancementSucess": 9847709,
+      "BasicSucess": 100000000,
+      "Price": 66.26
+    },
+    {
+      "EnhancementLevel": 23,
+      "EnhancementSucess": 8862938,
+      "BasicSucess": 100000000,
+      "Price": 80.18
+    },
+    {
+      "EnhancementLevel": 24,
+      "EnhancementSucess": 7976644,
+      "BasicSucess": 100000000,
+      "Price": 97.02
+    },
+    {
+      "EnhancementLevel": 25,
+      "EnhancementSucess": 7178980,
+      "BasicSucess": 100000000,
+      "Price": 117.39
+    },
+    {
+      "EnhancementLevel": 26,
+      "EnhancementSucess": 6461082,
+      "BasicSucess": 100000000,
+      "Price": 142.04
+    },
+    {
+      "EnhancementLevel": 27,
+      "EnhancementSucess": 5814974,
+      "BasicSucess": 100000000,
+      "Price": 171.87
+    },
+    {
+      "EnhancementLevel": 28,
+      "EnhancementSucess": 5233476,
+      "BasicSucess": 100000000,
+      "Price": 207.97
+    },
+    {
+      "EnhancementLevel": 29,
+      "EnhancementSucess": 4710129,
+      "BasicSucess": 100000000,
+      "Price": 251.64
+    },
+    {
+      "EnhancementLevel": 30,
+      "EnhancementSucess": 4239116,
+      "BasicSucess": 100000000,
+      "Price": 304.48
+    },
+    {
+      "EnhancementLevel": 31,
+      "EnhancementSucess": 3815204,
+      "BasicSucess": 100000000,
+      "Price": 368.42
+    },
+    {
+      "EnhancementLevel": 32,
+      "EnhancementSucess": 3433684,
+      "BasicSucess": 100000000,
+      "Price": 445.79
+    },
+    {
+      "EnhancementLevel": 33,
+      "EnhancementSucess": 3090315,
+      "BasicSucess": 100000000,
+      "Price": 539.41
+    },
+    {
+      "EnhancementLevel": 34,
+      "EnhancementSucess": 2781284,
+      "BasicSucess": 100000000,
+      "Price": 652.68
+    },
+    {
+      "EnhancementLevel": 35,
+      "EnhancementSucess": 2503156,
+      "BasicSucess": 100000000,
+      "Price": 789.75
+    },
+    {
+      "EnhancementLevel": 36,
+      "EnhancementSucess": 2252840,
+      "BasicSucess": 100000000,
+      "Price": 955.59
+    },
+    {
+      "EnhancementLevel": 37,
+      "EnhancementSucess": 2027556,
+      "BasicSucess": 100000000,
+      "Price": 1156.27
+    },
+    {
+      "EnhancementLevel": 38,
+      "EnhancementSucess": 1824800,
+      "BasicSucess": 100000000,
+      "Price": 1399.08
+    },
+    {
+      "EnhancementLevel": 39,
+      "EnhancementSucess": 1642320,
+      "BasicSucess": 100000000,
+      "Price": 1692.89
+    },
+    {
+      "EnhancementLevel": 40,
+      "EnhancementSucess": 1478088,
+      "BasicSucess": 100000000,
+      "Price": 2048.4
+    }
+  ]
+}
