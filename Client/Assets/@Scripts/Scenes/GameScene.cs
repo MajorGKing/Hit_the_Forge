@@ -31,12 +31,9 @@ public class GameScene : BaseScene
     {
     }
 
-
     public void HitForge()
     {
-        var value = Managers.Game.CalcWeaponHit();
-
-        weapon.UpdateFill(value);
+        Managers.Game.CalcWeaponHit();
     }
 
 

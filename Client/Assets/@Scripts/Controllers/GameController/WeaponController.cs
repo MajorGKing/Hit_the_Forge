@@ -10,11 +10,23 @@ public class WeaponController : MonoBehaviour
         fillRenderer = GetComponent<SpriteRenderer>();
         gameScene = scene;
 
-        UpdateFill(0f);
+        fillRenderer.material.SetFloat("_FillAmount", 0);
     }
 
-    public void UpdateFill(float amount)
+    private void OnEnable()
     {
+        Managers.Game.OnWeaponHpChanged -= UpdateFill;
+        Managers.Game.OnWeaponHpChanged += UpdateFill;
+    }
+
+    private void OnDisable()
+    {
+        Managers.Game.OnWeaponHpChanged -= UpdateFill;
+    }
+
+    public void UpdateFill()
+    {
+        float amount = ((float)Managers.Game.WeaponHp / (float)Managers.Game.WeaponMaxHp);
         fillRenderer.material.SetFloat("_FillAmount", amount);
     }
 }

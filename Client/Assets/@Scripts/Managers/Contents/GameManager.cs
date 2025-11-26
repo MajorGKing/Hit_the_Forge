@@ -1,6 +1,7 @@
 using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Threading;
 using UnityEngine;
@@ -55,19 +56,19 @@ public class GameManager
 
         //Debug.Log(makeProcessState);
 
-        if(makeProcessState == EWeaponMakeProcess.Enhancement)
-        {
-            //Debug.Log(enhancementCountTime);
-            enhancementCountTime -= Time.deltaTime;
+        //if(makeProcessState == EWeaponMakeProcess.Enhancement)
+        //{
+        //    //Debug.Log(enhancementCountTime);
+        //    EnhancementCountTime -= Time.deltaTime;
 
-            if(enhancementCountTime <= 0)
-            {
-                enhancementCountTime = 0f;
-                SellWeapon();
-            }
+        //    if(EnhancementCountTime <= 0)
+        //    {
+        //        EnhancementCountTime = 0f;
+        //        SellWeapon();
+        //    }
 
-            OnEnhancementCountChanged?.Invoke();
-        }
+        //    OnEnhancementCountChanged?.Invoke();
+        //}
     }
 
     private void UpdateInput()
@@ -166,9 +167,10 @@ public class GameManager
     #region Action
     public event Action OnWeaponHpChanged;
     public event Action OnEnhancementCountChanged;
+    public event Action OnEnhancementPercentChanged;
     #endregion
 
-    #region GameScene
+    #region Variables
 
     int weaponMaxHp = 100;
     public int WeaponMaxHp
@@ -185,21 +187,154 @@ public class GameManager
 
     EWeaponMakeProcess makeProcessState = EWeaponMakeProcess.None;
     bool useCoal = false;
+    
     private CancellationTokenSource coalCTS;
-
-    Data.WeaponData currentWeaponInfo;
-
     private CancellationTokenSource regenerateIronCTS;
     private CancellationTokenSource regenerateCoalCTS;
 
     private float enhancementCountTime;
+    public float EnhancementCountTime
+    {
+        protected set { enhancementCountTime = value; OnEnhancementCountChanged?.Invoke(); }
+        get { return enhancementCountTime; }
+    }
     private int enhancmentLevel;
+    public int EnhancmentLevel
+    {
+        protected set { enhancmentLevel = value; OnEnhancementPercentChanged?.Invoke(); }
+        get { return enhancmentLevel; }
+    }
 
+    Data.WeaponData currentWeaponInfo;
+
+    #endregion
+
+    #region FSM Core
+    private Coroutine _currentStateRoutine = null;
+
+    private void ChangeState(EWeaponMakeProcess next)
+    {
+        if (makeProcessState == next)
+            return;
+
+        makeProcessState = next;
+
+        if (_currentStateRoutine != null)
+            Managers.Instance.StopCoroutine(_currentStateRoutine);
+
+        _currentStateRoutine = Managers.Instance.StartCoroutine(GetStateCoroutine(next));
+    }
+
+    private IEnumerator GetStateCoroutine(EWeaponMakeProcess state)
+    {
+        switch (state)
+        {
+            case EWeaponMakeProcess.BeginHold: return CoBeginHold();
+            case EWeaponMakeProcess.Ready: return CoReady();
+            case EWeaponMakeProcess.Progress: return CoProgress();
+            case EWeaponMakeProcess.Finish: return CoFinish();
+            case EWeaponMakeProcess.Enhancement: return CoEnhancement();
+            case EWeaponMakeProcess.EnhancementProgress: return CoEnhancementProgress();
+            case EWeaponMakeProcess.Sell: return CoSell();
+        }
+
+        return null;
+    }
+    #endregion
+
+    #region FSM States
+    private IEnumerator CoBeginHold()
+    {
+        WeaponHp = 0;
+        //currentWeaponInfo = null;
+        useCoal = false;
+
+        while (makeProcessState == EWeaponMakeProcess.BeginHold)
+            yield return null;
+    }
+
+    private IEnumerator CoReady()
+    {
+        Managers.Player.CurrencySubtract(Define.ECurrency.Iron, currentWeaponInfo.Iron);
+
+        coalCTS?.Cancel();
+        coalCTS = null;
+
+        useCoal = false;
+
+        WeaponHp = 0;
+        WeaponMaxHp = currentWeaponInfo.HP;
+
+        while (makeProcessState == EWeaponMakeProcess.Ready)
+            yield return null;
+    }
+
+    private IEnumerator CoProgress()
+    {
+        while (makeProcessState == EWeaponMakeProcess.Progress)
+            yield return null;
+    }
+
+    private IEnumerator CoFinish()
+    {
+        TryShakeCameraRandom();
+        Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
+
+        yield return new WaitForSeconds(0.15f);
+
+        ChangeState(EWeaponMakeProcess.Enhancement);
+    }
+
+    private IEnumerator CoEnhancement()
+    {
+        enhancementCountTime = 3f;
+        EnhancmentLevel = 1;
+
+        while (makeProcessState == EWeaponMakeProcess.Enhancement)
+        {
+            EnhancementCountTime -= Time.deltaTime;
+
+            if (enhancementCountTime <= 0)
+            {
+                EnhancementCountTime = 0f;
+                ChangeState(EWeaponMakeProcess.Sell);
+                yield break;
+            }
+
+            yield return null;
+        }
+    }
+
+    private IEnumerator CoEnhancementProgress()
+    {
+        ChangeState(EWeaponMakeProcess.Sell);
+
+        yield return null;
+    }
+
+    private IEnumerator CoSell()
+    {
+        EnhancementCountTime = 0;
+
+        if (currentWeaponInfo != null)
+        {
+            int price = GetSellPrice();
+
+            Managers.Player.CurrencyAdd(Define.ECurrency.Gold, price);
+        }
+
+        ChangeState(EWeaponMakeProcess.BeginHold);
+        yield return null;
+    }
+    #endregion
+
+    #region GameLogic
 
     // 게임씬 들어가면 호출
     public void GameInit()
     {
-        makeProcessState = EWeaponMakeProcess.BeginHold;
+        makeProcessState = EWeaponMakeProcess.None;
+        ChangeState(EWeaponMakeProcess.BeginHold);
 
         regenerateIronCTS = new CancellationTokenSource();
         regenerateCoalCTS = new CancellationTokenSource();
@@ -208,17 +343,23 @@ public class GameManager
         RegenerateResource(Define.ECurrency.Coal, Define.EPlayerTownStat.RegenerateCoal, regenerateCoalCTS.Token).Forget();
     }
 
-    public float CalcWeaponHit()
+    public void CalcWeaponHit()
     {
-        if (makeProcessState != EWeaponMakeProcess.BeginHold && makeProcessState != EWeaponMakeProcess.Ready && makeProcessState != EWeaponMakeProcess.Progress)
-            return (float)WeaponHp / WeaponMaxHp;
+        //if (makeProcessState != EWeaponMakeProcess.BeginHold && makeProcessState != EWeaponMakeProcess.Ready && makeProcessState != EWeaponMakeProcess.Progress)
+        //    return (float)WeaponHp / WeaponMaxHp;
 
         if(makeProcessState == EWeaponMakeProcess.BeginHold)
         {
             StartWeaponMake(currentWeaponInfo.TemplateId);
         }
 
-        makeProcessState = EWeaponMakeProcess.Progress;
+        if (makeProcessState == EWeaponMakeProcess.Ready)
+            ChangeState(EWeaponMakeProcess.Progress);
+
+        //makeProcessState = EWeaponMakeProcess.Progress;
+
+        if (makeProcessState != EWeaponMakeProcess.Progress)
+            return;
 
         // Check Coal
         var needCoal = currentWeaponInfo.Coal;
@@ -228,7 +369,7 @@ public class GameManager
             if (needCoal > Managers.Player.GetCurrency(Define.ECurrency.Coal))
             {
                 // TODO 석탄 부족 표시
-                return (float)WeaponHp / WeaponMaxHp;
+                return;
             }
 
             UseCoal().Forget();
@@ -238,9 +379,8 @@ public class GameManager
 
         if (currentWeaponHp >= WeaponMaxHp)
         {
-            currentWeaponHp = WeaponMaxHp;
-            WeaponHp = currentWeaponHp;
-            MakeFinish();
+            WeaponHp = WeaponMaxHp;
+            ChangeState(EWeaponMakeProcess.Finish);
         }
         else
         {
@@ -252,8 +392,9 @@ public class GameManager
 
         //Debug.Log(weaponHp);
 
-        return (float)WeaponHp / WeaponMaxHp;
+        return;
     }
+
 
     public bool StartWeaponMake(int templateId)
     {
@@ -268,46 +409,10 @@ public class GameManager
         if (weaponInfo.Iron > Managers.Player.GetCurrency(Define.ECurrency.Iron))
             return false;
 
-
-        Managers.Player.CurrencySubtract(Define.ECurrency.Iron, weaponInfo.Iron);
-
-        makeProcessState = EWeaponMakeProcess.Ready;
         currentWeaponInfo = weaponInfo;
-
-        coalCTS?.Cancel();
-        coalCTS = null;
-
-        useCoal = false;
-
-        WeaponHp = 0;
-        WeaponMaxHp = currentWeaponInfo.HP;
-
-        OnWeaponHpChanged?.Invoke();
+        ChangeState(EWeaponMakeProcess.Ready);
 
         return true;
-    }
-
-    private void MakeFinish()
-    {
-        if (currentWeaponInfo == null)
-            return;
-
-        TryShakeCameraRandom();
-        Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
-        makeProcessState = EWeaponMakeProcess.Finish;
-
-        // TODO Enhancement
-        enhancementCountTime = 3f;
-        enhancmentLevel = 1;
-        makeProcessState = EWeaponMakeProcess.Enhancement;
-        
-
-        // TODO Sell
-        
-
-        // TODO Restart
-        //StartWeaponMake(currentWeaponInfo.TemplateId);
-        //makeProcessState = EWeaponMakeProcess.BeginHold;
     }
 
     public float GetEnhancementCount()
@@ -318,6 +423,30 @@ public class GameManager
         return -1f;
     }
 
+    public int GetEnhancementLevel()
+    {
+        if (makeProcessState == EWeaponMakeProcess.Enhancement)
+            return EnhancmentLevel;
+
+        return 0;
+    }
+
+    public float GetEnhancementPercent()
+    {
+        var info = Managers.Data.EnhancementDict[EnhancmentLevel];
+
+        float returnValue = (float)info.EnhancementSucess / info.BasicSucess;
+        returnValue = Mathf.Round(returnValue * 10000f)/100f;
+
+        return returnValue;
+    }
+
+    public int GetSellPrice()
+    {
+        var price = currentWeaponInfo.Price * Managers.Data.EnhancementDict[EnhancmentLevel - 1].Price;
+        return (int)price;
+    }
+
     public void SellWeapon()
     {
         if (makeProcessState != EWeaponMakeProcess.Finish && makeProcessState != EWeaponMakeProcess.Enhancement)
@@ -326,23 +455,15 @@ public class GameManager
         if (currentWeaponInfo == null)
             return;
 
-        makeProcessState = EWeaponMakeProcess.Sell;
-
-        OnEnhancementCountChanged?.Invoke();
-
-        var price = currentWeaponInfo.Price * Managers.Data.EnhancementDict[enhancmentLevel - 1].Price;
-
-
-        Managers.Player.CurrencyAdd(Define.ECurrency.Gold, (int)price);
-
-        WeaponHp = 0;
-
-        makeProcessState = EWeaponMakeProcess.BeginHold;
+        ChangeState(EWeaponMakeProcess.Sell);
     }
 
     public void DoEnhancemenet()
     {
-        Data.EnhancementData enhancementData = Managers.Data.EnhancementDict[enhancmentLevel];
+        if (makeProcessState != EWeaponMakeProcess.Enhancement)
+            return;
+
+        Data.EnhancementData enhancementData = Managers.Data.EnhancementDict[EnhancmentLevel];
 
         if (enhancementData == null)
             return;
@@ -353,14 +474,14 @@ public class GameManager
         
         if(value <= enhancementData.EnhancementSucess)
         {
-            enhancmentLevel++;
+            EnhancmentLevel++;
             enhancementCountTime = 3f;
         }
         else
         {
-            WeaponHp = 0;
-            enhancmentLevel = 0;
-            makeProcessState = EWeaponMakeProcess.BeginHold;
+            EnhancmentLevel = 0;
+            enhancementCountTime = 0f;
+            ChangeState(EWeaponMakeProcess.BeginHold);
         }
     }
 

@@ -29,7 +29,9 @@ public class UI_GameScene : UI_Scene
         Text_Iron,
         Text_Coal,
         FpsText,
-        Text_EnhancementCountDown
+        Text_EnhancementCountDown,
+        Text_EnhancementPercent,
+        Text_SellPrice,
     }
 
     enum Sliders
@@ -81,12 +83,15 @@ public class UI_GameScene : UI_Scene
         Managers.Player.OnCurrenciesChagned += RefreshUI;
         Managers.Game.OnEnhancementCountChanged -= RefreshUI;
         Managers.Game.OnEnhancementCountChanged += RefreshUI;
+        Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
+        Managers.Game.OnEnhancementPercentChanged += RefreshUI;
     }
 
     private void OnDisable()
     {
         Managers.Player.OnCurrenciesChagned -= RefreshUI;
         Managers.Game.OnEnhancementCountChanged -= RefreshUI;
+        Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
     }
 
     public void SetInfo()
@@ -113,6 +118,24 @@ public class UI_GameScene : UI_Scene
 
             GetText((int)Texts.Text_EnhancementCountDown).text = ((int)countTime).ToString();
             GetImage((int)Images.Image_EnhancementCountDown).fillAmount = countTime - (int)countTime;
+        }
+
+        var enhancementLevel = Managers.Game.GetEnhancementLevel();
+        if(enhancementLevel == 0)
+        {
+            GetText((int)Texts.Text_EnhancementPercent).gameObject.SetActive(false);
+            GetText((int)Texts.Text_SellPrice).gameObject.SetActive(false);
+        }
+        else
+        {
+            GetText((int)Texts.Text_EnhancementPercent).gameObject.SetActive(true);
+            GetText((int)Texts.Text_SellPrice).gameObject.SetActive(true);
+
+            var percent = Managers.Game.GetEnhancementPercent();
+            GetText((int)Texts.Text_EnhancementPercent).text = percent.ToString();
+
+            var price = Managers.Game.GetSellPrice();
+            GetText((int)Texts.Text_SellPrice).text = price.ToString();
         }
     }
 
