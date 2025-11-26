@@ -1,6 +1,12 @@
 {
   "enhancements": [
     {
+      "EnhancementLevel": 0,
+      "EnhancementSucess": 100000000,
+      "BasicSucess": 100000000,
+      "Price": 1.0
+    },
+    {
       "EnhancementLevel": 1,
       "EnhancementSucess": 90000000,
       "BasicSucess": 100000000,

@@ -1,6 +1,7 @@
 using System.Linq;
 using Data;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 public class UI_GameScene : UI_Scene
@@ -13,12 +14,13 @@ public class UI_GameScene : UI_Scene
 
     enum Images
     {
-
+        Image_EnhancementCountDown,
     }
 
     enum Buttons
     {
-
+        Button_ForgeEnhancement,
+        Button_ForgeSell,
     }
 
     enum Texts
@@ -26,7 +28,8 @@ public class UI_GameScene : UI_Scene
         Text_Gold,
         Text_Iron,
         Text_Coal,
-        FpsText
+        FpsText,
+        Text_EnhancementCountDown
     }
 
     enum Sliders
@@ -49,6 +52,9 @@ public class UI_GameScene : UI_Scene
         RefreshUI();
 
         WeaponSelectReset();
+
+        GetButton((int)Buttons.Button_ForgeEnhancement).gameObject.BindEvent(OnClickedForgeEnhancementButton);
+        GetButton((int)Buttons.Button_ForgeSell).gameObject.BindEvent(OnClickedForgeSellButton);
     }
 
     private float elapsedTime;
@@ -73,11 +79,14 @@ public class UI_GameScene : UI_Scene
     {
         Managers.Player.OnCurrenciesChagned -= RefreshUI;
         Managers.Player.OnCurrenciesChagned += RefreshUI;
+        Managers.Game.OnEnhancementCountChanged -= RefreshUI;
+        Managers.Game.OnEnhancementCountChanged += RefreshUI;
     }
 
     private void OnDisable()
     {
         Managers.Player.OnCurrenciesChagned -= RefreshUI;
+        Managers.Game.OnEnhancementCountChanged -= RefreshUI;
     }
 
     public void SetInfo()
@@ -90,6 +99,21 @@ public class UI_GameScene : UI_Scene
         GetText((int)Texts.Text_Gold).text = Managers.Player.GetCurrency(Define.ECurrency.Gold).ToString();
         GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToString();
         GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToString();
+
+        var countTime = Managers.Game.GetEnhancementCount();
+        if(countTime < 0)
+        {
+            GetImage((int)Images.Image_EnhancementCountDown).gameObject.SetActive(false);
+            GetText((int)Texts.Text_EnhancementCountDown).gameObject.SetActive(false);
+        }
+        else
+        {
+            GetImage((int)Images.Image_EnhancementCountDown).gameObject.SetActive(true);
+            GetText((int)Texts.Text_EnhancementCountDown).gameObject.SetActive(true);
+
+            GetText((int)Texts.Text_EnhancementCountDown).text = ((int)countTime).ToString();
+            GetImage((int)Images.Image_EnhancementCountDown).fillAmount = countTime - (int)countTime;
+        }
     }
 
     private void WeaponSelectReset()
@@ -101,5 +125,15 @@ public class UI_GameScene : UI_Scene
             var item = Managers.UI.MakeSubItem<UI_WeaponSelectSubItem>(GetGameObject((int)GameObjects.WeaponContent).transform);
             item.SetInfo(weapon.TemplateId);
         }
+    }
+
+    private void OnClickedForgeEnhancementButton(PointerEventData eventData)
+    {
+        Managers.Game.DoEnhancemenet();
+    }
+
+    private void OnClickedForgeSellButton(PointerEventData eventData)
+    {
+        Managers.Game.SellWeapon();
     }
 }

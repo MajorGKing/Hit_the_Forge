@@ -79,12 +79,12 @@ public class UI_BattleBarWorldSpace : UI_WorldSpace
 
     private void OnEnable() 
     {
-        Managers.Game.OnWeaponHpChagned -= RefreshUI;
-        Managers.Game.OnWeaponHpChagned += RefreshUI;
+        Managers.Game.OnWeaponHpChanged -= RefreshUI;
+        Managers.Game.OnWeaponHpChanged += RefreshUI;
     }
 
     private void OnDisable() 
     {
-        Managers.Game.OnWeaponHpChagned -= RefreshUI;
+        Managers.Game.OnWeaponHpChanged -= RefreshUI;
     }
 }
