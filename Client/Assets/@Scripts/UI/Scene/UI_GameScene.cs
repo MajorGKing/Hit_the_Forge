@@ -9,7 +9,16 @@ public class UI_GameScene : UI_Scene
     #region Enum
     enum GameObjects
     {
-        WeaponContent
+        WeaponContent,
+        Object_PlayerUpgrade,
+        Object_ForgeUpgrade,
+        Object_TownUpgrade,
+        Object_ShopUpgrade,
+        Object_PlayerUpgradeRedDot,
+        Object_ForgeUpgradeRedDot,
+        Object_TownUpgradeRedDot,
+        Object_ShopUpgradeRedDot,
+
     }
 
     enum Images
@@ -39,7 +48,19 @@ public class UI_GameScene : UI_Scene
 
     }
 
+    enum Toggles
+    {
+        Toggle_PlayerUpgrade,
+        Toggle_ForgeUpgrade,
+        Toggle_TownUpgrade,
+        Toggle_ShopUpgrade,
+    }
     #endregion
+
+    private bool _isSelectedPlayer = false;
+    private bool _isSelectedForge = false;
+    private bool _isSelectedTown = false;
+    private bool _isSelectedShop = false;
 
     protected override void Awake()
     {
@@ -50,6 +71,7 @@ public class UI_GameScene : UI_Scene
         BindTexts(typeof(Texts));
         BindImages(typeof(Images));
         BindSliders(typeof(Sliders));
+        BindToggles(typeof(Toggles));
 
         RefreshUI();
 
@@ -57,6 +79,13 @@ public class UI_GameScene : UI_Scene
 
         GetButton((int)Buttons.Button_ForgeEnhancement).gameObject.BindEvent(OnClickedForgeEnhancementButton);
         GetButton((int)Buttons.Button_ForgeSell).gameObject.BindEvent(OnClickedForgeSellButton);
+
+        GetToggle((int)Toggles.Toggle_PlayerUpgrade).gameObject.BindEvent(OnClickPlayerToogle);
+        GetToggle((int)Toggles.Toggle_ForgeUpgrade).gameObject.BindEvent(OnClickForgeToogle);
+        GetToggle((int)Toggles.Toggle_TownUpgrade).gameObject.BindEvent(OnClickTownToogle);
+        GetToggle((int)Toggles.Toggle_ShopUpgrade).gameObject.BindEvent(OnClickShopToogle);
+
+        TogglesInit();
     }
 
     private float elapsedTime;
@@ -159,4 +188,57 @@ public class UI_GameScene : UI_Scene
     {
         Managers.Game.SellWeapon();
     }
+
+    #region Toggle
+
+    private void TogglesInit()
+    {
+        GetGameObject((int)GameObjects.Object_PlayerUpgrade).SetActive(false);
+        GetGameObject((int)GameObjects.Object_ForgeUpgrade).SetActive(false);
+        GetGameObject((int)GameObjects.Object_TownUpgrade).SetActive(false);
+        GetGameObject((int)GameObjects.Object_ShopUpgrade).SetActive(false);
+
+        _isSelectedPlayer = false;
+        _isSelectedForge = false;
+        _isSelectedTown = false;
+        _isSelectedShop = false;
+
+        GetGameObject((int)GameObjects.Object_PlayerUpgradeRedDot).SetActive(false);
+        GetGameObject((int)GameObjects.Object_ForgeUpgradeRedDot).SetActive(false);
+        GetGameObject((int)GameObjects.Object_TownUpgradeRedDot).SetActive(false);
+        GetGameObject((int)GameObjects.Object_ShopUpgradeRedDot).SetActive(false);
+    }
+
+    private void OnClickPlayerToogle(PointerEventData eventData)
+    {
+        TogglesInit();
+
+        GetGameObject((int)GameObjects.Object_PlayerUpgrade).SetActive(true);
+        _isSelectedPlayer = true;
+    }
+
+    private void OnClickForgeToogle(PointerEventData eventData)
+    {
+        TogglesInit();
+
+        GetGameObject((int)GameObjects.Object_ForgeUpgrade).SetActive(true);
+        _isSelectedForge = true;
+    }
+
+    private void OnClickTownToogle(PointerEventData eventData)
+    {
+        TogglesInit();
+
+        GetGameObject((int)GameObjects.Object_TownUpgrade).SetActive(true);
+        _isSelectedTown = true;
+    }
+
+    private void OnClickShopToogle(PointerEventData eventData)
+    {
+        TogglesInit();
+
+        GetGameObject((int)GameObjects.Object_ShopUpgrade).SetActive(true);
+        _isSelectedShop = true;
+    }
+    #endregion
 }

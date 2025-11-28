@@ -19,7 +19,7 @@ public class TitleScene : BaseScene
         QualitySettings.vSyncCount = 0;  
         GraphicsSettings.transparencySortMode = TransparencySortMode.CustomAxis;
         GraphicsSettings.transparencySortAxis = new Vector3(0.0f, 1.0f, 0.0f);
-	}
+    }
 
 	protected override void Start()
     {
