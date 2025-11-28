@@ -5,7 +5,8 @@ public class PlayerManager
 {
     private int[] currency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
     public int[] maxCurrency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
-    private int[] playerStat = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
+    //private int[] playerStat = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
+    private int[] playerStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] forgeStat = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
     private int[] townStat = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
     
@@ -26,9 +27,15 @@ public class PlayerManager
         currency[(int)Define.ECurrency.Iron] = 5000;
         currency[(int)Define.ECurrency.Coal] = 5000;
 
-        playerStat[(int)Define.EPlayerStat.Str] = 10;
-        playerStat[(int)Define.EPlayerStat.Skill] = 10;
-        playerStat[(int)Define.EPlayerStat.Dex] = 10;
+        //playerStat[(int)Define.EPlayerStat.Str] = 10;
+        //playerStat[(int)Define.EPlayerStat.Skill] = 10;
+        //playerStat[(int)Define.EPlayerStat.Dex] = 10;
+        //playerStat[(int)Define.EPlayerStat.Mastery] = 10;
+
+        playerStatLevel[(int)Define.EPlayerStat.Str] = 1;
+        playerStatLevel[(int)Define.EPlayerStat.Skill] = 101;
+        playerStatLevel[(int)Define.EPlayerStat.Dex] = 0;
+        playerStatLevel[(int)Define.EPlayerStat.Mastery] = 201;
 
         forgeStat[(int)Define.EPlayerForgeStat.CoalTime] = 1000;
 
@@ -89,7 +96,9 @@ public class PlayerManager
 
     public int GetPlayerStat(Define.EPlayerStat type)
     {
-        return playerStat[(int)type];
+        var statData = Managers.Data.PlayerUpgradeDict[playerStatLevel[(int)type]];
+
+        return statData.CurrentValue;
     }
 
     public int GetForgeStat(Define.EPlayerForgeStat type)
@@ -100,6 +109,27 @@ public class PlayerManager
     public int GetTownStat(Define.EPlayerTownStat type)
     {
         return townStat[(int)type];
+    }
+
+    public int[] GetPlayerAllStat()
+    {
+        return playerStatLevel;
+    }
+
+    public void PlayerStatUpgrade(Define.EPlayerStat type)
+    {
+        Managers.Data.PlayerUpgradeDict.TryGetValue(playerStatLevel[(int)type], out var data);
+
+        if (data == null)
+            return;
+
+        // Gold 체크
+
+        // 다음 레벨 가능 여부 체크
+
+        // Gold 깍고 레벨업
+
+        // invoke
     }
 
     #region Action

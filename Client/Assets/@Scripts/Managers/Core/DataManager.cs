@@ -17,15 +17,16 @@ public class DataManager
     private HashSet<IValidate> _loaders = new HashSet<IValidate>();
 
     public Dictionary<string, Data.TextData> TextDict { get; private set; } = new Dictionary<string, Data.TextData>();
-
     public Dictionary<int, Data.WeaponData> WeaponDict { get; private set; } = new Dictionary<int, Data.WeaponData>();
     public Dictionary<int, Data.EnhancementData> EnhancementDict { get; private set; } = new Dictionary<int, Data.EnhancementData>();
+    public Dictionary<int, Data.PlayerUpgradeData> PlayerUpgradeDict { get; private set; } = new Dictionary<int, Data.PlayerUpgradeData>();
 
     public void Init()
     {
         TextDict = LoadJson<Data.TextDataLoader, string, Data.TextData>("TextData").MakeDict();
         WeaponDict = LoadJson<Data.WeaponDataLoader, int, Data.WeaponData>("WeaponData").MakeDict();
         EnhancementDict = LoadJson<Data.EnhancementDataLoader, int, Data.EnhancementData>("EnhancementData").MakeDict();
+        PlayerUpgradeDict = LoadJson<Data.PlayerUpgradeDataLoader, int, Data.PlayerUpgradeData>("PlayerUpgradeData").MakeDict();
         Validate();
     }
 

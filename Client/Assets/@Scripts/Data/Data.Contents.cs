@@ -143,4 +143,37 @@ namespace Data
     }
     #endregion
 
+    #region
+    [Serializable]
+    public class PlayerUpgradeData
+    {
+        public int TemplateId;
+        public string UpgradeName;
+        public Define.EPlayerStat StatType;
+        public int Price;
+        public int CurrentValue;
+        public int NextValue;
+        public int OriginalTemplateId;
+        public int NextTempalteId;
+    }
+
+    [Serializable]
+    public class PlayerUpgradeDataLoader : ILoader<int, PlayerUpgradeData>
+    {
+        public List<PlayerUpgradeData> upgrades = new List<PlayerUpgradeData>();
+        public Dictionary<int, PlayerUpgradeData> MakeDict()
+        {
+            Dictionary<int, PlayerUpgradeData> dict = new Dictionary<int, PlayerUpgradeData>();
+            foreach (PlayerUpgradeData upgrade in upgrades)
+                dict.Add(upgrade.TemplateId, upgrade);
+            return dict;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+    }
+    #endregion
+
 }

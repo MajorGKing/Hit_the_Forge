@@ -20,6 +20,7 @@ public class DataTransformer : EditorWindow
     {
         ParseExcelDataToJson<WeaponDataLoader, WeaponData>("Weapon");
         ParseExcelDataToJson<EnhancementDataLoader, EnhancementData>("Enhancement");
+        ParseExcelDataToJson<PlayerUpgradeDataLoader, PlayerUpgradeData>("PlayerUpgrade");
         Debug.Log("Complete DataTransformer");
     }
 

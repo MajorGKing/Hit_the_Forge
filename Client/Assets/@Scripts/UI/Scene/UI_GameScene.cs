@@ -1,5 +1,3 @@
-using System.Linq;
-using Data;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -18,6 +16,7 @@ public class UI_GameScene : UI_Scene
         Object_ForgeUpgradeRedDot,
         Object_TownUpgradeRedDot,
         Object_ShopUpgradeRedDot,
+        PlayerUpgradeContent,
 
     }
 
@@ -166,6 +165,25 @@ public class UI_GameScene : UI_Scene
             var price = Managers.Game.GetSellPrice();
             GetText((int)Texts.Text_SellPrice).text = price.ToString();
         }
+
+        // 플레이어 업그레이드 아이템 갱신
+        if (_isSelectedPlayer == true)
+        {
+            GetGameObject((int)GameObjects.PlayerUpgradeContent).DestroyChildren();
+            var playerLevels = Managers.Player.GetPlayerAllStat();
+
+            foreach (var level in playerLevels)
+            {
+                Managers.Data.PlayerUpgradeDict.TryGetValue(level, out var data);
+
+                if (data != null)
+                {
+                    var item = Managers.UI.MakeSubItem<UI_UpgradeSubItem>(GetGameObject((int)GameObjects.PlayerUpgradeContent).transform);
+
+                    item.SetInfo(Define.EUpgradeType.Player, data.TemplateId);
+                }
+            }
+        }
     }
 
     private void WeaponSelectReset()
@@ -215,6 +233,8 @@ public class UI_GameScene : UI_Scene
 
         GetGameObject((int)GameObjects.Object_PlayerUpgrade).SetActive(true);
         _isSelectedPlayer = true;
+
+        RefreshUI();
     }
 
     private void OnClickForgeToogle(PointerEventData eventData)

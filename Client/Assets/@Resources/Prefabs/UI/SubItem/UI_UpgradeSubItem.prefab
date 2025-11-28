@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8583385508616995242}
   - component: {fileID: 6580012616593344761}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text_UpgradePrice
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -221,6 +221,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7027243755573849426}
   - component: {fileID: 3251153891099325798}
+  - component: {fileID: 8679459299353903151}
   m_Layer: 0
   m_Name: UI_UpgradeSubItem
   m_TagString: Untagged
@@ -277,6 +278,19 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &8679459299353903151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4081813884900744991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d85284fd0883c4496fc22a9f31167f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UI_UpgradeSubItem
+  _parentScrollRect: {fileID: 0}
 --- !u!1 &6527700803324894838
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +303,7 @@ GameObject:
   - component: {fileID: 7115984267811236413}
   - component: {fileID: 8283031274431920092}
   m_Layer: 0
-  m_Name: Image
+  m_Name: Image_Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -364,7 +378,7 @@ GameObject:
   - component: {fileID: 4712576254278939583}
   - component: {fileID: 2913623253860769359}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text_UpgradeDiscribe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -502,7 +516,7 @@ GameObject:
   - component: {fileID: 4055890499394989176}
   - component: {fileID: 4256146395897711680}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button_Upgrade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -623,7 +637,7 @@ GameObject:
   - component: {fileID: 6843154521775217840}
   - component: {fileID: 6800299100493880703}
   m_Layer: 0
-  m_Name: Text (TMP)
+  m_Name: Text_UpgradeStat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

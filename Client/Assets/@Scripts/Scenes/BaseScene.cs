@@ -27,9 +27,6 @@ public abstract class BaseScene : MonoBehaviour
         int deviceWidth = Screen.width; // 기기 너비 저장
         int deviceHeight = Screen.height; // 기기 높이 저장
 
-        Debug.Log($"Width : {deviceWidth} Height : {deviceHeight}");
-        Debug.Log($"new Width : {(int)(((float)deviceWidth / deviceHeight) * setHeight)}");
-
         Screen.SetResolution((int)(((float)deviceWidth / deviceHeight) * setHeight), setHeight, true); // SetResolution 함수 제대로 사용하기
         //Screen.SetResolution(setWidth, (int)(((float)deviceHeight / deviceWidth) * setWidth), true); // SetResolution 함수 제대로 사용하기
 

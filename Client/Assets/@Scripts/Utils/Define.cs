@@ -84,11 +84,21 @@ public class Define
         Coal,
     }
 
+    public enum EUpgradeType
+    {
+        None,
+        Player,
+        Forge,
+        Town,
+        Shop
+    }
+
     public enum EPlayerStat
     {
         Str,
         Skill,
         Dex,
+        Mastery,
     }
 
     public enum EPlayerForgeStat

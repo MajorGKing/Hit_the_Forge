@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Prefabs
   m_GUID: 6855a303d91ea534cad059887528a9c1
   m_SerializeEntries:
+  - m_GUID: 5f2196ee0f5ccdc439746ad4b77afe0a
+    m_Address: UI_UpgradeSubItem
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: ad814e28c3e6b294f8a7baa023c1c72a
     m_Address: UI_WeaponSelectSubItem
     m_ReadOnly: 0
