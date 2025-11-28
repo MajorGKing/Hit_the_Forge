@@ -86,7 +86,7 @@ public class UI_TitleScene : UI_Scene
 		Managers.Resource.LoadAllAsync<Object>("Preload", (key, count, totalCount) =>
 		{
 			GetText((int)Texts.StatusText).text = $"TODO ·ÎµùÁß : {key} {count}/{totalCount}";
-            Debug.Log(GetText((int)Texts.StatusText).text);
+            //Debug.Log(GetText((int)Texts.StatusText).text);
 
             if (count == totalCount)
 			{

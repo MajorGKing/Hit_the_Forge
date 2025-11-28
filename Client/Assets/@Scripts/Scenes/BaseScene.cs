@@ -27,17 +27,21 @@ public abstract class BaseScene : MonoBehaviour
         int deviceWidth = Screen.width; // 기기 너비 저장
         int deviceHeight = Screen.height; // 기기 높이 저장
 
-        Screen.SetResolution(setWidth, (int)(((float)deviceHeight / deviceWidth) * setWidth), true); // SetResolution 함수 제대로 사용하기
+        Debug.Log($"Width : {deviceWidth} Height : {deviceHeight}");
+        Debug.Log($"new Width : {(int)(((float)deviceWidth / deviceHeight) * setHeight)}");
 
-        if ((float)setWidth / setHeight < (float)deviceWidth / deviceHeight) // 기기의 해상도 비가 더 큰 경우
+        Screen.SetResolution((int)(((float)deviceWidth / deviceHeight) * setHeight), setHeight, true); // SetResolution 함수 제대로 사용하기
+        //Screen.SetResolution(setWidth, (int)(((float)deviceHeight / deviceWidth) * setWidth), true); // SetResolution 함수 제대로 사용하기
+
+        if ((float)setHeight / setWidth < (float)deviceHeight/ deviceWidth) // 기기의 해상도 비가 더 큰 경우
         {
-            float newWidth = ((float)setWidth / setHeight) / ((float)deviceWidth / deviceHeight); // 새로운 너비
-            Camera.main.rect = new Rect((1f - newWidth) / 2f, 0f, newWidth, 1f); // 새로운 Rect 적용
+            float newWidth = ((float)setHeight/ setWidth) / ((float)deviceHeight/ deviceWidth); // 새로운 너비
+            Camera.main.rect = new Rect(0f, (1f - newWidth) / 2f, 1f, newWidth); // 새로운 Rect 적용
         }
         else // 게임의 해상도 비가 더 큰 경우
         {
-            float newHeight = ((float)deviceWidth / deviceHeight) / ((float)setWidth / setHeight); // 새로운 높이
-            Camera.main.rect = new Rect(0f, (1f - newHeight) / 2f, 1f, newHeight); // 새로운 Rect 적용
+            float newHeight = ((float)deviceHeight/ deviceWidth) / ((float)setHeight/ setWidth); // 새로운 높이
+            Camera.main.rect = new Rect((1f - newHeight) / 2f, 0f, newHeight, 1f); // 새로운 Rect 적용
         }
     }
 }
