@@ -1,0 +1,1404 @@
+{
+  "upgrades": [
+    {
+      "StatType": 0,
+      "TemplateId": 1,
+      "UpgradeName": "GoldMaxLevel1",
+      "Price": 100,
+      "CurrentValue": 5000,
+      "NextValue": 5100,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 2
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 2,
+      "UpgradeName": "GoldMaxLevel2",
+      "Price": 100,
+      "CurrentValue": 5100,
+      "NextValue": 5200,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 3
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 3,
+      "UpgradeName": "GoldMaxLevel3",
+      "Price": 100,
+      "CurrentValue": 5200,
+      "NextValue": 5300,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 4
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 4,
+      "UpgradeName": "GoldMaxLevel4",
+      "Price": 100,
+      "CurrentValue": 5300,
+      "NextValue": 5400,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 5
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 5,
+      "UpgradeName": "GoldMaxLevel5",
+      "Price": 100,
+      "CurrentValue": 5400,
+      "NextValue": 5500,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 6
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 6,
+      "UpgradeName": "GoldMaxLevel6",
+      "Price": 100,
+      "CurrentValue": 5500,
+      "NextValue": 5600,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 7
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 7,
+      "UpgradeName": "GoldMaxLevel7",
+      "Price": 100,
+      "CurrentValue": 5600,
+      "NextValue": 5700,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 8
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 8,
+      "UpgradeName": "GoldMaxLevel8",
+      "Price": 100,
+      "CurrentValue": 5700,
+      "NextValue": 5800,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 9
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 9,
+      "UpgradeName": "GoldMaxLevel9",
+      "Price": 100,
+      "CurrentValue": 5800,
+      "NextValue": 5900,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 10
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 10,
+      "UpgradeName": "GoldMaxLevel10",
+      "Price": 100,
+      "CurrentValue": 5900,
+      "NextValue": 6000,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 11
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 11,
+      "UpgradeName": "GoldMaxLevel11",
+      "Price": 100,
+      "CurrentValue": 6000,
+      "NextValue": 6100,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 12
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 12,
+      "UpgradeName": "GoldMaxLevel12",
+      "Price": 100,
+      "CurrentValue": 6100,
+      "NextValue": 6200,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 13
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 13,
+      "UpgradeName": "GoldMaxLevel13",
+      "Price": 100,
+      "CurrentValue": 6200,
+      "NextValue": 6300,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 14
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 14,
+      "UpgradeName": "GoldMaxLevel14",
+      "Price": 100,
+      "CurrentValue": 6300,
+      "NextValue": 6400,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 15
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 15,
+      "UpgradeName": "GoldMaxLevel15",
+      "Price": 100,
+      "CurrentValue": 6400,
+      "NextValue": 6500,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 16
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 16,
+      "UpgradeName": "GoldMaxLevel16",
+      "Price": 100,
+      "CurrentValue": 6500,
+      "NextValue": 6600,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 17
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 17,
+      "UpgradeName": "GoldMaxLevel17",
+      "Price": 100,
+      "CurrentValue": 6600,
+      "NextValue": 6700,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 18
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 18,
+      "UpgradeName": "GoldMaxLevel18",
+      "Price": 100,
+      "CurrentValue": 6700,
+      "NextValue": 6800,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 19
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 19,
+      "UpgradeName": "GoldMaxLevel19",
+      "Price": 100,
+      "CurrentValue": 6800,
+      "NextValue": 6900,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 20
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 20,
+      "UpgradeName": "GoldMaxLevel20",
+      "Price": 100,
+      "CurrentValue": 6900,
+      "NextValue": 7000,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 101,
+      "UpgradeName": "IronMaxLevel1",
+      "Price": 100,
+      "CurrentValue": 5000,
+      "NextValue": 5100,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 102
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 102,
+      "UpgradeName": "IronMaxLevel2",
+      "Price": 100,
+      "CurrentValue": 5100,
+      "NextValue": 5200,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 103
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 103,
+      "UpgradeName": "IronMaxLevel3",
+      "Price": 100,
+      "CurrentValue": 5200,
+      "NextValue": 5300,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 104
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 104,
+      "UpgradeName": "IronMaxLevel4",
+      "Price": 100,
+      "CurrentValue": 5300,
+      "NextValue": 5400,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 105
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 105,
+      "UpgradeName": "IronMaxLevel5",
+      "Price": 100,
+      "CurrentValue": 5400,
+      "NextValue": 5500,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 106
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 106,
+      "UpgradeName": "IronMaxLevel6",
+      "Price": 100,
+      "CurrentValue": 5500,
+      "NextValue": 5600,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 107
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 107,
+      "UpgradeName": "IronMaxLevel7",
+      "Price": 100,
+      "CurrentValue": 5600,
+      "NextValue": 5700,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 108
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 108,
+      "UpgradeName": "IronMaxLevel8",
+      "Price": 100,
+      "CurrentValue": 5700,
+      "NextValue": 5800,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 109
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 109,
+      "UpgradeName": "IronMaxLevel9",
+      "Price": 100,
+      "CurrentValue": 5800,
+      "NextValue": 5900,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 110
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 110,
+      "UpgradeName": "IronMaxLevel10",
+      "Price": 100,
+      "CurrentValue": 5900,
+      "NextValue": 6000,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 111
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 111,
+      "UpgradeName": "IronMaxLevel11",
+      "Price": 100,
+      "CurrentValue": 6000,
+      "NextValue": 6100,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 112
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 112,
+      "UpgradeName": "IronMaxLevel12",
+      "Price": 100,
+      "CurrentValue": 6100,
+      "NextValue": 6200,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 113
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 113,
+      "UpgradeName": "IronMaxLevel13",
+      "Price": 100,
+      "CurrentValue": 6200,
+      "NextValue": 6300,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 114
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 114,
+      "UpgradeName": "IronMaxLevel14",
+      "Price": 100,
+      "CurrentValue": 6300,
+      "NextValue": 6400,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 115
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 115,
+      "UpgradeName": "IronMaxLevel15",
+      "Price": 100,
+      "CurrentValue": 6400,
+      "NextValue": 6500,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 116
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 116,
+      "UpgradeName": "IronMaxLevel16",
+      "Price": 100,
+      "CurrentValue": 6500,
+      "NextValue": 6600,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 117
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 117,
+      "UpgradeName": "IronMaxLevel17",
+      "Price": 100,
+      "CurrentValue": 6600,
+      "NextValue": 6700,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 118
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 118,
+      "UpgradeName": "IronMaxLevel18",
+      "Price": 100,
+      "CurrentValue": 6700,
+      "NextValue": 6800,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 119
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 119,
+      "UpgradeName": "IronMaxLevel19",
+      "Price": 100,
+      "CurrentValue": 6800,
+      "NextValue": 6900,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 120
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 120,
+      "UpgradeName": "IronMaxLevel20",
+      "Price": 100,
+      "CurrentValue": 6900,
+      "NextValue": 7000,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 201,
+      "UpgradeName": "IronRegenerationLevel1",
+      "Price": 100,
+      "CurrentValue": 10,
+      "NextValue": 11,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 202
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 202,
+      "UpgradeName": "IronRegenerationLevel2",
+      "Price": 100,
+      "CurrentValue": 11,
+      "NextValue": 12,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 203
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 203,
+      "UpgradeName": "IronRegenerationLevel3",
+      "Price": 100,
+      "CurrentValue": 12,
+      "NextValue": 13,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 204
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 204,
+      "UpgradeName": "IronRegenerationLevel4",
+      "Price": 100,
+      "CurrentValue": 13,
+      "NextValue": 14,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 205
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 205,
+      "UpgradeName": "IronRegenerationLevel5",
+      "Price": 100,
+      "CurrentValue": 14,
+      "NextValue": 15,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 206
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 206,
+      "UpgradeName": "IronRegenerationLevel6",
+      "Price": 100,
+      "CurrentValue": 15,
+      "NextValue": 16,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 207
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 207,
+      "UpgradeName": "IronRegenerationLevel7",
+      "Price": 100,
+      "CurrentValue": 16,
+      "NextValue": 17,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 208
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 208,
+      "UpgradeName": "IronRegenerationLevel8",
+      "Price": 100,
+      "CurrentValue": 17,
+      "NextValue": 18,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 209
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 209,
+      "UpgradeName": "IronRegenerationLevel9",
+      "Price": 100,
+      "CurrentValue": 18,
+      "NextValue": 19,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 210
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 210,
+      "UpgradeName": "IronRegenerationLevel10",
+      "Price": 100,
+      "CurrentValue": 19,
+      "NextValue": 20,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 211
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 211,
+      "UpgradeName": "IronRegenerationLevel11",
+      "Price": 100,
+      "CurrentValue": 20,
+      "NextValue": 21,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 212
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 212,
+      "UpgradeName": "IronRegenerationLevel12",
+      "Price": 100,
+      "CurrentValue": 21,
+      "NextValue": 22,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 213
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 213,
+      "UpgradeName": "IronRegenerationLevel13",
+      "Price": 100,
+      "CurrentValue": 22,
+      "NextValue": 23,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 214
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 214,
+      "UpgradeName": "IronRegenerationLevel14",
+      "Price": 100,
+      "CurrentValue": 23,
+      "NextValue": 24,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 215
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 215,
+      "UpgradeName": "IronRegenerationLevel15",
+      "Price": 100,
+      "CurrentValue": 24,
+      "NextValue": 25,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 216
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 216,
+      "UpgradeName": "IronRegenerationLevel16",
+      "Price": 100,
+      "CurrentValue": 25,
+      "NextValue": 26,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 217
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 217,
+      "UpgradeName": "IronRegenerationLevel17",
+      "Price": 100,
+      "CurrentValue": 26,
+      "NextValue": 27,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 218
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 218,
+      "UpgradeName": "IronRegenerationLevel18",
+      "Price": 100,
+      "CurrentValue": 27,
+      "NextValue": 28,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 219
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 219,
+      "UpgradeName": "IronRegenerationLevel19",
+      "Price": 100,
+      "CurrentValue": 28,
+      "NextValue": 29,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 220
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 220,
+      "UpgradeName": "IronRegenerationLevel20",
+      "Price": 100,
+      "CurrentValue": 29,
+      "NextValue": 30,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 301,
+      "UpgradeName": "CoalMaxLevel1",
+      "Price": 100,
+      "CurrentValue": 5000,
+      "NextValue": 5100,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 302
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 302,
+      "UpgradeName": "CoalMaxLevel2",
+      "Price": 100,
+      "CurrentValue": 5100,
+      "NextValue": 5200,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 303
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 303,
+      "UpgradeName": "CoalMaxLevel3",
+      "Price": 100,
+      "CurrentValue": 5200,
+      "NextValue": 5300,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 304
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 304,
+      "UpgradeName": "CoalMaxLevel4",
+      "Price": 100,
+      "CurrentValue": 5300,
+      "NextValue": 5400,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 305
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 305,
+      "UpgradeName": "CoalMaxLevel5",
+      "Price": 100,
+      "CurrentValue": 5400,
+      "NextValue": 5500,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 306
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 306,
+      "UpgradeName": "CoalMaxLevel6",
+      "Price": 100,
+      "CurrentValue": 5500,
+      "NextValue": 5600,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 307
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 307,
+      "UpgradeName": "CoalMaxLevel7",
+      "Price": 100,
+      "CurrentValue": 5600,
+      "NextValue": 5700,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 308
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 308,
+      "UpgradeName": "CoalMaxLevel8",
+      "Price": 100,
+      "CurrentValue": 5700,
+      "NextValue": 5800,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 309
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 309,
+      "UpgradeName": "CoalMaxLevel9",
+      "Price": 100,
+      "CurrentValue": 5800,
+      "NextValue": 5900,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 310
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 310,
+      "UpgradeName": "CoalMaxLevel10",
+      "Price": 100,
+      "CurrentValue": 5900,
+      "NextValue": 6000,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 311
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 311,
+      "UpgradeName": "CoalMaxLevel11",
+      "Price": 100,
+      "CurrentValue": 6000,
+      "NextValue": 6100,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 312
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 312,
+      "UpgradeName": "CoalMaxLevel12",
+      "Price": 100,
+      "CurrentValue": 6100,
+      "NextValue": 6200,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 313
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 313,
+      "UpgradeName": "CoalMaxLevel13",
+      "Price": 100,
+      "CurrentValue": 6200,
+      "NextValue": 6300,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 314
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 314,
+      "UpgradeName": "CoalMaxLevel14",
+      "Price": 100,
+      "CurrentValue": 6300,
+      "NextValue": 6400,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 315
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 315,
+      "UpgradeName": "CoalMaxLevel15",
+      "Price": 100,
+      "CurrentValue": 6400,
+      "NextValue": 6500,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 316
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 316,
+      "UpgradeName": "CoalMaxLevel16",
+      "Price": 100,
+      "CurrentValue": 6500,
+      "NextValue": 6600,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 317
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 317,
+      "UpgradeName": "CoalMaxLevel17",
+      "Price": 100,
+      "CurrentValue": 6600,
+      "NextValue": 6700,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 318
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 318,
+      "UpgradeName": "CoalMaxLevel18",
+      "Price": 100,
+      "CurrentValue": 6700,
+      "NextValue": 6800,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 319
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 319,
+      "UpgradeName": "CoalMaxLevel19",
+      "Price": 100,
+      "CurrentValue": 6800,
+      "NextValue": 6900,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 320
+    },
+    {
+      "StatType": 3,
+      "TemplateId": 320,
+      "UpgradeName": "CoalMaxLevel20",
+      "Price": 100,
+      "CurrentValue": 6900,
+      "NextValue": 7000,
+      "OriginalTemplateId": 301,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 401,
+      "UpgradeName": "CoalRegenerationLevel1",
+      "Price": 100,
+      "CurrentValue": 10,
+      "NextValue": 11,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 402
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 402,
+      "UpgradeName": "CoalRegenerationLevel2",
+      "Price": 100,
+      "CurrentValue": 11,
+      "NextValue": 12,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 403
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 403,
+      "UpgradeName": "CoalRegenerationLevel3",
+      "Price": 100,
+      "CurrentValue": 12,
+      "NextValue": 13,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 404
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 404,
+      "UpgradeName": "CoalRegenerationLevel4",
+      "Price": 100,
+      "CurrentValue": 13,
+      "NextValue": 14,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 405
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 405,
+      "UpgradeName": "CoalRegenerationLevel5",
+      "Price": 100,
+      "CurrentValue": 14,
+      "NextValue": 15,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 406
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 406,
+      "UpgradeName": "CoalRegenerationLevel6",
+      "Price": 100,
+      "CurrentValue": 15,
+      "NextValue": 16,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 407
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 407,
+      "UpgradeName": "CoalRegenerationLevel7",
+      "Price": 100,
+      "CurrentValue": 16,
+      "NextValue": 17,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 408
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 408,
+      "UpgradeName": "CoalRegenerationLevel8",
+      "Price": 100,
+      "CurrentValue": 17,
+      "NextValue": 18,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 409
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 409,
+      "UpgradeName": "CoalRegenerationLevel9",
+      "Price": 100,
+      "CurrentValue": 18,
+      "NextValue": 19,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 410
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 410,
+      "UpgradeName": "CoalRegenerationLevel10",
+      "Price": 100,
+      "CurrentValue": 19,
+      "NextValue": 20,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 411
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 411,
+      "UpgradeName": "CoalRegenerationLevel11",
+      "Price": 100,
+      "CurrentValue": 20,
+      "NextValue": 21,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 412
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 412,
+      "UpgradeName": "CoalRegenerationLevel12",
+      "Price": 100,
+      "CurrentValue": 21,
+      "NextValue": 22,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 413
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 413,
+      "UpgradeName": "CoalRegenerationLevel13",
+      "Price": 100,
+      "CurrentValue": 22,
+      "NextValue": 23,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 414
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 414,
+      "UpgradeName": "CoalRegenerationLevel14",
+      "Price": 100,
+      "CurrentValue": 23,
+      "NextValue": 24,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 415
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 415,
+      "UpgradeName": "CoalRegenerationLevel15",
+      "Price": 100,
+      "CurrentValue": 24,
+      "NextValue": 25,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 416
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 416,
+      "UpgradeName": "CoalRegenerationLevel16",
+      "Price": 100,
+      "CurrentValue": 25,
+      "NextValue": 26,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 417
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 417,
+      "UpgradeName": "CoalRegenerationLevel17",
+      "Price": 100,
+      "CurrentValue": 26,
+      "NextValue": 27,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 418
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 418,
+      "UpgradeName": "CoalRegenerationLevel18",
+      "Price": 100,
+      "CurrentValue": 27,
+      "NextValue": 28,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 419
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 419,
+      "UpgradeName": "CoalRegenerationLevel19",
+      "Price": 100,
+      "CurrentValue": 28,
+      "NextValue": 29,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 420
+    },
+    {
+      "StatType": 4,
+      "TemplateId": 420,
+      "UpgradeName": "CoalRegenerationLevel20",
+      "Price": 100,
+      "CurrentValue": 29,
+      "NextValue": 30,
+      "OriginalTemplateId": 401,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 501,
+      "UpgradeName": "ShopSellBonusLevel1",
+      "Price": 100,
+      "CurrentValue": 0,
+      "NextValue": 1,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 502
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 502,
+      "UpgradeName": "ShopSellBonusLevel2",
+      "Price": 100,
+      "CurrentValue": 1,
+      "NextValue": 2,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 503
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 503,
+      "UpgradeName": "ShopSellBonusLevel3",
+      "Price": 100,
+      "CurrentValue": 2,
+      "NextValue": 3,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 504
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 504,
+      "UpgradeName": "ShopSellBonusLevel4",
+      "Price": 100,
+      "CurrentValue": 3,
+      "NextValue": 4,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 505
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 505,
+      "UpgradeName": "ShopSellBonusLevel5",
+      "Price": 100,
+      "CurrentValue": 4,
+      "NextValue": 5,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 506
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 506,
+      "UpgradeName": "ShopSellBonusLevel6",
+      "Price": 100,
+      "CurrentValue": 5,
+      "NextValue": 6,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 507
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 507,
+      "UpgradeName": "ShopSellBonusLevel7",
+      "Price": 100,
+      "CurrentValue": 6,
+      "NextValue": 7,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 508
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 508,
+      "UpgradeName": "ShopSellBonusLevel8",
+      "Price": 100,
+      "CurrentValue": 7,
+      "NextValue": 8,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 509
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 509,
+      "UpgradeName": "ShopSellBonusLevel9",
+      "Price": 100,
+      "CurrentValue": 8,
+      "NextValue": 9,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 510
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 510,
+      "UpgradeName": "ShopSellBonusLevel10",
+      "Price": 100,
+      "CurrentValue": 9,
+      "NextValue": 10,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 511
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 511,
+      "UpgradeName": "ShopSellBonusLevel11",
+      "Price": 100,
+      "CurrentValue": 10,
+      "NextValue": 11,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 512
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 512,
+      "UpgradeName": "ShopSellBonusLevel12",
+      "Price": 100,
+      "CurrentValue": 11,
+      "NextValue": 12,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 513
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 513,
+      "UpgradeName": "ShopSellBonusLevel13",
+      "Price": 100,
+      "CurrentValue": 12,
+      "NextValue": 13,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 514
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 514,
+      "UpgradeName": "ShopSellBonusLevel14",
+      "Price": 100,
+      "CurrentValue": 13,
+      "NextValue": 14,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 515
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 515,
+      "UpgradeName": "ShopSellBonusLevel15",
+      "Price": 100,
+      "CurrentValue": 14,
+      "NextValue": 15,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 516
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 516,
+      "UpgradeName": "ShopSellBonusLevel16",
+      "Price": 100,
+      "CurrentValue": 15,
+      "NextValue": 16,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 517
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 517,
+      "UpgradeName": "ShopSellBonusLevel17",
+      "Price": 100,
+      "CurrentValue": 16,
+      "NextValue": 17,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 518
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 518,
+      "UpgradeName": "ShopSellBonusLevel18",
+      "Price": 100,
+      "CurrentValue": 17,
+      "NextValue": 18,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 519
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 519,
+      "UpgradeName": "ShopSellBonusLevel19",
+      "Price": 100,
+      "CurrentValue": 18,
+      "NextValue": 19,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 520
+    },
+    {
+      "StatType": 5,
+      "TemplateId": 520,
+      "UpgradeName": "ShopSellBonusLevel20",
+      "Price": 100,
+      "CurrentValue": 19,
+      "NextValue": 20,
+      "OriginalTemplateId": 501,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 601,
+      "UpgradeName": "ShopBuyBonusLevel1",
+      "Price": 100,
+      "CurrentValue": 0,
+      "NextValue": 1,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 602
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 602,
+      "UpgradeName": "ShopBuyBonusLevel2",
+      "Price": 100,
+      "CurrentValue": 1,
+      "NextValue": 2,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 603
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 603,
+      "UpgradeName": "ShopBuyBonusLevel3",
+      "Price": 100,
+      "CurrentValue": 2,
+      "NextValue": 3,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 604
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 604,
+      "UpgradeName": "ShopBuyBonusLevel4",
+      "Price": 100,
+      "CurrentValue": 3,
+      "NextValue": 4,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 605
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 605,
+      "UpgradeName": "ShopBuyBonusLevel5",
+      "Price": 100,
+      "CurrentValue": 4,
+      "NextValue": 5,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 606
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 606,
+      "UpgradeName": "ShopBuyBonusLevel6",
+      "Price": 100,
+      "CurrentValue": 5,
+      "NextValue": 6,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 607
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 607,
+      "UpgradeName": "ShopBuyBonusLevel7",
+      "Price": 100,
+      "CurrentValue": 6,
+      "NextValue": 7,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 608
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 608,
+      "UpgradeName": "ShopBuyBonusLevel8",
+      "Price": 100,
+      "CurrentValue": 7,
+      "NextValue": 8,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 609
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 609,
+      "UpgradeName": "ShopBuyBonusLevel9",
+      "Price": 100,
+      "CurrentValue": 8,
+      "NextValue": 9,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 610
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 610,
+      "UpgradeName": "ShopBuyBonusLevel10",
+      "Price": 100,
+      "CurrentValue": 9,
+      "NextValue": 10,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 611
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 611,
+      "UpgradeName": "ShopBuyBonusLevel11",
+      "Price": 100,
+      "CurrentValue": 10,
+      "NextValue": 11,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 612
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 612,
+      "UpgradeName": "ShopBuyBonusLevel12",
+      "Price": 100,
+      "CurrentValue": 11,
+      "NextValue": 12,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 613
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 613,
+      "UpgradeName": "ShopBuyBonusLevel13",
+      "Price": 100,
+      "CurrentValue": 12,
+      "NextValue": 13,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 614
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 614,
+      "UpgradeName": "ShopBuyBonusLevel14",
+      "Price": 100,
+      "CurrentValue": 13,
+      "NextValue": 14,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 615
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 615,
+      "UpgradeName": "ShopBuyBonusLevel15",
+      "Price": 100,
+      "CurrentValue": 14,
+      "NextValue": 15,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 616
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 616,
+      "UpgradeName": "ShopBuyBonusLevel16",
+      "Price": 100,
+      "CurrentValue": 15,
+      "NextValue": 16,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 617
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 617,
+      "UpgradeName": "ShopBuyBonusLevel17",
+      "Price": 100,
+      "CurrentValue": 16,
+      "NextValue": 17,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 618
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 618,
+      "UpgradeName": "ShopBuyBonusLevel18",
+      "Price": 100,
+      "CurrentValue": 17,
+      "NextValue": 18,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 619
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 619,
+      "UpgradeName": "ShopBuyBonusLevel19",
+      "Price": 100,
+      "CurrentValue": 18,
+      "NextValue": 19,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 620
+    },
+    {
+      "StatType": 6,
+      "TemplateId": 620,
+      "UpgradeName": "ShopBuyBonusLevel20",
+      "Price": 100,
+      "CurrentValue": 19,
+      "NextValue": 20,
+      "OriginalTemplateId": 601,
+      "NextTempalteId": 0
+    }
+  ]
+}

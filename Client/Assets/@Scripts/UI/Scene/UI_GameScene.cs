@@ -17,7 +17,9 @@ public class UI_GameScene : UI_Scene
         Object_TownUpgradeRedDot,
         Object_ShopUpgradeRedDot,
         PlayerUpgradeContent,
-
+        ForgeUpgradeContent,
+        TownUpgradeContent,
+        ShopUpgradeContent,
     }
 
     enum Images
@@ -113,6 +115,8 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnEnhancementCountChanged += RefreshUI;
         Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
         Managers.Game.OnEnhancementPercentChanged += RefreshUI;
+        Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
+        Managers.Player.OnPlayerUpgradeChanged += RefreshUI;
     }
 
     private void OnDisable()
@@ -120,6 +124,7 @@ public class UI_GameScene : UI_Scene
         Managers.Player.OnCurrenciesChagned -= RefreshUI;
         Managers.Game.OnEnhancementCountChanged -= RefreshUI;
         Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
+        Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
     }
 
     public void SetInfo()
@@ -184,6 +189,40 @@ public class UI_GameScene : UI_Scene
                 }
             }
         }
+        else if(_isSelectedForge == true)
+        {
+            GetGameObject((int)GameObjects.ForgeUpgradeContent).DestroyChildren();
+            var forgeLevels = Managers.Player.GetForgeAllStat();
+
+            foreach (var level in forgeLevels)
+            {
+                Managers.Data.ForgeUpgradeDict.TryGetValue(level, out var data);
+
+                if (data != null)
+                {
+                    var item = Managers.UI.MakeSubItem<UI_UpgradeSubItem>(GetGameObject((int)GameObjects.ForgeUpgradeContent).transform);
+
+                    item.SetInfo(Define.EUpgradeType.Forge, data.TemplateId);
+                }
+            }
+        }
+        else if (_isSelectedTown == true)
+        {
+            GetGameObject((int)GameObjects.TownUpgradeContent).DestroyChildren();
+            var townLevels = Managers.Player.GetTownAllStat();
+
+            foreach (var level in townLevels)
+            {
+                Managers.Data.TownUpgradeDict.TryGetValue(level, out var data);
+
+                if (data != null)
+                {
+                    var item = Managers.UI.MakeSubItem<UI_UpgradeSubItem>(GetGameObject((int)GameObjects.TownUpgradeContent).transform);
+
+                    item.SetInfo(Define.EUpgradeType.Town, data.TemplateId);
+                }
+            }
+        }
     }
 
     private void WeaponSelectReset()
@@ -243,6 +282,8 @@ public class UI_GameScene : UI_Scene
 
         GetGameObject((int)GameObjects.Object_ForgeUpgrade).SetActive(true);
         _isSelectedForge = true;
+
+        RefreshUI();
     }
 
     private void OnClickTownToogle(PointerEventData eventData)
@@ -251,6 +292,8 @@ public class UI_GameScene : UI_Scene
 
         GetGameObject((int)GameObjects.Object_TownUpgrade).SetActive(true);
         _isSelectedTown = true;
+
+        RefreshUI();
     }
 
     private void OnClickShopToogle(PointerEventData eventData)

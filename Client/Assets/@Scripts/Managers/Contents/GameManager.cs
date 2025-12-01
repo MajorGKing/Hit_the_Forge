@@ -339,8 +339,8 @@ public class GameManager
         regenerateIronCTS = new CancellationTokenSource();
         regenerateCoalCTS = new CancellationTokenSource();
 
-        RegenerateResource(Define.ECurrency.Iron, Define.EPlayerTownStat.RegenerateIron, regenerateIronCTS.Token).Forget();
-        RegenerateResource(Define.ECurrency.Coal, Define.EPlayerTownStat.RegenerateCoal, regenerateCoalCTS.Token).Forget();
+        RegenerateResource(Define.ECurrency.Iron, Define.EPlayerTownStat.IronRegeneration, regenerateIronCTS.Token).Forget();
+        RegenerateResource(Define.ECurrency.Coal, Define.EPlayerTownStat.CoalRegeneration, regenerateCoalCTS.Token).Forget();
     }
 
     public void CalcWeaponHit()
@@ -434,8 +434,8 @@ public class GameManager
     public float GetEnhancementPercent()
     {
         var info = Managers.Data.EnhancementDict[EnhancmentLevel];
-
-        float returnValue = (float)info.EnhancementSucess / info.BasicSucess;
+        var suceeValue = CalEnhancemenetPercent(info);
+        float returnValue = suceeValue / info.BasicSucess;
         returnValue = Mathf.Round(returnValue * 10000f)/100f;
 
         return returnValue;
@@ -471,8 +471,11 @@ public class GameManager
         var value = Random.Range(0, enhancementData.BasicSucess);
 
         // TODO Add Player&Forge Stat
-        
-        if(value <= enhancementData.EnhancementSucess)
+        var suceeValue = CalEnhancemenetPercent(enhancementData);
+        //var suceeValue = enhancementData.EnhancementSucess + (enhancementData.EnhancementSucess * Managers.Player.GetPlayerStat(Define.EPlayerStat.Mastery))/100f;
+
+
+        if (value <= suceeValue)
         {
             EnhancmentLevel++;
             enhancementCountTime = 3f;
@@ -528,6 +531,22 @@ public class GameManager
         {
             
         }
+    }
+    #endregion
+
+    #region Helper
+    private float CalEnhancemenetPercent(Data.EnhancementData enhancementData)
+    {
+        var returnValue = enhancementData.EnhancementSucess
+            + (enhancementData.EnhancementSucess * Managers.Player.GetPlayerStat(Define.EPlayerStat.Mastery)) / 100f
+            + (enhancementData.EnhancementSucess * Managers.Player.GetForgeStat(Define.EPlayerForgeStat.Mastery)) / 100f;
+
+        if (returnValue > enhancementData.BasicSucess)
+        {
+            returnValue = enhancementData.BasicSucess;
+        }
+
+        return returnValue;
     }
     #endregion
 }

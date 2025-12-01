@@ -33,6 +33,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5633bc3543d058247b4ed481c96b8044
+    m_Address: TownUpgradeData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 62b44f0cfa64a78479bbe685a863bb09
+    m_Address: ForgeUpgradeData
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e2845396c3ed4c443a7c1662fb6f651a
     m_Address: PlayerUpgradeData
     m_ReadOnly: 0

@@ -22,6 +22,8 @@ public class UI_UpgradeSubItem : UI_SubItem
 
     private Define.EUpgradeType upgradeType = Define.EUpgradeType.None;
     private Data.PlayerUpgradeData playerUpgradeData = null;
+    private Data.ForgeUpgradeData forgeUpgradeData = null;
+    private Data.TownUpgradeData townUpgradeData = null;
 
 
     protected override void Awake()
@@ -44,6 +46,14 @@ public class UI_UpgradeSubItem : UI_SubItem
         if(type == Define.EUpgradeType.Player)
         {
             Managers.Data.PlayerUpgradeDict.TryGetValue(templateId, out playerUpgradeData);
+        }
+        else if(type == Define.EUpgradeType.Forge)
+        {
+            Managers.Data.ForgeUpgradeDict.TryGetValue(templateId, out forgeUpgradeData);
+        }
+        else if(type == Define.EUpgradeType.Town)
+        {
+            Managers.Data.TownUpgradeDict.TryGetValue(templateId, out townUpgradeData);
         }
         
 
@@ -78,7 +88,88 @@ public class UI_UpgradeSubItem : UI_SubItem
             GetText((int)Texts.Text_UpgradeStat).text = $"{playerUpgradeData.CurrentValue} > {playerUpgradeData.NextValue}";
 
             GetText((int)Texts.Text_UpgradePrice).text = playerUpgradeData.Price.ToString();
+
+            if (playerUpgradeData.NextTempalteId == 0)
+            {
+                GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
+            }
         }
+        else if (upgradeType == Define.EUpgradeType.Forge)
+        {
+            if (forgeUpgradeData == null)
+                return;
+
+            // TODO Image based on type
+
+            if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.CoalTime)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "연료 사용시간을 늘립니다.";
+            }
+            else if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.Skill)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "제품의 품질을 높입니다.";
+            }
+            else if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.Mastery)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "강화 성공확률을 높입니다.";
+            }
+
+            GetText((int)Texts.Text_UpgradeStat).text = $"{forgeUpgradeData.CurrentValue} > {forgeUpgradeData.NextValue}";
+
+            GetText((int)Texts.Text_UpgradePrice).text = forgeUpgradeData.Price.ToString();
+
+            if (forgeUpgradeData.NextTempalteId == 0)
+            {
+                GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
+            }
+        }
+        else if (upgradeType == Define.EUpgradeType.Town)
+        {
+            if (townUpgradeData == null)
+                return;
+
+            // TODO Image based on type
+
+            if (townUpgradeData.StatType == Define.EPlayerTownStat.GoldMax)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "골드 최대 소유량을 늘립니다.";
+            }
+            else if (townUpgradeData.StatType == Define.EPlayerTownStat.IronMax)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "자원 최대 소유량을 늘립니다.";
+            }
+            else if (townUpgradeData.StatType == Define.EPlayerTownStat.IronRegeneration)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "자원 생산량을 늘립니다.";
+            }
+            else if (townUpgradeData.StatType == Define.EPlayerTownStat.CoalMax)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "연로 최대 소유량을 늘립니다.";
+            }
+            else if (townUpgradeData.StatType == Define.EPlayerTownStat.CoalRegeneration)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "연로 생산량을 늘립니다.";
+            }
+            else if (townUpgradeData.StatType == Define.EPlayerTownStat.ShopSellBonus)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "판매시 받는 골드 보너스를 늘립니다.";
+            }
+            else if (townUpgradeData.StatType == Define.EPlayerTownStat.ShopBuyBonus)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "상점 구매시 받는 구매량을 늘립니다.";
+            }
+
+            GetText((int)Texts.Text_UpgradeStat).text = $"{townUpgradeData.CurrentValue} > {townUpgradeData.NextValue}";
+
+            GetText((int)Texts.Text_UpgradePrice).text = townUpgradeData.Price.ToString();
+
+            if (townUpgradeData.NextTempalteId == 0)
+            {
+                GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
+            }
+        }
+
+
     }
 
     private void OnClickedUpgradeButton(PointerEventData eventData)
@@ -92,7 +183,26 @@ public class UI_UpgradeSubItem : UI_SubItem
             if (playerUpgradeData == null)
                 return;
 
-            Managers.Player.PlayerStatUpgrade(playerUpgradeData.StatType);
+            Managers.Player.StatUpgrade(Define.EUpgradeType.Player ,(int)playerUpgradeData.StatType);
+        }
+        else if (upgradeType == Define.EUpgradeType.Forge)
+        {
+
+            if (forgeUpgradeData == null)
+                return;
+
+            Managers.Player.StatUpgrade(Define.EUpgradeType.Forge, (int)forgeUpgradeData.StatType);
+        }
+        else if (upgradeType == Define.EUpgradeType.Town)
+        {
+            Debug.Log("Town Update Clicked");
+
+            if (townUpgradeData == null)
+                return;
+
+            Debug.Log("Do Town Update");
+
+            Managers.Player.StatUpgrade(Define.EUpgradeType.Town, (int)townUpgradeData.StatType);
         }
     }
 }

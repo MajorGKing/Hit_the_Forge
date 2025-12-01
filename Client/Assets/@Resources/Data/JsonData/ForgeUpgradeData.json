@@ -1,0 +1,604 @@
+{
+  "upgrades": [
+    {
+      "StatType": 0,
+      "TemplateId": 1,
+      "UpgradeName": "VentilationLevel1",
+      "Price": 100,
+      "CurrentValue": 1000,
+      "NextValue": 1001,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 2
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 2,
+      "UpgradeName": "VentilationLevel2",
+      "Price": 100,
+      "CurrentValue": 1001,
+      "NextValue": 1002,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 3
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 3,
+      "UpgradeName": "VentilationLevel3",
+      "Price": 100,
+      "CurrentValue": 1002,
+      "NextValue": 1003,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 4
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 4,
+      "UpgradeName": "VentilationLevel4",
+      "Price": 100,
+      "CurrentValue": 1003,
+      "NextValue": 1004,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 5
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 5,
+      "UpgradeName": "VentilationLevel5",
+      "Price": 100,
+      "CurrentValue": 1004,
+      "NextValue": 1005,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 6
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 6,
+      "UpgradeName": "VentilationLevel6",
+      "Price": 100,
+      "CurrentValue": 1005,
+      "NextValue": 1006,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 7
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 7,
+      "UpgradeName": "VentilationLevel7",
+      "Price": 100,
+      "CurrentValue": 1006,
+      "NextValue": 1007,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 8
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 8,
+      "UpgradeName": "VentilationLevel8",
+      "Price": 100,
+      "CurrentValue": 1007,
+      "NextValue": 1008,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 9
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 9,
+      "UpgradeName": "VentilationLevel9",
+      "Price": 100,
+      "CurrentValue": 1008,
+      "NextValue": 1009,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 10
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 10,
+      "UpgradeName": "VentilationLevel10",
+      "Price": 100,
+      "CurrentValue": 1009,
+      "NextValue": 1010,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 11
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 11,
+      "UpgradeName": "VentilationLevel11",
+      "Price": 100,
+      "CurrentValue": 1010,
+      "NextValue": 1011,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 12
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 12,
+      "UpgradeName": "VentilationLevel12",
+      "Price": 100,
+      "CurrentValue": 1011,
+      "NextValue": 1012,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 13
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 13,
+      "UpgradeName": "VentilationLevel13",
+      "Price": 100,
+      "CurrentValue": 1012,
+      "NextValue": 1013,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 14
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 14,
+      "UpgradeName": "VentilationLevel14",
+      "Price": 100,
+      "CurrentValue": 1013,
+      "NextValue": 1014,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 15
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 15,
+      "UpgradeName": "VentilationLevel15",
+      "Price": 100,
+      "CurrentValue": 1014,
+      "NextValue": 1015,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 16
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 16,
+      "UpgradeName": "VentilationLevel16",
+      "Price": 100,
+      "CurrentValue": 1015,
+      "NextValue": 1016,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 17
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 17,
+      "UpgradeName": "VentilationLevel17",
+      "Price": 100,
+      "CurrentValue": 1016,
+      "NextValue": 1017,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 18
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 18,
+      "UpgradeName": "VentilationLevel18",
+      "Price": 100,
+      "CurrentValue": 1017,
+      "NextValue": 1018,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 19
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 19,
+      "UpgradeName": "VentilationLevel19",
+      "Price": 100,
+      "CurrentValue": 1018,
+      "NextValue": 1019,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 20
+    },
+    {
+      "StatType": 0,
+      "TemplateId": 20,
+      "UpgradeName": "VentilationLevel20",
+      "Price": 100,
+      "CurrentValue": 1019,
+      "NextValue": 1020,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 101,
+      "UpgradeName": "SkillLevel1",
+      "Price": 100,
+      "CurrentValue": 0,
+      "NextValue": 1,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 102
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 102,
+      "UpgradeName": "SkillLevel2",
+      "Price": 100,
+      "CurrentValue": 1,
+      "NextValue": 2,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 103
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 103,
+      "UpgradeName": "SkillLevel3",
+      "Price": 100,
+      "CurrentValue": 2,
+      "NextValue": 3,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 104
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 104,
+      "UpgradeName": "SkillLevel4",
+      "Price": 100,
+      "CurrentValue": 3,
+      "NextValue": 4,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 105
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 105,
+      "UpgradeName": "SkillLevel5",
+      "Price": 100,
+      "CurrentValue": 4,
+      "NextValue": 5,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 106
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 106,
+      "UpgradeName": "SkillLevel6",
+      "Price": 100,
+      "CurrentValue": 5,
+      "NextValue": 6,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 107
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 107,
+      "UpgradeName": "SkillLevel7",
+      "Price": 100,
+      "CurrentValue": 6,
+      "NextValue": 7,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 108
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 108,
+      "UpgradeName": "SkillLevel8",
+      "Price": 100,
+      "CurrentValue": 7,
+      "NextValue": 8,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 109
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 109,
+      "UpgradeName": "SkillLevel9",
+      "Price": 100,
+      "CurrentValue": 8,
+      "NextValue": 9,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 110
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 110,
+      "UpgradeName": "SkillLevel10",
+      "Price": 100,
+      "CurrentValue": 9,
+      "NextValue": 10,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 111
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 111,
+      "UpgradeName": "SkillLevel11",
+      "Price": 100,
+      "CurrentValue": 10,
+      "NextValue": 11,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 112
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 112,
+      "UpgradeName": "SkillLevel12",
+      "Price": 100,
+      "CurrentValue": 11,
+      "NextValue": 12,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 113
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 113,
+      "UpgradeName": "SkillLevel13",
+      "Price": 100,
+      "CurrentValue": 12,
+      "NextValue": 13,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 114
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 114,
+      "UpgradeName": "SkillLevel14",
+      "Price": 100,
+      "CurrentValue": 13,
+      "NextValue": 14,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 115
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 115,
+      "UpgradeName": "SkillLevel15",
+      "Price": 100,
+      "CurrentValue": 14,
+      "NextValue": 15,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 116
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 116,
+      "UpgradeName": "SkillLevel16",
+      "Price": 100,
+      "CurrentValue": 15,
+      "NextValue": 16,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 117
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 117,
+      "UpgradeName": "SkillLevel17",
+      "Price": 100,
+      "CurrentValue": 16,
+      "NextValue": 17,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 118
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 118,
+      "UpgradeName": "SkillLevel18",
+      "Price": 100,
+      "CurrentValue": 17,
+      "NextValue": 18,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 119
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 119,
+      "UpgradeName": "SkillLevel19",
+      "Price": 100,
+      "CurrentValue": 18,
+      "NextValue": 19,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 120
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 120,
+      "UpgradeName": "SkillLevel20",
+      "Price": 100,
+      "CurrentValue": 19,
+      "NextValue": 20,
+      "OriginalTemplateId": 101,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 201,
+      "UpgradeName": "MasteryLevel1",
+      "Price": 100,
+      "CurrentValue": 0,
+      "NextValue": 1,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 202
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 202,
+      "UpgradeName": "MasteryLevel2",
+      "Price": 100,
+      "CurrentValue": 1,
+      "NextValue": 2,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 203
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 203,
+      "UpgradeName": "MasteryLevel3",
+      "Price": 100,
+      "CurrentValue": 2,
+      "NextValue": 3,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 204
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 204,
+      "UpgradeName": "MasteryLevel4",
+      "Price": 100,
+      "CurrentValue": 3,
+      "NextValue": 4,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 205
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 205,
+      "UpgradeName": "MasteryLevel5",
+      "Price": 100,
+      "CurrentValue": 4,
+      "NextValue": 5,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 206
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 206,
+      "UpgradeName": "MasteryLevel6",
+      "Price": 100,
+      "CurrentValue": 5,
+      "NextValue": 6,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 207
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 207,
+      "UpgradeName": "MasteryLevel7",
+      "Price": 100,
+      "CurrentValue": 6,
+      "NextValue": 7,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 208
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 208,
+      "UpgradeName": "MasteryLevel8",
+      "Price": 100,
+      "CurrentValue": 7,
+      "NextValue": 8,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 209
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 209,
+      "UpgradeName": "MasteryLevel9",
+      "Price": 100,
+      "CurrentValue": 8,
+      "NextValue": 9,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 210
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 210,
+      "UpgradeName": "MasteryLevel10",
+      "Price": 100,
+      "CurrentValue": 9,
+      "NextValue": 10,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 211
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 211,
+      "UpgradeName": "MasteryLevel11",
+      "Price": 100,
+      "CurrentValue": 10,
+      "NextValue": 11,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 212
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 212,
+      "UpgradeName": "MasteryLevel12",
+      "Price": 100,
+      "CurrentValue": 11,
+      "NextValue": 12,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 213
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 213,
+      "UpgradeName": "MasteryLevel13",
+      "Price": 100,
+      "CurrentValue": 12,
+      "NextValue": 13,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 214
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 214,
+      "UpgradeName": "MasteryLevel14",
+      "Price": 100,
+      "CurrentValue": 13,
+      "NextValue": 14,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 215
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 215,
+      "UpgradeName": "MasteryLevel15",
+      "Price": 100,
+      "CurrentValue": 14,
+      "NextValue": 15,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 216
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 216,
+      "UpgradeName": "MasteryLevel16",
+      "Price": 100,
+      "CurrentValue": 15,
+      "NextValue": 16,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 217
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 217,
+      "UpgradeName": "MasteryLevel17",
+      "Price": 100,
+      "CurrentValue": 16,
+      "NextValue": 17,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 218
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 218,
+      "UpgradeName": "MasteryLevel18",
+      "Price": 100,
+      "CurrentValue": 17,
+      "NextValue": 18,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 219
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 219,
+      "UpgradeName": "MasteryLevel19",
+      "Price": 100,
+      "CurrentValue": 18,
+      "NextValue": 19,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 220
+    },
+    {
+      "StatType": 2,
+      "TemplateId": 220,
+      "UpgradeName": "MasteryLevel20",
+      "Price": 100,
+      "CurrentValue": 19,
+      "NextValue": 20,
+      "OriginalTemplateId": 201,
+      "NextTempalteId": 0
+    }
+  ]
+}

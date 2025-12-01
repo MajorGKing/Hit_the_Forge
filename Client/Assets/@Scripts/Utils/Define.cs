@@ -104,14 +104,18 @@ public class Define
     public enum EPlayerForgeStat
     {
         CoalTime,
+        Skill,
+        Mastery,
     }
 
     public enum EPlayerTownStat
     {
-        ShopBuyDiscount,
+        GoldMax,
+        IronMax,
+        IronRegeneration,
+        CoalMax,
+        CoalRegeneration,
         ShopSellBonus,
-        RegenerateIron,
-        RegenerateCoal,
-
+        ShopBuyBonus,
     }
 }

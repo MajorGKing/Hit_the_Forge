@@ -1,14 +1,15 @@
 using System;
+using System.Diagnostics;
 
 
 public class PlayerManager
 {
     private int[] currency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
-    public int[] maxCurrency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
+    //public int[] maxCurrency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
     //private int[] playerStat = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] playerStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
-    private int[] forgeStat = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
-    private int[] townStat = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
+    private int[] forgeStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
+    private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
     
 
     public void Clear()
@@ -18,10 +19,10 @@ public class PlayerManager
 
     public void Init()
     {
-        for (int i = 0; i < maxCurrency.Length; i++)
-        {
-            maxCurrency[i] = 10000;
-        }
+        //for (int i = 0; i < maxCurrency.Length; i++)
+        //{
+        //    maxCurrency[i] = 10000;
+        //}
 
         currency[(int)Define.ECurrency.Gold] = 0;
         currency[(int)Define.ECurrency.Iron] = 5000;
@@ -37,11 +38,17 @@ public class PlayerManager
         playerStatLevel[(int)Define.EPlayerStat.Dex] = 0;
         playerStatLevel[(int)Define.EPlayerStat.Mastery] = 201;
 
-        forgeStat[(int)Define.EPlayerForgeStat.CoalTime] = 1000;
+        forgeStatLevel[(int)Define.EPlayerForgeStat.CoalTime] = 1;
+        forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 101;
+        forgeStatLevel[(int)Define.EPlayerForgeStat.Mastery] = 201;
 
-        townStat[(int)Define.EPlayerTownStat.RegenerateIron] = 10;
-        townStat[(int)Define.EPlayerTownStat.RegenerateCoal] = 10;
-        
+        townStatLevel[(int)Define.EPlayerTownStat.GoldMax] = 1;
+        townStatLevel[(int)Define.EPlayerTownStat.IronMax] = 101;
+        townStatLevel[(int)Define.EPlayerTownStat.IronRegeneration] = 201;
+        townStatLevel[(int)Define.EPlayerTownStat.CoalMax] = 301;
+        townStatLevel[(int)Define.EPlayerTownStat.CoalRegeneration] = 401;
+        townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 501;
+        townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 601;
     }
 
     public void CurrencyAdd(Define.ECurrency type, int value)
@@ -53,9 +60,9 @@ public class PlayerManager
         int oldValue = currency[index];
         int newValue = oldValue + value;
 
-        if (newValue > maxCurrency[index])
+        if (newValue > GetCurrenyMax(type))
         {
-            newValue = maxCurrency[index];
+            newValue = GetCurrenyMax(type);
         }
 
         currency[index] = newValue;
@@ -94,6 +101,29 @@ public class PlayerManager
         return currency[(int)type];
     }
 
+    public int GetCurrenyMax(Define.ECurrency type)
+    {
+        int index = -1;
+
+        if(type == Define.ECurrency.Gold)
+        {
+            index = townStatLevel[(int)Define.EPlayerTownStat.GoldMax];
+        }
+        else if (type == Define.ECurrency.Iron)
+        {
+            index = townStatLevel[(int)Define.EPlayerTownStat.IronMax];
+        }
+        else if (type == Define.ECurrency.Coal)
+        {
+            index = townStatLevel[(int)Define.EPlayerTownStat.CoalMax];
+        }
+
+        if (index != -1)
+            return Managers.Data.TownUpgradeDict[index].CurrentValue;
+
+        return 0;
+    }
+
     public int GetPlayerStat(Define.EPlayerStat type)
     {
         var statData = Managers.Data.PlayerUpgradeDict[playerStatLevel[(int)type]];
@@ -103,12 +133,16 @@ public class PlayerManager
 
     public int GetForgeStat(Define.EPlayerForgeStat type)
     {
-        return forgeStat[(int)type];
+        var statData = Managers.Data.ForgeUpgradeDict[forgeStatLevel[(int)type]];
+
+        return statData.CurrentValue;
     }
 
     public int GetTownStat(Define.EPlayerTownStat type)
     {
-        return townStat[(int)type];
+        var statData = Managers.Data.TownUpgradeDict[townStatLevel[(int)type]];
+
+        return statData.CurrentValue;
     }
 
     public int[] GetPlayerAllStat()
@@ -116,23 +150,115 @@ public class PlayerManager
         return playerStatLevel;
     }
 
-    public void PlayerStatUpgrade(Define.EPlayerStat type)
+    public void StatUpgrade(Define.EUpgradeType upgradeType, int type)
     {
-        Managers.Data.PlayerUpgradeDict.TryGetValue(playerStatLevel[(int)type], out var data);
+        Data.UpgradeData data = null;
+
+        if (upgradeType == Define.EUpgradeType.Player)
+        {
+            Managers.Data.PlayerUpgradeDict.TryGetValue(playerStatLevel[type], out var dataValue);
+            
+            if (dataValue != null)
+            {
+                data = new Data.UpgradeData() { 
+                    TemplateId = dataValue.TemplateId, 
+                    UpgradeName = dataValue.UpgradeName,
+                    //StatIndex = (int)dataValue.StatType,
+                    Price = dataValue.Price,
+                    CurrentValue = dataValue.CurrentValue,
+                    NextValue = dataValue.NextValue,
+                    OriginalTemplateId = dataValue.OriginalTemplateId,
+                    NextTempalteId = dataValue.NextTempalteId,
+                };
+            }
+        }
+        else if(upgradeType == Define.EUpgradeType.Forge)
+        {
+            Managers.Data.ForgeUpgradeDict.TryGetValue(forgeStatLevel[type], out var dataValue);
+
+            if (dataValue != null)
+            {
+                data = new Data.UpgradeData()
+                {
+                    TemplateId = dataValue.TemplateId,
+                    UpgradeName = dataValue.UpgradeName,
+                    //StatIndex = (int)dataValue.StatType,
+                    Price = dataValue.Price,
+                    CurrentValue = dataValue.CurrentValue,
+                    NextValue = dataValue.NextValue,
+                    OriginalTemplateId = dataValue.OriginalTemplateId,
+                    NextTempalteId = dataValue.NextTempalteId,
+                };
+            }
+        }
+        else if (upgradeType == Define.EUpgradeType.Town)
+        {
+            Managers.Data.TownUpgradeDict.TryGetValue(townStatLevel[type], out var dataValue);
+
+            if (dataValue != null)
+            {
+                data = new Data.UpgradeData()
+                {
+                    TemplateId = dataValue.TemplateId,
+                    UpgradeName = dataValue.UpgradeName,
+                    //StatIndex = (int)dataValue.StatType,
+                    Price = dataValue.Price,
+                    CurrentValue = dataValue.CurrentValue,
+                    NextValue = dataValue.NextValue,
+                    OriginalTemplateId = dataValue.OriginalTemplateId,
+                    NextTempalteId = dataValue.NextTempalteId,
+                };
+            }
+        }
 
         if (data == null)
             return;
 
         // Gold 체크
+        if(data.Price > GetCurrency(Define.ECurrency.Gold))
+        {
+            // TODO 골드 부족 알림
+            return;
+        }
 
         // 다음 레벨 가능 여부 체크
+        if (data.NextTempalteId == 0)
+            return;
 
         // Gold 깍고 레벨업
+        CurrencySubtract(Define.ECurrency.Gold, data.Price);
+        // TODO 나중에 골드 아닌 방식 있으면 csv수정 필요
+
+        if (upgradeType == Define.EUpgradeType.Player)
+        {
+            playerStatLevel[type] = data.NextTempalteId;
+        }
+        else if(upgradeType == Define.EUpgradeType.Forge)
+        {
+            forgeStatLevel[type] = data.NextTempalteId;
+        }
+        else if(upgradeType == Define.EUpgradeType.Town)
+        {
+            UnityEngine.Debug.Log("Do Update!");
+            townStatLevel[type] = data.NextTempalteId;
+        }
 
         // invoke
+        OnPlayerUpgradeChanged?.Invoke();
+    }
+
+    public int[] GetForgeAllStat()
+    {
+        return forgeStatLevel;
+    }
+
+    public int[] GetTownAllStat()
+    {
+        return townStatLevel;
     }
 
     #region Action
     public event Action OnCurrenciesChagned;
+    public event Action OnPlayerUpgradeChanged;
     #endregion
 }

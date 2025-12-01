@@ -143,18 +143,33 @@ namespace Data
     }
     #endregion
 
-    #region
     [Serializable]
-    public class PlayerUpgradeData
+    public class UpgradeData
     {
         public int TemplateId;
         public string UpgradeName;
-        public Define.EPlayerStat StatType;
         public int Price;
         public int CurrentValue;
         public int NextValue;
         public int OriginalTemplateId;
         public int NextTempalteId;
+
+        //[ExcludeFieldAttribute]
+        //public int StatIndex;
+    }
+
+    #region PlayerUpgrade
+    [Serializable]
+    public class PlayerUpgradeData : UpgradeData
+    {
+        //public int TemplateId;
+        //public string UpgradeName;
+        public Define.EPlayerStat StatType;
+        //public int Price;
+        //public int CurrentValue;
+        //public int NextValue;
+        //public int OriginalTemplateId;
+        //public int NextTempalteId;
     }
 
     [Serializable]
@@ -166,6 +181,66 @@ namespace Data
             Dictionary<int, PlayerUpgradeData> dict = new Dictionary<int, PlayerUpgradeData>();
             foreach (PlayerUpgradeData upgrade in upgrades)
                 dict.Add(upgrade.TemplateId, upgrade);
+            return dict;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+    }
+    #endregion
+
+    #region ForgeUpgrade
+    [Serializable]
+    public class ForgeUpgradeData : UpgradeData
+    {
+        //public int TemplateId;
+        //public string UpgradeName;
+        public Define.EPlayerForgeStat StatType;
+        //public int Price;
+        //public int CurrentValue;
+        //public int NextValue;
+        //public int OriginalTemplateId;
+        //public int NextTempalteId;
+    }
+
+    [Serializable]
+    public class ForgeUpgradeDataLoader : ILoader<int, ForgeUpgradeData>
+    {
+        public List<ForgeUpgradeData> upgrades = new List<ForgeUpgradeData>();
+        public Dictionary<int, ForgeUpgradeData> MakeDict()
+        {
+            Dictionary<int, ForgeUpgradeData> dict = new Dictionary<int, ForgeUpgradeData>();
+            foreach (ForgeUpgradeData upgrade in upgrades)
+                dict.Add(upgrade.TemplateId, upgrade);
+            return dict;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+    }
+    #endregion
+
+    #region TownUpgrade
+    [Serializable]
+    public class TownUpgradeData : UpgradeData
+    {
+        public Define.EPlayerTownStat StatType;
+    }
+
+    [Serializable]
+    public class TownUpgradeDataLoader : ILoader<int, TownUpgradeData>
+    {
+        public List<TownUpgradeData> upgrades = new List<TownUpgradeData>();
+        public Dictionary<int, TownUpgradeData> MakeDict()
+        {
+            Dictionary<int, TownUpgradeData> dict = new Dictionary<int, TownUpgradeData>();
+            foreach (TownUpgradeData upgrade in upgrades) 
+                dict.Add(upgrade.TemplateId, upgrade);
+            
             return dict;
         }
 

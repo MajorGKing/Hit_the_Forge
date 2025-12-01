@@ -21,6 +21,8 @@ public class DataTransformer : EditorWindow
         ParseExcelDataToJson<WeaponDataLoader, WeaponData>("Weapon");
         ParseExcelDataToJson<EnhancementDataLoader, EnhancementData>("Enhancement");
         ParseExcelDataToJson<PlayerUpgradeDataLoader, PlayerUpgradeData>("PlayerUpgrade");
+        ParseExcelDataToJson<ForgeUpgradeDataLoader, ForgeUpgradeData>("ForgeUpgrade");
+        ParseExcelDataToJson<TownUpgradeDataLoader, TownUpgradeData>("TownUpgrade");
         Debug.Log("Complete DataTransformer");
     }
 
