@@ -10,6 +10,7 @@ public class PlayerManager
     private int[] playerStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] forgeStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
     private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
+    private int[] shopProducts = new int[Enum.GetValues(typeof(Define.EShopProductType)).Length];
     
 
     public void Clear()
@@ -49,6 +50,9 @@ public class PlayerManager
         townStatLevel[(int)Define.EPlayerTownStat.CoalRegeneration] = 401;
         townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 501;
         townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 601;
+
+        shopProducts[(int)Define.EShopProductType.BuyIron] = 1;
+        shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
     }
 
     public void CurrencyAdd(Define.ECurrency type, int value)
@@ -210,6 +214,50 @@ public class PlayerManager
                 };
             }
         }
+        else if (upgradeType == Define.EUpgradeType.Shop)
+        {
+            Managers.Data.ShopProductDict.TryGetValue(shopProducts[type], out var dataValue);
+
+            data = new Data.UpgradeData()
+            {
+                TemplateId = dataValue.TemplateId,
+                UpgradeName = dataValue.UpgradeName,
+                //StatIndex = (int)dataValue.StatType,
+                Price = dataValue.Price,
+                CurrentValue = dataValue.CurrentValue,
+                NextValue = dataValue.NextValue,
+                OriginalTemplateId = dataValue.OriginalTemplateId,
+                NextTempalteId = dataValue.NextTempalteId,
+            };
+
+            // TODO Type을 None을 할 수 없어서 임시로
+            Define.ECurrency currencyType = Define.ECurrency.Gold;
+
+            // 가지고 있는 자원 종류 파악
+            if(dataValue.StatType == Define.EShopProductType.BuyIron)
+            {
+                currencyType = Define.ECurrency.Iron;
+            }
+            else if(dataValue.StatType == Define.EShopProductType.BuyCoal)
+            {
+                currencyType = Define.ECurrency.Coal;
+            }
+            else
+            {
+                return;
+            }
+
+            // 최대 값 비교
+            var stock = GetCurrency(currencyType);
+            var maxStock = GetCurrenyMax(currencyType);
+
+            if (stock == maxStock)
+            {
+                // TODO 최대치 관련 메세지
+                return;
+            }
+        }
+
 
         if (data == null)
             return;
@@ -222,7 +270,7 @@ public class PlayerManager
         }
 
         // 다음 레벨 가능 여부 체크
-        if (data.NextTempalteId == 0)
+        if (upgradeType != Define.EUpgradeType.Shop && data.NextTempalteId == 0)
             return;
 
         // Gold 깍고 레벨업
@@ -239,8 +287,27 @@ public class PlayerManager
         }
         else if(upgradeType == Define.EUpgradeType.Town)
         {
-            UnityEngine.Debug.Log("Do Update!");
             townStatLevel[type] = data.NextTempalteId;
+        }
+        else if(upgradeType == Define.EUpgradeType.Shop)
+        {
+            Managers.Data.ShopProductDict.TryGetValue(shopProducts[type], out var dataValue);
+
+            // 가지고 있는 자원 종류 파악
+            if (dataValue.StatType == Define.EShopProductType.BuyIron)
+            {
+                var addValue = dataValue.CurrentValue;
+                var bonusValue = addValue * (GetTownStat(Define.EPlayerTownStat.ShopBuyBonus)/100f);
+                CurrencyAdd(Define.ECurrency.Iron, addValue + (int)bonusValue);
+            }
+            else if (dataValue.StatType == Define.EShopProductType.BuyCoal)
+            {
+                var addValue = dataValue.CurrentValue;
+                var bonusValue = addValue * (GetTownStat(Define.EPlayerTownStat.ShopBuyBonus) / 100f);
+                CurrencyAdd(Define.ECurrency.Coal, dataValue.CurrentValue);
+            }
+
+            OnCurrenciesChagned?.Invoke();
         }
 
         // invoke
@@ -255,6 +322,11 @@ public class PlayerManager
     public int[] GetTownAllStat()
     {
         return townStatLevel;
+    }
+
+    public int[] GetShopAllStat()
+    {
+        return shopProducts;
     }
 
     #region Action

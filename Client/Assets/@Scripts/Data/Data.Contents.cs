@@ -251,4 +251,31 @@ namespace Data
     }
     #endregion
 
+    #region ShopProduct
+    [Serializable]
+    public class ShopProductData : UpgradeData
+    {
+        public Define.EShopProductType StatType;
+    }
+
+    [Serializable]
+    public class ShopProductDataLoader : ILoader<int, ShopProductData>
+    {
+        public List<ShopProductData> products = new List<ShopProductData>();
+        public Dictionary<int, ShopProductData> MakeDict()
+        {
+            Dictionary<int, ShopProductData> dict = new Dictionary<int, ShopProductData>();
+            foreach (ShopProductData product in products)
+                dict.Add(product.TemplateId, product);
+
+            return dict;
+        }
+
+        public bool Validate()
+        {
+            return true;
+        }
+    }
+    #endregion
+
 }

@@ -23,6 +23,7 @@ public class DataTransformer : EditorWindow
         ParseExcelDataToJson<PlayerUpgradeDataLoader, PlayerUpgradeData>("PlayerUpgrade");
         ParseExcelDataToJson<ForgeUpgradeDataLoader, ForgeUpgradeData>("ForgeUpgrade");
         ParseExcelDataToJson<TownUpgradeDataLoader, TownUpgradeData>("TownUpgrade");
+        ParseExcelDataToJson<ShopProductDataLoader, ShopProductData>("ShopProduct");
         Debug.Log("Complete DataTransformer");
     }
 

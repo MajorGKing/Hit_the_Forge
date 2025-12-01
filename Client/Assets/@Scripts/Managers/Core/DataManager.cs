@@ -22,6 +22,7 @@ public class DataManager
     public Dictionary<int, Data.PlayerUpgradeData> PlayerUpgradeDict { get; private set; } = new Dictionary<int, Data.PlayerUpgradeData>();
     public Dictionary<int, Data.ForgeUpgradeData> ForgeUpgradeDict { get; private set; } = new Dictionary<int, Data.ForgeUpgradeData>();
     public Dictionary<int, Data.TownUpgradeData> TownUpgradeDict { get; private set; } = new Dictionary<int, Data.TownUpgradeData>();
+    public Dictionary<int, Data.ShopProductData> ShopProductDict { get; private set; } = new Dictionary<int, Data.ShopProductData>();
 
     public void Init()
     {
@@ -31,6 +32,7 @@ public class DataManager
         PlayerUpgradeDict = LoadJson<Data.PlayerUpgradeDataLoader, int, Data.PlayerUpgradeData>("PlayerUpgradeData").MakeDict();
         ForgeUpgradeDict = LoadJson<Data.ForgeUpgradeDataLoader, int, Data.ForgeUpgradeData>("ForgeUpgradeData").MakeDict();
         TownUpgradeDict = LoadJson<Data.TownUpgradeDataLoader, int, Data.TownUpgradeData>("TownUpgradeData").MakeDict();
+        ShopProductDict = LoadJson<Data.ShopProductDataLoader, int, Data.ShopProductData>("ShopProductData").MakeDict();
         Validate();
     }
 

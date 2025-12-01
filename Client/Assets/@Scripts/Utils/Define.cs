@@ -118,4 +118,11 @@ public class Define
         ShopSellBonus,
         ShopBuyBonus,
     }
+
+    public enum EShopProductType
+    {
+        BuyIron,
+        BuyCoal,
+        AdGold,
+    }
 }

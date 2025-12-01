@@ -24,6 +24,7 @@ public class UI_UpgradeSubItem : UI_SubItem
     private Data.PlayerUpgradeData playerUpgradeData = null;
     private Data.ForgeUpgradeData forgeUpgradeData = null;
     private Data.TownUpgradeData townUpgradeData = null;
+    private Data.ShopProductData shopProductData = null;
 
 
     protected override void Awake()
@@ -54,6 +55,10 @@ public class UI_UpgradeSubItem : UI_SubItem
         else if(type == Define.EUpgradeType.Town)
         {
             Managers.Data.TownUpgradeDict.TryGetValue(templateId, out townUpgradeData);
+        }
+        else if(type == Define.EUpgradeType.Shop)
+        {
+            Managers.Data.ShopProductDict.TryGetValue(templateId, out shopProductData);
         }
         
 
@@ -168,8 +173,26 @@ public class UI_UpgradeSubItem : UI_SubItem
                 GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
             }
         }
+        else if (upgradeType == Define.EUpgradeType.Shop)
+        {
+            if (shopProductData == null)
+                return;
 
+            // TODO Image based on type
 
+            if (shopProductData.StatType == Define.EShopProductType.BuyIron)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "재료를 구매 합니다.";
+            }
+            else if (shopProductData.StatType == Define.EShopProductType.BuyCoal)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "연료를 구매 합니다.";
+            }
+
+            GetText((int)Texts.Text_UpgradeStat).text = shopProductData.CurrentValue.ToString();
+
+            GetText((int)Texts.Text_UpgradePrice).text = shopProductData.Price.ToString();
+        }
     }
 
     private void OnClickedUpgradeButton(PointerEventData eventData)
@@ -195,14 +218,17 @@ public class UI_UpgradeSubItem : UI_SubItem
         }
         else if (upgradeType == Define.EUpgradeType.Town)
         {
-            Debug.Log("Town Update Clicked");
-
             if (townUpgradeData == null)
                 return;
 
-            Debug.Log("Do Town Update");
-
             Managers.Player.StatUpgrade(Define.EUpgradeType.Town, (int)townUpgradeData.StatType);
+        }
+        else if(upgradeType == Define.EUpgradeType.Shop)
+        {
+            if(shopProductData == null)
+                return;
+
+            Managers.Player.StatUpgrade(Define.EUpgradeType.Shop, (int)shopProductData.StatType);
         }
     }
 }

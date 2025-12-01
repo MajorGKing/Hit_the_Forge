@@ -223,6 +223,25 @@ public class UI_GameScene : UI_Scene
                 }
             }
         }
+        else if(_isSelectedShop == true)
+        {
+            GetGameObject((int)GameObjects.ShopUpgradeContent).DestroyChildren();
+            var shopProducts = Managers.Player.GetShopAllStat();
+
+
+            foreach (var product in shopProducts)
+            {
+                Managers.Data.ShopProductDict.TryGetValue(product, out var data);
+
+                if (data != null)
+                {
+                    var item = Managers.UI.MakeSubItem<UI_UpgradeSubItem>(GetGameObject((int)GameObjects.ShopUpgradeContent).transform);
+
+                    item.SetInfo(Define.EUpgradeType.Shop, data.TemplateId);
+                }
+            }
+
+        }
     }
 
     private void WeaponSelectReset()
@@ -302,6 +321,8 @@ public class UI_GameScene : UI_Scene
 
         GetGameObject((int)GameObjects.Object_ShopUpgrade).SetActive(true);
         _isSelectedShop = true;
+
+        RefreshUI();
     }
     #endregion
 }

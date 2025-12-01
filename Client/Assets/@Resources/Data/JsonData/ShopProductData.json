@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "StatType": 0,
+      "TemplateId": 1,
+      "UpgradeName": "BuyIron",
+      "Price": 100,
+      "CurrentValue": 1000,
+      "NextValue": 0,
+      "OriginalTemplateId": 1,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 1,
+      "TemplateId": 11,
+      "UpgradeName": "BuyCoal",
+      "Price": 100,
+      "CurrentValue": 1000,
+      "NextValue": 0,
+      "OriginalTemplateId": 11,
+      "NextTempalteId": 0
+    }
+  ]
+}
