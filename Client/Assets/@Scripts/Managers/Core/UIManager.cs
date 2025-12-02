@@ -14,6 +14,11 @@ public class UIManager
     private Stack<UI_Popup> _popupStack = new Stack<UI_Popup>();
     private UI_Scene _sceneUI = null;
 
+    //Toast
+    public bool isToastLoaded = false;
+
+    private static ToastUI _toastUI;
+
     public UI_Scene SceneUI
     {
         set { _sceneUI = value; }
@@ -198,4 +203,31 @@ public class UIManager
         Time.timeScale = 1;
         _sceneUI = null;
     }
+
+    #region Toast
+
+    private void PrepareToast()
+    {
+        if (!isToastLoaded)
+        {
+            GameObject instance = MonoBehaviour.Instantiate(Managers.Resource.Load<GameObject>("ToastUI"));
+            instance.name = "[ TOAST UI ]";
+            _toastUI = instance.GetComponent<ToastUI>();
+            isToastLoaded = true;
+        }
+    }
+
+    public void ShowToast(string text, float duration = 1f, EToastColor color = EToastColor.Black, EToastPosition position = EToastPosition.TopCenter)
+    {
+        PrepareToast();
+        _toastUI.SetInfo(text, duration, color, position);
+    }
+
+    public void Dismiss()
+    {
+        if (isToastLoaded)
+            _toastUI.Dismiss();
+    }
+
+    #endregion
 }

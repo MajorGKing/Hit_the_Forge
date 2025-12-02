@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using static Utils;
@@ -76,6 +76,33 @@ public class Define
 		//
 		Projectile = 20,
 	}
+
+    #region Toast
+    public enum EToastColor
+    {
+        Black,
+        Red,
+        Purple,
+        Magenta,
+        Blue,
+        Green,
+        Yellow,
+        Orange
+    }
+
+    public enum EToastPosition
+    {
+        TopLeft,
+        TopCenter,
+        TopRight,
+        MiddleLeft,
+        MiddleCenter,
+        MiddleRight,
+        BottomLeft,
+        BottomCenter,
+        BottomRight
+    }
+    #endregion
 
     public enum ECurrency
     {
