@@ -1,4 +1,4 @@
-using Cysharp.Threading.Tasks;
+﻿using Cysharp.Threading.Tasks;
 using DG.Tweening;
 using System;
 using System.Collections;
@@ -168,6 +168,8 @@ public class GameManager
     public event Action OnWeaponHpChanged;
     public event Action OnEnhancementCountChanged;
     public event Action OnEnhancementPercentChanged;
+    public event Action OnWeaponEnhancementSucess;
+    public event Action OnWeaponEnhancementFail;
     #endregion
 
     #region Variables
@@ -307,9 +309,10 @@ public class GameManager
 
     private IEnumerator CoEnhancementProgress()
     {
-        ChangeState(EWeaponMakeProcess.Sell);
-
-        yield return null;
+        while (makeProcessState == EWeaponMakeProcess.EnhancementProgress)
+        {
+            yield return null;
+        }
     }
 
     private IEnumerator CoSell()
@@ -482,13 +485,31 @@ public class GameManager
         {
             EnhancmentLevel++;
             enhancementCountTime = 3f;
+
+            Managers.Sound.Play(Define.ESound.Effect, "EnhancementSucessSound1");
+
+            OnWeaponEnhancementSucess?.Invoke();
         }
         else
         {
-            EnhancmentLevel = 0;
-            enhancementCountTime = 0f;
-            ChangeState(EWeaponMakeProcess.BeginHold);
+            WaitFail().Forget();
         }
+    }
+
+    private async UniTaskVoid WaitFail()
+    {
+        EnhancmentLevel = 0;
+        enhancementCountTime = 0f;
+        
+        Managers.Sound.Play(Define.ESound.Effect, "EnhancementFailSound1");
+
+        OnWeaponEnhancementFail?.Invoke();
+
+        ChangeState(EWeaponMakeProcess.EnhancementProgress);
+
+        await UniTask.Delay(500);
+
+        ChangeState(EWeaponMakeProcess.BeginHold);
     }
 
     private async UniTaskVoid UseCoal()

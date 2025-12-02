@@ -1,0 +1,13 @@
+{
+    "asset": "3f3037810d7a66440b3aff8c3f0b39d5",
+    "fileName": "019adefd-49d3-7ac4-8e2d-7228ecc2f215.wav",
+    "prompt": "An extremely short, high-pitched metallic sound effect (maximum 0.5 seconds duration). The sound should mimic the sharp, crystalline shatter of glass or the high-frequency impact of thin, brittle metal breaking. It must be very bright, highly resonant, and contain a brief, piercing quality, suggesting instantaneous and irreversible fragmentation.",
+    "negativePrompt": "",
+    "model": "5de0686a-fb27-40e5-9df0-28ae810d70ca",
+    "modelName": "ElevenLabs Sound Effects V2",
+    "customSeed": -1,
+    "w3CTraceId": "c7c54db85de11e893bb24cb1a81bf162",
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false
+}

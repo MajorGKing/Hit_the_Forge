@@ -39,8 +39,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d2ac8a5cdb9d1194fabafada1c556b72
+    m_Address: EnhancementSucessSound1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d70ff2e0acd574ed29a20af954689501
     m_Address: HitEffectSound2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e64ec236a6f65b7459f17a750ff091e9
+    m_Address: EnhancementFailSound1
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload

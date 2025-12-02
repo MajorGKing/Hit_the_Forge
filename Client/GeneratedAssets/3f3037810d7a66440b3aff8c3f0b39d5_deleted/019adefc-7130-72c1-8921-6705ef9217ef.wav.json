@@ -1,0 +1,13 @@
+{
+    "asset": "3f3037810d7a66440b3aff8c3f0b39d5",
+    "fileName": "019adefc-7130-72c1-8921-6705ef9217ef.wav",
+    "prompt": "An extremely short, high-pitched metallic sound effect (maximum 0.5 seconds duration). The sound should mimic the sharp, crystalline shatter of glass or the high-frequency impact of thin, brittle metal breaking. It must be very bright, highly resonant, and contain a brief, piercing quality, suggesting instantaneous and irreversible fragmentation.",
+    "negativePrompt": "",
+    "model": "6ab5371b-d771-4e55-b856-fb0296eaf50c",
+    "modelName": "Beatoven Music Generation",
+    "customSeed": -1,
+    "w3CTraceId": "286c5a534c4670b5e23e437a00a56e98",
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false
+}
