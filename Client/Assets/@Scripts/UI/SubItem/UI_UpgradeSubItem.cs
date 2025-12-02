@@ -1,4 +1,4 @@
-using UnityEngine;
+ï»¿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class UI_UpgradeSubItem : UI_SubItem
@@ -79,15 +79,15 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (playerUpgradeData.StatType == Define.EPlayerStat.Str)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "ÅÍÄ¡½Ã °ø°Ý·ÂÀ» ¿Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "í„°ì¹˜ì‹œ ê³µê²©ë ¥ì„ ì˜¬ë¦½ë‹ˆë‹¤.";
             }
             else if (playerUpgradeData.StatType == Define.EPlayerStat.Skill)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "Á¦Ç°ÀÇ Ç°ÁúÀ» ³ôÀÔ´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ì œí’ˆì˜ í’ˆì§ˆì„ ë†’ìž…ë‹ˆë‹¤.";
             }
             else if (playerUpgradeData.StatType == Define.EPlayerStat.Mastery)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "°­È­ ¼º°øÈ®·üÀ» ³ôÀÔ´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ê°•í™” ì„±ê³µí™•ë¥ ì„ ë†’ìž…ë‹ˆë‹¤.";
             }
 
             GetText((int)Texts.Text_UpgradeStat).text = $"{playerUpgradeData.CurrentValue} > {playerUpgradeData.NextValue}";
@@ -108,15 +108,15 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.CoalTime)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "¿¬·á »ç¿ë½Ã°£À» ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ì—°ë£Œ ì‚¬ìš©ì‹œê°„ì„ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
             else if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.Skill)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "Á¦Ç°ÀÇ Ç°ÁúÀ» ³ôÀÔ´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ì œí’ˆì˜ í’ˆì§ˆì„ ë†’ìž…ë‹ˆë‹¤.";
             }
             else if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.Mastery)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "°­È­ ¼º°øÈ®·üÀ» ³ôÀÔ´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ê°•í™” ì„±ê³µí™•ë¥ ì„ ë†’ìž…ë‹ˆë‹¤.";
             }
 
             GetText((int)Texts.Text_UpgradeStat).text = $"{forgeUpgradeData.CurrentValue} > {forgeUpgradeData.NextValue}";
@@ -137,31 +137,31 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (townUpgradeData.StatType == Define.EPlayerTownStat.GoldMax)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "°ñµå ÃÖ´ë ¼ÒÀ¯·®À» ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ê³¨ë“œ ìµœëŒ€ ì†Œìœ ëŸ‰ì„ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.IronMax)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "ÀÚ¿ø ÃÖ´ë ¼ÒÀ¯·®À» ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ìžì› ìµœëŒ€ ì†Œìœ ëŸ‰ì„ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.IronRegeneration)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "ÀÚ¿ø »ý»ê·®À» ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ìžì› ìƒì‚°ëŸ‰ì„ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.CoalMax)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "¿¬·Î ÃÖ´ë ¼ÒÀ¯·®À» ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ì—°ë¡œ ìµœëŒ€ ì†Œìœ ëŸ‰ì„ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.CoalRegeneration)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "¿¬·Î »ý»ê·®À» ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ì—°ë¡œ ìƒì‚°ëŸ‰ì„ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.ShopSellBonus)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "ÆÇ¸Å½Ã ¹Þ´Â °ñµå º¸³Ê½º¸¦ ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "íŒë§¤ì‹œ ë°›ëŠ” ê³¨ë“œ ë³´ë„ˆìŠ¤ë¥¼ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.ShopBuyBonus)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "»óÁ¡ ±¸¸Å½Ã ¹Þ´Â ±¸¸Å·®À» ´Ã¸³´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ìƒì  êµ¬ë§¤ì‹œ ë°›ëŠ” êµ¬ë§¤ëŸ‰ì„ ëŠ˜ë¦½ë‹ˆë‹¤.";
             }
 
             GetText((int)Texts.Text_UpgradeStat).text = $"{townUpgradeData.CurrentValue} > {townUpgradeData.NextValue}";
@@ -182,11 +182,11 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (shopProductData.StatType == Define.EShopProductType.BuyIron)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "Àç·á¸¦ ±¸¸Å ÇÕ´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ìž¬ë£Œë¥¼ êµ¬ë§¤ í•©ë‹ˆë‹¤.";
             }
             else if (shopProductData.StatType == Define.EShopProductType.BuyCoal)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "¿¬·á¸¦ ±¸¸Å ÇÕ´Ï´Ù.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "ì—°ë£Œë¥¼ êµ¬ë§¤ í•©ë‹ˆë‹¤.";
             }
 
             GetText((int)Texts.Text_UpgradeStat).text = shopProductData.CurrentValue.ToString();
