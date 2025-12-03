@@ -324,6 +324,7 @@ public class GameManager
             int price = GetSellPrice();
 
             Managers.Player.CurrencyAdd(Define.ECurrency.Gold, price);
+            Managers.Sound.Play(Define.ESound.Effect, "SellEffect");
         }
 
         ChangeState(EWeaponMakeProcess.BeginHold);

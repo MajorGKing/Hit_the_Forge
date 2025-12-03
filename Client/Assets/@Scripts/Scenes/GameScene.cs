@@ -26,7 +26,7 @@ public class GameScene : BaseScene
 
         Managers.Game.StartWeaponMake(1);
 
-        Managers.Sound.Play(Define.ESound.Bgm, "BGM1", 0.2f);
+        Managers.Sound.Play(Define.ESound.Bgm, "BGM3", 0.2f);
     }
 
     public override void Clear()

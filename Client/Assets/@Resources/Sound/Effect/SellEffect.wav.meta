@@ -1,7 +1,5 @@
 fileFormatVersion: 2
-guid: 7a466e7df0d1d42359018e86844016f7
-timeCreated: 1525251106
-licenseType: Store
+guid: abdbbfd33a46f4549987385f85c536b5
 AudioImporter:
   externalObjects: {}
   serializedVersion: 6
@@ -24,8 +22,8 @@ AudioImporter:
   assetBundleVariant: 
 AssetOrigin:
   serializedVersion: 1
-  productId: 117893
-  packageName: Karugamo BGM FREE Pack
+  productId: 227708
+  packageName: RPG Essentials Sound Effects - FREE!
   packageVersion: 1.0
-  assetPath: Assets/Karugamo/BGM/FREE/KBF_Event_Positive_05.ogg
-  uploadId: 346841
+  assetPath: Assets/Leohpaz/RPG_Essentials_Free/10_UI_Menu_SFX/079_Buy_sell_01.wav
+  uploadId: 516368

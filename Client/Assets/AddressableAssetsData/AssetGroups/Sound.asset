@@ -15,12 +15,6 @@ MonoBehaviour:
   m_GroupName: Sound
   m_GUID: 7160e765c545848cbadf1468ffbc811e
   m_SerializeEntries:
-  - m_GUID: 1139ea05703ba40a9bca5ab756083d8f
-    m_Address: BGM1
-    m_ReadOnly: 0
-    m_SerializedLabels:
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1bfa277acb36b45ec998c6b12a46a110
     m_Address: HitEffectSound3
     m_ReadOnly: 0
@@ -45,6 +39,18 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: abdbbfd33a46f4549987385f85c536b5
+    m_Address: SellEffect
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c5cb2ac29e89dbf43a9b644caaad45e6
+    m_Address: UpgradeEffect
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d2ac8a5cdb9d1194fabafada1c556b72
     m_Address: EnhancementSucessSound1
     m_ReadOnly: 0
@@ -59,6 +65,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e64ec236a6f65b7459f17a750ff091e9
     m_Address: EnhancementFailSound1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f182586aa4a604f15aeda6e358e9a5ea
+    m_Address: BGM3
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload

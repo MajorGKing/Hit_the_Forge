@@ -310,6 +310,8 @@ public class PlayerManager
             OnCurrenciesChagned?.Invoke();
         }
 
+        Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
+
         // invoke
         OnPlayerUpgradeChanged?.Invoke();
     }
