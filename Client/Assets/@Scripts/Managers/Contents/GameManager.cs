@@ -371,7 +371,8 @@ public class GameManager
         {
             if (needCoal > Managers.Player.GetCurrency(Define.ECurrency.Coal))
             {
-                // TODO 석탄 부족 표시
+                // TODO ILHAK 석탄 부족 표시
+                Managers.UI.ShowToast("연료가 부족합니다.", 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
                 return;
             }
 
@@ -410,7 +411,10 @@ public class GameManager
             return false;
 
         if (weaponInfo.Iron > Managers.Player.GetCurrency(Define.ECurrency.Iron))
+        {
+            Managers.UI.ShowToast("재료가 부족합니다.", 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
             return false;
+        }
 
         currentWeaponInfo = weaponInfo;
         ChangeState(EWeaponMakeProcess.Ready);
@@ -476,7 +480,6 @@ public class GameManager
 
         var value = Random.Range(0, enhancementData.BasicSucess);
 
-        // TODO Add Player&Forge Stat
         var suceeValue = CalEnhancemenetPercent(enhancementData);
         //var suceeValue = enhancementData.EnhancementSucess + (enhancementData.EnhancementSucess * Managers.Player.GetPlayerStat(Define.EPlayerStat.Mastery))/100f;
 

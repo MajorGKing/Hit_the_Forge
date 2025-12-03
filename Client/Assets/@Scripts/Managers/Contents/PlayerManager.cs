@@ -253,7 +253,7 @@ public class PlayerManager
 
             if (stock == maxStock)
             {
-                // TODO 최대치 관련 메세지
+                ShowFullMessage(currencyType);
                 return;
             }
         }
@@ -265,7 +265,7 @@ public class PlayerManager
         // Gold 체크
         if(data.Price > GetCurrency(Define.ECurrency.Gold))
         {
-            // TODO 골드 부족 알림
+            ShowLessMessage(Define.ECurrency.Gold);
             return;
         }
 
@@ -328,6 +328,46 @@ public class PlayerManager
     {
         return shopProducts;
     }
+
+    #region  ShowMessage
+    private void ShowLessMessage(Define.ECurrency currency)
+    {
+        string message = "";
+
+        if(currency == Define.ECurrency.Gold)
+        {
+            message = "골드가 부족합니다.";
+        }
+        else if(currency == Define.ECurrency.Iron)
+        {
+            message = "재료가 부족합니다.";
+        }
+        else if(currency == Define.ECurrency.Coal)
+        {
+            message = "연료가 부족합니다.";
+        }
+        Managers.UI.ShowToast(message, 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
+    }
+
+    private void ShowFullMessage(Define.ECurrency currency)
+    {
+        string message = "";
+
+        if(currency == Define.ECurrency.Gold)
+        {
+            message = "골드가 최대치입니다.";
+        }
+        else if(currency == Define.ECurrency.Iron)
+        {
+            message = "재료가 최대치입니다.";
+        }
+        else if(currency == Define.ECurrency.Coal)
+        {
+            message = "연료가 최대치입니다.";
+        }
+        Managers.UI.ShowToast(message, 1, Define.EToastColor.Orange, Define.EToastPosition.MiddleCenter);
+    }
+    #endregion
 
     #region Action
     public event Action OnCurrenciesChagned;

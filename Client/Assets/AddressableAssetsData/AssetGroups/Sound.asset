@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Sound
   m_GUID: 7160e765c545848cbadf1468ffbc811e
   m_SerializeEntries:
+  - m_GUID: 1139ea05703ba40a9bca5ab756083d8f
+    m_Address: BGM1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1bfa277acb36b45ec998c6b12a46a110
     m_Address: HitEffectSound3
     m_ReadOnly: 0
