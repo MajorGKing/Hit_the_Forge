@@ -1,0 +1,13 @@
+{
+    "asset": "1139ea05703ba40a9bca5ab756083d8f",
+    "fileName": "019ae200-ca17-785f-9084-7e7261eea64f.wav",
+    "prompt": "Create a 30-second background track inspired by a quiet blacksmith’s forge. Emphasize the gentle crackling of fire, the soft roar of embers, and slow, rhythmic metallic hammering on an anvil. Blend subtle ambient echoes, warm atmospheric pads, and low industrial rumbles to evoke a calm, steady, and focused crafting environment. The overall mood should be peaceful, immersive, and cinematic, with a smooth balance of natural forge sounds and light ambient music.",
+    "negativePrompt": "",
+    "model": "7df9b85a-1695-49f7-89bf-988208d5a3bc",
+    "modelName": "Meta MusicGen",
+    "customSeed": -1,
+    "w3CTraceId": "ce03d3767edd3eac84944b71a7043e66",
+    "duration": 10.0,
+    "autoTrim": false,
+    "hasReference": false
+}
