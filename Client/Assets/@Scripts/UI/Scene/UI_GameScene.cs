@@ -109,8 +109,8 @@ public class UI_GameScene : UI_Scene
 
     private void OnEnable()
     {
-        Managers.Player.OnCurrenciesChagned -= RefreshUI;
-        Managers.Player.OnCurrenciesChagned += RefreshUI;
+        Managers.Player.OnCurrenciesChanged -= RefreshUI;
+        Managers.Player.OnCurrenciesChanged += RefreshUI;
         Managers.Game.OnEnhancementCountChanged -= RefreshUI;
         Managers.Game.OnEnhancementCountChanged += RefreshUI;
         Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
@@ -121,7 +121,7 @@ public class UI_GameScene : UI_Scene
 
     private void OnDisable()
     {
-        Managers.Player.OnCurrenciesChagned -= RefreshUI;
+        Managers.Player.OnCurrenciesChanged -= RefreshUI;
         Managers.Game.OnEnhancementCountChanged -= RefreshUI;
         Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
