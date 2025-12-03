@@ -1,4 +1,4 @@
-using System;
+ï»¿using System;
 using System.Diagnostics;
 
 
@@ -230,10 +230,10 @@ public class PlayerManager
                 NextTempalteId = dataValue.NextTempalteId,
             };
 
-            // TODO TypeÀ» NoneÀ» ÇÒ ¼ö ¾ø¾î¼­ ÀÓ½Ã·Î
+            // TODO Typeì„ Noneì„ í•  ìˆ˜ ì—†ì–´ì„œ ì„ì‹œë¡œ
             Define.ECurrency currencyType = Define.ECurrency.Gold;
 
-            // °¡Áö°í ÀÖ´Â ÀÚ¿ø Á¾·ù ÆÄ¾Ç
+            // ê°€ì§€ê³  ìˆëŠ” ìì› ì¢…ë¥˜ íŒŒì•…
             if(dataValue.StatType == Define.EShopProductType.BuyIron)
             {
                 currencyType = Define.ECurrency.Iron;
@@ -247,13 +247,13 @@ public class PlayerManager
                 return;
             }
 
-            // ÃÖ´ë °ª ºñ±³
+            // ìµœëŒ€ ê°’ ë¹„êµ
             var stock = GetCurrency(currencyType);
             var maxStock = GetCurrenyMax(currencyType);
 
             if (stock == maxStock)
             {
-                // TODO ÃÖ´ëÄ¡ °ü·Ã ¸Ş¼¼Áö
+                // TODO ìµœëŒ€ì¹˜ ê´€ë ¨ ë©”ì„¸ì§€
                 return;
             }
         }
@@ -262,20 +262,20 @@ public class PlayerManager
         if (data == null)
             return;
 
-        // Gold Ã¼Å©
+        // Gold ì²´í¬
         if(data.Price > GetCurrency(Define.ECurrency.Gold))
         {
-            // TODO °ñµå ºÎÁ· ¾Ë¸²
+            // TODO ê³¨ë“œ ë¶€ì¡± ì•Œë¦¼
             return;
         }
 
-        // ´ÙÀ½ ·¹º§ °¡´É ¿©ºÎ Ã¼Å©
+        // ë‹¤ìŒ ë ˆë²¨ ê°€ëŠ¥ ì—¬ë¶€ ì²´í¬
         if (upgradeType != Define.EUpgradeType.Shop && data.NextTempalteId == 0)
             return;
 
-        // Gold ±ï°í ·¹º§¾÷
+        // Gold ê¹ê³  ë ˆë²¨ì—…
         CurrencySubtract(Define.ECurrency.Gold, data.Price);
-        // TODO ³ªÁß¿¡ °ñµå ¾Æ´Ñ ¹æ½Ä ÀÖÀ¸¸é csv¼öÁ¤ ÇÊ¿ä
+        // TODO ë‚˜ì¤‘ì— ê³¨ë“œ ì•„ë‹Œ ë°©ì‹ ìˆìœ¼ë©´ csvìˆ˜ì • í•„ìš”
 
         if (upgradeType == Define.EUpgradeType.Player)
         {
@@ -293,7 +293,7 @@ public class PlayerManager
         {
             Managers.Data.ShopProductDict.TryGetValue(shopProducts[type], out var dataValue);
 
-            // °¡Áö°í ÀÖ´Â ÀÚ¿ø Á¾·ù ÆÄ¾Ç
+            // ê°€ì§€ê³  ìˆëŠ” ìì› ì¢…ë¥˜ íŒŒì•…
             if (dataValue.StatType == Define.EShopProductType.BuyIron)
             {
                 var addValue = dataValue.CurrentValue;
