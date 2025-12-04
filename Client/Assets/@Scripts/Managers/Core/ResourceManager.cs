@@ -18,13 +18,11 @@ public class ResourceManager
             return true;
         }
 
+        //스프라이트인 경우 하위객체의 찐이름으로 로드하면 스프라이트로 로딩이 됌
+        string loadKey = key;
         if (typeof(T) == typeof(Sprite))
         {
-            key = key + ".sprite";
-            if (_resources.TryGetValue(key, out Object temp))
-            {
-                return true;
-            }
+            loadKey = $"{key}[{key}]";
         }
 
         return false;

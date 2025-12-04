@@ -25,6 +25,7 @@ public class UI_GameScene : UI_Scene
     enum Images
     {
         Image_EnhancementCountDown,
+        Image_Help,
     }
 
     enum Buttons
@@ -85,6 +86,8 @@ public class UI_GameScene : UI_Scene
         GetToggle((int)Toggles.Toggle_ForgeUpgrade).gameObject.BindEvent(OnClickForgeToogle);
         GetToggle((int)Toggles.Toggle_TownUpgrade).gameObject.BindEvent(OnClickTownToogle);
         GetToggle((int)Toggles.Toggle_ShopUpgrade).gameObject.BindEvent(OnClickShopToogle);
+
+        GetImage((int)Images.Image_Help).gameObject.BindEvent(OnClickedHelp);
 
         TogglesInit();
     }
@@ -171,7 +174,7 @@ public class UI_GameScene : UI_Scene
             GetText((int)Texts.Text_SellPrice).text = price.ToString();
         }
 
-        // ÇÃ·¹ÀÌ¾î ¾÷±×·¹ÀÌµå ¾ÆÀÌÅÛ °»½Å
+        // ï¿½Ã·ï¿½ï¿½Ì¾ï¿½ ï¿½ï¿½ï¿½×·ï¿½ï¿½Ìµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (_isSelectedPlayer == true)
         {
             GetGameObject((int)GameObjects.PlayerUpgradeContent).DestroyChildren();
@@ -323,6 +326,11 @@ public class UI_GameScene : UI_Scene
         _isSelectedShop = true;
 
         RefreshUI();
+    }
+
+    private void OnClickedHelp(PointerEventData eventData)
+    {
+        Managers.UI.ShowPopupUI<UI_HelpPopup>();
     }
     #endregion
 }

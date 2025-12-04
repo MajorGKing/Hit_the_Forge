@@ -13,10 +13,44 @@ MonoBehaviour:
   m_Name: Sprite
   m_EditorClassIdentifier: 
   m_GroupName: Sprite
-  m_Data:
-    m_SerializedData: []
   m_GUID: e838eaf0fdd6b2c45ab065dfc4950a7d
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 0bf1b767a8552441db9c8feeb4b5cdc4
+    m_Address: help03
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 70211099f4d9f4ef888d6bd78610ded0
+    m_Address: help06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 902572cd954aa4b4b8c38bef2442fd8c
+    m_Address: help04
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9f73acaf9e80c46b3bc120fb894662d9
+    m_Address: help01
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e28cf2dd957ea41cb9bf9b21b459fbbc
+    m_Address: help05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: facbca727138842888128349f7c41abc
+    m_Address: help02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 9094f0f0595c6e147aa68a6f81e2dcaf, type: 2}
   m_SchemaSet:
