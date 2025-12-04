@@ -40,7 +40,7 @@ public class UI_HelpPopup : UI_Popup
         }
 
         var helpName = "help0" + helpStep.ToString();
-        Debug.Log(helpName);
+        //Debug.Log(helpName);
 
         GetGameObject((int)GameObjects.BackGround).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(helpName);
     }

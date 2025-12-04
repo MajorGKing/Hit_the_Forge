@@ -9,6 +9,9 @@ public class UI_Popup : UI_Base
         base.Awake();
 
         UICanvas = Managers.UI.SetCanvas(gameObject);
+
+        UICanvas.renderMode = RenderMode.ScreenSpaceCamera;
+        UICanvas.worldCamera = Camera.main;
         //PopupOpenAnimation(gameObject);
     }
     
