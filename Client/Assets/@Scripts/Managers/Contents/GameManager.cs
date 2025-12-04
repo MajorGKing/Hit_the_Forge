@@ -53,22 +53,6 @@ public class GameManager
     public void Update()
     {
         UpdateInput();
-
-        //Debug.Log(makeProcessState);
-
-        //if(makeProcessState == EWeaponMakeProcess.Enhancement)
-        //{
-        //    //Debug.Log(enhancementCountTime);
-        //    EnhancementCountTime -= Time.deltaTime;
-
-        //    if(EnhancementCountTime <= 0)
-        //    {
-        //        EnhancementCountTime = 0f;
-        //        SellWeapon();
-        //    }
-
-        //    OnEnhancementCountChanged?.Invoke();
-        //}
     }
 
     private void UpdateInput()

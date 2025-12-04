@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Diagnostics;
+using Unity.InferenceEngine.Tokenization.PostProcessors.Templating;
+using UnityEngine;
 
 
 public class PlayerManager
 {
     private int[] currency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
-    //public int[] maxCurrency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
-    //private int[] playerStat = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] playerStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] forgeStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
     private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
@@ -15,24 +15,18 @@ public class PlayerManager
 
     public void Clear()
     {
-
+        Array.Clear(currency, 0, currency.Length);
+        Array.Clear(playerStatLevel, 0, playerStatLevel.Length);
+        Array.Clear(forgeStatLevel, 0, forgeStatLevel.Length);
+        Array.Clear(townStatLevel, 0, townStatLevel.Length);
+        Array.Clear(shopProducts, 0, shopProducts.Length);
     }
 
     public void Init()
     {
-        //for (int i = 0; i < maxCurrency.Length; i++)
-        //{
-        //    maxCurrency[i] = 10000;
-        //}
-
         currency[(int)Define.ECurrency.Gold] = 0;
         currency[(int)Define.ECurrency.Iron] = 5000;
         currency[(int)Define.ECurrency.Coal] = 5000;
-
-        //playerStat[(int)Define.EPlayerStat.Str] = 10;
-        //playerStat[(int)Define.EPlayerStat.Skill] = 10;
-        //playerStat[(int)Define.EPlayerStat.Dex] = 10;
-        //playerStat[(int)Define.EPlayerStat.Mastery] = 10;
 
         playerStatLevel[(int)Define.EPlayerStat.Str] = 1;
         playerStatLevel[(int)Define.EPlayerStat.Skill] = 101;
@@ -55,26 +49,41 @@ public class PlayerManager
         shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
     }
 
+    public void SetCurrency(Define.ECurrency type, int value)
+    {
+        int index = (int)type;
+
+        // 음수는 최소 0
+        if (value < 0)
+            value = 0;
+
+        int max = GetCurrenyMax(type);
+        int newValue = Mathf.Clamp(value, 0, max);
+
+        if (currency[index] != newValue)
+        {
+            currency[index] = newValue;
+            OnCurrenciesChanged?.Invoke();
+        }
+    }
+
+    private void ChangeCurrency(Define.ECurrency type, int value)
+    {
+        if (value == 0) 
+            return;
+
+        int index = (int)type;
+        int current = currency[index];
+
+        SetCurrency(type, current + value);
+    }
+
     public void CurrencyAdd(Define.ECurrency type, int value)
     {
         if (value <= 0)
             return;
-        int index = (int)type;
-
-        int oldValue = currency[index];
-        int newValue = oldValue + value;
-
-        if (newValue > GetCurrenyMax(type))
-        {
-            newValue = GetCurrenyMax(type);
-        }
-
-        currency[index] = newValue;
-
-        if (oldValue != newValue)
-        {
-            OnCurrenciesChagned?.Invoke();
-        }
+        
+        ChangeCurrency(type, value);
     }
 
     public void CurrencySubtract(Define.ECurrency type, int value)
@@ -82,22 +91,7 @@ public class PlayerManager
         if (value <= 0)
             return;
 
-        int index = (int)type;
-
-        int oldValue = currency[index];
-        int newValue = oldValue - value;
-
-        if (newValue < 0)
-        {
-            newValue = 0;
-        }
-
-        currency[index] = newValue;
-
-        if (oldValue != newValue)
-        {
-            OnCurrenciesChagned?.Invoke();
-        }
+        ChangeCurrency(type, -value);
     }
 
     public int GetCurrency(Define.ECurrency type)
@@ -107,272 +101,228 @@ public class PlayerManager
 
     public int GetCurrenyMax(Define.ECurrency type)
     {
-        int index = -1;
+        return type switch
+        {
+            Define.ECurrency.Gold => GetCurrencyMaxFromTowndata(Define.EPlayerTownStat.GoldMax),
+            Define.ECurrency.Iron => GetCurrencyMaxFromTowndata(Define.EPlayerTownStat.IronMax),
+            Define.ECurrency.Coal => GetCurrencyMaxFromTowndata(Define.EPlayerTownStat.CoalMax),
+            _ => int.MaxValue
+        };
+    }
 
-        if(type == Define.ECurrency.Gold)
-        {
-            index = townStatLevel[(int)Define.EPlayerTownStat.GoldMax];
-        }
-        else if (type == Define.ECurrency.Iron)
-        {
-            index = townStatLevel[(int)Define.EPlayerTownStat.IronMax];
-        }
-        else if (type == Define.ECurrency.Coal)
-        {
-            index = townStatLevel[(int)Define.EPlayerTownStat.CoalMax];
-        }
+    private int GetCurrencyMaxFromTowndata(Define.EPlayerTownStat stat)
+    {
+        int templateId = townStatLevel[(int)stat];
+        if (Managers.Data.TownUpgradeDict.TryGetValue(templateId, out var data))
+            return data.CurrentValue;
 
-        if (index != -1)
-            return Managers.Data.TownUpgradeDict[index].CurrentValue;
+        return int.MaxValue;
+    }
+
+
+    public int GetPlayerStat(Define.EPlayerStat type)
+    {
+        int templateId = playerStatLevel[(int)type];
+
+        if (Managers.Data.PlayerUpgradeDict.TryGetValue(templateId, out var d))
+            return d.CurrentValue;
 
         return 0;
     }
 
-    public int GetPlayerStat(Define.EPlayerStat type)
-    {
-        var statData = Managers.Data.PlayerUpgradeDict[playerStatLevel[(int)type]];
-
-        return statData.CurrentValue;
-    }
-
     public int GetForgeStat(Define.EPlayerForgeStat type)
     {
-        var statData = Managers.Data.ForgeUpgradeDict[forgeStatLevel[(int)type]];
+        int templateId = forgeStatLevel[(int)type];
 
-        return statData.CurrentValue;
+        if (Managers.Data.ForgeUpgradeDict.TryGetValue(templateId, out var d))
+            return d.CurrentValue;
+
+        return 0;
     }
 
     public int GetTownStat(Define.EPlayerTownStat type)
     {
-        var statData = Managers.Data.TownUpgradeDict[townStatLevel[(int)type]];
+        int templateId = townStatLevel[(int)type];
 
-        return statData.CurrentValue;
+        if (Managers.Data.TownUpgradeDict.TryGetValue(templateId, out var d))
+            return d.CurrentValue;
+
+        return 0;
     }
 
-    public int[] GetPlayerAllStat()
+    public int[] GetPlayerAllStat() => playerStatLevel;
+    public int[] GetForgeAllStat() => forgeStatLevel;
+    public int[] GetTownAllStat() => townStatLevel;
+    public int[] GetShopAllStat() => shopProducts;
+
+    #region UpgradeHelper
+    private int GetTemplateIdFor(Define.EUpgradeType upgradeType, int type)
     {
-        return playerStatLevel;
+        switch (upgradeType)
+        {
+            case Define.EUpgradeType.Player:
+                return playerStatLevel[type];
+            case Define.EUpgradeType.Forge:
+                return forgeStatLevel[type];
+            case Define.EUpgradeType.Town:
+                return townStatLevel[type];
+            case Define.EUpgradeType.Shop:
+                return shopProducts[type];
+            default:
+                return 0;
+        }
     }
 
-    public void StatUpgrade(Define.EUpgradeType upgradeType, int type)
+    private Data.UpgradeData GetUpgradeDataFor(Define.EUpgradeType upgradeType, int templateId)
     {
-        Data.UpgradeData data = null;
+        if (templateId <= 0) return null;
 
-        if (upgradeType == Define.EUpgradeType.Player)
+        switch (upgradeType)
         {
-            Managers.Data.PlayerUpgradeDict.TryGetValue(playerStatLevel[type], out var dataValue);
-            
-            if (dataValue != null)
-            {
-                data = new Data.UpgradeData() { 
-                    TemplateId = dataValue.TemplateId, 
-                    UpgradeName = dataValue.UpgradeName,
-                    //StatIndex = (int)dataValue.StatType,
-                    Price = dataValue.Price,
-                    CurrentValue = dataValue.CurrentValue,
-                    NextValue = dataValue.NextValue,
-                    OriginalTemplateId = dataValue.OriginalTemplateId,
-                    NextTempalteId = dataValue.NextTempalteId,
-                };
-            }
+            case Define.EUpgradeType.Player:
+                Managers.Data.PlayerUpgradeDict.TryGetValue(templateId, out var p);
+                return p;
+            case Define.EUpgradeType.Forge:
+                Managers.Data.ForgeUpgradeDict.TryGetValue(templateId, out var f);
+                return f;
+            case Define.EUpgradeType.Town:
+                Managers.Data.TownUpgradeDict.TryGetValue(templateId, out var t);
+                return t;
+            case Define.EUpgradeType.Shop:
+                Managers.Data.ShopProductDict.TryGetValue(templateId, out var s);
+                return s;
+            default:
+                return null;
         }
-        else if(upgradeType == Define.EUpgradeType.Forge)
-        {
-            Managers.Data.ForgeUpgradeDict.TryGetValue(forgeStatLevel[type], out var dataValue);
+    }
+    #endregion
 
-            if (dataValue != null)
-            {
-                data = new Data.UpgradeData()
-                {
-                    TemplateId = dataValue.TemplateId,
-                    UpgradeName = dataValue.UpgradeName,
-                    //StatIndex = (int)dataValue.StatType,
-                    Price = dataValue.Price,
-                    CurrentValue = dataValue.CurrentValue,
-                    NextValue = dataValue.NextValue,
-                    OriginalTemplateId = dataValue.OriginalTemplateId,
-                    NextTempalteId = dataValue.NextTempalteId,
-                };
-            }
-        }
-        else if (upgradeType == Define.EUpgradeType.Town)
-        {
-            Managers.Data.TownUpgradeDict.TryGetValue(townStatLevel[type], out var dataValue);
-
-            if (dataValue != null)
-            {
-                data = new Data.UpgradeData()
-                {
-                    TemplateId = dataValue.TemplateId,
-                    UpgradeName = dataValue.UpgradeName,
-                    //StatIndex = (int)dataValue.StatType,
-                    Price = dataValue.Price,
-                    CurrentValue = dataValue.CurrentValue,
-                    NextValue = dataValue.NextValue,
-                    OriginalTemplateId = dataValue.OriginalTemplateId,
-                    NextTempalteId = dataValue.NextTempalteId,
-                };
-            }
-        }
-        else if (upgradeType == Define.EUpgradeType.Shop)
-        {
-            Managers.Data.ShopProductDict.TryGetValue(shopProducts[type], out var dataValue);
-
-            data = new Data.UpgradeData()
-            {
-                TemplateId = dataValue.TemplateId,
-                UpgradeName = dataValue.UpgradeName,
-                //StatIndex = (int)dataValue.StatType,
-                Price = dataValue.Price,
-                CurrentValue = dataValue.CurrentValue,
-                NextValue = dataValue.NextValue,
-                OriginalTemplateId = dataValue.OriginalTemplateId,
-                NextTempalteId = dataValue.NextTempalteId,
-            };
-
-            // TODO Type을 None을 할 수 없어서 임시로
-            Define.ECurrency currencyType = Define.ECurrency.Gold;
-
-            // 가지고 있는 자원 종류 파악
-            if(dataValue.StatType == Define.EShopProductType.BuyIron)
-            {
-                currencyType = Define.ECurrency.Iron;
-            }
-            else if(dataValue.StatType == Define.EShopProductType.BuyCoal)
-            {
-                currencyType = Define.ECurrency.Coal;
-            }
-            else
-            {
-                return;
-            }
-
-            // 최대 값 비교
-            var stock = GetCurrency(currencyType);
-            var maxStock = GetCurrenyMax(currencyType);
-
-            if (stock == maxStock)
-            {
-                ShowFullMessage(currencyType);
-                return;
-            }
-        }
-
+    public void StatUpgrade(Define.EUpgradeType upgradeType, int slotIndex)
+    {
+        int templateId = GetTemplateIdFor(upgradeType, slotIndex);
+        var data = GetUpgradeDataFor(upgradeType, templateId);
 
         if (data == null)
             return;
 
         // Gold 체크
-        if(data.Price > GetCurrency(Define.ECurrency.Gold))
+        if (data.Price > GetCurrency(Define.ECurrency.Gold))
         {
             ShowLessMessage(Define.ECurrency.Gold);
             return;
         }
 
-        // 다음 레벨 가능 여부 체크
+        // Shop이 아닌 경우 다음 레벨 가능 여부 체크
         if (upgradeType != Define.EUpgradeType.Shop && data.NextTempalteId == 0)
             return;
 
-        // Gold 깍고 레벨업
-        CurrencySubtract(Define.ECurrency.Gold, data.Price);
-        // TODO 나중에 골드 아닌 방식 있으면 csv수정 필요
-
-        if (upgradeType == Define.EUpgradeType.Player)
+        // Upgrade하기
+        if (upgradeType == Define.EUpgradeType.Shop)
         {
-            playerStatLevel[type] = data.NextTempalteId;
+            ProcessShopPurchase(slotIndex);
         }
-        else if(upgradeType == Define.EUpgradeType.Forge)
+        else
         {
-            forgeStatLevel[type] = data.NextTempalteId;
-        }
-        else if(upgradeType == Define.EUpgradeType.Town)
-        {
-            townStatLevel[type] = data.NextTempalteId;
-        }
-        else if(upgradeType == Define.EUpgradeType.Shop)
-        {
-            Managers.Data.ShopProductDict.TryGetValue(shopProducts[type], out var dataValue);
+            // Gold 차감
+            CurrencySubtract(Define.ECurrency.Gold, data.Price);
 
-            // 가지고 있는 자원 종류 파악
-            if (dataValue.StatType == Define.EShopProductType.BuyIron)
-            {
-                var addValue = dataValue.CurrentValue;
-                var bonusValue = addValue * (GetTownStat(Define.EPlayerTownStat.ShopBuyBonus)/100f);
-                CurrencyAdd(Define.ECurrency.Iron, addValue + (int)bonusValue);
-            }
-            else if (dataValue.StatType == Define.EShopProductType.BuyCoal)
-            {
-                var addValue = dataValue.CurrentValue;
-                var bonusValue = addValue * (GetTownStat(Define.EPlayerTownStat.ShopBuyBonus) / 100f);
-                CurrencyAdd(Define.ECurrency.Coal, dataValue.CurrentValue);
-            }
+            // 공통 업그레이드 처리
+            ApplyUpgradeLevel(upgradeType, slotIndex, data.NextTempalteId);
 
-            OnCurrenciesChagned?.Invoke();
+            Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
         }
 
-        Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
 
-        // invoke
         OnPlayerUpgradeChanged?.Invoke();
     }
 
-    public int[] GetForgeAllStat()
+    private void ApplyUpgradeLevel(Define.EUpgradeType upgradeType, int slotIndex, int nextTemplateId)
     {
-        return forgeStatLevel;
+        switch (upgradeType)
+        {
+            case Define.EUpgradeType.Player:
+                playerStatLevel[slotIndex] = nextTemplateId;
+                break;
+
+            case Define.EUpgradeType.Forge:
+                forgeStatLevel[slotIndex] = nextTemplateId;
+                break;
+
+            case Define.EUpgradeType.Town:
+                townStatLevel[slotIndex] = nextTemplateId;
+                break;
+        }
     }
 
-    public int[] GetTownAllStat()
+    private void ProcessShopPurchase(int shopSlotIndex)
     {
-        return townStatLevel;
-    }
+        int shopTemplateId = shopProducts[shopSlotIndex];
+        if (!Managers.Data.ShopProductDict.TryGetValue(shopTemplateId, out var dataValue))
+            return;
 
-    public int[] GetShopAllStat()
-    {
-        return shopProducts;
+        // 어떤 자원인지 판별
+        Define.ECurrency currencyType = dataValue.StatType switch
+        {
+            Define.EShopProductType.BuyIron => Define.ECurrency.Iron,
+            Define.EShopProductType.BuyCoal => Define.ECurrency.Coal,
+            // TODO ILHAK 골드 추후에 구현 필요
+            _ => Define.ECurrency.None,
+        };
+
+        if (currencyType == Define.ECurrency.None)
+            return;
+
+        // 최대값 체크
+        var stock = GetCurrency(currencyType);
+        var maxStock = GetCurrenyMax(currencyType); // 없으면 int 최대값
+
+        if (stock >= maxStock)
+        {
+            ShowFullMessage(currencyType);
+            return;
+        }
+
+        // 골드 지불
+        CurrencySubtract(Define.ECurrency.Gold, dataValue.Price);
+        Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
+
+        int addValue = dataValue.CurrentValue;
+        int bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
+        int bonusValue = Mathf.FloorToInt(addValue * (bonusPercent / 100f));
+
+        ChangeCurrency(currencyType, addValue + bonusValue);
     }
 
     #region  ShowMessage
     private void ShowLessMessage(Define.ECurrency currency)
     {
-        string message = "";
+        string message = currency switch
+        {
+            Define.ECurrency.Gold => "골드가 부족합니다.",
+            Define.ECurrency.Iron => "재료가 부족합니다.",
+            Define.ECurrency.Coal => "연료가 부족합니다.",
+            _ => "자원이 부족합니다."
+        };
 
-        if(currency == Define.ECurrency.Gold)
-        {
-            message = "골드가 부족합니다.";
-        }
-        else if(currency == Define.ECurrency.Iron)
-        {
-            message = "재료가 부족합니다.";
-        }
-        else if(currency == Define.ECurrency.Coal)
-        {
-            message = "연료가 부족합니다.";
-        }
         Managers.UI.ShowToast(message, 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
     }
 
     private void ShowFullMessage(Define.ECurrency currency)
     {
-        string message = "";
+        string message = currency switch
+        {
+            Define.ECurrency.Gold => "골드가 최대치입니다.",
+            Define.ECurrency.Iron => "재료가 최대치입니다.",
+            Define.ECurrency.Coal => "연료가 최대치입니다.",
+            _ => "자원이 가득합니다."
+        };
 
-        if(currency == Define.ECurrency.Gold)
-        {
-            message = "골드가 최대치입니다.";
-        }
-        else if(currency == Define.ECurrency.Iron)
-        {
-            message = "재료가 최대치입니다.";
-        }
-        else if(currency == Define.ECurrency.Coal)
-        {
-            message = "연료가 최대치입니다.";
-        }
         Managers.UI.ShowToast(message, 1, Define.EToastColor.Orange, Define.EToastPosition.MiddleCenter);
     }
     #endregion
 
     #region Action
-    public event Action OnCurrenciesChagned;
+    public event Action OnCurrenciesChanged;
     public event Action OnPlayerUpgradeChanged;
     #endregion
 }

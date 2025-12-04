@@ -106,6 +106,7 @@ public class Define
 
     public enum ECurrency
     {
+        None,
         Gold,
         Iron,
         Coal,

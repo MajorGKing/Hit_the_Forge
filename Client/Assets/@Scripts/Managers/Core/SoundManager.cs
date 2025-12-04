@@ -46,7 +46,7 @@ public class SoundManager
         audioSource.Play();
     }
 
-    public void Play(Define.ESound type, string key, float pitch = 1.0f)
+    public void Play(Define.ESound type, string key, float pitch = 1.0f, float volume = 1f)
     {
         AudioSource audioSource = _audioSources[(int)type];
 
@@ -58,6 +58,8 @@ public class SoundManager
                     audioSource.Stop();
 
                 audioSource.clip = audioClip;
+                audioSource.pitch = pitch;
+                audioSource.volume = volume;
                 //if (Managers.Game.BGMOn)
                     audioSource.Play();
             });
