@@ -23,6 +23,8 @@ public class WeaponController : MonoBehaviour
         Managers.Game.OnWeaponEnhancementSucess += EnhancemenetSucess;
         Managers.Game.OnWeaponEnhancementFail -= EnhancementFail;
         Managers.Game.OnWeaponEnhancementFail += EnhancementFail;
+        Managers.Game.OnWeaponFinish -= OnWeaponFinish;
+        Managers.Game.OnWeaponFinish += OnWeaponFinish;
     }
 
     private void OnDisable()
@@ -30,6 +32,13 @@ public class WeaponController : MonoBehaviour
         Managers.Game.OnWeaponHpChanged -= UpdateFill;
         Managers.Game.OnWeaponEnhancementSucess -= EnhancemenetSucess;
         Managers.Game.OnWeaponEnhancementFail -= EnhancementFail;
+        Managers.Game.OnWeaponFinish -= OnWeaponFinish;
+    }
+
+    private void OnWeaponFinish()
+    {
+        transform.DORotate(new Vector3(0, 0, 360), 0.15f, RotateMode.FastBeyond360)
+            .SetEase(Ease.OutBack);
     }
 
     public void UpdateFill()
@@ -41,6 +50,9 @@ public class WeaponController : MonoBehaviour
     public void EnhancemenetSucess()
     {
         var mat = spriteRenderer.material;
+
+        // TODO ILHAK 레벨에 따른 Flash색 변경 필요
+        int level = Managers.Game.GetEnhancementLevel();
 
         mat.SetFloat("_FlashIntensity", 1f);
 

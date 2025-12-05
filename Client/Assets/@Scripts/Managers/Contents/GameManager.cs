@@ -154,6 +154,7 @@ public class GameManager
     public event Action OnEnhancementPercentChanged;
     public event Action OnWeaponEnhancementSucess;
     public event Action OnWeaponEnhancementFail;
+    public event Action OnWeaponFinish;
     #endregion
 
     #region Variables
@@ -184,11 +185,19 @@ public class GameManager
         protected set { enhancementCountTime = value; OnEnhancementCountChanged?.Invoke(); }
         get { return enhancementCountTime; }
     }
-    private int enhancmentLevel;
-    public int EnhancmentLevel
+    private int enhancementLevel;
+    protected int EnhancementLevel
     {
-        protected set { enhancmentLevel = value; OnEnhancementPercentChanged?.Invoke(); }
-        get { return enhancmentLevel; }
+        set { enhancementLevel = value; OnEnhancementPercentChanged?.Invoke(); }
+        get { return enhancementLevel; }
+    }
+
+    public int GetEnhancementLevel()
+    {
+        if (makeProcessState == EWeaponMakeProcess.Enhancement)
+                return EnhancementLevel;
+
+            return 0;
     }
 
     Data.WeaponData currentWeaponInfo;
@@ -265,6 +274,7 @@ public class GameManager
     {
         TryShakeCameraRandom();
         Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
+        OnWeaponFinish?.Invoke();
 
         yield return new WaitForSeconds(0.15f);
 
@@ -274,7 +284,7 @@ public class GameManager
     private IEnumerator CoEnhancement()
     {
         enhancementCountTime = 3f;
-        EnhancmentLevel = 1;
+        EnhancementLevel = 1;
 
         while (makeProcessState == EWeaponMakeProcess.Enhancement)
         {
@@ -415,17 +425,9 @@ public class GameManager
         return -1f;
     }
 
-    public int GetEnhancementLevel()
-    {
-        if (makeProcessState == EWeaponMakeProcess.Enhancement)
-            return EnhancmentLevel;
-
-        return 0;
-    }
-
     public float GetEnhancementPercent()
     {
-        var info = Managers.Data.EnhancementDict[EnhancmentLevel];
+        var info = Managers.Data.EnhancementDict[EnhancementLevel];
         var suceeValue = CalEnhancemenetPercent(info);
         float returnValue = suceeValue / info.BasicSucess;
         returnValue = Mathf.Round(returnValue * 10000f)/100f;
@@ -435,7 +437,7 @@ public class GameManager
 
     public int GetSellPrice()
     {
-        var price = currentWeaponInfo.Price * Managers.Data.EnhancementDict[EnhancmentLevel - 1].Price;
+        var price = currentWeaponInfo.Price * Managers.Data.EnhancementDict[EnhancementLevel - 1].Price;
         var bonusePrice = price * (Managers.Player.GetTownStat(Define.EPlayerTownStat.ShopSellBonus)/(float)100);
         //Debug.Log($"Sell Price {price} + Bounse Price {bonusePrice} = {(int)price + (int)bonusePrice}");
         
@@ -458,7 +460,7 @@ public class GameManager
         if (makeProcessState != EWeaponMakeProcess.Enhancement)
             return;
 
-        Data.EnhancementData enhancementData = Managers.Data.EnhancementDict[EnhancmentLevel];
+        Data.EnhancementData enhancementData = Managers.Data.EnhancementDict[EnhancementLevel];
 
         if (enhancementData == null)
             return;
@@ -471,7 +473,7 @@ public class GameManager
 
         if (value <= suceeValue)
         {
-            EnhancmentLevel++;
+            EnhancementLevel++;
             enhancementCountTime = 3f;
 
             Managers.Sound.Play(Define.ESound.Effect, "EnhancementSucessSound1");
@@ -486,7 +488,7 @@ public class GameManager
 
     private async UniTaskVoid WaitFail()
     {
-        EnhancmentLevel = 0;
+        EnhancementLevel = 0;
         enhancementCountTime = 0f;
         
         Managers.Sound.Play(Define.ESound.Effect, "EnhancementFailSound1");
