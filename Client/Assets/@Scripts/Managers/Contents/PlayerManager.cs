@@ -326,6 +326,7 @@ public class PlayerManager
     public event Action OnPlayerUpgradeChanged;
     #endregion
 
+    #region Save
     public SaveData GetSaveData()
     {
         SaveData data = new SaveData();
@@ -348,4 +349,5 @@ public class PlayerManager
         OnCurrenciesChanged?.Invoke();
         OnPlayerUpgradeChanged?.Invoke();
     }
+    #endregion
 }

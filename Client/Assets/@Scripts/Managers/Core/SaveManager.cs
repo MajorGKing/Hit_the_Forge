@@ -14,6 +14,17 @@ public class SaveData
 
 public class SaveManager
 {
+    public void Init()
+    {
+        Managers.Game.OnDoSave -= SaveGame;
+        Managers.Game.OnDoSave += SaveGame;
+    }
+
+    public void Clear()
+    {
+        Managers.Game.OnDoSave -= SaveGame;
+    }
+
     public void SaveGame()
     {
         SaveData data = Managers.Player.GetSaveData();

@@ -155,6 +155,7 @@ public class GameManager
     public event Action OnWeaponEnhancementSucess;
     public event Action OnWeaponEnhancementFail;
     public event Action OnWeaponFinish;
+    public event Action OnDoSave;
     #endregion
 
     #region Variables
