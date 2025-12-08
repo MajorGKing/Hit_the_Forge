@@ -31,7 +31,8 @@ public class Managers : MonoBehaviour
     private SceneManagerEx _scene = new SceneManagerEx();
     private SoundManager _sound = new SoundManager();
     private UIManager _ui = new UIManager();
-    NetworkManager _network = new NetworkManager();
+    private NetworkManager _network = new NetworkManager();
+    private SaveManager _save = new SaveManager();
 
     public static DataManager Data { get { return Instance?._data; } }
     public static PoolManager Pool { get { return Instance?._pool; } }
@@ -40,6 +41,7 @@ public class Managers : MonoBehaviour
     public static SoundManager Sound { get { return Instance?._sound; } }
     public static UIManager UI { get { return Instance?._ui; } }
     public static NetworkManager Network { get { return Instance?._network; } }
+    public static SaveManager Save { get { return Instance?._save; } }
 
     #endregion
 

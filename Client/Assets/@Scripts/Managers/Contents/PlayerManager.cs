@@ -325,4 +325,27 @@ public class PlayerManager
     public event Action OnCurrenciesChanged;
     public event Action OnPlayerUpgradeChanged;
     #endregion
+
+    public SaveData GetSaveData()
+    {
+        SaveData data = new SaveData();
+        data.currency = (int[])currency.Clone();
+        data.playerStatLevel = (int[])playerStatLevel.Clone();
+        data.forgeStatLevel = (int[])forgeStatLevel.Clone();
+        data.townStatLevel = (int[])townStatLevel.Clone();
+        data.shopProducts = (int[])shopProducts.Clone();
+        return data;
+    }
+
+    public void RestoreFromSaveData(SaveData data)
+    {
+        currency = (int[])data.currency.Clone();
+        playerStatLevel = (int[])data.playerStatLevel.Clone();
+        forgeStatLevel = (int[])data.forgeStatLevel.Clone();
+        townStatLevel = (int[])data.townStatLevel.Clone();
+        shopProducts = (int[])data.shopProducts.Clone();
+
+        OnCurrenciesChanged?.Invoke();
+        OnPlayerUpgradeChanged?.Invoke();
+    }
 }
