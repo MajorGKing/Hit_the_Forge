@@ -88,10 +88,10 @@ namespace Data
     {
         public int TemplateId;
         public string WeaponName;
-        public int HP;
-        public int Iron;
-        public int Coal;
-        public int Price;
+        public long HP;
+        public long Iron;
+        public long Coal;
+        public long Price;
         public int NextTemplateId;
     }
 
@@ -148,7 +148,7 @@ namespace Data
     {
         public int TemplateId;
         public string UpgradeName;
-        public int Price;
+        public long Price;
         public int CurrentValue;
         public int NextValue;
         public int OriginalTemplateId;

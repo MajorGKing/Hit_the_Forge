@@ -7,7 +7,7 @@ using UnityEngine;
 
 public class PlayerManager
 {
-    private int[] currency = new int[Enum.GetValues(typeof(Define.ECurrency)).Length];
+    private long[] currency = new long[Enum.GetValues(typeof(Define.ECurrency)).Length];
     private int[] playerStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] forgeStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
     private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
@@ -42,13 +42,13 @@ public class PlayerManager
             forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 101;
             forgeStatLevel[(int)Define.EPlayerForgeStat.Mastery] = 201;
 
-            townStatLevel[(int)Define.EPlayerTownStat.GoldMax] = 1;
-            townStatLevel[(int)Define.EPlayerTownStat.IronMax] = 101;
-            townStatLevel[(int)Define.EPlayerTownStat.IronRegeneration] = 201;
-            townStatLevel[(int)Define.EPlayerTownStat.CoalMax] = 301;
-            townStatLevel[(int)Define.EPlayerTownStat.CoalRegeneration] = 401;
-            townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 501;
-            townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 601;
+            townStatLevel[(int)Define.EPlayerTownStat.GoldMax] = 100001;
+            townStatLevel[(int)Define.EPlayerTownStat.IronMax] = 200001;
+            townStatLevel[(int)Define.EPlayerTownStat.IronRegeneration] = 300001;
+            townStatLevel[(int)Define.EPlayerTownStat.CoalMax] = 400001;
+            townStatLevel[(int)Define.EPlayerTownStat.CoalRegeneration] = 500001;
+            townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 600001;
+            townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 700001;
 
             shopProducts[(int)Define.EShopProductType.BuyIron] = 1;
             shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
@@ -59,7 +59,7 @@ public class PlayerManager
         }
     }
 
-    public void SetCurrency(Define.ECurrency type, int value)
+    public void SetCurrency(Define.ECurrency type, long value)
     {
         int index = (int)type;
 
@@ -67,8 +67,8 @@ public class PlayerManager
         if (value < 0)
             value = 0;
 
-        int max = GetCurrenyMax(type);
-        int newValue = Mathf.Clamp(value, 0, max);
+        long max = GetCurrenyMax(type);
+        long newValue = Math.Clamp(value, 0, max);
 
         if (currency[index] != newValue)
         {
@@ -79,18 +79,18 @@ public class PlayerManager
         OnPlayerSave?.Invoke();
     }
 
-    private void ChangeCurrency(Define.ECurrency type, int value)
+    private void ChangeCurrency(Define.ECurrency type, long value)
     {
         if (value == 0)
             return;
 
         int index = (int)type;
-        int current = currency[index];
+        long current = currency[index];
 
         SetCurrency(type, current + value);
     }
 
-    public void CurrencyAdd(Define.ECurrency type, int value)
+    public void CurrencyAdd(Define.ECurrency type, long value)
     {
         if (value <= 0)
             return;
@@ -98,7 +98,7 @@ public class PlayerManager
         ChangeCurrency(type, value);
     }
 
-    public void CurrencySubtract(Define.ECurrency type, int value)
+    public void CurrencySubtract(Define.ECurrency type, long value)
     {
         if (value <= 0)
             return;
@@ -106,29 +106,29 @@ public class PlayerManager
         ChangeCurrency(type, -value);
     }
 
-    public int GetCurrency(Define.ECurrency type)
+    public long GetCurrency(Define.ECurrency type)
     {
         return currency[(int)type];
     }
 
-    public int GetCurrenyMax(Define.ECurrency type)
+    public long GetCurrenyMax(Define.ECurrency type)
     {
         return type switch
         {
             Define.ECurrency.Gold => GetCurrencyMaxFromTowndata(Define.EPlayerTownStat.GoldMax),
             Define.ECurrency.Iron => GetCurrencyMaxFromTowndata(Define.EPlayerTownStat.IronMax),
             Define.ECurrency.Coal => GetCurrencyMaxFromTowndata(Define.EPlayerTownStat.CoalMax),
-            _ => int.MaxValue
+            _ => long.MaxValue
         };
     }
 
-    private int GetCurrencyMaxFromTowndata(Define.EPlayerTownStat stat)
+    private long GetCurrencyMaxFromTowndata(Define.EPlayerTownStat stat)
     {
         int templateId = townStatLevel[(int)stat];
         if (Managers.Data.TownUpgradeDict.TryGetValue(templateId, out var data))
             return data.CurrentValue;
 
-        return int.MaxValue;
+        return long.MaxValue;
     }
 
 
@@ -356,7 +356,7 @@ public class PlayerManager
     public SaveData GetSaveData()
     {
         SaveData data = new SaveData();
-        data.currency = (int[])currency.Clone();
+        data.currency = (long[])currency.Clone();
         data.playerStatLevel = (int[])playerStatLevel.Clone();
         data.forgeStatLevel = (int[])forgeStatLevel.Clone();
         data.townStatLevel = (int[])townStatLevel.Clone();
@@ -367,7 +367,7 @@ public class PlayerManager
 
     public void RestoreFromSaveData(SaveData data)
     {
-        currency = (int[])data.currency.Clone();
+        currency = (long[])data.currency.Clone();
         playerStatLevel = (int[])data.playerStatLevel.Clone();
         forgeStatLevel = (int[])data.forgeStatLevel.Clone();
         townStatLevel = (int[])data.townStatLevel.Clone();

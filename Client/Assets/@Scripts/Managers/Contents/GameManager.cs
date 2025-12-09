@@ -161,14 +161,14 @@ public class GameManager
 
     #region Variables
 
-    int weaponMaxHp = 100;
-    public int WeaponMaxHp
+    long weaponMaxHp = 100;
+    public long WeaponMaxHp
     {
         protected set { weaponMaxHp = value; OnWeaponHpChanged?.Invoke(); }
         get { return weaponMaxHp; }
     }
-    int weaponHp = 0;
-    public int WeaponHp
+    long weaponHp = 0;
+    public long WeaponHp
     {
         protected set { weaponHp = value; OnWeaponHpChanged?.Invoke(); }
         get { return weaponHp; }
@@ -331,7 +331,7 @@ public class GameManager
 
         if (currentWeaponInfo != null)
         {
-            int price = GetSellPrice();
+            long price = GetSellPrice();
 
             Managers.Player.CurrencyAdd(Define.ECurrency.Gold, price);
             Managers.Sound.Play(Define.ESound.Effect, "SellEffect");
@@ -390,7 +390,7 @@ public class GameManager
             UseCoal().Forget();
         }
 
-        var currentWeaponHp = WeaponHp + Managers.Player.GetPlayerStat(Define.EPlayerStat.Str);
+        long currentWeaponHp = WeaponHp + Managers.Player.GetPlayerStat(Define.EPlayerStat.Str);
 
         if (currentWeaponHp >= WeaponMaxHp)
         {
@@ -451,13 +451,13 @@ public class GameManager
         return returnValue;
     }
 
-    public int GetSellPrice()
+    public long GetSellPrice()
     {
         var price = currentWeaponInfo.Price * Managers.Data.EnhancementDict[EnhancementLevel - 1].Price;
         var bonusePrice = price * (Managers.Player.GetTownStat(Define.EPlayerTownStat.ShopSellBonus)/(float)100);
         //Debug.Log($"Sell Price {price} + Bounse Price {bonusePrice} = {(int)price + (int)bonusePrice}");
         
-        return (int)price + (int)bonusePrice;
+        return (long)(price + bonusePrice);
     }
 
     public void SellWeapon()

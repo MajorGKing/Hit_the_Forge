@@ -1,6 +1,6 @@
 TemplateId,UpgradeName,Price,CurrentValue,NextValue,OriginalTemplateId,NextTempalteId,StatType
-10001,AttackLevel1,1168,8,10,10001,10002,Str
-10002,AttackLevel2,1380,10,10,10001,10003,Str
+10001,AttackLevel1,1168,8,9,10001,10002,Str
+10002,AttackLevel2,1380,9,10,10001,10003,Str
 10003,AttackLevel3,1420,10,11,10001,10004,Str
 10004,AttackLevel4,1588,11,12,10001,10005,Str
 10005,AttackLevel5,1752,12,13,10001,10006,Str

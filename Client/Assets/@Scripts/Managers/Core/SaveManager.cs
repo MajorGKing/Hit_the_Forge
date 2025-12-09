@@ -5,7 +5,7 @@ using UnityEngine;
 public class SaveData
 {
     public int Version = 1;
-    public int[] currency;
+    public long[] currency;
     public int[] playerStatLevel;
     public int[] forgeStatLevel;
     public int[] townStatLevel;

@@ -13,8 +13,8 @@ public class UI_BattleBarWorldSpace : UI_WorldSpace
         //Slider_Skill_Guage,
     }
 
-    private int _hp;
-    private int _maxHP;
+    private long _hp;
+    private long _maxHP;
 
     private float _coolTime;
     private float _maxCoolTime;
