@@ -156,6 +156,7 @@ public class GameManager
     public event Action OnWeaponEnhancementFail;
     public event Action OnWeaponFinish;
     public event Action OnDoSave;
+    public event Action OnNewWeaponAdded;
     #endregion
 
     #region Variables
@@ -276,6 +277,20 @@ public class GameManager
         TryShakeCameraRandom();
         Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
         OnWeaponFinish?.Invoke();
+
+        if (currentWeaponInfo.NextTemplateId > 0)
+        {
+            if (Managers.Player.HasWeapon(currentWeaponInfo.NextTemplateId) == false)
+            {
+                Managers.Player.AddOwnedWeapon(currentWeaponInfo.NextTemplateId);
+
+                var nextWeaponName = Managers.Data.WeaponDict[currentWeaponInfo.NextTemplateId].WeaponName;
+
+                Managers.UI.ShowToast($"{nextWeaponName} 추가 되었습니다.", 1, Define.EToastColor.Blue, Define.EToastPosition.TopCenter);
+
+                OnNewWeaponAdded?.Invoke();
+            }
+        }
 
         yield return new WaitForSeconds(0.15f);
 

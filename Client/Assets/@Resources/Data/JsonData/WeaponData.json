@@ -2,29 +2,1532 @@
   "weapons": [
     {
       "TemplateId": 1,
-      "WeaponName": "Dagger",
+      "WeaponName": "Rusty Dagger",
       "HP": 100,
-      "Iron": 100,
-      "Coal": 10,
-      "Price": 100,
+      "Iron": 75,
+      "Coal": 6,
+      "Price": 292,
       "NextTemplateId": 2
     },
     {
       "TemplateId": 2,
-      "WeaponName": "Sword",
-      "HP": 1000,
-      "Iron": 1000,
-      "Coal": 10,
-      "Price": 1000,
+      "WeaponName": "Rusty Sword",
+      "HP": 120,
+      "Iron": 90,
+      "Coal": 7,
+      "Price": 345,
       "NextTemplateId": 3
     },
     {
       "TemplateId": 3,
-      "WeaponName": "Shild",
+      "WeaponName": "Rusty Mace",
+      "HP": 130,
+      "Iron": 97,
+      "Coal": 7,
+      "Price": 355,
+      "NextTemplateId": 4
+    },
+    {
+      "TemplateId": 4,
+      "WeaponName": "Rusty Axe",
+      "HP": 140,
+      "Iron": 105,
+      "Coal": 8,
+      "Price": 397,
+      "NextTemplateId": 5
+    },
+    {
+      "TemplateId": 5,
+      "WeaponName": "Rusty Spear",
+      "HP": 150,
+      "Iron": 112,
+      "Coal": 9,
+      "Price": 438,
+      "NextTemplateId": 6
+    },
+    {
+      "TemplateId": 6,
+      "WeaponName": "Rusty Rapier",
+      "HP": 160,
+      "Iron": 120,
+      "Coal": 9,
+      "Price": 450,
+      "NextTemplateId": 7
+    },
+    {
+      "TemplateId": 7,
+      "WeaponName": "Rusty Longsword",
+      "HP": 180,
+      "Iron": 135,
+      "Coal": 10,
+      "Price": 502,
+      "NextTemplateId": 8
+    },
+    {
+      "TemplateId": 8,
+      "WeaponName": "Rusty Warhammer",
+      "HP": 200,
+      "Iron": 150,
+      "Coal": 12,
+      "Price": 585,
+      "NextTemplateId": 9
+    },
+    {
+      "TemplateId": 9,
+      "WeaponName": "Rusty Battleaxe",
+      "HP": 220,
+      "Iron": 165,
+      "Coal": 13,
+      "Price": 637,
+      "NextTemplateId": 10
+    },
+    {
+      "TemplateId": 10,
+      "WeaponName": "Rusty Greatsword",
+      "HP": 250,
+      "Iron": 187,
+      "Coal": 15,
+      "Price": 730,
+      "NextTemplateId": 11
+    },
+    {
+      "TemplateId": 11,
+      "WeaponName": "Wooden Dagger",
+      "HP": 150,
+      "Iron": 112,
+      "Coal": 9,
+      "Price": 438,
+      "NextTemplateId": 12
+    },
+    {
+      "TemplateId": 12,
+      "WeaponName": "Wooden Sword",
+      "HP": 180,
+      "Iron": 135,
+      "Coal": 10,
+      "Price": 502,
+      "NextTemplateId": 13
+    },
+    {
+      "TemplateId": 13,
+      "WeaponName": "Wooden Mace",
+      "HP": 195,
+      "Iron": 146,
+      "Coal": 11,
+      "Price": 549,
+      "NextTemplateId": 14
+    },
+    {
+      "TemplateId": 14,
+      "WeaponName": "Wooden Axe",
+      "HP": 210,
+      "Iron": 157,
+      "Coal": 12,
+      "Price": 595,
+      "NextTemplateId": 15
+    },
+    {
+      "TemplateId": 15,
+      "WeaponName": "Wooden Spear",
+      "HP": 225,
+      "Iron": 168,
+      "Coal": 13,
+      "Price": 642,
+      "NextTemplateId": 16
+    },
+    {
+      "TemplateId": 16,
+      "WeaponName": "Wooden Rapier",
+      "HP": 240,
+      "Iron": 180,
+      "Coal": 14,
+      "Price": 690,
+      "NextTemplateId": 17
+    },
+    {
+      "TemplateId": 17,
+      "WeaponName": "Wooden Longsword",
+      "HP": 270,
+      "Iron": 202,
+      "Coal": 16,
+      "Price": 783,
+      "NextTemplateId": 18
+    },
+    {
+      "TemplateId": 18,
+      "WeaponName": "Wooden Warhammer",
+      "HP": 300,
+      "Iron": 225,
+      "Coal": 18,
+      "Price": 877,
+      "NextTemplateId": 19
+    },
+    {
+      "TemplateId": 19,
+      "WeaponName": "Wooden Battleaxe",
+      "HP": 330,
+      "Iron": 247,
+      "Coal": 19,
+      "Price": 940,
+      "NextTemplateId": 20
+    },
+    {
+      "TemplateId": 20,
+      "WeaponName": "Wooden Greatsword",
+      "HP": 375,
+      "Iron": 281,
+      "Coal": 22,
+      "Price": 1081,
+      "NextTemplateId": 21
+    },
+    {
+      "TemplateId": 21,
+      "WeaponName": "Copper Dagger",
+      "HP": 200,
+      "Iron": 150,
+      "Coal": 12,
+      "Price": 585,
+      "NextTemplateId": 22
+    },
+    {
+      "TemplateId": 22,
+      "WeaponName": "Copper Sword",
+      "HP": 240,
+      "Iron": 180,
+      "Coal": 14,
+      "Price": 690,
+      "NextTemplateId": 23
+    },
+    {
+      "TemplateId": 23,
+      "WeaponName": "Copper Mace",
+      "HP": 260,
+      "Iron": 195,
+      "Coal": 15,
+      "Price": 742,
+      "NextTemplateId": 24
+    },
+    {
+      "TemplateId": 24,
+      "WeaponName": "Copper Axe",
+      "HP": 280,
+      "Iron": 210,
+      "Coal": 16,
+      "Price": 795,
+      "NextTemplateId": 25
+    },
+    {
+      "TemplateId": 25,
+      "WeaponName": "Copper Spear",
+      "HP": 300,
+      "Iron": 225,
+      "Coal": 18,
+      "Price": 877,
+      "NextTemplateId": 26
+    },
+    {
+      "TemplateId": 26,
+      "WeaponName": "Copper Rapier",
+      "HP": 320,
+      "Iron": 240,
+      "Coal": 19,
+      "Price": 930,
+      "NextTemplateId": 27
+    },
+    {
+      "TemplateId": 27,
+      "WeaponName": "Copper Longsword",
+      "HP": 360,
+      "Iron": 270,
+      "Coal": 21,
+      "Price": 1035,
+      "NextTemplateId": 28
+    },
+    {
+      "TemplateId": 28,
+      "WeaponName": "Copper Warhammer",
+      "HP": 400,
+      "Iron": 300,
+      "Coal": 24,
+      "Price": 1170,
+      "NextTemplateId": 29
+    },
+    {
+      "TemplateId": 29,
+      "WeaponName": "Copper Battleaxe",
+      "HP": 440,
+      "Iron": 330,
+      "Coal": 26,
+      "Price": 1275,
+      "NextTemplateId": 30
+    },
+    {
+      "TemplateId": 30,
+      "WeaponName": "Copper Greatsword",
       "HP": 500,
-      "Iron": 1000,
-      "Coal": 50,
-      "Price": 1000,
+      "Iron": 375,
+      "Coal": 30,
+      "Price": 1462,
+      "NextTemplateId": 31
+    },
+    {
+      "TemplateId": 31,
+      "WeaponName": "Bronze Dagger",
+      "HP": 300,
+      "Iron": 225,
+      "Coal": 18,
+      "Price": 877,
+      "NextTemplateId": 32
+    },
+    {
+      "TemplateId": 32,
+      "WeaponName": "Bronze Sword",
+      "HP": 360,
+      "Iron": 270,
+      "Coal": 21,
+      "Price": 1035,
+      "NextTemplateId": 33
+    },
+    {
+      "TemplateId": 33,
+      "WeaponName": "Bronze Mace",
+      "HP": 390,
+      "Iron": 292,
+      "Coal": 23,
+      "Price": 1128,
+      "NextTemplateId": 34
+    },
+    {
+      "TemplateId": 34,
+      "WeaponName": "Bronze Axe",
+      "HP": 420,
+      "Iron": 315,
+      "Coal": 25,
+      "Price": 1222,
+      "NextTemplateId": 35
+    },
+    {
+      "TemplateId": 35,
+      "WeaponName": "Bronze Spear",
+      "HP": 450,
+      "Iron": 337,
+      "Coal": 27,
+      "Price": 1315,
+      "NextTemplateId": 36
+    },
+    {
+      "TemplateId": 36,
+      "WeaponName": "Bronze Rapier",
+      "HP": 480,
+      "Iron": 360,
+      "Coal": 28,
+      "Price": 1380,
+      "NextTemplateId": 37
+    },
+    {
+      "TemplateId": 37,
+      "WeaponName": "Bronze Longsword",
+      "HP": 540,
+      "Iron": 405,
+      "Coal": 32,
+      "Price": 1567,
+      "NextTemplateId": 38
+    },
+    {
+      "TemplateId": 38,
+      "WeaponName": "Bronze Warhammer",
+      "HP": 600,
+      "Iron": 450,
+      "Coal": 36,
+      "Price": 1755,
+      "NextTemplateId": 39
+    },
+    {
+      "TemplateId": 39,
+      "WeaponName": "Bronze Battleaxe",
+      "HP": 660,
+      "Iron": 495,
+      "Coal": 39,
+      "Price": 1912,
+      "NextTemplateId": 40
+    },
+    {
+      "TemplateId": 40,
+      "WeaponName": "Bronze Greatsword",
+      "HP": 750,
+      "Iron": 562,
+      "Coal": 45,
+      "Price": 2193,
+      "NextTemplateId": 41
+    },
+    {
+      "TemplateId": 41,
+      "WeaponName": "Iron Dagger",
+      "HP": 500,
+      "Iron": 375,
+      "Coal": 30,
+      "Price": 1462,
+      "NextTemplateId": 42
+    },
+    {
+      "TemplateId": 42,
+      "WeaponName": "Iron Sword",
+      "HP": 600,
+      "Iron": 450,
+      "Coal": 36,
+      "Price": 1755,
+      "NextTemplateId": 43
+    },
+    {
+      "TemplateId": 43,
+      "WeaponName": "Iron Mace",
+      "HP": 650,
+      "Iron": 487,
+      "Coal": 39,
+      "Price": 1900,
+      "NextTemplateId": 44
+    },
+    {
+      "TemplateId": 44,
+      "WeaponName": "Iron Axe",
+      "HP": 700,
+      "Iron": 525,
+      "Coal": 42,
+      "Price": 2047,
+      "NextTemplateId": 45
+    },
+    {
+      "TemplateId": 45,
+      "WeaponName": "Iron Spear",
+      "HP": 750,
+      "Iron": 562,
+      "Coal": 45,
+      "Price": 2193,
+      "NextTemplateId": 46
+    },
+    {
+      "TemplateId": 46,
+      "WeaponName": "Iron Rapier",
+      "HP": 800,
+      "Iron": 600,
+      "Coal": 48,
+      "Price": 2340,
+      "NextTemplateId": 47
+    },
+    {
+      "TemplateId": 47,
+      "WeaponName": "Iron Longsword",
+      "HP": 900,
+      "Iron": 675,
+      "Coal": 54,
+      "Price": 2632,
+      "NextTemplateId": 48
+    },
+    {
+      "TemplateId": 48,
+      "WeaponName": "Iron Warhammer",
+      "HP": 1000,
+      "Iron": 750,
+      "Coal": 60,
+      "Price": 2925,
+      "NextTemplateId": 49
+    },
+    {
+      "TemplateId": 49,
+      "WeaponName": "Iron Battleaxe",
+      "HP": 1100,
+      "Iron": 825,
+      "Coal": 66,
+      "Price": 3217,
+      "NextTemplateId": 50
+    },
+    {
+      "TemplateId": 50,
+      "WeaponName": "Iron Greatsword",
+      "HP": 1250,
+      "Iron": 937,
+      "Coal": 75,
+      "Price": 3655,
+      "NextTemplateId": 51
+    },
+    {
+      "TemplateId": 51,
+      "WeaponName": "Steel Dagger",
+      "HP": 800,
+      "Iron": 600,
+      "Coal": 48,
+      "Price": 2340,
+      "NextTemplateId": 52
+    },
+    {
+      "TemplateId": 52,
+      "WeaponName": "Steel Sword",
+      "HP": 960,
+      "Iron": 720,
+      "Coal": 57,
+      "Price": 2790,
+      "NextTemplateId": 53
+    },
+    {
+      "TemplateId": 53,
+      "WeaponName": "Steel Mace",
+      "HP": 1040,
+      "Iron": 780,
+      "Coal": 62,
+      "Price": 3030,
+      "NextTemplateId": 54
+    },
+    {
+      "TemplateId": 54,
+      "WeaponName": "Steel Axe",
+      "HP": 1120,
+      "Iron": 840,
+      "Coal": 67,
+      "Price": 3270,
+      "NextTemplateId": 55
+    },
+    {
+      "TemplateId": 55,
+      "WeaponName": "Steel Spear",
+      "HP": 1200,
+      "Iron": 900,
+      "Coal": 72,
+      "Price": 3510,
+      "NextTemplateId": 56
+    },
+    {
+      "TemplateId": 56,
+      "WeaponName": "Steel Rapier",
+      "HP": 1280,
+      "Iron": 960,
+      "Coal": 76,
+      "Price": 3720,
+      "NextTemplateId": 57
+    },
+    {
+      "TemplateId": 57,
+      "WeaponName": "Steel Longsword",
+      "HP": 1440,
+      "Iron": 1080,
+      "Coal": 86,
+      "Price": 4200,
+      "NextTemplateId": 58
+    },
+    {
+      "TemplateId": 58,
+      "WeaponName": "Steel Warhammer",
+      "HP": 1600,
+      "Iron": 1200,
+      "Coal": 96,
+      "Price": 4680,
+      "NextTemplateId": 59
+    },
+    {
+      "TemplateId": 59,
+      "WeaponName": "Steel Battleaxe",
+      "HP": 1760,
+      "Iron": 1320,
+      "Coal": 105,
+      "Price": 5130,
+      "NextTemplateId": 60
+    },
+    {
+      "TemplateId": 60,
+      "WeaponName": "Steel Greatsword",
+      "HP": 2000,
+      "Iron": 1500,
+      "Coal": 120,
+      "Price": 5850,
+      "NextTemplateId": 61
+    },
+    {
+      "TemplateId": 61,
+      "WeaponName": "Reinforced Dagger",
+      "HP": 1200,
+      "Iron": 900,
+      "Coal": 72,
+      "Price": 3510,
+      "NextTemplateId": 62
+    },
+    {
+      "TemplateId": 62,
+      "WeaponName": "Reinforced Sword",
+      "HP": 1440,
+      "Iron": 1080,
+      "Coal": 86,
+      "Price": 4200,
+      "NextTemplateId": 63
+    },
+    {
+      "TemplateId": 63,
+      "WeaponName": "Reinforced Mace",
+      "HP": 1560,
+      "Iron": 1170,
+      "Coal": 93,
+      "Price": 4545,
+      "NextTemplateId": 64
+    },
+    {
+      "TemplateId": 64,
+      "WeaponName": "Reinforced Axe",
+      "HP": 1680,
+      "Iron": 1260,
+      "Coal": 100,
+      "Price": 4890,
+      "NextTemplateId": 65
+    },
+    {
+      "TemplateId": 65,
+      "WeaponName": "Reinforced Spear",
+      "HP": 1800,
+      "Iron": 1350,
+      "Coal": 108,
+      "Price": 5265,
+      "NextTemplateId": 66
+    },
+    {
+      "TemplateId": 66,
+      "WeaponName": "Reinforced Rapier",
+      "HP": 1920,
+      "Iron": 1440,
+      "Coal": 115,
+      "Price": 5610,
+      "NextTemplateId": 67
+    },
+    {
+      "TemplateId": 67,
+      "WeaponName": "Reinforced Longsword",
+      "HP": 2160,
+      "Iron": 1620,
+      "Coal": 129,
+      "Price": 6300,
+      "NextTemplateId": 68
+    },
+    {
+      "TemplateId": 68,
+      "WeaponName": "Reinforced Warhammer",
+      "HP": 2400,
+      "Iron": 1800,
+      "Coal": 144,
+      "Price": 7020,
+      "NextTemplateId": 69
+    },
+    {
+      "TemplateId": 69,
+      "WeaponName": "Reinforced Battleaxe",
+      "HP": 2640,
+      "Iron": 1980,
+      "Coal": 158,
+      "Price": 7710,
+      "NextTemplateId": 70
+    },
+    {
+      "TemplateId": 70,
+      "WeaponName": "Reinforced Greatsword",
+      "HP": 3000,
+      "Iron": 2250,
+      "Coal": 180,
+      "Price": 8775,
+      "NextTemplateId": 71
+    },
+    {
+      "TemplateId": 71,
+      "WeaponName": "Silver Dagger",
+      "HP": 1800,
+      "Iron": 1350,
+      "Coal": 108,
+      "Price": 5265,
+      "NextTemplateId": 72
+    },
+    {
+      "TemplateId": 72,
+      "WeaponName": "Silver Sword",
+      "HP": 2160,
+      "Iron": 1620,
+      "Coal": 129,
+      "Price": 6300,
+      "NextTemplateId": 73
+    },
+    {
+      "TemplateId": 73,
+      "WeaponName": "Silver Mace",
+      "HP": 2340,
+      "Iron": 1755,
+      "Coal": 140,
+      "Price": 6832,
+      "NextTemplateId": 74
+    },
+    {
+      "TemplateId": 74,
+      "WeaponName": "Silver Axe",
+      "HP": 2520,
+      "Iron": 1890,
+      "Coal": 151,
+      "Price": 7365,
+      "NextTemplateId": 75
+    },
+    {
+      "TemplateId": 75,
+      "WeaponName": "Silver Spear",
+      "HP": 2700,
+      "Iron": 2025,
+      "Coal": 162,
+      "Price": 7897,
+      "NextTemplateId": 76
+    },
+    {
+      "TemplateId": 76,
+      "WeaponName": "Silver Rapier",
+      "HP": 2880,
+      "Iron": 2160,
+      "Coal": 172,
+      "Price": 8400,
+      "NextTemplateId": 77
+    },
+    {
+      "TemplateId": 77,
+      "WeaponName": "Silver Longsword",
+      "HP": 3240,
+      "Iron": 2430,
+      "Coal": 194,
+      "Price": 9465,
+      "NextTemplateId": 78
+    },
+    {
+      "TemplateId": 78,
+      "WeaponName": "Silver Warhammer",
+      "HP": 3600,
+      "Iron": 2700,
+      "Coal": 216,
+      "Price": 10530,
+      "NextTemplateId": 79
+    },
+    {
+      "TemplateId": 79,
+      "WeaponName": "Silver Battleaxe",
+      "HP": 3960,
+      "Iron": 2970,
+      "Coal": 237,
+      "Price": 11565,
+      "NextTemplateId": 80
+    },
+    {
+      "TemplateId": 80,
+      "WeaponName": "Silver Greatsword",
+      "HP": 4500,
+      "Iron": 3375,
+      "Coal": 270,
+      "Price": 13162,
+      "NextTemplateId": 81
+    },
+    {
+      "TemplateId": 81,
+      "WeaponName": "Gold Dagger",
+      "HP": 2500,
+      "Iron": 1875,
+      "Coal": 150,
+      "Price": 7312,
+      "NextTemplateId": 82
+    },
+    {
+      "TemplateId": 82,
+      "WeaponName": "Gold Sword",
+      "HP": 3000,
+      "Iron": 2250,
+      "Coal": 180,
+      "Price": 8775,
+      "NextTemplateId": 83
+    },
+    {
+      "TemplateId": 83,
+      "WeaponName": "Gold Mace",
+      "HP": 3250,
+      "Iron": 2437,
+      "Coal": 195,
+      "Price": 9505,
+      "NextTemplateId": 84
+    },
+    {
+      "TemplateId": 84,
+      "WeaponName": "Gold Axe",
+      "HP": 3500,
+      "Iron": 2625,
+      "Coal": 210,
+      "Price": 10237,
+      "NextTemplateId": 85
+    },
+    {
+      "TemplateId": 85,
+      "WeaponName": "Gold Spear",
+      "HP": 3750,
+      "Iron": 2812,
+      "Coal": 225,
+      "Price": 10968,
+      "NextTemplateId": 86
+    },
+    {
+      "TemplateId": 86,
+      "WeaponName": "Gold Rapier",
+      "HP": 4000,
+      "Iron": 3000,
+      "Coal": 240,
+      "Price": 11700,
+      "NextTemplateId": 87
+    },
+    {
+      "TemplateId": 87,
+      "WeaponName": "Gold Longsword",
+      "HP": 4500,
+      "Iron": 3375,
+      "Coal": 270,
+      "Price": 13162,
+      "NextTemplateId": 88
+    },
+    {
+      "TemplateId": 88,
+      "WeaponName": "Gold Warhammer",
+      "HP": 5000,
+      "Iron": 3750,
+      "Coal": 300,
+      "Price": 14625,
+      "NextTemplateId": 89
+    },
+    {
+      "TemplateId": 89,
+      "WeaponName": "Gold Battleaxe",
+      "HP": 5500,
+      "Iron": 4125,
+      "Coal": 330,
+      "Price": 16087,
+      "NextTemplateId": 90
+    },
+    {
+      "TemplateId": 90,
+      "WeaponName": "Gold Greatsword",
+      "HP": 6250,
+      "Iron": 4687,
+      "Coal": 375,
+      "Price": 18280,
+      "NextTemplateId": 91
+    },
+    {
+      "TemplateId": 91,
+      "WeaponName": "Platinum Dagger",
+      "HP": 3500,
+      "Iron": 2625,
+      "Coal": 210,
+      "Price": 10237,
+      "NextTemplateId": 92
+    },
+    {
+      "TemplateId": 92,
+      "WeaponName": "Platinum Sword",
+      "HP": 4200,
+      "Iron": 3150,
+      "Coal": 252,
+      "Price": 12285,
+      "NextTemplateId": 93
+    },
+    {
+      "TemplateId": 93,
+      "WeaponName": "Platinum Mace",
+      "HP": 4550,
+      "Iron": 3412,
+      "Coal": 273,
+      "Price": 13308,
+      "NextTemplateId": 94
+    },
+    {
+      "TemplateId": 94,
+      "WeaponName": "Platinum Axe",
+      "HP": 4900,
+      "Iron": 3675,
+      "Coal": 293,
+      "Price": 14302,
+      "NextTemplateId": 95
+    },
+    {
+      "TemplateId": 95,
+      "WeaponName": "Platinum Spear",
+      "HP": 5250,
+      "Iron": 3937,
+      "Coal": 315,
+      "Price": 15355,
+      "NextTemplateId": 96
+    },
+    {
+      "TemplateId": 96,
+      "WeaponName": "Platinum Rapier",
+      "HP": 5600,
+      "Iron": 4200,
+      "Coal": 336,
+      "Price": 16380,
+      "NextTemplateId": 97
+    },
+    {
+      "TemplateId": 97,
+      "WeaponName": "Platinum Longsword",
+      "HP": 6300,
+      "Iron": 4725,
+      "Coal": 378,
+      "Price": 18427,
+      "NextTemplateId": 98
+    },
+    {
+      "TemplateId": 98,
+      "WeaponName": "Platinum Warhammer",
+      "HP": 7000,
+      "Iron": 5250,
+      "Coal": 420,
+      "Price": 20475,
+      "NextTemplateId": 99
+    },
+    {
+      "TemplateId": 99,
+      "WeaponName": "Platinum Battleaxe",
+      "HP": 7700,
+      "Iron": 5775,
+      "Coal": 462,
+      "Price": 22522,
+      "NextTemplateId": 100
+    },
+    {
+      "TemplateId": 100,
+      "WeaponName": "Platinum Greatsword",
+      "HP": 8750,
+      "Iron": 6562,
+      "Coal": 525,
+      "Price": 25593,
+      "NextTemplateId": 101
+    },
+    {
+      "TemplateId": 101,
+      "WeaponName": "Mithril Dagger",
+      "HP": 5000,
+      "Iron": 3750,
+      "Coal": 300,
+      "Price": 14625,
+      "NextTemplateId": 102
+    },
+    {
+      "TemplateId": 102,
+      "WeaponName": "Mithril Sword",
+      "HP": 6000,
+      "Iron": 4500,
+      "Coal": 360,
+      "Price": 17550,
+      "NextTemplateId": 103
+    },
+    {
+      "TemplateId": 103,
+      "WeaponName": "Mithril Mace",
+      "HP": 6500,
+      "Iron": 4875,
+      "Coal": 390,
+      "Price": 19012,
+      "NextTemplateId": 104
+    },
+    {
+      "TemplateId": 104,
+      "WeaponName": "Mithril Axe",
+      "HP": 7000,
+      "Iron": 5250,
+      "Coal": 420,
+      "Price": 20475,
+      "NextTemplateId": 105
+    },
+    {
+      "TemplateId": 105,
+      "WeaponName": "Mithril Spear",
+      "HP": 7500,
+      "Iron": 5625,
+      "Coal": 450,
+      "Price": 21937,
+      "NextTemplateId": 106
+    },
+    {
+      "TemplateId": 106,
+      "WeaponName": "Mithril Rapier",
+      "HP": 8000,
+      "Iron": 6000,
+      "Coal": 480,
+      "Price": 23400,
+      "NextTemplateId": 107
+    },
+    {
+      "TemplateId": 107,
+      "WeaponName": "Mithril Longsword",
+      "HP": 9000,
+      "Iron": 6750,
+      "Coal": 540,
+      "Price": 26325,
+      "NextTemplateId": 108
+    },
+    {
+      "TemplateId": 108,
+      "WeaponName": "Mithril Warhammer",
+      "HP": 10000,
+      "Iron": 7500,
+      "Coal": 600,
+      "Price": 29250,
+      "NextTemplateId": 109
+    },
+    {
+      "TemplateId": 109,
+      "WeaponName": "Mithril Battleaxe",
+      "HP": 11000,
+      "Iron": 8250,
+      "Coal": 660,
+      "Price": 32175,
+      "NextTemplateId": 110
+    },
+    {
+      "TemplateId": 110,
+      "WeaponName": "Mithril Greatsword",
+      "HP": 12500,
+      "Iron": 9375,
+      "Coal": 750,
+      "Price": 36562,
+      "NextTemplateId": 111
+    },
+    {
+      "TemplateId": 111,
+      "WeaponName": "Titanium Dagger",
+      "HP": 7500,
+      "Iron": 5625,
+      "Coal": 450,
+      "Price": 21937,
+      "NextTemplateId": 112
+    },
+    {
+      "TemplateId": 112,
+      "WeaponName": "Titanium Sword",
+      "HP": 9000,
+      "Iron": 6750,
+      "Coal": 540,
+      "Price": 26325,
+      "NextTemplateId": 113
+    },
+    {
+      "TemplateId": 113,
+      "WeaponName": "Titanium Mace",
+      "HP": 9750,
+      "Iron": 7312,
+      "Coal": 585,
+      "Price": 28518,
+      "NextTemplateId": 114
+    },
+    {
+      "TemplateId": 114,
+      "WeaponName": "Titanium Axe",
+      "HP": 10500,
+      "Iron": 7875,
+      "Coal": 630,
+      "Price": 30712,
+      "NextTemplateId": 115
+    },
+    {
+      "TemplateId": 115,
+      "WeaponName": "Titanium Spear",
+      "HP": 11250,
+      "Iron": 8437,
+      "Coal": 675,
+      "Price": 32905,
+      "NextTemplateId": 116
+    },
+    {
+      "TemplateId": 116,
+      "WeaponName": "Titanium Rapier",
+      "HP": 12000,
+      "Iron": 9000,
+      "Coal": 720,
+      "Price": 35100,
+      "NextTemplateId": 117
+    },
+    {
+      "TemplateId": 117,
+      "WeaponName": "Titanium Longsword",
+      "HP": 13500,
+      "Iron": 10125,
+      "Coal": 810,
+      "Price": 39487,
+      "NextTemplateId": 118
+    },
+    {
+      "TemplateId": 118,
+      "WeaponName": "Titanium Warhammer",
+      "HP": 15000,
+      "Iron": 11250,
+      "Coal": 900,
+      "Price": 43875,
+      "NextTemplateId": 119
+    },
+    {
+      "TemplateId": 119,
+      "WeaponName": "Titanium Battleaxe",
+      "HP": 16500,
+      "Iron": 12375,
+      "Coal": 990,
+      "Price": 48262,
+      "NextTemplateId": 120
+    },
+    {
+      "TemplateId": 120,
+      "WeaponName": "Titanium Greatsword",
+      "HP": 18750,
+      "Iron": 14062,
+      "Coal": 1125,
+      "Price": 54843,
+      "NextTemplateId": 121
+    },
+    {
+      "TemplateId": 121,
+      "WeaponName": "Adamantite Dagger",
+      "HP": 12000,
+      "Iron": 9000,
+      "Coal": 720,
+      "Price": 35100,
+      "NextTemplateId": 122
+    },
+    {
+      "TemplateId": 122,
+      "WeaponName": "Adamantite Sword",
+      "HP": 14400,
+      "Iron": 10800,
+      "Coal": 864,
+      "Price": 42120,
+      "NextTemplateId": 123
+    },
+    {
+      "TemplateId": 123,
+      "WeaponName": "Adamantite Mace",
+      "HP": 15600,
+      "Iron": 11700,
+      "Coal": 936,
+      "Price": 45630,
+      "NextTemplateId": 124
+    },
+    {
+      "TemplateId": 124,
+      "WeaponName": "Adamantite Axe",
+      "HP": 16800,
+      "Iron": 12600,
+      "Coal": 1008,
+      "Price": 49140,
+      "NextTemplateId": 125
+    },
+    {
+      "TemplateId": 125,
+      "WeaponName": "Adamantite Spear",
+      "HP": 18000,
+      "Iron": 13500,
+      "Coal": 1080,
+      "Price": 52650,
+      "NextTemplateId": 126
+    },
+    {
+      "TemplateId": 126,
+      "WeaponName": "Adamantite Rapier",
+      "HP": 19200,
+      "Iron": 14400,
+      "Coal": 1152,
+      "Price": 56160,
+      "NextTemplateId": 127
+    },
+    {
+      "TemplateId": 127,
+      "WeaponName": "Adamantite Longsword",
+      "HP": 21600,
+      "Iron": 16200,
+      "Coal": 1296,
+      "Price": 63180,
+      "NextTemplateId": 128
+    },
+    {
+      "TemplateId": 128,
+      "WeaponName": "Adamantite Warhammer",
+      "HP": 24000,
+      "Iron": 18000,
+      "Coal": 1440,
+      "Price": 70200,
+      "NextTemplateId": 129
+    },
+    {
+      "TemplateId": 129,
+      "WeaponName": "Adamantite Battleaxe",
+      "HP": 26400,
+      "Iron": 19800,
+      "Coal": 1584,
+      "Price": 77220,
+      "NextTemplateId": 130
+    },
+    {
+      "TemplateId": 130,
+      "WeaponName": "Adamantite Greatsword",
+      "HP": 30000,
+      "Iron": 22500,
+      "Coal": 1800,
+      "Price": 87750,
+      "NextTemplateId": 131
+    },
+    {
+      "TemplateId": 131,
+      "WeaponName": "Rune Dagger",
+      "HP": 20000,
+      "Iron": 15000,
+      "Coal": 1200,
+      "Price": 58500,
+      "NextTemplateId": 132
+    },
+    {
+      "TemplateId": 132,
+      "WeaponName": "Rune Sword",
+      "HP": 24000,
+      "Iron": 18000,
+      "Coal": 1440,
+      "Price": 70200,
+      "NextTemplateId": 133
+    },
+    {
+      "TemplateId": 133,
+      "WeaponName": "Rune Mace",
+      "HP": 26000,
+      "Iron": 19500,
+      "Coal": 1560,
+      "Price": 76050,
+      "NextTemplateId": 134
+    },
+    {
+      "TemplateId": 134,
+      "WeaponName": "Rune Axe",
+      "HP": 28000,
+      "Iron": 21000,
+      "Coal": 1680,
+      "Price": 81900,
+      "NextTemplateId": 135
+    },
+    {
+      "TemplateId": 135,
+      "WeaponName": "Rune Spear",
+      "HP": 30000,
+      "Iron": 22500,
+      "Coal": 1800,
+      "Price": 87750,
+      "NextTemplateId": 136
+    },
+    {
+      "TemplateId": 136,
+      "WeaponName": "Rune Rapier",
+      "HP": 32000,
+      "Iron": 24000,
+      "Coal": 1920,
+      "Price": 93600,
+      "NextTemplateId": 137
+    },
+    {
+      "TemplateId": 137,
+      "WeaponName": "Rune Longsword",
+      "HP": 36000,
+      "Iron": 27000,
+      "Coal": 2160,
+      "Price": 105300,
+      "NextTemplateId": 138
+    },
+    {
+      "TemplateId": 138,
+      "WeaponName": "Rune Warhammer",
+      "HP": 40000,
+      "Iron": 30000,
+      "Coal": 2400,
+      "Price": 117000,
+      "NextTemplateId": 139
+    },
+    {
+      "TemplateId": 139,
+      "WeaponName": "Rune Battleaxe",
+      "HP": 44000,
+      "Iron": 33000,
+      "Coal": 2640,
+      "Price": 128700,
+      "NextTemplateId": 140
+    },
+    {
+      "TemplateId": 140,
+      "WeaponName": "Rune Greatsword",
+      "HP": 50000,
+      "Iron": 37500,
+      "Coal": 3000,
+      "Price": 146250,
+      "NextTemplateId": 141
+    },
+    {
+      "TemplateId": 141,
+      "WeaponName": "Dragon Dagger",
+      "HP": 35000,
+      "Iron": 26250,
+      "Coal": 2100,
+      "Price": 102375,
+      "NextTemplateId": 142
+    },
+    {
+      "TemplateId": 142,
+      "WeaponName": "Dragon Sword",
+      "HP": 42000,
+      "Iron": 31500,
+      "Coal": 2520,
+      "Price": 122850,
+      "NextTemplateId": 143
+    },
+    {
+      "TemplateId": 143,
+      "WeaponName": "Dragon Mace",
+      "HP": 45500,
+      "Iron": 34125,
+      "Coal": 2730,
+      "Price": 133087,
+      "NextTemplateId": 144
+    },
+    {
+      "TemplateId": 144,
+      "WeaponName": "Dragon Axe",
+      "HP": 49000,
+      "Iron": 36750,
+      "Coal": 2940,
+      "Price": 143325,
+      "NextTemplateId": 145
+    },
+    {
+      "TemplateId": 145,
+      "WeaponName": "Dragon Spear",
+      "HP": 52500,
+      "Iron": 39375,
+      "Coal": 3150,
+      "Price": 153562,
+      "NextTemplateId": 146
+    },
+    {
+      "TemplateId": 146,
+      "WeaponName": "Dragon Rapier",
+      "HP": 56000,
+      "Iron": 42000,
+      "Coal": 3360,
+      "Price": 163800,
+      "NextTemplateId": 147
+    },
+    {
+      "TemplateId": 147,
+      "WeaponName": "Dragon Longsword",
+      "HP": 63000,
+      "Iron": 47250,
+      "Coal": 3780,
+      "Price": 184275,
+      "NextTemplateId": 148
+    },
+    {
+      "TemplateId": 148,
+      "WeaponName": "Dragon Warhammer",
+      "HP": 70000,
+      "Iron": 52500,
+      "Coal": 4200,
+      "Price": 204750,
+      "NextTemplateId": 149
+    },
+    {
+      "TemplateId": 149,
+      "WeaponName": "Dragon Battleaxe",
+      "HP": 77000,
+      "Iron": 57750,
+      "Coal": 4620,
+      "Price": 225225,
+      "NextTemplateId": 150
+    },
+    {
+      "TemplateId": 150,
+      "WeaponName": "Dragon Greatsword",
+      "HP": 87500,
+      "Iron": 65625,
+      "Coal": 5250,
+      "Price": 255937,
+      "NextTemplateId": 151
+    },
+    {
+      "TemplateId": 151,
+      "WeaponName": "Ethereal Dagger",
+      "HP": 50000,
+      "Iron": 37500,
+      "Coal": 3000,
+      "Price": 146250,
+      "NextTemplateId": 152
+    },
+    {
+      "TemplateId": 152,
+      "WeaponName": "Ethereal Sword",
+      "HP": 60000,
+      "Iron": 45000,
+      "Coal": 3600,
+      "Price": 175500,
+      "NextTemplateId": 153
+    },
+    {
+      "TemplateId": 153,
+      "WeaponName": "Ethereal Mace",
+      "HP": 65000,
+      "Iron": 48750,
+      "Coal": 3900,
+      "Price": 190125,
+      "NextTemplateId": 154
+    },
+    {
+      "TemplateId": 154,
+      "WeaponName": "Ethereal Axe",
+      "HP": 70000,
+      "Iron": 52500,
+      "Coal": 4200,
+      "Price": 204750,
+      "NextTemplateId": 155
+    },
+    {
+      "TemplateId": 155,
+      "WeaponName": "Ethereal Spear",
+      "HP": 75000,
+      "Iron": 56250,
+      "Coal": 4500,
+      "Price": 219375,
+      "NextTemplateId": 156
+    },
+    {
+      "TemplateId": 156,
+      "WeaponName": "Ethereal Rapier",
+      "HP": 80000,
+      "Iron": 60000,
+      "Coal": 4800,
+      "Price": 234000,
+      "NextTemplateId": 157
+    },
+    {
+      "TemplateId": 157,
+      "WeaponName": "Ethereal Longsword",
+      "HP": 90000,
+      "Iron": 67500,
+      "Coal": 5400,
+      "Price": 263250,
+      "NextTemplateId": 158
+    },
+    {
+      "TemplateId": 158,
+      "WeaponName": "Ethereal Warhammer",
+      "HP": 100000,
+      "Iron": 75000,
+      "Coal": 6000,
+      "Price": 292500,
+      "NextTemplateId": 159
+    },
+    {
+      "TemplateId": 159,
+      "WeaponName": "Ethereal Battleaxe",
+      "HP": 110000,
+      "Iron": 82500,
+      "Coal": 6600,
+      "Price": 321750,
+      "NextTemplateId": 160
+    },
+    {
+      "TemplateId": 160,
+      "WeaponName": "Ethereal Greatsword",
+      "HP": 125000,
+      "Iron": 93750,
+      "Coal": 7500,
+      "Price": 365625,
+      "NextTemplateId": 161
+    },
+    {
+      "TemplateId": 161,
+      "WeaponName": "Godly Dagger",
+      "HP": 100000,
+      "Iron": 75000,
+      "Coal": 6000,
+      "Price": 292500,
+      "NextTemplateId": 162
+    },
+    {
+      "TemplateId": 162,
+      "WeaponName": "Godly Sword",
+      "HP": 120000,
+      "Iron": 90000,
+      "Coal": 7200,
+      "Price": 351000,
+      "NextTemplateId": 163
+    },
+    {
+      "TemplateId": 163,
+      "WeaponName": "Godly Mace",
+      "HP": 130000,
+      "Iron": 97500,
+      "Coal": 7800,
+      "Price": 380250,
+      "NextTemplateId": 164
+    },
+    {
+      "TemplateId": 164,
+      "WeaponName": "Godly Axe",
+      "HP": 140000,
+      "Iron": 105000,
+      "Coal": 8400,
+      "Price": 409500,
+      "NextTemplateId": 165
+    },
+    {
+      "TemplateId": 165,
+      "WeaponName": "Godly Spear",
+      "HP": 150000,
+      "Iron": 112500,
+      "Coal": 9000,
+      "Price": 438750,
+      "NextTemplateId": 166
+    },
+    {
+      "TemplateId": 166,
+      "WeaponName": "Godly Rapier",
+      "HP": 160000,
+      "Iron": 120000,
+      "Coal": 9600,
+      "Price": 468000,
+      "NextTemplateId": 167
+    },
+    {
+      "TemplateId": 167,
+      "WeaponName": "Godly Longsword",
+      "HP": 180000,
+      "Iron": 135000,
+      "Coal": 10800,
+      "Price": 526500,
+      "NextTemplateId": 168
+    },
+    {
+      "TemplateId": 168,
+      "WeaponName": "Godly Warhammer",
+      "HP": 200000,
+      "Iron": 150000,
+      "Coal": 12000,
+      "Price": 585000,
+      "NextTemplateId": 169
+    },
+    {
+      "TemplateId": 169,
+      "WeaponName": "Godly Battleaxe",
+      "HP": 220000,
+      "Iron": 165000,
+      "Coal": 13200,
+      "Price": 643500,
+      "NextTemplateId": 170
+    },
+    {
+      "TemplateId": 170,
+      "WeaponName": "Godly Greatsword",
+      "HP": 250000,
+      "Iron": 187500,
+      "Coal": 15000,
+      "Price": 731250,
       "NextTemplateId": 0
     }
   ]

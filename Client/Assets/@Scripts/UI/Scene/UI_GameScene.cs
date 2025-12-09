@@ -120,6 +120,8 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnEnhancementPercentChanged += RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged += RefreshUI;
+        Managers.Game.OnNewWeaponAdded -= WeaponSelectReset;
+        Managers.Game.OnNewWeaponAdded += WeaponSelectReset;
     }
 
     private void OnDisable()
@@ -128,6 +130,7 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnEnhancementCountChanged -= RefreshUI;
         Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
+        Managers.Game.OnNewWeaponAdded -= WeaponSelectReset;
     }
 
     public void SetInfo()
@@ -251,10 +254,10 @@ public class UI_GameScene : UI_Scene
     {
         GetGameObject((int)GameObjects.WeaponContent).DestroyChildren();
 
-        foreach(var weapon in Managers.Data.WeaponDict.Values)
+        foreach(var weaponId in Managers.Player.GetOwnedWeapons())
         {
             var item = Managers.UI.MakeSubItem<UI_WeaponSelectSubItem>(GetGameObject((int)GameObjects.WeaponContent).transform);
-            item.SetInfo(weapon.TemplateId);
+            item.SetInfo(weaponId);
         }
     }
 

@@ -1,4 +1,4 @@
-using System.IO;
+using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -10,6 +10,7 @@ public class SaveData
     public int[] forgeStatLevel;
     public int[] townStatLevel;
     public int[] shopProducts;
+    public List<int> ownedWeapons;
 }
 
 public class SaveManager
@@ -18,11 +19,14 @@ public class SaveManager
     {
         Managers.Game.OnDoSave -= SaveGame;
         Managers.Game.OnDoSave += SaveGame;
+        Managers.Player.OnPlayerSave -= SaveGame;
+        Managers.Player.OnPlayerSave += SaveGame;
     }
 
     public void Clear()
     {
         Managers.Game.OnDoSave -= SaveGame;
+        Managers.Player.OnPlayerSave -= SaveGame;
     }
 
     public void SaveGame()
@@ -38,7 +42,7 @@ public class SaveManager
         Debug.Log("Game Saved");
     }
 
-    public void LoadGame()
+    public bool LoadGame()
     {
         if (PlayerPrefs.HasKey("SaveData"))
         {
@@ -56,16 +60,20 @@ public class SaveManager
 
                 Managers.Player.RestoreFromSaveData(data);
                 Debug.Log("Game Loaded");
+
+                return true;
             }
             catch (System.Exception e)
             {
                 Debug.LogError($"Failed to load save data: {e.Message}");
                 // Handle corruption (e.g., start fresh or warn user)
+                return false;
             }
         }
         else
         {
             Debug.Log("No save data found.");
+            return false;
         }
     }
 }

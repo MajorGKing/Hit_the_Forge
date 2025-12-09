@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using Unity.InferenceEngine.Tokenization.PostProcessors.Templating;
 using UnityEngine;
@@ -11,7 +12,8 @@ public class PlayerManager
     private int[] forgeStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
     private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
     private int[] shopProducts = new int[Enum.GetValues(typeof(Define.EShopProductType)).Length];
-    
+    private List<int> ownedWeapons = new List<int>();
+
 
     public void Clear()
     {
@@ -24,29 +26,37 @@ public class PlayerManager
 
     public void Init()
     {
-        currency[(int)Define.ECurrency.Gold] = 0;
-        currency[(int)Define.ECurrency.Iron] = 5000;
-        currency[(int)Define.ECurrency.Coal] = 5000;
+        if (false == Managers.Save.LoadGame())
+        {
 
-        playerStatLevel[(int)Define.EPlayerStat.Str] = 1;
-        playerStatLevel[(int)Define.EPlayerStat.Skill] = 101;
-        playerStatLevel[(int)Define.EPlayerStat.Dex] = 0;
-        playerStatLevel[(int)Define.EPlayerStat.Mastery] = 201;
+            currency[(int)Define.ECurrency.Gold] = 0;
+            currency[(int)Define.ECurrency.Iron] = 5000;
+            currency[(int)Define.ECurrency.Coal] = 5000;
 
-        forgeStatLevel[(int)Define.EPlayerForgeStat.CoalTime] = 1;
-        forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 101;
-        forgeStatLevel[(int)Define.EPlayerForgeStat.Mastery] = 201;
+            playerStatLevel[(int)Define.EPlayerStat.Str] = 1;
+            playerStatLevel[(int)Define.EPlayerStat.Skill] = 101;
+            playerStatLevel[(int)Define.EPlayerStat.Dex] = 0;
+            playerStatLevel[(int)Define.EPlayerStat.Mastery] = 201;
 
-        townStatLevel[(int)Define.EPlayerTownStat.GoldMax] = 1;
-        townStatLevel[(int)Define.EPlayerTownStat.IronMax] = 101;
-        townStatLevel[(int)Define.EPlayerTownStat.IronRegeneration] = 201;
-        townStatLevel[(int)Define.EPlayerTownStat.CoalMax] = 301;
-        townStatLevel[(int)Define.EPlayerTownStat.CoalRegeneration] = 401;
-        townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 501;
-        townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 601;
+            forgeStatLevel[(int)Define.EPlayerForgeStat.CoalTime] = 1;
+            forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 101;
+            forgeStatLevel[(int)Define.EPlayerForgeStat.Mastery] = 201;
 
-        shopProducts[(int)Define.EShopProductType.BuyIron] = 1;
-        shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
+            townStatLevel[(int)Define.EPlayerTownStat.GoldMax] = 1;
+            townStatLevel[(int)Define.EPlayerTownStat.IronMax] = 101;
+            townStatLevel[(int)Define.EPlayerTownStat.IronRegeneration] = 201;
+            townStatLevel[(int)Define.EPlayerTownStat.CoalMax] = 301;
+            townStatLevel[(int)Define.EPlayerTownStat.CoalRegeneration] = 401;
+            townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 501;
+            townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 601;
+
+            shopProducts[(int)Define.EShopProductType.BuyIron] = 1;
+            shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
+
+            ownedWeapons.Add(1);
+
+            OnPlayerSave?.Invoke();
+        }
     }
 
     public void SetCurrency(Define.ECurrency type, int value)
@@ -65,11 +75,13 @@ public class PlayerManager
             currency[index] = newValue;
             OnCurrenciesChanged?.Invoke();
         }
+
+        OnPlayerSave?.Invoke();
     }
 
     private void ChangeCurrency(Define.ECurrency type, int value)
     {
-        if (value == 0) 
+        if (value == 0)
             return;
 
         int index = (int)type;
@@ -82,7 +94,7 @@ public class PlayerManager
     {
         if (value <= 0)
             return;
-        
+
         ChangeCurrency(type, value);
     }
 
@@ -154,6 +166,19 @@ public class PlayerManager
     public int[] GetForgeAllStat() => forgeStatLevel;
     public int[] GetTownAllStat() => townStatLevel;
     public int[] GetShopAllStat() => shopProducts;
+
+    public List<int> GetOwnedWeapons() => ownedWeapons;
+
+    public void AddOwnedWeapon(int templateId)
+    {
+        if (!ownedWeapons.Contains(templateId))
+        {
+            ownedWeapons.Add(templateId);
+            OnPlayerSave?.Invoke();
+        }
+    }
+
+    public bool HasWeapon(int templateId) => ownedWeapons.Contains(templateId);
 
     #region UpgradeHelper
     private int GetTemplateIdFor(Define.EUpgradeType upgradeType, int type)
@@ -232,8 +257,8 @@ public class PlayerManager
             Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
         }
 
-
         OnPlayerUpgradeChanged?.Invoke();
+        OnPlayerSave?.Invoke();
     }
 
     private void ApplyUpgradeLevel(Define.EUpgradeType upgradeType, int slotIndex, int nextTemplateId)
@@ -324,9 +349,10 @@ public class PlayerManager
     #region Action
     public event Action OnCurrenciesChanged;
     public event Action OnPlayerUpgradeChanged;
+    public event Action OnPlayerSave;
     #endregion
 
-    #region Save
+    #region Save&Load
     public SaveData GetSaveData()
     {
         SaveData data = new SaveData();
@@ -335,6 +361,7 @@ public class PlayerManager
         data.forgeStatLevel = (int[])forgeStatLevel.Clone();
         data.townStatLevel = (int[])townStatLevel.Clone();
         data.shopProducts = (int[])shopProducts.Clone();
+        data.ownedWeapons = new List<int>(ownedWeapons);
         return data;
     }
 
@@ -345,6 +372,7 @@ public class PlayerManager
         forgeStatLevel = (int[])data.forgeStatLevel.Clone();
         townStatLevel = (int[])data.townStatLevel.Clone();
         shopProducts = (int[])data.shopProducts.Clone();
+        ownedWeapons = new List<int>(data.ownedWeapons);
 
         OnCurrenciesChanged?.Invoke();
         OnPlayerUpgradeChanged?.Invoke();
