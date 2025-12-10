@@ -36,9 +36,9 @@ public class PlayerManager
             playerStatLevel[(int)Define.EPlayerStat.Dex] = 0;
             playerStatLevel[(int)Define.EPlayerStat.Mastery] = 300001;
 
-            forgeStatLevel[(int)Define.EPlayerForgeStat.CoalTime] = 1;
-            forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 101;
-            forgeStatLevel[(int)Define.EPlayerForgeStat.Mastery] = 201;
+            forgeStatLevel[(int)Define.EPlayerForgeStat.CoalTime] = 100001;
+            forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 200001;
+            forgeStatLevel[(int)Define.EPlayerForgeStat.Mastery] = 300001;
 
             townStatLevel[(int)Define.EPlayerTownStat.GoldMax] = 100001;
             townStatLevel[(int)Define.EPlayerTownStat.IronMax] = 200001;
@@ -130,7 +130,7 @@ public class PlayerManager
     }
 
 
-    public int GetPlayerStat(Define.EPlayerStat type)
+    public long GetPlayerStat(Define.EPlayerStat type)
     {
         int templateId = playerStatLevel[(int)type];
 
@@ -140,7 +140,7 @@ public class PlayerManager
         return 0;
     }
 
-    public int GetForgeStat(Define.EPlayerForgeStat type)
+    public long GetForgeStat(Define.EPlayerForgeStat type)
     {
         int templateId = forgeStatLevel[(int)type];
 
@@ -150,7 +150,7 @@ public class PlayerManager
         return 0;
     }
 
-    public int GetTownStat(Define.EPlayerTownStat type)
+    public long GetTownStat(Define.EPlayerTownStat type)
     {
         int templateId = townStatLevel[(int)type];
 
@@ -309,9 +309,9 @@ public class PlayerManager
         CurrencySubtract(Define.ECurrency.Gold, dataValue.Price);
         Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
 
-        int addValue = dataValue.CurrentValue;
-        int bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
-        int bonusValue = Mathf.FloorToInt(addValue * (bonusPercent / 100f));
+        long addValue = dataValue.CurrentValue;
+        long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
+        long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 100f));
 
         ChangeCurrency(currencyType, addValue + bonusValue);
     }

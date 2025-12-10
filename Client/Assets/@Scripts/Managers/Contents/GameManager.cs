@@ -543,10 +543,9 @@ public class GameManager
 
         try
         {
-            await UniTask.Delay(
-                Managers.Player.GetForgeStat(Define.EPlayerForgeStat.CoalTime),
-                cancellationToken: coalCTS.Token
-            );
+            var waitTime = (int)Managers.Player.GetForgeStat(Define.EPlayerForgeStat.CoalTime);
+                
+            await UniTask.Delay(waitTime, cancellationToken: coalCTS.Token);
         }
         catch (OperationCanceledException)
         {

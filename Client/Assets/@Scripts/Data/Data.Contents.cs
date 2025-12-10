@@ -150,8 +150,8 @@ namespace Data
         public int TemplateId;
         public string UpgradeName;
         public long Price;
-        public int CurrentValue;
-        public int NextValue;
+        public long CurrentValue;
+        public long NextValue;
         public int OriginalTemplateId;
         public int NextTempalteId;
 
