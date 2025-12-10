@@ -31,10 +31,10 @@ public class PlayerManager
             currency[(int)Define.ECurrency.Iron] = 5000;
             currency[(int)Define.ECurrency.Coal] = 5000;
 
-            playerStatLevel[(int)Define.EPlayerStat.Str] = 10001;
-            playerStatLevel[(int)Define.EPlayerStat.Skill] = 30001;
+            playerStatLevel[(int)Define.EPlayerStat.Str] = 100001;
+            playerStatLevel[(int)Define.EPlayerStat.Skill] = 200001;
             playerStatLevel[(int)Define.EPlayerStat.Dex] = 0;
-            playerStatLevel[(int)Define.EPlayerStat.Mastery] = 50001;
+            playerStatLevel[(int)Define.EPlayerStat.Mastery] = 300001;
 
             forgeStatLevel[(int)Define.EPlayerForgeStat.CoalTime] = 1;
             forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 101;
