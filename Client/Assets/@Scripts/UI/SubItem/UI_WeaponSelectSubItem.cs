@@ -1,4 +1,3 @@
-using Unity.InferenceEngine.Tokenization.PostProcessors.Templating;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -9,6 +8,7 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         Text_NeedIron,
         Text_NeedCoal,
         Text_GetPrice,
+        Text_Name,
     }
 
     enum Buttons
@@ -42,6 +42,9 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         GetText((int)Texts.Text_NeedIron).text = weaponInfo.Iron.ToString();
         GetText((int)Texts.Text_NeedCoal).text = weaponInfo.Coal.ToString();
         GetText((int)Texts.Text_GetPrice).text = weaponInfo.Price.ToString();
+        GetText((int)Texts.Text_Name).text = weaponInfo.WeaponName;
+
+        GetButton((int)Buttons.Button_Weapon).image.sprite = Managers.Resource.Load<Sprite>(weaponInfo.WeaponImage);
     }
 
     private void OnClickedWeaponButton(PointerEventData eventData)

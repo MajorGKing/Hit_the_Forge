@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 
 public class UI_GameScene : UI_Scene
@@ -20,6 +21,7 @@ public class UI_GameScene : UI_Scene
         ForgeUpgradeContent,
         TownUpgradeContent,
         ShopUpgradeContent,
+        WeaponSelect,
     }
 
     enum Images
@@ -259,6 +261,8 @@ public class UI_GameScene : UI_Scene
             var item = Managers.UI.MakeSubItem<UI_WeaponSelectSubItem>(GetGameObject((int)GameObjects.WeaponContent).transform);
             item.SetInfo(weaponId);
         }
+
+        GetGameObject((int)GameObjects.WeaponSelect).GetComponent<ScrollRect>().horizontalNormalizedPosition = 1f; 
     }
 
     private void OnClickedForgeEnhancementButton(PointerEventData eventData)

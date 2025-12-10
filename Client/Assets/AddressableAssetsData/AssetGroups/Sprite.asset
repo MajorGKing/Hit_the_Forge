@@ -21,6 +21,30 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17662dd7780a5416f91a29c9e1537749
+    m_Address: Rapier
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c457b120d7f84789af40cf58efb92e3
+    m_Address: Sword
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e36a7bd4a468470fa30b5c74f40dfc7
+    m_Address: Longsword
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 530bd0b606aa64c21b3c95a921c25930
+    m_Address: Warhammer
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 70211099f4d9f4ef888d6bd78610ded0
     m_Address: help06
     m_ReadOnly: 0
@@ -33,14 +57,50 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9129d823675f34586b30b3f8fe6e0051
+    m_Address: Shortsword
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 94a4bb860a4e643869651551beb5a206
+    m_Address: Scimitar
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9dea949edb32c4e4a9c904e052425d9b
+    m_Address: Dagger
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 9f73acaf9e80c46b3bc120fb894662d9
     m_Address: help01
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dffe49a3f7a5249689aa52737370035a
+    m_Address: Battleaxe
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e20c62610a7df447d9518d4f049bc515
+    m_Address: Greatsword
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e28cf2dd957ea41cb9bf9b21b459fbbc
     m_Address: help05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e2a9fbaaf5219466881c4a64529d4fa3
+    m_Address: Mace
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload

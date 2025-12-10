@@ -157,6 +157,7 @@ public class GameManager
     public event Action OnWeaponFinish;
     public event Action OnDoSave;
     public event Action OnNewWeaponAdded;
+    public event Action OnWeaponSelected;
     #endregion
 
     #region Variables
@@ -202,7 +203,11 @@ public class GameManager
             return 0;
     }
 
-    Data.WeaponData currentWeaponInfo;
+    private Data.WeaponData currentWeaponInfo;
+    public Data.WeaponData CurrentWeaponInfo
+    {
+        get => currentWeaponInfo;
+    }
 
     #endregion
 
@@ -278,20 +283,6 @@ public class GameManager
         Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
         OnWeaponFinish?.Invoke();
 
-        if (currentWeaponInfo.NextTemplateId > 0)
-        {
-            if (Managers.Player.HasWeapon(currentWeaponInfo.NextTemplateId) == false)
-            {
-                Managers.Player.AddOwnedWeapon(currentWeaponInfo.NextTemplateId);
-
-                var nextWeaponName = Managers.Data.WeaponDict[currentWeaponInfo.NextTemplateId].WeaponName;
-
-                Managers.UI.ShowToast($"{nextWeaponName} 추가 되었습니다.", 1, Define.EToastColor.Blue, Define.EToastPosition.TopCenter);
-
-                OnNewWeaponAdded?.Invoke();
-            }
-        }
-
         yield return new WaitForSeconds(0.15f);
 
         ChangeState(EWeaponMakeProcess.Enhancement);
@@ -337,6 +328,20 @@ public class GameManager
             Managers.Sound.Play(Define.ESound.Effect, "SellEffect");
         }
 
+        if (currentWeaponInfo.NextTemplateId > 0)
+        {
+            if (Managers.Player.HasWeapon(currentWeaponInfo.NextTemplateId) == false)
+            {
+                Managers.Player.AddOwnedWeapon(currentWeaponInfo.NextTemplateId);
+
+                var nextWeaponName = Managers.Data.WeaponDict[currentWeaponInfo.NextTemplateId].WeaponName;
+
+                Managers.UI.ShowToast($"{nextWeaponName} 추가 되었습니다.", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+
+                OnNewWeaponAdded?.Invoke();
+            }
+        }
+
         ChangeState(EWeaponMakeProcess.BeginHold);
         yield return null;
     }
@@ -361,6 +366,9 @@ public class GameManager
     {
         //if (makeProcessState != EWeaponMakeProcess.BeginHold && makeProcessState != EWeaponMakeProcess.Ready && makeProcessState != EWeaponMakeProcess.Progress)
         //    return (float)WeaponHp / WeaponMaxHp;
+
+        if(currentWeaponInfo == null)
+                return;
 
         if(makeProcessState == EWeaponMakeProcess.BeginHold)
         {
@@ -429,6 +437,8 @@ public class GameManager
 
         currentWeaponInfo = weaponInfo;
         ChangeState(EWeaponMakeProcess.Ready);
+
+        OnWeaponSelected?.Invoke();
 
         return true;
     }

@@ -93,6 +93,7 @@ namespace Data
         public long Coal;
         public long Price;
         public int NextTemplateId;
+        public string WeaponImage;
     }
 
     [Serializable]

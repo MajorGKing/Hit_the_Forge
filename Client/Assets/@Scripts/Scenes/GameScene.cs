@@ -24,7 +24,7 @@ public class GameScene : BaseScene
 
         Managers.Game.GameInit();
 
-        Managers.Game.StartWeaponMake(1);
+        //Managers.Game.StartWeaponMake(1);
 
         Managers.Sound.Play(Define.ESound.Bgm, "BGM3", 1f, 0.5f);
     }

@@ -15,6 +15,12 @@ public class WeaponController : MonoBehaviour
         spriteRenderer.material.SetFloat("_FillAmount", 0);
     }
 
+    private void SetWeaponImage()
+    {
+        var weaponInfo = Managers.Game.CurrentWeaponInfo;
+        spriteRenderer.sprite = Managers.Resource.Load<Sprite>(weaponInfo.WeaponImage);
+    }
+
     private void OnEnable()
     {
         Managers.Game.OnWeaponHpChanged -= UpdateFill;
@@ -25,6 +31,8 @@ public class WeaponController : MonoBehaviour
         Managers.Game.OnWeaponEnhancementFail += EnhancementFail;
         Managers.Game.OnWeaponFinish -= OnWeaponFinish;
         Managers.Game.OnWeaponFinish += OnWeaponFinish;
+        Managers.Game.OnWeaponSelected -= SetWeaponImage;
+        Managers.Game.OnWeaponSelected += SetWeaponImage;
     }
 
     private void OnDisable()
@@ -33,11 +41,12 @@ public class WeaponController : MonoBehaviour
         Managers.Game.OnWeaponEnhancementSucess -= EnhancemenetSucess;
         Managers.Game.OnWeaponEnhancementFail -= EnhancementFail;
         Managers.Game.OnWeaponFinish -= OnWeaponFinish;
+        Managers.Game.OnWeaponSelected -= SetWeaponImage;
     }
 
     private void OnWeaponFinish()
     {
-        transform.DORotate(new Vector3(0, 0, 360), 0.15f, RotateMode.FastBeyond360)
+        transform.DORotate(new Vector3(0, 0, 360), 0.5f, RotateMode.FastBeyond360)
             .SetEase(Ease.OutBack);
     }
 
