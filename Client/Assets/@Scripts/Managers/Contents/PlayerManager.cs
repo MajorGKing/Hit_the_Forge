@@ -311,7 +311,7 @@ public class PlayerManager
 
         long addValue = dataValue.CurrentValue;
         long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
-        long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 100f));
+        long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 1000f));
 
         ChangeCurrency(currencyType, addValue + bonusValue);
     }

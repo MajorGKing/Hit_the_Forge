@@ -464,7 +464,7 @@ public class GameManager
     public long GetSellPrice()
     {
         var price = currentWeaponInfo.Price * Managers.Data.EnhancementDict[EnhancementLevel - 1].Price;
-        var bonusePrice = price * (Managers.Player.GetTownStat(Define.EPlayerTownStat.ShopSellBonus)/(float)100);
+        var bonusePrice = price * (Managers.Player.GetTownStat(Define.EPlayerTownStat.ShopSellBonus)/(float)1000);
         //Debug.Log($"Sell Price {price} + Bounse Price {bonusePrice} = {(int)price + (int)bonusePrice}");
         
         return (long)(price + bonusePrice);
