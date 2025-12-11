@@ -1,4 +1,4 @@
-using Google.Protobuf.Protocol;
+﻿using Google.Protobuf.Protocol;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -42,20 +42,20 @@ public class UI_TitleScene : UI_Scene
 				case TitleSceneState.None:
 					break;
 				case TitleSceneState.AssetLoading:
-					GetText((int)Texts.StatusText).text = $"TODO �ε���";
-					break;
+					GetText((int)Texts.StatusText).text = $"TODO 로딩중";
+                    break;
 				case TitleSceneState.AssetLoaded:
-					GetText((int)Texts.StatusText).text = "TODO �ε� �Ϸ�";
-					break;
+					GetText((int)Texts.StatusText).text = "TODO 로딩 완료";
+                    break;
 				case TitleSceneState.ConnectingToServer:
-					GetText((int)Texts.StatusText).text = "TODO ���� ������";
-					break;
+					GetText((int)Texts.StatusText).text = "TODO 서버 접속중";
+                    break;
 				case TitleSceneState.ConnectedToServer:
-					GetText((int)Texts.StatusText).text = "TODO ���� ���� ����";
-					break;
+					GetText((int)Texts.StatusText).text = "TODO 서버 접속 성공";
+                    break;
 				case TitleSceneState.FailedToConnectToServer:
-					GetText((int)Texts.StatusText).text = "TODO ���� ���� ����";
-					break;
+					GetText((int)Texts.StatusText).text = "TODO 서버 접속 실패";
+                    break;
 			}
 		}
 	}
