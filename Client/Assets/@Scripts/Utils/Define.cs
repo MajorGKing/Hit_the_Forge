@@ -151,6 +151,12 @@ public class Define
     {
         BuyIron,
         BuyCoal,
-        AdGold,
+        BuyGold,
+    }
+
+    public enum EShopBuyType
+    {
+        Gold,
+        Ad,
     }
 }

@@ -42,19 +42,19 @@ public class UI_TitleScene : UI_Scene
 				case TitleSceneState.None:
 					break;
 				case TitleSceneState.AssetLoading:
-					GetText((int)Texts.StatusText).text = $"TODO ·ÎµùÁß";
+					GetText((int)Texts.StatusText).text = $"TODO ï¿½Îµï¿½ï¿½ï¿½";
 					break;
 				case TitleSceneState.AssetLoaded:
-					GetText((int)Texts.StatusText).text = "TODO ·Îµù ¿Ï·á";
+					GetText((int)Texts.StatusText).text = "TODO ï¿½Îµï¿½ ï¿½Ï·ï¿½";
 					break;
 				case TitleSceneState.ConnectingToServer:
-					GetText((int)Texts.StatusText).text = "TODO ¼­¹ö Á¢¼ÓÁß";
+					GetText((int)Texts.StatusText).text = "TODO ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½";
 					break;
 				case TitleSceneState.ConnectedToServer:
-					GetText((int)Texts.StatusText).text = "TODO ¼­¹ö Á¢¼Ó ¼º°ø";
+					GetText((int)Texts.StatusText).text = "TODO ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
 					break;
 				case TitleSceneState.FailedToConnectToServer:
-					GetText((int)Texts.StatusText).text = "TODO ¼­¹ö Á¢¼Ó ½ÇÆÐ";
+					GetText((int)Texts.StatusText).text = "TODO ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½";
 					break;
 			}
 		}
@@ -80,12 +80,12 @@ public class UI_TitleScene : UI_Scene
 	{
 		base.Start();
 
-		// Load ½ÃÀÛ
+		// Load ï¿½ï¿½ï¿½ï¿½
 		State = TitleSceneState.AssetLoading;
 
 		Managers.Resource.LoadAllAsync<Object>("Preload", (key, count, totalCount) =>
 		{
-			GetText((int)Texts.StatusText).text = $"TODO ·ÎµùÁß : {key} {count}/{totalCount}";
+			GetText((int)Texts.StatusText).text = $"TODO ï¿½Îµï¿½ï¿½ï¿½ : {key} {count}/{totalCount}";
             //Debug.Log(GetText((int)Texts.StatusText).text);
 
             if (count == totalCount)
@@ -99,6 +99,7 @@ public class UI_TitleScene : UI_Scene
 	{
 		Managers.Data.Init();
 		Managers.Game.Init();
+		Managers.Player.Init();
 		//State = TitleSceneState.AssetLoaded;
 		//Managers.Data.Init();
 

@@ -1,7 +1,5 @@
 using System;
 using System.Collections.Generic;
-using UnityEngine;
-using static Define;
 
 namespace Data
 {
@@ -257,6 +255,7 @@ namespace Data
     public class ShopProductData : UpgradeData
     {
         public Define.EShopProductType StatType;
+        public Define.EShopBuyType BuyType;
     }
 
     [Serializable]

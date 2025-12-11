@@ -6,6 +6,7 @@ public class UI_UpgradeSubItem : UI_SubItem
     enum Images
     {
         Image_Upgrade,
+        Image_CostType,
     }
 
     enum Texts
@@ -180,18 +181,50 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             // TODO Image based on type
 
+            if(shopProductData.BuyType == Define.EShopBuyType.Gold)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "골드를 사용해 ";
+            }
+            else if(shopProductData.BuyType == Define.EShopBuyType.Ad)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text = "광고를 보고 ";
+                GetImage((int)Images.Image_CostType).sprite = null;
+            }
+
+            long maxValue = 0;
+            long buyValue = 0;
+            long price = 0;
+
             if (shopProductData.StatType == Define.EShopProductType.BuyIron)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "재료를 구매 합니다.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text += "재료를 구매 합니다.";
+                maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Iron);
+                
             }
             else if (shopProductData.StatType == Define.EShopProductType.BuyCoal)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "연료를 구매 합니다.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text += "연료를 구매 합니다.";
+                maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Coal);
+            }
+            else if (shopProductData.StatType == Define.EShopProductType.BuyGold)
+            {
+                GetText((int)Texts.Text_UpgradeDiscribe).text += "골드를 구매 합니다.";
+                maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Gold);
             }
 
-            GetText((int)Texts.Text_UpgradeStat).text = shopProductData.CurrentValue.ToString();
+            buyValue = maxValue/shopProductData.CurrentValue;
+            price = maxValue/shopProductData.CurrentValue * shopProductData.Price;
 
-            GetText((int)Texts.Text_UpgradePrice).text = shopProductData.Price.ToString();
+            GetText((int)Texts.Text_UpgradeStat).text = buyValue.ToString();
+
+            if(shopProductData.BuyType == Define.EShopBuyType.Gold)
+            {
+                GetText((int)Texts.Text_UpgradePrice).text = price.ToString();
+            }
+            else if(shopProductData.BuyType == Define.EShopBuyType.Ad)
+            {
+                GetText((int)Texts.Text_UpgradePrice).text = "AD";
+            }
         }
     }
 
@@ -228,7 +261,7 @@ public class UI_UpgradeSubItem : UI_SubItem
             if(shopProductData == null)
                 return;
 
-            Managers.Player.StatUpgrade(Define.EUpgradeType.Shop, (int)shopProductData.StatType);
+            Managers.Player.StatUpgrade(Define.EUpgradeType.Shop, shopProductData.TemplateId);
         }
     }
 }

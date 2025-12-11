@@ -9,7 +9,7 @@ public class PlayerManager
     private int[] playerStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
     private int[] forgeStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
     private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
-    private int[] shopProducts = new int[Enum.GetValues(typeof(Define.EShopProductType)).Length];
+    private List<int> shopProducts = new List<int>();
     private List<int> ownedWeapons = new List<int>();
 
 
@@ -19,7 +19,7 @@ public class PlayerManager
         Array.Clear(playerStatLevel, 0, playerStatLevel.Length);
         Array.Clear(forgeStatLevel, 0, forgeStatLevel.Length);
         Array.Clear(townStatLevel, 0, townStatLevel.Length);
-        Array.Clear(shopProducts, 0, shopProducts.Length);
+        shopProducts.Clear();
     }
 
     public void Init()
@@ -48,8 +48,16 @@ public class PlayerManager
             townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 600001;
             townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 700001;
 
-            shopProducts[(int)Define.EShopProductType.BuyIron] = 1;
-            shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
+            {
+                // shopProducts[(int)Define.EShopProductType.BuyIron] = 1;
+                // shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
+                foreach (var shopData in Managers.Data.ShopProductDict.Values)
+                {
+                    Debug.Log(shopData.TemplateId);
+                    shopProducts.Add(shopData.TemplateId);
+                }
+            }
+
 
             ownedWeapons.Add(1);
 
@@ -163,8 +171,7 @@ public class PlayerManager
     public int[] GetPlayerAllStat() => playerStatLevel;
     public int[] GetForgeAllStat() => forgeStatLevel;
     public int[] GetTownAllStat() => townStatLevel;
-    public int[] GetShopAllStat() => shopProducts;
-
+    public List<int> GetShopAllStat() => shopProducts;
     public List<int> GetOwnedWeapons() => ownedWeapons;
 
     public void AddOwnedWeapon(int templateId)
@@ -222,18 +229,21 @@ public class PlayerManager
 
     public void StatUpgrade(Define.EUpgradeType upgradeType, int slotIndex)
     {
-        int templateId = GetTemplateIdFor(upgradeType, slotIndex);
+        int templateId = 0;
+        // Shop의 경우 TemplateId를 전달 받음
+        if(upgradeType == Define.EUpgradeType.Shop)
+        {
+            templateId = slotIndex;
+        }
+        else
+        {
+            templateId = GetTemplateIdFor(upgradeType, slotIndex);
+        }
+
         var data = GetUpgradeDataFor(upgradeType, templateId);
 
         if (data == null)
             return;
-
-        // Gold 체크
-        if (data.Price > GetCurrency(Define.ECurrency.Gold))
-        {
-            ShowLessMessage(Define.ECurrency.Gold);
-            return;
-        }
 
         // Shop이 아닌 경우 다음 레벨 가능 여부 체크
         if (upgradeType != Define.EUpgradeType.Shop && data.NextTempalteId == 0)
@@ -242,10 +252,18 @@ public class PlayerManager
         // Upgrade하기
         if (upgradeType == Define.EUpgradeType.Shop)
         {
-            ProcessShopPurchase(slotIndex);
+            // Shop인 경우 tempalteId를 활용하여 업데이트
+            ProcessShopPurchase(templateId);
         }
         else
         {
+            // Gold 체크
+            if (data.Price > GetCurrency(Define.ECurrency.Gold))
+            {
+                ShowLessMessage(Define.ECurrency.Gold);
+                return;
+            }
+
             // Gold 차감
             CurrencySubtract(Define.ECurrency.Gold, data.Price);
 
@@ -277,9 +295,9 @@ public class PlayerManager
         }
     }
 
-    private void ProcessShopPurchase(int shopSlotIndex)
+    private void ProcessShopPurchase(int templateId)
     {
-        int shopTemplateId = shopProducts[shopSlotIndex];
+        int shopTemplateId = templateId;
         if (!Managers.Data.ShopProductDict.TryGetValue(shopTemplateId, out var dataValue))
             return;
 
@@ -288,7 +306,7 @@ public class PlayerManager
         {
             Define.EShopProductType.BuyIron => Define.ECurrency.Iron,
             Define.EShopProductType.BuyCoal => Define.ECurrency.Coal,
-            // TODO ILHAK 골드 추후에 구현 필요
+            Define.EShopProductType.BuyGold => Define.ECurrency.Gold,
             _ => Define.ECurrency.None,
         };
 
@@ -297,7 +315,7 @@ public class PlayerManager
 
         // 최대값 체크
         var stock = GetCurrency(currencyType);
-        var maxStock = GetCurrenyMax(currencyType); // 없으면 int 최대값
+        var maxStock = GetCurrenyMax(currencyType); // 없으면 long 최대값
 
         if (stock >= maxStock)
         {
@@ -305,15 +323,40 @@ public class PlayerManager
             return;
         }
 
-        // 골드 지불
-        CurrencySubtract(Define.ECurrency.Gold, dataValue.Price);
-        Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
+        // 기존 클래스를 그대로 쓰기 때문에 CurrentValue는 몇 % 획득인지를 의미함
+        long addValue = maxStock/dataValue.CurrentValue;
 
-        long addValue = dataValue.CurrentValue;
-        long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
-        long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 1000f));
+        // 구매 타입에 따른 분류
+        if (dataValue.BuyType == Define.EShopBuyType.Gold)
+        {
+            // 골드 지불 계산 기존 클래스를 그대로 쓰기 때문에 Price는 1개다 가격을 의미함
+            long price = addValue * dataValue.Price;
 
-        ChangeCurrency(currencyType, addValue + bonusValue);
+            if(price > Managers.Player.GetCurrency(Define.ECurrency.Gold))
+            {
+                ShowLessMessage(Define.ECurrency.Gold);
+                return;
+            }
+
+            CurrencySubtract(Define.ECurrency.Gold, price);
+            Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
+
+            long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
+            long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 1000f));
+
+            CurrencyAdd(currencyType, addValue + bonusValue);
+        }
+        else if (dataValue.BuyType == Define.EShopBuyType.Ad)
+        {
+            // TODO ILHAK 광고를 보고 준다
+            Debug.Log("ADADAD");
+
+            Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
+            long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
+            long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 1000f));
+
+            CurrencyAdd(currencyType, addValue + bonusValue);
+        }
     }
 
     #region  ShowMessage
@@ -358,7 +401,7 @@ public class PlayerManager
         data.playerStatLevel = (int[])playerStatLevel.Clone();
         data.forgeStatLevel = (int[])forgeStatLevel.Clone();
         data.townStatLevel = (int[])townStatLevel.Clone();
-        data.shopProducts = (int[])shopProducts.Clone();
+        data.shopProducts = new List<int>(shopProducts);
         data.ownedWeapons = new List<int>(ownedWeapons);
         return data;
     }
@@ -369,7 +412,7 @@ public class PlayerManager
         playerStatLevel = (int[])data.playerStatLevel.Clone();
         forgeStatLevel = (int[])data.forgeStatLevel.Clone();
         townStatLevel = (int[])data.townStatLevel.Clone();
-        shopProducts = (int[])data.shopProducts.Clone();
+        shopProducts = new List<int>(data.shopProducts);
         ownedWeapons = new List<int>(data.ownedWeapons);
 
         OnCurrenciesChanged?.Invoke();

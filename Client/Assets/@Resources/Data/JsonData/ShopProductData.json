@@ -2,22 +2,57 @@
   "products": [
     {
       "StatType": 0,
-      "TemplateId": 1,
+      "BuyType": 0,
+      "TemplateId": 100001,
       "UpgradeName": "BuyIron",
-      "Price": 100,
-      "CurrentValue": 1000,
+      "Price": 1,
+      "CurrentValue": 10,
       "NextValue": 0,
-      "OriginalTemplateId": 1,
+      "OriginalTemplateId": 100001,
       "NextTempalteId": 0
     },
     {
       "StatType": 1,
-      "TemplateId": 11,
+      "BuyType": 0,
+      "TemplateId": 200001,
       "UpgradeName": "BuyCoal",
-      "Price": 100,
-      "CurrentValue": 1000,
+      "Price": 10,
+      "CurrentValue": 10,
       "NextValue": 0,
-      "OriginalTemplateId": 11,
+      "OriginalTemplateId": 200001,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 2,
+      "BuyType": 1,
+      "TemplateId": 300001,
+      "UpgradeName": "BuyGold",
+      "Price": 1,
+      "CurrentValue": 10,
+      "NextValue": 0,
+      "OriginalTemplateId": 300001,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 0,
+      "BuyType": 1,
+      "TemplateId": 400001,
+      "UpgradeName": "BuyIron",
+      "Price": 1,
+      "CurrentValue": 10,
+      "NextValue": 0,
+      "OriginalTemplateId": 400001,
+      "NextTempalteId": 0
+    },
+    {
+      "StatType": 1,
+      "BuyType": 1,
+      "TemplateId": 500001,
+      "UpgradeName": "BuyCoal",
+      "Price": 1,
+      "CurrentValue": 10,
+      "NextValue": 0,
+      "OriginalTemplateId": 500001,
       "NextTempalteId": 0
     }
   ]

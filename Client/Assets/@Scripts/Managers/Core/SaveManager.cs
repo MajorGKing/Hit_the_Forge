@@ -9,7 +9,7 @@ public class SaveData
     public int[] playerStatLevel;
     public int[] forgeStatLevel;
     public int[] townStatLevel;
-    public int[] shopProducts;
+    public List<int> shopProducts;
     public List<int> ownedWeapons;
 }
 
