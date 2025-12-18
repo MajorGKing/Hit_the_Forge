@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -22,6 +22,7 @@ public class UI_GameScene : UI_Scene
         TownUpgradeContent,
         ShopUpgradeContent,
         WeaponSelect,
+        BannerPosition,
     }
 
     enum Images
@@ -92,6 +93,10 @@ public class UI_GameScene : UI_Scene
         GetImage((int)Images.Image_Help).gameObject.BindEvent(OnClickedHelp);
 
         TogglesInit();
+
+        Managers.Ad.SetBannerPosition(new Vector2(0, 1850));
+
+        Managers.Ad.bannerAd.LoadAd();
     }
 
     private float elapsedTime;

@@ -33,6 +33,7 @@ public class Managers : MonoBehaviour
     private UIManager _ui = new UIManager();
     private NetworkManager _network = new NetworkManager();
     private SaveManager _save = new SaveManager();
+    private AdManager _ad = new AdManager();
 
     public static DataManager Data { get { return Instance?._data; } }
     public static PoolManager Pool { get { return Instance?._pool; } }
@@ -42,6 +43,7 @@ public class Managers : MonoBehaviour
     public static UIManager UI { get { return Instance?._ui; } }
     public static NetworkManager Network { get { return Instance?._network; } }
     public static SaveManager Save { get { return Instance?._save; } }
+    public static AdManager Ad { get { return Instance?._ad; } }
 
     #endregion
 
@@ -96,6 +98,7 @@ public class Managers : MonoBehaviour
             s_instance._sound.Init();
             //s_instance._player.Init();
             s_instance._save.Init();
+            s_instance._ad.Init();
         }		
 	}
 
@@ -111,5 +114,6 @@ public class Managers : MonoBehaviour
         Scene.Clear();
         UI.Clear();
         Pool.Clear();
+        Ad.Clear();
     }
 }
