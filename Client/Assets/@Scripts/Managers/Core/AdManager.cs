@@ -14,7 +14,16 @@ public class AdManager
         // SDK init
         LevelPlay.Init("24948f305");
 
-       
+        var configBuilder = new LevelPlayBannerAd.Config.Builder();
+        configBuilder.SetSize(LevelPlayAdSize.BANNER);
+        configBuilder.SetPosition(LevelPlayBannerPosition.BottomCenter);
+        configBuilder.SetDisplayOnLoad(true);
+        configBuilder.SetRespectSafeArea(true); // Only relevant for Android
+        configBuilder.SetPlacementName("bannerPlacement");
+        configBuilder.SetBidFloor(1.0); // Minimum bid price in USD
+        var bannerConfig = configBuilder.Build();
+
+        bannerAd = new LevelPlayBannerAd("bwdq9r9c6nw4d7t9", bannerConfig);
 
     }
 
@@ -50,6 +59,11 @@ public class AdManager
         var bannerConfig = configBuilder.Build();
 
         bannerAd = new LevelPlayBannerAd("bwdq9r9c6nw4d7t9", bannerConfig);
+    }
+
+    public void LoadBanner()
+    {
+        bannerAd.LoadAd();
     }
 
 }

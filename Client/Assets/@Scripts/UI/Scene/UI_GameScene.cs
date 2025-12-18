@@ -94,9 +94,10 @@ public class UI_GameScene : UI_Scene
 
         TogglesInit();
 
-        Managers.Ad.SetBannerPosition(new Vector2(0, 1850));
+        //Managers.Ad.SetBannerPosition(new Vector2(0, 1850));
+        //Managers.Ad.SetBannerPosition(GetGameObject((int)GameObjects.BannerPosition).transform.position);
 
-        Managers.Ad.bannerAd.LoadAd();
+        Managers.Ad.LoadBanner();
     }
 
     private float elapsedTime;
