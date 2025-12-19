@@ -350,6 +350,7 @@ public class PlayerManager
         {
             // TODO ILHAK 광고를 보고 준다
             Debug.Log("ADADAD");
+            Managers.Ad.ShowRewardAd(currencyType);
 
             Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
             long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);

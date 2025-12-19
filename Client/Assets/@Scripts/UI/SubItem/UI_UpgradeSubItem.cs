@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Unity.Services.LevelPlay;
+using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class UI_UpgradeSubItem : UI_SubItem
@@ -26,6 +27,11 @@ public class UI_UpgradeSubItem : UI_SubItem
     private Data.ForgeUpgradeData forgeUpgradeData = null;
     private Data.TownUpgradeData townUpgradeData = null;
     private Data.ShopProductData shopProductData = null;
+
+    private void OnDisable()
+    {
+        Managers.Ad.OnRewardedLoaded -= AdReady;
+    }
 
 
     protected override void Awake()
@@ -60,6 +66,12 @@ public class UI_UpgradeSubItem : UI_SubItem
         else if(type == Define.EUpgradeType.Shop)
         {
             Managers.Data.ShopProductDict.TryGetValue(templateId, out shopProductData);
+
+            if (shopProductData != null && shopProductData.BuyType == Define.EShopBuyType.Ad)
+            {
+                Managers.Ad.OnRewardedLoaded -= AdReady;
+                Managers.Ad.OnRewardedLoaded += AdReady;
+            }
         }
         
 
@@ -224,6 +236,19 @@ public class UI_UpgradeSubItem : UI_SubItem
             else if(shopProductData.BuyType == Define.EShopBuyType.Ad)
             {
                 GetText((int)Texts.Text_UpgradePrice).text = "AD";
+
+                if(shopProductData.StatType == Define.EShopProductType.BuyGold)
+                {
+                    GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(Managers.Ad.IsRewardedReady(Define.ECurrency.Gold));
+                }
+                else if (shopProductData.StatType == Define.EShopProductType.BuyIron)
+                {
+                    GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(Managers.Ad.IsRewardedReady(Define.ECurrency.Iron));
+                }
+                else if (shopProductData.StatType == Define.EShopProductType.BuyCoal)
+                {
+                    GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(Managers.Ad.IsRewardedReady(Define.ECurrency.Coal));
+                }
             }
         }
     }
@@ -263,5 +288,10 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             Managers.Player.StatUpgrade(Define.EUpgradeType.Shop, shopProductData.TemplateId);
         }
+    }
+
+    private void AdReady(Define.ECurrency currency, LevelPlayAdInfo info)
+    {
+        GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(true);
     }
 }

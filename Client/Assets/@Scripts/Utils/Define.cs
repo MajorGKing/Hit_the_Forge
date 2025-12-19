@@ -106,10 +106,10 @@ public class Define
 
     public enum ECurrency
     {
-        None,
-        Gold,
-        Iron,
-        Coal,
+        None = 0,
+        Gold = 1,
+        Iron = 2,
+        Coal = 3,
     }
 
     public enum EUpgradeType
