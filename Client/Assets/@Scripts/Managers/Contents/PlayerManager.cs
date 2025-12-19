@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using Unity.Services.LevelPlay;
 using UnityEngine;
 
 
@@ -20,6 +21,7 @@ public class PlayerManager
         Array.Clear(forgeStatLevel, 0, forgeStatLevel.Length);
         Array.Clear(townStatLevel, 0, townStatLevel.Length);
         shopProducts.Clear();
+        Managers.Ad.OnRewardedEarned -= RewardAdEarned;
     }
 
     public void Init()
@@ -60,9 +62,12 @@ public class PlayerManager
 
 
             ownedWeapons.Add(1);
-
+            
             OnPlayerSave?.Invoke();
         }
+
+        Managers.Ad.OnRewardedEarned -= RewardAdEarned;
+        Managers.Ad.OnRewardedEarned += RewardAdEarned;
     }
 
     public void SetCurrency(Define.ECurrency type, long value)
@@ -323,8 +328,10 @@ public class PlayerManager
             return;
         }
 
+        Debug.Log($"get currencyType {currencyType}");
+
         // 기존 클래스를 그대로 쓰기 때문에 CurrentValue는 몇 % 획득인지를 의미함
-        long addValue = maxStock/dataValue.CurrentValue;
+        long addValue = maxStock * dataValue.CurrentValue / 100;
 
         // 구매 타입에 따른 분류
         if (dataValue.BuyType == Define.EShopBuyType.Gold)
@@ -348,16 +355,54 @@ public class PlayerManager
         }
         else if (dataValue.BuyType == Define.EShopBuyType.Ad)
         {
-            // TODO ILHAK 광고를 보고 준다
-            Debug.Log("ADADAD");
             Managers.Ad.ShowRewardAd(currencyType);
-
-            Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
-            long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
-            long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 1000f));
-
-            CurrencyAdd(currencyType, addValue + bonusValue);
         }
+    }
+
+    private void RewardAdEarned(Define.ECurrency currencyType, LevelPlayAdInfo info, LevelPlayReward reward)
+    {
+        // 광고 시청 보류 중인 상품 정보 찾기 (여기서는 통화별로 하나의 광고 상품만 있다고 가정)
+        Data.ShopProductData dataValue = null;
+        foreach (var productId in shopProducts)
+        {
+            if (Managers.Data.ShopProductDict.TryGetValue(productId, out var product))
+            {
+                if (product.BuyType == Define.EShopBuyType.Ad)
+                {
+                    Define.ECurrency pCurrency = product.StatType switch
+                    {
+                        Define.EShopProductType.BuyIron => Define.ECurrency.Iron,
+                        Define.EShopProductType.BuyCoal => Define.ECurrency.Coal,
+                        Define.EShopProductType.BuyGold => Define.ECurrency.Gold,
+                        _ => Define.ECurrency.None,
+                    };
+
+                    if (pCurrency == currencyType)
+                    {
+                        dataValue = product;
+                        break;
+                    }
+                }
+            }
+        }
+
+        if (dataValue == null)
+            return;
+
+        long maxStock = GetCurrenyMax(currencyType);
+        long addValue = maxStock * reward.Amount / 100;
+        
+
+        Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
+        long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
+        long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 1000f));
+
+        Debug.Log($"Currency : {currencyType} Value : {addValue + bonusValue}");
+
+        CurrencyAdd(currencyType, addValue + bonusValue);
+        
+        OnPlayerUpgradeChanged?.Invoke();
+        OnPlayerSave?.Invoke();
     }
 
     #region  ShowMessage

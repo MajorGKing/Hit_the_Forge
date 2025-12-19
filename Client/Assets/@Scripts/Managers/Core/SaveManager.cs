@@ -39,7 +39,7 @@ public class SaveManager
         PlayerPrefs.SetString("SaveData", encrypted);
         PlayerPrefs.Save();
         
-        Debug.Log("Game Saved");
+        //Debug.Log("Game Saved");
     }
 
     public bool LoadGame()

@@ -60,47 +60,61 @@ public class AdManager
                 continue;
 
             string adUnitId = RewardedVideoAdUnitId(currency);
+            Debug.Log($"adUnitId : {adUnitId}");
             if (string.IsNullOrEmpty(adUnitId))
                 continue;
 
-            var ad = new LevelPlayRewardedAd(adUnitId);
+            InitializeRewardedAd(currency, adUnitId);
 
-            // ⭐ currency를 캡처해서 이벤트 연결
-            Define.ECurrency capturedCurrency = currency;
+            // var ad = new LevelPlayRewardedAd(adUnitId);
 
-            ad.OnAdLoaded += (adInfo) =>
-            {
-                retrying[(int)capturedCurrency] = false; // 재시도 중단
-                OnRewardedLoaded?.Invoke(capturedCurrency, adInfo);
-            };
+            // // currency를 캡처해서 이벤트 연결
+            // Define.ECurrency capturedCurrency = currency;
 
-            ad.OnAdLoadFailed += error =>
-            {
-                Debug.LogError($"{capturedCurrency} rewarded load failed: {error}");
-                OnRewardedLoadFailed?.Invoke(capturedCurrency, error.ToString());
+            // Debug.Log($"capturedCurrency : {capturedCurrency}");
 
-                RetryLoadRewardedAd(ad, capturedCurrency, token).Forget();
-            };
+            // ad.OnAdLoaded += (adInfo) =>
+            // {
+            //     retrying[(int)capturedCurrency] = false; // 재시도 중단
+            //     OnRewardedLoaded?.Invoke(capturedCurrency, adInfo);
+            // };
 
-            rewardedVideoAds[(int)currency] = ad;
-            ad.LoadAd();
+            // ad.OnAdLoadFailed += error =>
+            // {
+            //     Debug.LogError($"{capturedCurrency} rewarded load failed: {error}");
+            //     OnRewardedLoadFailed?.Invoke(capturedCurrency, error.ToString());
+
+            //     RetryLoadRewardedAd(ad, capturedCurrency, token).Forget();
+            // };
+
+            // ad.OnAdClosed += (adInfo) =>
+            // {
+            //     Debug.Log($"{capturedCurrency} rewarded ad closed");
+            //     OnRewardedClosed?.Invoke(capturedCurrency, adInfo);
+            //     ad.LoadAd(); // 광고 닫히면 다시 로드
+            // };
+
+            // ad.OnAdDisplayFailed += (adInfo, error) =>
+            // {
+            //     Debug.LogError($"{capturedCurrency} rewarded ad display failed: {error}");
+            //     OnRewardedLoadFailed?.Invoke(capturedCurrency, error.ToString());
+            //     ad.LoadAd(); // 표시 실패시에도 다시 로드 시도
+            // };
+
+            // ad.OnAdRewarded += (adInfo, reward) =>
+            // {
+            //     Debug.Log($"{capturedCurrency} rewarded ad rewarded");
+            //     OnRewardedEarned?.Invoke(capturedCurrency, adInfo, reward);
+            // };
+
+            // Debug.Log($"ads capturedCurrency : {(int)currency}");
+            // rewardedVideoAds[(int)currency] = ad;
+            // ad.LoadAd();
         }
 
-
-
-    //// Register to Rewarded Video events
-    //rewardedVideoAd.OnAdLoaded += RewardedVideoOnLoadedEvent;
-    //rewardedVideoAd.OnAdLoadFailed += RewardedVideoOnAdLoadFailedEvent;
-    //rewardedVideoAd.OnAdDisplayed += RewardedVideoOnAdDisplayedEvent;
-    //rewardedVideoAd.OnAdDisplayFailed += RewardedVideoOnAdDisplayedFailedEvent;
-    //rewardedVideoAd.OnAdRewarded += RewardedVideoOnAdRewardedEvent;
-    //rewardedVideoAd.OnAdClicked += RewardedVideoOnAdClickedEvent;
-    //rewardedVideoAd.OnAdClosed += RewardedVideoOnAdClosedEvent;
-    //rewardedVideoAd.OnAdInfoChanged += RewardedVideoOnAdInfoChangedEvent;
-
-    // Create Banner object
-    //bannerAd = new LevelPlayBannerAd(AdConfig.BannerAdUnitId);
-    var configBuilder = new LevelPlayBannerAd.Config.Builder();
+        // Create Banner object
+        //bannerAd = new LevelPlayBannerAd(AdConfig.BannerAdUnitId);
+        var configBuilder = new LevelPlayBannerAd.Config.Builder();
         configBuilder.SetSize(LevelPlayAdSize.BANNER);
         configBuilder.SetPosition(LevelPlayBannerPosition.BottomCenter);
         configBuilder.SetDisplayOnLoad(true);
@@ -110,28 +124,44 @@ public class AdManager
         var bannerConfig = configBuilder.Build();
 
         bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
+    }
 
-        //// Register to Banner events
-        //bannerAd.OnAdLoaded += BannerOnAdLoadedEvent;
-        //bannerAd.OnAdLoadFailed += BannerOnAdLoadFailedEvent;
-        //bannerAd.OnAdDisplayed += BannerOnAdDisplayedEvent;
-        //bannerAd.OnAdDisplayFailed += BannerOnAdDisplayFailedEvent;
-        //bannerAd.OnAdClicked += BannerOnAdClickedEvent;
-        //bannerAd.OnAdCollapsed += BannerOnAdCollapsedEvent;
-        //bannerAd.OnAdLeftApplication += BannerOnAdLeftApplicationEvent;
-        //bannerAd.OnAdExpanded += BannerOnAdExpandedEvent;
+    private void InitializeRewardedAd(Define.ECurrency currency, string adUnitId)
+    {
+        var ad = new LevelPlayRewardedAd(adUnitId);
 
-        //// Create Interstitial object
-        //interstitialAd = new LevelPlayInterstitialAd(AdConfig.InterstitalAdUnitId);
-
-        //// Register to Interstitial events
-        //interstitialAd.OnAdLoaded += InterstitialOnAdLoadedEvent;
-        //interstitialAd.OnAdLoadFailed += InterstitialOnAdLoadFailedEvent;
-        //interstitialAd.OnAdDisplayed += InterstitialOnAdDisplayedEvent;
-        //interstitialAd.OnAdDisplayFailed += InterstitialOnAdDisplayFailedEvent;
-        //interstitialAd.OnAdClicked += InterstitialOnAdClickedEvent;
-        //interstitialAd.OnAdClosed += InterstitialOnAdClosedEvent;
-        //interstitialAd.OnAdInfoChanged += InterstitialOnAdInfoChangedEvent;
+        Debug.Log($"Initializing Ad for: {currency}");
+        ad.OnAdLoaded += (adInfo) =>
+        {
+            Debug.Log($"{currency} Ad Loaded");
+            retrying[(int)currency] = false;
+            OnRewardedLoaded?.Invoke(currency, adInfo);
+        };
+        ad.OnAdLoadFailed += error =>
+        {
+            Debug.LogError($"{currency} rewarded load failed: {error}");
+            OnRewardedLoadFailed?.Invoke(currency, error.ToString());
+            // Retry logic...
+        };
+        ad.OnAdClosed += (adInfo) =>
+        {
+            Debug.Log($"{currency} rewarded ad closed");
+            OnRewardedClosed?.Invoke(currency, adInfo);
+            ad.LoadAd();
+        };
+        ad.OnAdDisplayFailed += (adInfo, error) =>
+        {
+            Debug.LogError($"{currency} rewarded ad display failed: {error}");
+            OnRewardedLoadFailed?.Invoke(currency, error.ToString());
+            ad.LoadAd();
+        };
+        ad.OnAdRewarded += (adInfo, reward) =>
+        {
+            Debug.Log($"{currency} rewarded ad earned: {reward.Amount}");
+            OnRewardedEarned?.Invoke(currency, adInfo, reward);
+        };
+        rewardedVideoAds[(int)currency] = ad;
+        ad.LoadAd();
     }
 
     private async UniTaskVoid RetryLoadRewardedAd(LevelPlayRewardedAd ad, Define.ECurrency currency, CancellationToken token)
@@ -327,6 +357,7 @@ public class AdManager
     {
         if (rewardedVideoAds[(int)currency].IsAdReady())
         {
+            Debug.Log($"(int)currency {(int)currency}");
             rewardedVideoAds[(int)currency].ShowAd();
         }
     }
@@ -339,57 +370,59 @@ public class AdManager
 
     static string GetAppKey()
     {
-        #if UNITY_ANDROID
-            return "24948f305";
-        #elif UNITY_IPHONE
+#if UNITY_ANDROID
+        return "24948f305";
+#elif UNITY_IPHONE
             return "8545d445";
-        #else
+#else
             return "unexpected_platform";
-        #endif
+#endif
     }
 
     static string GetBannerAdUnitId()
     {
-        #if UNITY_ANDROID
-            return "bwdq9r9c6nw4d7t9";
-        #elif UNITY_IPHONE
+#if UNITY_ANDROID
+        return "bwdq9r9c6nw4d7t9";
+#elif UNITY_IPHONE
             return "iep3rxsyp9na3rw8";
-        #else
+#else
             return "unexpected_platform";
-        #endif
+#endif
     }
     static string GetInterstitialAdUnitId()
     {
-        #if UNITY_ANDROID
-            return "aeyqi3vqlv6o8sh9";
-        #elif UNITY_IPHONE
+#if UNITY_ANDROID
+        return "aeyqi3vqlv6o8sh9";
+#elif UNITY_IPHONE
             return "wmgt0712uuux8ju4";
-        #else
+#else
             return "unexpected_platform";
-        #endif
+#endif
     }
 
     static string GetRewardedVideoAdUnitId(Define.ECurrency currency)
     {
-        #if UNITY_ANDROID
-            if (currency == Define.ECurrency.Gold)
-                return "nqtypyp6wpx0i4f5";
-            else if (currency == Define.ECurrency.Iron)
-                return "rhftz04os3wbbimo";
-            else if (currency == Define.ECurrency.Coal)
-                return "xmsw7fw2utqqmtw2";
-            else return null;
-        #elif UNITY_IPHONE
+#if UNITY_ANDROID
+        if (currency == Define.ECurrency.Gold)
+            return "nqtypyp6wpx0i4f5";
+        else if (currency == Define.ECurrency.Iron)
+            return "rhftz04os3wbbimo";
+        else if (currency == Define.ECurrency.Coal)
+            return "xmsw7fw2utqqmtw2";
+        else return null;
+#elif UNITY_IPHONE
             return "qwouvdrkuwivay5q";
-        #else
+#else
             return "unexpected_platform";
-        #endif
+#endif
     }
     #endregion
 
     #region Action
     public Action<Define.ECurrency, LevelPlayAdInfo> OnRewardedLoaded;
     public Action<Define.ECurrency, string> OnRewardedLoadFailed;
+    public Action<Define.ECurrency, LevelPlayAdInfo> OnRewardedClosed;
+    public Action<Define.ECurrency, LevelPlayAdInfo, LevelPlayReward> OnRewardedEarned;
     #endregion
 
 }

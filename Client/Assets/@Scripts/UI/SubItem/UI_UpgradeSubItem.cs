@@ -31,6 +31,7 @@ public class UI_UpgradeSubItem : UI_SubItem
     private void OnDisable()
     {
         Managers.Ad.OnRewardedLoaded -= AdReady;
+        Managers.Ad.OnRewardedLoadFailed -= AdLoadFailed;
     }
 
 
@@ -71,6 +72,8 @@ public class UI_UpgradeSubItem : UI_SubItem
             {
                 Managers.Ad.OnRewardedLoaded -= AdReady;
                 Managers.Ad.OnRewardedLoaded += AdReady;
+                Managers.Ad.OnRewardedLoadFailed -= AdLoadFailed;
+                Managers.Ad.OnRewardedLoadFailed += AdLoadFailed;
             }
         }
         
@@ -224,8 +227,8 @@ public class UI_UpgradeSubItem : UI_SubItem
                 maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Gold);
             }
 
-            buyValue = maxValue/shopProductData.CurrentValue;
-            price = maxValue/shopProductData.CurrentValue * shopProductData.Price;
+            buyValue = maxValue * shopProductData.CurrentValue / 100;
+            price = buyValue * shopProductData.Price;
 
             GetText((int)Texts.Text_UpgradeStat).text = buyValue.ToString();
 
@@ -286,12 +289,48 @@ public class UI_UpgradeSubItem : UI_SubItem
             if(shopProductData == null)
                 return;
 
+            if (shopProductData.BuyType == Define.EShopBuyType.Ad)
+            {
+                GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
+            }
+
             Managers.Player.StatUpgrade(Define.EUpgradeType.Shop, shopProductData.TemplateId);
         }
     }
 
     private void AdReady(Define.ECurrency currency, LevelPlayAdInfo info)
     {
-        GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(true);
+        if (shopProductData == null) return;
+
+        Define.ECurrency myCurrency = shopProductData.StatType switch
+        {
+            Define.EShopProductType.BuyIron => Define.ECurrency.Iron,
+            Define.EShopProductType.BuyCoal => Define.ECurrency.Coal,
+            Define.EShopProductType.BuyGold => Define.ECurrency.Gold,
+            _ => Define.ECurrency.None,
+        };
+
+        if (myCurrency == currency)
+        {
+            GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(true);
+        }
+    }
+
+    private void AdLoadFailed(Define.ECurrency currency, string error)
+    {
+        if (shopProductData == null) return;
+
+        Define.ECurrency myCurrency = shopProductData.StatType switch
+        {
+            Define.EShopProductType.BuyIron => Define.ECurrency.Iron,
+            Define.EShopProductType.BuyCoal => Define.ECurrency.Coal,
+            Define.EShopProductType.BuyGold => Define.ECurrency.Gold,
+            _ => Define.ECurrency.None,
+        };
+
+        if (myCurrency == currency)
+        {
+            GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
+        }
     }
 }
