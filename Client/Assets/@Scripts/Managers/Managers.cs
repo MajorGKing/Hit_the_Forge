@@ -114,6 +114,5 @@ public class Managers : MonoBehaviour
         Scene.Clear();
         UI.Clear();
         Pool.Clear();
-        Ad.Clear();
     }
 }

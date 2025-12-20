@@ -19,6 +19,7 @@ public class AdManager
     }
 
     private bool[] retrying;
+    private bool _isBannerRetrying = false;
     private CancellationTokenSource adsCts;
 
     public void Init()
@@ -33,6 +34,21 @@ public class AdManager
 
     public void Clear()
     {
+        adsCts?.Cancel();
+        adsCts?.Dispose();
+        adsCts = null;
+
+        LevelPlay.OnInitSuccess -= SdkInitializationCompletedEvent;
+        LevelPlay.OnInitFailed -= SdkInitializationFailedEvent;
+    }
+
+    // ILHAK temp 나중에 Clear호출하도록 변경
+    private void OnDisable() 
+    {
+        adsCts?.Cancel();
+        adsCts?.Dispose();
+        adsCts = null;
+
         LevelPlay.OnInitSuccess -= SdkInitializationCompletedEvent;
         LevelPlay.OnInitFailed -= SdkInitializationFailedEvent;
     }
@@ -64,7 +80,7 @@ public class AdManager
             if (string.IsNullOrEmpty(adUnitId))
                 continue;
 
-            InitializeRewardedAd(currency, adUnitId);
+            InitializeRewardedAd(currency, adUnitId, token);
 
             // var ad = new LevelPlayRewardedAd(adUnitId);
 
@@ -124,9 +140,23 @@ public class AdManager
         var bannerConfig = configBuilder.Build();
 
         bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
+
+        bannerAd.OnAdLoaded += (info) =>
+        {
+            Debug.Log("Banner Ad Loaded Success");
+        };
+
+        bannerAd.OnAdLoadFailed += (error) =>
+        {
+            Debug.LogError($"Banner Load Failed: {error}");
+        };
+
+        RetryLoadBannerAd(token).Forget();
+
+        //bannerAd.LoadAd();
     }
 
-    private void InitializeRewardedAd(Define.ECurrency currency, string adUnitId)
+    private void InitializeRewardedAd(Define.ECurrency currency, string adUnitId, CancellationToken token)
     {
         var ad = new LevelPlayRewardedAd(adUnitId);
 
@@ -141,7 +171,8 @@ public class AdManager
         {
             Debug.LogError($"{currency} rewarded load failed: {error}");
             OnRewardedLoadFailed?.Invoke(currency, error.ToString());
-            // Retry logic...
+
+            RetryLoadRewardedAd(ad, currency, token).Forget();
         };
         ad.OnAdClosed += (adInfo) =>
         {
@@ -162,6 +193,52 @@ public class AdManager
         };
         rewardedVideoAds[(int)currency] = ad;
         ad.LoadAd();
+    }
+
+    private async UniTaskVoid RetryLoadBannerAd(CancellationToken token)
+    {
+        // 1. 활성화될 때까지 짧은 주기로 체크 (응답성 향상)
+        while (_isBannerRetrying == false)
+        {
+            if (token.IsCancellationRequested) return;
+            await UniTask.Delay(TimeSpan.FromSeconds(1), cancellationToken: token);
+        }
+
+
+        // 이미 로직 진입 시 true로 고정 (LoadBanner에서 설정됨)
+        try
+        {
+            while (!token.IsCancellationRequested)
+            {
+                // 주기적 로드
+                await UniTask.Delay(TimeSpan.FromSeconds(30), cancellationToken: token);
+
+                if (bannerAd != null)
+                {
+                    //Debug.Log("Banner Ad Refreshing (30s interval)...");
+                    //bannerAd.LoadAd();
+                }
+                else
+                {
+                    var configBuilder = new LevelPlayBannerAd.Config.Builder();
+                    configBuilder.SetSize(LevelPlayAdSize.BANNER);
+                    configBuilder.SetPosition(LevelPlayBannerPosition.BottomCenter);
+                    configBuilder.SetDisplayOnLoad(true);
+                    configBuilder.SetRespectSafeArea(true); // Only relevant for Android
+                    configBuilder.SetPlacementName("bannerPlacement");
+                    configBuilder.SetBidFloor(1.0); // Minimum bid price in USD
+                    var bannerConfig = configBuilder.Build();
+
+                    bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
+                    bannerAd.LoadAd();
+                }
+            }
+        }
+        catch (OperationCanceledException) { }
+        finally
+        {
+            _isBannerRetrying = false;
+        }
     }
 
     private async UniTaskVoid RetryLoadRewardedAd(LevelPlayRewardedAd ad, Define.ECurrency currency, CancellationToken token)
@@ -345,12 +422,14 @@ public class AdManager
         configBuilder.SetBidFloor(1.0); // Minimum bid price in USD
         var bannerConfig = configBuilder.Build();
 
-        bannerAd = new LevelPlayBannerAd("bwdq9r9c6nw4d7t9", bannerConfig);
+        bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
     }
 
     public void LoadBanner()
     {
         bannerAd.LoadAd();
+
+        _isBannerRetrying = true;
     }
 
     public void ShowRewardAd(Define.ECurrency currency)
