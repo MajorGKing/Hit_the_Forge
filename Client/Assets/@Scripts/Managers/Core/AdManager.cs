@@ -136,7 +136,7 @@ public class AdManager
         configBuilder.SetDisplayOnLoad(true);
         configBuilder.SetRespectSafeArea(true); // Only relevant for Android
         configBuilder.SetPlacementName("bannerPlacement");
-        configBuilder.SetBidFloor(1.0); // Minimum bid price in USD
+        configBuilder.SetBidFloor(0.01); // Minimum bid price in USD
         var bannerConfig = configBuilder.Build();
 
         bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
@@ -226,7 +226,7 @@ public class AdManager
                     configBuilder.SetDisplayOnLoad(true);
                     configBuilder.SetRespectSafeArea(true); // Only relevant for Android
                     configBuilder.SetPlacementName("bannerPlacement");
-                    configBuilder.SetBidFloor(1.0); // Minimum bid price in USD
+                    configBuilder.SetBidFloor(0.01); // Minimum bid price in USD
                     var bannerConfig = configBuilder.Build();
 
                     bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
@@ -419,7 +419,7 @@ public class AdManager
         configBuilder.SetDisplayOnLoad(true);
         configBuilder.SetRespectSafeArea(true); // Only relevant for Android
         configBuilder.SetPlacementName("bannerPlacement");
-        configBuilder.SetBidFloor(1.0); // Minimum bid price in USD
+        configBuilder.SetBidFloor(0.01); // Minimum bid price in USD
         var bannerConfig = configBuilder.Build();
 
         bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
