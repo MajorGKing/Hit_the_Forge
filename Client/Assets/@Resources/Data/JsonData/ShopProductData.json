@@ -5,7 +5,7 @@
       "BuyType": 0,
       "TemplateId": 100001,
       "UpgradeName": "BuyIron",
-      "Price": 1,
+      "Price": 5,
       "CurrentValue": 10,
       "NextValue": 0,
       "OriginalTemplateId": 100001,
@@ -28,7 +28,7 @@
       "TemplateId": 300001,
       "UpgradeName": "BuyGold",
       "Price": 1,
-      "CurrentValue": 10,
+      "CurrentValue": 20,
       "NextValue": 0,
       "OriginalTemplateId": 300001,
       "NextTempalteId": 0
