@@ -106,9 +106,9 @@ public class UI_UpgradeSubItem : UI_SubItem
                 GetText((int)Texts.Text_UpgradeDiscribe).text = "강화 성공확률을 높입니다.";
             }
 
-            GetText((int)Texts.Text_UpgradeStat).text = $"{playerUpgradeData.CurrentValue} > {playerUpgradeData.NextValue}";
+            GetText((int)Texts.Text_UpgradeStat).text = $"{playerUpgradeData.CurrentValue.ToAbbreviatedString()} > {playerUpgradeData.NextValue.ToAbbreviatedString()}";
 
-            GetText((int)Texts.Text_UpgradePrice).text = playerUpgradeData.Price.ToString();
+            GetText((int)Texts.Text_UpgradePrice).text = playerUpgradeData.Price.ToAbbreviatedString();
 
             if (playerUpgradeData.NextTempalteId == 0)
             {
@@ -135,9 +135,9 @@ public class UI_UpgradeSubItem : UI_SubItem
                 GetText((int)Texts.Text_UpgradeDiscribe).text = "강화 성공확률을 높입니다.";
             }
 
-            GetText((int)Texts.Text_UpgradeStat).text = $"{forgeUpgradeData.CurrentValue} > {forgeUpgradeData.NextValue}";
+            GetText((int)Texts.Text_UpgradeStat).text = $"{forgeUpgradeData.CurrentValue.ToAbbreviatedString()} > {forgeUpgradeData.NextValue.ToAbbreviatedString()}";
 
-            GetText((int)Texts.Text_UpgradePrice).text = forgeUpgradeData.Price.ToString();
+            GetText((int)Texts.Text_UpgradePrice).text = forgeUpgradeData.Price.ToAbbreviatedString();
 
             if (forgeUpgradeData.NextTempalteId == 0)
             {
@@ -180,9 +180,9 @@ public class UI_UpgradeSubItem : UI_SubItem
                 GetText((int)Texts.Text_UpgradeDiscribe).text = "상점 구매시 받는 구매량을 늘립니다.";
             }
 
-            GetText((int)Texts.Text_UpgradeStat).text = $"{townUpgradeData.CurrentValue} > {townUpgradeData.NextValue}";
+            GetText((int)Texts.Text_UpgradeStat).text = $"{townUpgradeData.CurrentValue.ToAbbreviatedString()} > {townUpgradeData.NextValue.ToAbbreviatedString()}";
 
-            GetText((int)Texts.Text_UpgradePrice).text = townUpgradeData.Price.ToString();
+            GetText((int)Texts.Text_UpgradePrice).text = townUpgradeData.Price.ToAbbreviatedString();
 
             if (townUpgradeData.NextTempalteId == 0)
             {
@@ -230,11 +230,11 @@ public class UI_UpgradeSubItem : UI_SubItem
             buyValue = maxValue * shopProductData.CurrentValue / 100;
             price = buyValue * shopProductData.Price;
 
-            GetText((int)Texts.Text_UpgradeStat).text = buyValue.ToString();
+            GetText((int)Texts.Text_UpgradeStat).text = buyValue.ToAbbreviatedString();
 
             if(shopProductData.BuyType == Define.EShopBuyType.Gold)
             {
-                GetText((int)Texts.Text_UpgradePrice).text = price.ToString();
+                GetText((int)Texts.Text_UpgradePrice).text = price.ToAbbreviatedString();
             }
             else if(shopProductData.BuyType == Define.EShopBuyType.Ad)
             {

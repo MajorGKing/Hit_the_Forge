@@ -342,6 +342,11 @@ public class GameManager
             }
         }
 
+        if (currentWeaponInfo.NextTemplateId == 0)
+        {
+            Managers.UI.ShowToast($"다음 업데이트를 기다려 주세요", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+        }
+
         ChangeState(EWeaponMakeProcess.BeginHold);
         yield return null;
     }

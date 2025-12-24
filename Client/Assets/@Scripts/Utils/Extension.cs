@@ -60,4 +60,27 @@ public static class Extension
             (list[k], list[n]) = (list[n], list[k]);//swap
         }
     }
+
+    public static string ToAbbreviatedString(this long value)
+    {
+        if (value < 100000) // 100,000 미만은 그대로 표시 (천단위 콤마 포함)
+            return value.ToString("N0");
+
+        string[] units = { "", "K", "M", "B", "T", "Qa", "Qi" };
+        int unitIndex = 0;
+        double doubleValue = value;
+
+        while (doubleValue >= 1000 && unitIndex < units.Length - 1)
+        {
+            doubleValue /= 1000;
+            unitIndex++;
+        }
+
+        return $"{doubleValue:0.##}{units[unitIndex]}";
+    }
+
+    public static string ToAbbreviatedString(this int value)
+    {
+        return ((long)value).ToAbbreviatedString();
+    }
 }

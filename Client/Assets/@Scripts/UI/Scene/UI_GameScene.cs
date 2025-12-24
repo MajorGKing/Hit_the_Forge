@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using System.Linq;
+using System.Collections.Generic;
 
 
 public class UI_GameScene : UI_Scene
@@ -46,6 +48,7 @@ public class UI_GameScene : UI_Scene
         Text_EnhancementCountDown,
         Text_EnhancementPercent,
         Text_SellPrice,
+        Text_ClearWeaponCount, 
     }
 
     enum Sliders
@@ -148,9 +151,11 @@ public class UI_GameScene : UI_Scene
 
     public void RefreshUI()
     {
-        GetText((int)Texts.Text_Gold).text = Managers.Player.GetCurrency(Define.ECurrency.Gold).ToString();
-        GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToString();
-        GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToString();
+        GetText((int)Texts.Text_Gold).text = Managers.Player.GetCurrency(Define.ECurrency.Gold).ToAbbreviatedString();
+        GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToAbbreviatedString();
+        GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToAbbreviatedString();
+
+        GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.GetOwnedWeapons().Count} / {Managers.Data.WeaponDict.Count}";
 
         var countTime = Managers.Game.GetEnhancementCount();
         if(countTime < 0)
@@ -179,10 +184,10 @@ public class UI_GameScene : UI_Scene
             GetText((int)Texts.Text_SellPrice).gameObject.SetActive(true);
 
             var percent = Managers.Game.GetEnhancementPercent();
-            GetText((int)Texts.Text_EnhancementPercent).text = percent.ToString();
+            GetText((int)Texts.Text_EnhancementPercent).text = percent.ToString() + "%";
 
             var price = Managers.Game.GetSellPrice();
-            GetText((int)Texts.Text_SellPrice).text = price.ToString();
+            GetText((int)Texts.Text_SellPrice).text = price.ToAbbreviatedString();
         }
 
         // �÷��̾� ���׷��̵� ������ ����
@@ -262,7 +267,7 @@ public class UI_GameScene : UI_Scene
     {
         GetGameObject((int)GameObjects.WeaponContent).DestroyChildren();
 
-        foreach(var weaponId in Managers.Player.GetOwnedWeapons())
+        foreach(var weaponId in Managers.Player.GetOwnedWeapons().TakeLast(20))
         {
             var item = Managers.UI.MakeSubItem<UI_WeaponSelectSubItem>(GetGameObject((int)GameObjects.WeaponContent).transform);
             item.SetInfo(weaponId);

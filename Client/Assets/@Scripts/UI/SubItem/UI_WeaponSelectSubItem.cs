@@ -39,9 +39,9 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         if (weaponInfo == null)
             return;
 
-        GetText((int)Texts.Text_NeedIron).text = weaponInfo.Iron.ToString();
-        GetText((int)Texts.Text_NeedCoal).text = weaponInfo.Coal.ToString();
-        GetText((int)Texts.Text_GetPrice).text = weaponInfo.Price.ToString();
+        GetText((int)Texts.Text_NeedIron).text = weaponInfo.Iron.ToAbbreviatedString();
+        GetText((int)Texts.Text_NeedCoal).text = weaponInfo.Coal.ToAbbreviatedString();
+        GetText((int)Texts.Text_GetPrice).text = weaponInfo.Price.ToAbbreviatedString();
         GetText((int)Texts.Text_Name).text = weaponInfo.WeaponName;
 
         GetButton((int)Buttons.Button_Weapon).image.sprite = Managers.Resource.Load<Sprite>(weaponInfo.WeaponImage);
