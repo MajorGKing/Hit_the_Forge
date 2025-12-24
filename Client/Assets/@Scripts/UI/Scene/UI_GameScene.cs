@@ -155,7 +155,7 @@ public class UI_GameScene : UI_Scene
         GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToAbbreviatedString();
         GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToAbbreviatedString();
 
-        GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.GetOwnedWeapons().Count} / {Managers.Data.WeaponDict.Count}";
+        GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.GetOwnedWeapons().Count - 1} / {Managers.Data.WeaponDict.Count}";
 
         var countTime = Managers.Game.GetEnhancementCount();
         if(countTime < 0)
