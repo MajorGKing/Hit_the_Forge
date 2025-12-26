@@ -463,19 +463,33 @@ public class GameManager
 
     public float GetEnhancementPercent()
     {
-        var info = Managers.Data.EnhancementDict[EnhancementLevel];
-        var suceeValue = CalEnhancemenetPercent(info);
-        float returnValue = suceeValue / info.BasicSucess;
-        returnValue = Mathf.Round(returnValue * 10000f)/100f;
+        if (Managers.Data.EnhancementDict.TryGetValue(Managers.Player.Stage, out var stageDict))
+        {
+            if (stageDict.TryGetValue(EnhancementLevel, out var info))
+            {
+                var suceeValue = CalEnhancemenetPercent(info);
+                float returnValue = suceeValue / info.BasicSucess;
+                returnValue = Mathf.Round(returnValue * 10000f) / 100f;
+                return returnValue;
+            }
+        }
 
-        return returnValue;
+        return 0;
     }
 
     public long GetSellPrice()
     {
-        var price = currentWeaponInfo.Price * Managers.Data.EnhancementDict[EnhancementLevel - 1].Price;
-        var bonusePrice = price * (Managers.Player.GetTownStat(Define.EPlayerTownStat.ShopSellBonus)/(float)1000);
-        //Debug.Log($"Sell Price {price} + Bounse Price {bonusePrice} = {(int)price + (int)bonusePrice}");
+        float multiplier = 1.0f;
+        if (Managers.Data.EnhancementDict.TryGetValue(Managers.Player.Stage, out var stageDict))
+        {
+            if (stageDict.TryGetValue(EnhancementLevel - 1, out var info))
+            {
+                multiplier = info.Price;
+            }
+        }
+
+        var price = currentWeaponInfo.Price * multiplier;
+        var bonusePrice = price * (Managers.Player.GetTownStat(Define.EPlayerTownStat.ShopSellBonus) / (float)1000);
         
         return (long)(price + bonusePrice);
     }
@@ -496,9 +510,10 @@ public class GameManager
         if (makeProcessState != EWeaponMakeProcess.Enhancement)
             return;
 
-        Data.EnhancementData enhancementData = Managers.Data.EnhancementDict[EnhancementLevel];
+        if (Managers.Data.EnhancementDict.TryGetValue(Managers.Player.Stage, out var stageDict) == false)
+            return;
 
-        if (enhancementData == null)
+        if (stageDict.TryGetValue(EnhancementLevel, out var enhancementData) == false)
             return;
 
         var value = Random.Range(0, enhancementData.BasicSucess);

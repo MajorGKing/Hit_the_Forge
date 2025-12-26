@@ -18,7 +18,7 @@ public class DataManager
 
     public Dictionary<string, Data.TextData> TextDict { get; private set; } = new Dictionary<string, Data.TextData>();
     public Dictionary<int, Data.WeaponData> WeaponDict { get; private set; } = new Dictionary<int, Data.WeaponData>();
-    public Dictionary<int, Data.EnhancementData> EnhancementDict { get; private set; } = new Dictionary<int, Data.EnhancementData>();
+    public Dictionary<int, Dictionary<int, Data.EnhancementData>> EnhancementDict { get; private set; } = new Dictionary<int, Dictionary<int, Data.EnhancementData>>();
     public Dictionary<int, Data.PlayerUpgradeData> PlayerUpgradeDict { get; private set; } = new Dictionary<int, Data.PlayerUpgradeData>();
     public Dictionary<int, Data.ForgeUpgradeData> ForgeUpgradeDict { get; private set; } = new Dictionary<int, Data.ForgeUpgradeData>();
     public Dictionary<int, Data.TownUpgradeData> TownUpgradeDict { get; private set; } = new Dictionary<int, Data.TownUpgradeData>();
@@ -28,7 +28,7 @@ public class DataManager
     {
         TextDict = LoadJson<Data.TextDataLoader, string, Data.TextData>("TextData").MakeDict();
         WeaponDict = LoadJson<Data.WeaponDataLoader, int, Data.WeaponData>("WeaponData").MakeDict();
-        EnhancementDict = LoadJson<Data.EnhancementDataLoader, int, Data.EnhancementData>("EnhancementData").MakeDict();
+        EnhancementDict = LoadJson<Data.EnhancementDataLoader, int, Dictionary<int, Data.EnhancementData>>("EnhancementData").MakeDict();
         PlayerUpgradeDict = LoadJson<Data.PlayerUpgradeDataLoader, int, Data.PlayerUpgradeData>("PlayerUpgradeData").MakeDict();
         ForgeUpgradeDict = LoadJson<Data.ForgeUpgradeDataLoader, int, Data.ForgeUpgradeData>("ForgeUpgradeData").MakeDict();
         TownUpgradeDict = LoadJson<Data.TownUpgradeDataLoader, int, Data.TownUpgradeData>("TownUpgradeData").MakeDict();

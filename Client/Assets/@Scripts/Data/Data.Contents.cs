@@ -12,6 +12,7 @@ namespace Data
     public class CreatureData
     {
         public int TemplateId;
+        public int Stage;
         public string NameTextID;
         public float ColliderOffsetX;
         public float ColliderOffsetY;
@@ -85,6 +86,7 @@ namespace Data
     public class WeaponData
     {
         public int TemplateId;
+        public int Stage;
         public string WeaponName;
         public long HP;
         public long Iron;
@@ -118,20 +120,26 @@ namespace Data
     public class EnhancementData
     {
         public int EnhancementLevel;
+        public int Stage;
         public int EnhancementSucess;
         public int BasicSucess;
         public float Price;
     }
 
     [Serializable]
-    public class EnhancementDataLoader : ILoader<int, EnhancementData>
+    public class EnhancementDataLoader : ILoader<int, Dictionary<int, EnhancementData>>
     {
         public List<EnhancementData> enhancements = new List<EnhancementData>();
-        public Dictionary<int, EnhancementData> MakeDict()
+        public Dictionary<int, Dictionary<int, EnhancementData>> MakeDict()
         {
-            Dictionary<int, EnhancementData> dict = new Dictionary<int, EnhancementData>();
+            Dictionary<int, Dictionary<int, EnhancementData>> dict = new Dictionary<int, Dictionary<int, EnhancementData>>();
             foreach (EnhancementData enhancement in enhancements)
-                dict.Add(enhancement.EnhancementLevel, enhancement);
+            {
+                if (!dict.ContainsKey(enhancement.Stage))
+                    dict.Add(enhancement.Stage, new Dictionary<int, EnhancementData>());
+
+                dict[enhancement.Stage].Add(enhancement.EnhancementLevel, enhancement);
+            }
             return dict;
         }
 
@@ -146,6 +154,7 @@ namespace Data
     public class UpgradeData
     {
         public int TemplateId;
+        public int Stage;
         public string UpgradeName;
         public long Price;
         public long CurrentValue;

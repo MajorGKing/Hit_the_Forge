@@ -2,246 +2,287 @@
   "enhancements": [
     {
       "EnhancementLevel": 0,
+      "Stage": 1,
       "EnhancementSucess": 100000000,
       "BasicSucess": 100000000,
       "Price": 1.0
     },
     {
       "EnhancementLevel": 1,
+      "Stage": 1,
       "EnhancementSucess": 50000000,
       "BasicSucess": 100000000,
       "Price": 1.21
     },
     {
       "EnhancementLevel": 2,
+      "Stage": 1,
       "EnhancementSucess": 45000000,
       "BasicSucess": 100000000,
       "Price": 1.46
     },
     {
       "EnhancementLevel": 3,
+      "Stage": 1,
       "EnhancementSucess": 40500000,
       "BasicSucess": 100000000,
       "Price": 1.77
     },
     {
       "EnhancementLevel": 4,
+      "Stage": 1,
       "EnhancementSucess": 36450000,
       "BasicSucess": 100000000,
       "Price": 2.14
     },
     {
       "EnhancementLevel": 5,
+      "Stage": 1,
       "EnhancementSucess": 32805000,
       "BasicSucess": 100000000,
       "Price": 2.59
     },
     {
       "EnhancementLevel": 6,
+      "Stage": 1,
       "EnhancementSucess": 29524500,
       "BasicSucess": 100000000,
       "Price": 3.14
     },
     {
       "EnhancementLevel": 7,
+      "Stage": 1,
       "EnhancementSucess": 26572050,
       "BasicSucess": 100000000,
       "Price": 3.8
     },
     {
       "EnhancementLevel": 8,
+      "Stage": 1,
       "EnhancementSucess": 23914845,
       "BasicSucess": 100000000,
       "Price": 4.59
     },
     {
       "EnhancementLevel": 9,
+      "Stage": 1,
       "EnhancementSucess": 21523361,
       "BasicSucess": 100000000,
       "Price": 5.56
     },
     {
       "EnhancementLevel": 10,
+      "Stage": 1,
       "EnhancementSucess": 19371024,
       "BasicSucess": 100000000,
       "Price": 6.73
     },
     {
       "EnhancementLevel": 11,
+      "Stage": 1,
       "EnhancementSucess": 17433922,
       "BasicSucess": 100000000,
       "Price": 8.14
     },
     {
       "EnhancementLevel": 12,
+      "Stage": 1,
       "EnhancementSucess": 15690530,
       "BasicSucess": 100000000,
       "Price": 9.85
     },
     {
       "EnhancementLevel": 13,
+      "Stage": 1,
       "EnhancementSucess": 14121477,
       "BasicSucess": 100000000,
       "Price": 11.92
     },
     {
       "EnhancementLevel": 14,
+      "Stage": 1,
       "EnhancementSucess": 12709329,
       "BasicSucess": 100000000,
       "Price": 14.42
     },
     {
       "EnhancementLevel": 15,
+      "Stage": 1,
       "EnhancementSucess": 11438396,
       "BasicSucess": 100000000,
       "Price": 17.45
     },
     {
       "EnhancementLevel": 16,
+      "Stage": 1,
       "EnhancementSucess": 10294557,
       "BasicSucess": 100000000,
       "Price": 21.11
     },
     {
       "EnhancementLevel": 17,
+      "Stage": 1,
       "EnhancementSucess": 9265101,
       "BasicSucess": 100000000,
       "Price": 25.55
     },
     {
       "EnhancementLevel": 18,
+      "Stage": 1,
       "EnhancementSucess": 8338591,
       "BasicSucess": 100000000,
       "Price": 30.91
     },
     {
       "EnhancementLevel": 19,
+      "Stage": 1,
       "EnhancementSucess": 7504732,
       "BasicSucess": 100000000,
       "Price": 37.4
     },
     {
       "EnhancementLevel": 20,
+      "Stage": 1,
       "EnhancementSucess": 6754259,
       "BasicSucess": 100000000,
       "Price": 45.26
     },
     {
       "EnhancementLevel": 21,
+      "Stage": 1,
       "EnhancementSucess": 6078833,
       "BasicSucess": 100000000,
       "Price": 54.76
     },
     {
       "EnhancementLevel": 22,
+      "Stage": 1,
       "EnhancementSucess": 5470949,
       "BasicSucess": 100000000,
       "Price": 66.26
     },
     {
       "EnhancementLevel": 23,
+      "Stage": 1,
       "EnhancementSucess": 4923855,
       "BasicSucess": 100000000,
       "Price": 80.18
     },
     {
       "EnhancementLevel": 24,
+      "Stage": 1,
       "EnhancementSucess": 4431469,
       "BasicSucess": 100000000,
       "Price": 97.02
     },
     {
       "EnhancementLevel": 25,
+      "Stage": 1,
       "EnhancementSucess": 3988322,
       "BasicSucess": 100000000,
       "Price": 117.39
     },
     {
       "EnhancementLevel": 26,
+      "Stage": 1,
       "EnhancementSucess": 3589490,
       "BasicSucess": 100000000,
       "Price": 142.04
     },
     {
       "EnhancementLevel": 27,
+      "Stage": 1,
       "EnhancementSucess": 3230541,
       "BasicSucess": 100000000,
       "Price": 171.87
     },
     {
       "EnhancementLevel": 28,
+      "Stage": 1,
       "EnhancementSucess": 2907487,
       "BasicSucess": 100000000,
       "Price": 207.97
     },
     {
       "EnhancementLevel": 29,
+      "Stage": 1,
       "EnhancementSucess": 2616738,
       "BasicSucess": 100000000,
       "Price": 251.64
     },
     {
       "EnhancementLevel": 30,
+      "Stage": 1,
       "EnhancementSucess": 2355064,
       "BasicSucess": 100000000,
       "Price": 304.48
     },
     {
       "EnhancementLevel": 31,
+      "Stage": 1,
       "EnhancementSucess": 2119558,
       "BasicSucess": 100000000,
       "Price": 368.42
     },
     {
       "EnhancementLevel": 32,
+      "Stage": 1,
       "EnhancementSucess": 1907602,
       "BasicSucess": 100000000,
       "Price": 445.79
     },
     {
       "EnhancementLevel": 33,
+      "Stage": 1,
       "EnhancementSucess": 1716842,
       "BasicSucess": 100000000,
       "Price": 539.41
     },
     {
       "EnhancementLevel": 34,
+      "Stage": 1,
       "EnhancementSucess": 1545158,
       "BasicSucess": 100000000,
       "Price": 652.68
     },
     {
       "EnhancementLevel": 35,
+      "Stage": 1,
       "EnhancementSucess": 1390642,
       "BasicSucess": 100000000,
       "Price": 789.75
     },
     {
       "EnhancementLevel": 36,
+      "Stage": 1,
       "EnhancementSucess": 1251578,
       "BasicSucess": 100000000,
       "Price": 955.59
     },
     {
       "EnhancementLevel": 37,
+      "Stage": 1,
       "EnhancementSucess": 1126420,
       "BasicSucess": 100000000,
       "Price": 1156.27
     },
     {
       "EnhancementLevel": 38,
+      "Stage": 1,
       "EnhancementSucess": 1013778,
       "BasicSucess": 100000000,
       "Price": 1399.08
     },
     {
       "EnhancementLevel": 39,
+      "Stage": 1,
       "EnhancementSucess": 912400,
       "BasicSucess": 100000000,
       "Price": 1692.89
     },
     {
       "EnhancementLevel": 40,
+      "Stage": 1,
       "EnhancementSucess": 821160,
       "BasicSucess": 100000000,
       "Price": 2048.4

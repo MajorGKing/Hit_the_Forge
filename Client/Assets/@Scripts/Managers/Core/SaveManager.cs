@@ -12,6 +12,7 @@ public class SaveData
     public List<int> shopProducts;
     public List<int> ownedWeapons;
     public int clearedWeaponCount;
+    public int stage;
 }
 
 public class SaveManager

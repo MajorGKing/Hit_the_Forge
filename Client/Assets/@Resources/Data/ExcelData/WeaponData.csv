@@ -1,1001 +1,1001 @@
-TemplateId,WeaponName,HP,Iron,Coal,Price,NextTemplateId,WeaponImage
-1,Rusty Dagger,60,25,5,150,2,Dagger
-2,Rusty Shortsword,80,35,7,210,3,Shortsword
-3,Rusty Scimitar,90,40,12,300,4,Scimitar
-4,Rusty Mace,100,65,5,270,5,Mace
-5,Rusty Sword,100,50,10,300,6,Sword
-6,Rusty Battleaxe,120,70,8,330,7,Battleaxe
-7,Rusty Longsword,130,60,12,360,8,Longsword
-8,Rusty Rapier,90,45,15,360,9,Rapier
-9,Rusty Warhammer,160,90,6,360,10,Warhammer
-10,Rusty Greatsword,200,90,18,540,11,Greatsword
-11,Old Dagger,68,28,5,159,12,Dagger
-12,Old Shortsword,92,40,8,240,13,Shortsword
-13,Old Scimitar,103,46,13,333,14,Scimitar
-14,Old Mace,114,74,5,297,15,Mace
-15,Old Sword,114,57,11,336,16,Sword
-16,Old Battleaxe,137,80,9,375,17,Battleaxe
-17,Old Longsword,149,68,13,399,18,Longsword
-18,Old Rapier,103,51,17,408,19,Rapier
-19,Old Warhammer,184,103,6,399,20,Warhammer
-20,Old Greatsword,229,103,20,609,21,Greatsword
-21,Cracked Dagger,79,33,6,189,22,Dagger
-22,Cracked Shortsword,105,46,9,273,23,Shortsword
-23,Cracked Scimitar,119,52,15,381,24,Scimitar
-24,Cracked Mace,132,85,6,345,25,Mace
-25,Cracked Sword,132,66,13,393,26,Sword
-26,Cracked Battleaxe,158,92,10,426,27,Battleaxe
-27,Cracked Longsword,171,79,15,462,28,Longsword
-28,Cracked Rapier,119,59,19,462,29,Rapier
-29,Cracked Warhammer,211,119,7,462,30,Warhammer
-30,Cracked Greatsword,264,119,23,702,31,Greatsword
-31,Worn Dagger,91,38,7,219,32,Dagger
-32,Worn Shortsword,121,53,10,309,33,Shortsword
-33,Worn Scimitar,136,60,18,450,34,Scimitar
-34,Worn Mace,152,98,7,399,35,Mace
-35,Worn Sword,152,76,15,453,36,Sword
-36,Worn Battleaxe,182,106,12,498,37,Battleaxe
-37,Worn Longsword,197,91,18,543,38,Longsword
-38,Worn Rapier,136,68,22,534,39,Rapier
-39,Worn Warhammer,243,136,9,543,40,Warhammer
-40,Worn Greatsword,304,136,27,813,41,Greatsword
-41,Wooden Dagger,104,43,8,249,42,Dagger
-42,Wooden Shortsword,139,61,12,363,43,Shortsword
-43,Wooden Scimitar,157,69,20,507,44,Scimitar
-44,Wooden Mace,174,113,8,459,45,Mace
-45,Wooden Sword,174,87,17,516,46,Sword
-46,Wooden Battleaxe,209,122,13,561,47,Battleaxe
-47,Wooden Longsword,227,104,20,612,48,Longsword
-48,Wooden Rapier,157,78,26,624,49,Rapier
-49,Wooden Warhammer,279,157,10,621,50,Warhammer
-50,Wooden Greatsword,349,157,31,936,51,Greatsword
-51,Oak Dagger,120,50,10,300,52,Dagger
-52,Oak Shortsword,160,70,14,420,53,Shortsword
-53,Oak Scimitar,181,80,24,600,54,Scimitar
-54,Oak Mace,201,130,10,540,55,Mace
-55,Oak Sword,201,100,20,600,56,Sword
-56,Oak Battleaxe,241,140,16,660,57,Battleaxe
-57,Oak Longsword,261,120,24,720,58,Longsword
-58,Oak Rapier,181,90,30,720,59,Rapier
-59,Oak Warhammer,321,181,12,723,60,Warhammer
-60,Oak Greatsword,402,181,36,1083,61,Greatsword
-61,Hardwood Dagger,138,57,11,336,62,Dagger
-62,Hardwood Shortsword,185,80,16,480,63,Shortsword
-63,Hardwood Scimitar,208,92,27,681,64,Scimitar
-64,Hardwood Mace,231,150,11,615,65,Mace
-65,Hardwood Sword,231,115,23,690,66,Sword
-66,Hardwood Battleaxe,277,161,18,753,67,Battleaxe
-67,Hardwood Longsword,300,138,27,819,68,Longsword
-68,Hardwood Rapier,208,104,34,822,69,Rapier
-69,Hardwood Warhammer,370,208,13,819,70,Warhammer
-70,Hardwood Greatsword,462,208,41,1239,71,Greatsword
-71,Reinforced Wood Dagger,159,66,13,393,72,Dagger
-72,Reinforced Wood Shortsword,212,93,18,549,73,Shortsword
-73,Reinforced Wood Scimitar,239,106,31,783,74,Scimitar
-74,Reinforced Wood Mace,266,172,13,711,75,Mace
-75,Reinforced Wood Sword,266,133,26,789,76,Sword
-76,Reinforced Wood Battleaxe,319,186,21,873,77,Battleaxe
-77,Reinforced Wood Longsword,345,159,31,942,78,Longsword
-78,Reinforced Wood Rapier,239,119,39,942,79,Rapier
-79,Reinforced Wood Warhammer,425,239,15,942,80,Warhammer
-80,Reinforced Wood Greatsword,532,239,47,1422,81,Greatsword
-81,Stone Dagger,183,76,15,453,82,Dagger
-82,Stone Shortsword,244,107,21,636,83,Shortsword
-83,Stone Scimitar,275,122,36,906,84,Scimitar
-84,Stone Mace,305,198,15,819,85,Mace
-85,Stone Sword,305,152,30,906,86,Sword
-86,Stone Battleaxe,367,214,24,1002,87,Battleaxe
-87,Stone Longsword,397,183,36,1089,88,Longsword
-88,Stone Rapier,275,137,45,1086,89,Rapier
-89,Stone Warhammer,489,275,18,1095,90,Warhammer
-90,Stone Greatsword,611,275,55,1650,91,Greatsword
-91,Polished Stone Dagger,211,87,17,516,92,Dagger
-92,Polished Stone Shortsword,281,123,24,729,93,Shortsword
-93,Polished Stone Scimitar,316,140,42,1050,94,Scimitar
-94,Polished Stone Mace,351,228,17,939,95,Mace
-95,Polished Stone Sword,351,175,35,1050,96,Sword
-96,Polished Stone Battleaxe,422,246,28,1158,97,Battleaxe
-97,Polished Stone Longsword,457,211,42,1263,98,Longsword
-98,Polished Stone Rapier,316,158,52,1254,99,Rapier
-99,Polished Stone Warhammer,562,316,21,1263,100,Warhammer
-100,Polished Stone Greatsword,703,316,63,1893,101,Greatsword
-101,Marble Dagger,242,101,20,603,102,Dagger
-102,Marble Shortsword,323,141,28,843,103,Shortsword
-103,Marble Scimitar,364,161,48,1203,104,Scimitar
-104,Marble Mace,404,262,20,1086,105,Mace
-105,Marble Sword,404,202,40,1206,106,Sword
-106,Marble Battleaxe,485,283,32,1329,107,Battleaxe
-107,Marble Longsword,525,242,48,1446,108,Longsword
-108,Marble Rapier,364,182,60,1446,109,Rapier
-109,Marble Warhammer,647,364,24,1452,110,Warhammer
-110,Marble Greatsword,809,364,72,2172,111,Greatsword
-111,Granite Dagger,279,116,23,693,112,Dagger
-112,Granite Shortsword,372,162,32,966,113,Shortsword
-113,Granite Scimitar,418,186,55,1383,114,Scimitar
-114,Granite Mace,465,302,23,1251,115,Mace
-115,Granite Sword,465,232,46,1386,116,Sword
-116,Granite Battleaxe,558,325,37,1530,117,Battleaxe
-117,Granite Longsword,604,279,55,1662,118,Longsword
-118,Granite Rapier,418,209,69,1662,119,Rapier
-119,Granite Warhammer,744,418,27,1659,120,Warhammer
-120,Granite Greatsword,930,418,83,2499,121,Greatsword
-121,Flint Dagger,321,133,26,789,122,Dagger
-122,Flint Shortsword,428,187,37,1116,123,Shortsword
-123,Flint Scimitar,481,214,64,1602,124,Scimitar
-124,Flint Mace,535,347,26,1431,125,Mace
-125,Flint Sword,535,267,53,1596,126,Sword
-126,Flint Battleaxe,642,374,42,1752,127,Battleaxe
-127,Flint Longsword,695,321,64,1923,128,Longsword
-128,Flint Rapier,481,240,80,1920,129,Rapier
-129,Flint Warhammer,856,481,32,1923,130,Warhammer
-130,Flint Greatsword,1070,481,96,2883,131,Greatsword
-131,Obsidian Dagger,369,153,30,909,132,Dagger
-132,Obsidian Shortsword,492,215,43,1290,133,Shortsword
-133,Obsidian Scimitar,553,246,73,1833,134,Scimitar
-134,Obsidian Mace,615,399,30,1647,135,Mace
-135,Obsidian Sword,615,307,61,1836,136,Sword
-136,Obsidian Battleaxe,738,430,49,2025,137,Battleaxe
-137,Obsidian Longsword,799,369,73,2202,138,Longsword
-138,Obsidian Rapier,553,276,92,2208,139,Rapier
-139,Obsidian Warhammer,984,553,36,2199,140,Warhammer
-140,Obsidian Greatsword,1230,553,110,3309,141,Greatsword
-141,Copper Dagger,424,176,35,1053,142,Dagger
-142,Copper Shortsword,566,247,49,1476,143,Shortsword
-143,Copper Scimitar,636,283,84,2109,144,Scimitar
-144,Copper Mace,707,459,35,1902,145,Mace
-145,Copper Sword,707,353,70,2109,146,Sword
-146,Copper Battleaxe,849,495,56,2325,147,Battleaxe
-147,Copper Longsword,919,424,84,2532,148,Longsword
-148,Copper Rapier,636,318,106,2544,149,Rapier
-149,Copper Warhammer,1132,636,42,2538,150,Warhammer
-150,Copper Greatsword,1415,636,127,3813,151,Greatsword
-151,Oxidized Copper Dagger,488,203,40,1209,152,Dagger
-152,Oxidized Copper Shortsword,650,284,56,1692,153,Shortsword
-153,Oxidized Copper Scimitar,732,325,97,2430,154,Scimitar
-154,Oxidized Copper Mace,813,528,40,2184,155,Mace
-155,Oxidized Copper Sword,813,406,81,2433,156,Sword
-156,Oxidized Copper Battleaxe,976,569,65,2682,157,Battleaxe
-157,Oxidized Copper Longsword,1057,488,97,2919,158,Longsword
-158,Oxidized Copper Rapier,732,366,122,2928,159,Rapier
-159,Oxidized Copper Warhammer,1301,732,48,2916,160,Warhammer
-160,Oxidized Copper Greatsword,1627,732,146,4386,161,Greatsword
-161,Polished Copper Dagger,561,233,46,1389,162,Dagger
-162,Polished Copper Shortsword,748,327,65,1956,163,Shortsword
-163,Polished Copper Scimitar,842,374,112,2802,164,Scimitar
-164,Polished Copper Mace,935,608,46,2514,165,Mace
-165,Polished Copper Sword,935,467,93,2796,166,Sword
-166,Polished Copper Battleaxe,1122,655,74,3075,167,Battleaxe
-167,Polished Copper Longsword,1216,561,112,3363,168,Longsword
-168,Polished Copper Rapier,842,421,140,3363,169,Rapier
-169,Polished Copper Warhammer,1497,842,56,3366,170,Warhammer
-170,Polished Copper Greatsword,1871,842,168,5046,171,Greatsword
-171,Heavy Copper Dagger,645,269,53,1602,172,Dagger
-172,Heavy Copper Shortsword,860,376,75,2253,173,Shortsword
-173,Heavy Copper Scimitar,968,430,129,3225,174,Scimitar
-174,Heavy Copper Mace,1076,699,53,2892,175,Mace
-175,Heavy Copper Sword,1076,538,107,3219,176,Sword
-176,Heavy Copper Battleaxe,1291,753,86,3549,177,Battleaxe
-177,Heavy Copper Longsword,1398,645,129,3870,178,Longsword
-178,Heavy Copper Rapier,968,484,161,3867,179,Rapier
-179,Heavy Copper Warhammer,1721,968,64,3864,180,Warhammer
-180,Heavy Copper Greatsword,2152,968,193,5799,181,Greatsword
-181,Tin Dagger,742,309,61,1842,182,Dagger
-182,Tin Shortsword,990,433,86,2589,183,Shortsword
-183,Tin Scimitar,1113,495,148,3705,184,Scimitar
-184,Tin Mace,1237,804,61,3327,185,Mace
-185,Tin Sword,1237,618,123,3699,186,Sword
-186,Tin Battleaxe,1485,866,99,4083,187,Battleaxe
-187,Tin Longsword,1608,742,148,4446,188,Longsword
-188,Tin Rapier,1113,556,185,4443,189,Rapier
-189,Tin Warhammer,1980,1113,74,4449,190,Warhammer
-190,Tin Greatsword,2475,1113,222,6669,191,Greatsword
-191,Bronze Dagger,853,355,71,2130,192,Dagger
-192,Bronze Shortsword,1138,498,99,2979,193,Shortsword
-193,Bronze Scimitar,1280,569,170,4257,194,Scimitar
-194,Bronze Mace,1423,925,71,3840,195,Mace
-195,Bronze Sword,1423,711,142,4263,196,Sword
-196,Bronze Battleaxe,1707,996,113,4683,197,Battleaxe
-197,Bronze Longsword,1850,853,170,5109,198,Longsword
-198,Bronze Rapier,1280,640,213,5115,199,Rapier
-199,Bronze Warhammer,2277,1280,85,5115,200,Warhammer
-200,Bronze Greatsword,2846,1280,256,7680,201,Greatsword
-201,Ancient Bronze Dagger,981,409,81,2442,202,Dagger
-202,Ancient Bronze Shortsword,1309,572,114,3426,203,Shortsword
-203,Ancient Bronze Scimitar,1472,654,196,4902,204,Scimitar
-204,Ancient Bronze Mace,1636,1063,81,4404,205,Mace
-205,Ancient Bronze Sword,1636,818,163,4899,206,Sword
-206,Ancient Bronze Battleaxe,1963,1145,130,5385,207,Battleaxe
-207,Ancient Bronze Longsword,2127,981,196,5883,208,Longsword
-208,Ancient Bronze Rapier,1472,736,245,5883,209,Rapier
-209,Ancient Bronze Warhammer,2618,1472,98,5886,210,Warhammer
-210,Ancient Bronze Greatsword,3273,1472,294,8826,211,Greatsword
-211,Gilded Bronze Dagger,1129,470,94,2820,212,Dagger
-212,Gilded Bronze Shortsword,1505,658,131,3939,213,Shortsword
-213,Gilded Bronze Scimitar,1693,752,225,5631,214,Scimitar
-214,Gilded Bronze Mace,1882,1223,94,5079,215,Mace
-215,Gilded Bronze Sword,1882,941,188,5643,216,Sword
-216,Gilded Bronze Battleaxe,2258,1317,150,6201,217,Battleaxe
-217,Gilded Bronze Longsword,2446,1129,225,6762,218,Longsword
-218,Gilded Bronze Rapier,1693,846,282,6768,219,Rapier
-219,Gilded Bronze Warhammer,3011,1693,112,6759,220,Warhammer
-220,Gilded Bronze Greatsword,3764,1693,338,10149,221,Greatsword
-221,Brass Dagger,1298,541,108,3243,222,Dagger
-222,Brass Shortsword,1731,757,151,4536,223,Shortsword
-223,Brass Scimitar,1948,865,259,6480,224,Scimitar
-224,Brass Mace,2164,1406,108,5838,225,Mace
-225,Brass Sword,2164,1082,216,6486,226,Sword
-226,Brass Battleaxe,2597,1515,173,7140,227,Battleaxe
-227,Brass Longsword,2813,1298,259,7779,228,Longsword
-228,Brass Rapier,1948,974,324,7782,229,Rapier
-229,Brass Warhammer,3463,1948,129,7779,230,Warhammer
-230,Brass Greatsword,4328,1948,389,11679,231,Greatsword
-231,Iron Dagger,1493,622,124,3726,232,Dagger
-232,Iron Shortsword,1991,871,174,5223,233,Shortsword
-233,Iron Scimitar,2240,995,298,7455,234,Scimitar
-234,Iron Mace,2489,1617,124,6711,235,Mace
-235,Iron Sword,2489,1244,248,7452,236,Sword
-236,Iron Battleaxe,2986,1742,199,8211,237,Battleaxe
-237,Iron Longsword,3235,1493,298,8949,238,Longsword
-238,Iron Rapier,2240,1120,373,8955,239,Rapier
-239,Iron Warhammer,3982,2240,149,8955,240,Warhammer
-240,Iron Greatsword,4978,2240,448,13440,241,Greatsword
-241,Cast Iron Dagger,1717,715,143,4290,242,Dagger
-242,Cast Iron Shortsword,2290,1001,200,6003,243,Shortsword
-243,Cast Iron Scimitar,2576,1145,343,8580,244,Scimitar
-244,Cast Iron Mace,2862,1860,143,7725,245,Mace
-245,Cast Iron Sword,2862,1431,286,8583,246,Sword
-246,Cast Iron Battleaxe,3435,2003,229,9444,247,Battleaxe
-247,Cast Iron Longsword,3721,1717,343,10296,248,Longsword
-248,Cast Iron Rapier,2576,1288,429,10299,249,Rapier
-249,Cast Iron Warhammer,4580,2576,171,10293,250,Warhammer
-250,Cast Iron Greatsword,5725,2576,515,15453,251,Greatsword
-251,Wrought Iron Dagger,1975,822,164,4926,252,Dagger
-252,Wrought Iron Shortsword,2633,1152,230,6906,253,Shortsword
-253,Wrought Iron Scimitar,2962,1316,395,9873,254,Scimitar
-254,Wrought Iron Mace,3291,2139,164,8877,255,Mace
-255,Wrought Iron Sword,3291,1645,329,9870,256,Sword
-256,Wrought Iron Battleaxe,3950,2304,263,10857,257,Battleaxe
-257,Wrought Iron Longsword,4279,1975,395,11850,258,Longsword
-258,Wrought Iron Rapier,2962,1481,493,11838,259,Rapier
-259,Wrought Iron Warhammer,5267,2962,197,11841,260,Warhammer
-260,Wrought Iron Greatsword,6583,2962,592,17766,261,Greatsword
-261,Forged Iron Dagger,2271,946,189,5673,262,Dagger
-262,Forged Iron Shortsword,3028,1324,264,7932,263,Shortsword
-263,Forged Iron Scimitar,3407,1514,454,11352,264,Scimitar
-264,Forged Iron Mace,3785,2460,189,10215,265,Mace
-265,Forged Iron Sword,3785,1892,378,11346,266,Sword
-266,Forged Iron Battleaxe,4542,2649,302,12477,267,Battleaxe
-267,Forged Iron Longsword,4921,2271,454,13623,268,Longsword
-268,Forged Iron Rapier,3407,1703,567,13614,269,Rapier
-269,Forged Iron Warhammer,6057,3407,227,13626,270,Warhammer
-270,Forged Iron Greatsword,7571,3407,681,20436,271,Greatsword
-271,Steel Dagger,2612,1088,217,6519,272,Dagger
-272,Steel Shortsword,3482,1523,304,9129,273,Shortsword
-273,Steel Scimitar,3918,1741,522,13053,274,Scimitar
-274,Steel Mace,4353,2829,217,11742,275,Mace
-275,Steel Sword,4353,2176,435,13053,276,Sword
-276,Steel Battleaxe,5224,3047,348,14361,277,Battleaxe
-277,Steel Longsword,5659,2612,522,15666,278,Longsword
-278,Steel Rapier,3918,1959,653,15672,279,Rapier
-279,Steel Warhammer,6965,3918,261,15669,280,Warhammer
-280,Steel Greatsword,8707,3918,783,23499,281,Greatsword
-281,Carbon Steel Dagger,3003,1251,250,7503,282,Dagger
-282,Carbon Steel Shortsword,4005,1752,350,10506,283,Shortsword
-283,Carbon Steel Scimitar,4505,2002,600,15006,284,Scimitar
-284,Carbon Steel Mace,5006,3254,250,13512,285,Mace
-285,Carbon Steel Sword,5006,2503,500,15009,286,Sword
-286,Carbon Steel Battleaxe,6007,3504,400,16512,287,Battleaxe
-287,Carbon Steel Longsword,6508,3003,600,18009,288,Longsword
-288,Carbon Steel Rapier,4505,2252,750,18006,289,Rapier
-289,Carbon Steel Warhammer,8010,4505,300,18015,290,Warhammer
-290,Carbon Steel Greatsword,10013,4505,901,27030,291,Greatsword
-291,Damascus Steel Dagger,3454,1439,287,8622,292,Dagger
-292,Damascus Steel Shortsword,4606,2015,403,12090,293,Shortsword
-293,Damascus Steel Scimitar,5181,2303,690,17259,294,Scimitar
-294,Damascus Steel Mace,5757,3742,287,15531,295,Mace
-295,Damascus Steel Sword,5757,2878,575,17259,296,Sword
-296,Damascus Steel Battleaxe,6909,4030,460,18990,297,Battleaxe
-297,Damascus Steel Longsword,7484,3454,690,20712,298,Longsword
-298,Damascus Steel Rapier,5181,2590,863,20715,299,Rapier
-299,Damascus Steel Warhammer,9212,5181,345,20718,300,Warhammer
-300,Damascus Steel Greatsword,11515,5181,1036,31083,301,Greatsword
-301,Stainless Steel Dagger,3972,1655,331,9930,302,Dagger
-302,Stainless Steel Shortsword,5296,2317,463,13896,303,Shortsword
-303,Stainless Steel Scimitar,5959,2648,794,19854,304,Scimitar
-304,Stainless Steel Mace,6621,4303,331,17874,305,Mace
-305,Stainless Steel Sword,6621,3310,662,19860,306,Sword
-306,Stainless Steel Battleaxe,7945,4634,529,21837,307,Battleaxe
-307,Stainless Steel Longsword,8607,3972,794,23826,308,Longsword
-308,Stainless Steel Rapier,5959,2979,993,23832,309,Rapier
-309,Stainless Steel Warhammer,10593,5959,397,23832,310,Warhammer
-310,Stainless Steel Greatsword,13242,5959,1191,35742,311,Greatsword
-311,Dark Steel Dagger,4568,1903,380,11409,312,Dagger
-312,Dark Steel Shortsword,6091,2665,533,15990,313,Shortsword
-313,Dark Steel Scimitar,6852,3045,913,22830,314,Scimitar
-314,Dark Steel Mace,7614,4949,380,20547,315,Mace
-315,Dark Steel Sword,7614,3807,761,22836,316,Sword
-316,Dark Steel Battleaxe,9137,5330,609,25125,317,Battleaxe
-317,Dark Steel Longsword,9898,4568,913,27399,318,Longsword
-318,Dark Steel Rapier,6852,3426,1142,27408,319,Rapier
-319,Dark Steel Warhammer,12182,6852,456,27396,320,Warhammer
-320,Dark Steel Greatsword,15228,6852,1370,41106,321,Greatsword
-321,Black Iron Dagger,5253,2189,437,13122,322,Dagger
-322,Black Iron Shortsword,7005,3064,612,18372,323,Shortsword
-323,Black Iron Scimitar,7880,3502,1050,26256,324,Scimitar
-324,Black Iron Mace,8756,5691,437,23628,325,Mace
-325,Black Iron Sword,8756,4378,875,26259,326,Sword
-326,Black Iron Battleaxe,10507,6129,700,28887,327,Battleaxe
-327,Black Iron Longsword,11383,5253,1050,31509,328,Longsword
-328,Black Iron Rapier,7880,3940,1313,31515,329,Rapier
-329,Black Iron Warhammer,14010,7880,525,31515,330,Warhammer
-330,Black Iron Greatsword,17513,7880,1576,47280,331,Greatsword
-331,Shadow Steel Dagger,6041,2517,503,15096,332,Dagger
-332,Shadow Steel Shortsword,8055,3524,704,21132,333,Shortsword
-333,Shadow Steel Scimitar,9062,4027,1208,30201,334,Scimitar
-334,Shadow Steel Mace,10069,6545,503,27180,335,Mace
-335,Shadow Steel Sword,10069,5034,1006,30192,336,Sword
-336,Shadow Steel Battleaxe,12083,7048,805,33219,337,Battleaxe
-337,Shadow Steel Longsword,13090,6041,1208,36243,338,Longsword
-338,Shadow Steel Rapier,9062,4531,1510,36243,339,Rapier
-339,Shadow Steel Warhammer,16111,9062,604,36246,340,Warhammer
-340,Shadow Steel Greatsword,20139,9062,1812,54366,341,Greatsword
-341,Night Metal Dagger,6948,2895,579,17370,342,Dagger
-342,Night Metal Shortsword,9264,4053,810,24309,343,Shortsword
-343,Night Metal Scimitar,10422,4632,1389,34731,344,Scimitar
-344,Night Metal Mace,11580,7527,579,31266,345,Mace
-345,Night Metal Sword,11580,5790,1158,34740,346,Sword
-346,Night Metal Battleaxe,13896,8106,926,38208,347,Battleaxe
-347,Night Metal Longsword,15054,6948,1389,41679,348,Longsword
-348,Night Metal Rapier,10422,5211,1737,41688,349,Rapier
-349,Night Metal Warhammer,18528,10422,694,41676,350,Warhammer
-350,Night Metal Greatsword,23160,10422,2084,62526,351,Greatsword
-351,Silver Dagger,7990,3329,665,19962,352,Dagger
-352,Silver Shortsword,10654,4661,932,27963,353,Shortsword
-353,Silver Scimitar,11985,5327,1598,39951,354,Scimitar
-354,Silver Mace,13317,8656,665,35943,355,Mace
-355,Silver Sword,13317,6658,1331,39939,356,Sword
-356,Silver Battleaxe,15981,9322,1065,43941,357,Battleaxe
-357,Silver Longsword,17312,7990,1598,47940,358,Longsword
-358,Silver Rapier,11985,5992,1997,47931,359,Rapier
-359,Silver Warhammer,21308,11985,799,47940,360,Warhammer
-360,Silver Greatsword,26635,11985,2397,71910,361,Greatsword
-361,Sterling Silver Dagger,9189,3828,765,22959,362,Dagger
-362,Sterling Silver Shortsword,12252,5360,1072,32160,363,Shortsword
-363,Sterling Silver Scimitar,13783,6126,1837,45933,364,Scimitar
-364,Sterling Silver Mace,15315,9954,765,41337,365,Mace
-365,Sterling Silver Sword,15315,7657,1531,45936,366,Sword
-366,Sterling Silver Battleaxe,18378,10720,1225,50535,367,Battleaxe
-367,Sterling Silver Longsword,19909,9189,1837,55122,368,Longsword
-368,Sterling Silver Rapier,13783,6891,2297,55128,369,Rapier
-369,Sterling Silver Warhammer,24504,13783,918,55119,370,Warhammer
-370,Sterling Silver Greatsword,30630,13783,2756,82689,371,Greatsword
-371,Pure Silver Dagger,10567,4403,880,26409,372,Dagger
-372,Pure Silver Shortsword,14089,6164,1232,36972,373,Shortsword
-373,Pure Silver Scimitar,15851,7044,2113,52827,374,Scimitar
-374,Pure Silver Mace,17612,11448,880,47544,375,Mace
-375,Pure Silver Sword,17612,8806,1761,52833,376,Sword
-376,Pure Silver Battleaxe,21134,12328,1408,58104,377,Battleaxe
-377,Pure Silver Longsword,22896,10567,2113,63396,378,Longsword
-378,Pure Silver Rapier,15851,7925,2641,63390,379,Rapier
-379,Pure Silver Warhammer,28179,15851,1056,63393,380,Warhammer
-380,Pure Silver Greatsword,35224,15851,3170,95103,381,Greatsword
-381,Holy Silver Dagger,12152,5063,1012,30369,382,Dagger
-382,Holy Silver Shortsword,16203,7089,1417,42522,383,Shortsword
-383,Holy Silver Scimitar,18228,8101,2430,60753,384,Scimitar
-384,Holy Silver Mace,20254,13165,1012,54675,385,Mace
-385,Holy Silver Sword,20254,10127,2025,60756,386,Sword
-386,Holy Silver Battleaxe,24305,14178,1620,66834,387,Battleaxe
-387,Holy Silver Longsword,26330,12152,2430,72906,388,Longsword
-388,Holy Silver Rapier,18228,9114,3038,72912,389,Rapier
-389,Holy Silver Warhammer,32406,18228,1215,72909,390,Warhammer
-390,Holy Silver Greatsword,40508,18228,3645,109359,391,Greatsword
-391,Gold Dagger,13975,5823,1164,34929,392,Dagger
-392,Gold Shortsword,18633,8152,1630,48906,393,Shortsword
-393,Gold Scimitar,20963,9316,2795,69873,394,Scimitar
-394,Gold Mace,23292,15140,1164,62880,395,Mace
-395,Gold Sword,23292,11646,2329,69873,396,Sword
-396,Gold Battleaxe,27950,16304,1863,76857,397,Battleaxe
-397,Gold Longsword,30280,13975,2795,83850,398,Longsword
-398,Gold Rapier,20963,10481,3493,83838,399,Rapier
-399,Gold Warhammer,37267,20963,1397,83844,400,Warhammer
-400,Gold Greatsword,46584,20963,4192,125769,401,Greatsword
-401,Rose Gold Dagger,16071,6696,1339,40173,402,Dagger
-402,Rose Gold Shortsword,21429,9375,1875,56250,403,Shortsword
-403,Rose Gold Scimitar,24107,10714,3214,80352,404,Scimitar
-404,Rose Gold Mace,26786,17411,1339,72318,405,Mace
-405,Rose Gold Sword,26786,13393,2678,80349,406,Sword
-406,Rose Gold Battleaxe,32143,18750,2142,88380,407,Battleaxe
-407,Rose Gold Longsword,34822,16071,3214,96423,408,Longsword
-408,Rose Gold Rapier,24107,12053,4017,96414,409,Rapier
-409,Rose Gold Warhammer,42858,24107,1607,96426,410,Warhammer
-410,Rose Gold Greatsword,53572,24107,4821,144636,411,Greatsword
-411,White Gold Dagger,18482,7701,1540,46203,412,Dagger
-412,White Gold Shortsword,24643,10781,2156,64683,413,Shortsword
-413,White Gold Scimitar,27723,12321,3696,92403,414,Scimitar
-414,White Gold Mace,30804,20022,1540,83166,415,Mace
-415,White Gold Sword,30804,15402,3080,92406,416,Sword
-416,White Gold Battleaxe,36965,21563,2464,101649,417,Battleaxe
-417,White Gold Longsword,40045,18482,3696,110886,418,Longsword
-418,White Gold Rapier,27723,13861,4620,110883,419,Rapier
-419,White Gold Warhammer,49286,27723,1848,110889,420,Warhammer
-420,White Gold Greatsword,61608,27723,5544,166329,421,Greatsword
-421,Royal Gold Dagger,21254,8856,1771,53133,422,Dagger
-422,Royal Gold Shortsword,28339,12398,2479,74379,423,Shortsword
-423,Royal Gold Scimitar,31882,14169,4250,106257,424,Scimitar
-424,Royal Gold Mace,35424,23026,1771,95643,425,Mace
-425,Royal Gold Sword,35424,17712,3542,106266,426,Sword
-426,Royal Gold Battleaxe,42509,24797,2833,116886,427,Battleaxe
-427,Royal Gold Longsword,46052,21254,4250,127512,428,Longsword
-428,Royal Gold Rapier,31882,15941,5313,127518,429,Rapier
-429,Royal Gold Warhammer,56679,31882,2125,127521,430,Warhammer
-430,Royal Gold Greatsword,70849,31882,6376,191286,431,Greatsword
-431,Platinum Dagger,24443,10184,2036,61092,432,Dagger
-432,Platinum Shortsword,32590,14258,2851,85539,433,Shortsword
-433,Platinum Scimitar,36664,16295,4888,122205,434,Scimitar
-434,Platinum Mace,40738,26480,2036,109980,435,Mace
-435,Platinum Sword,40738,20369,4073,122202,436,Sword
-436,Platinum Battleaxe,48886,28517,3259,134436,437,Battleaxe
-437,Platinum Longsword,52960,24443,4888,146649,438,Longsword
-438,Platinum Rapier,36664,18332,6110,146646,439,Rapier
-439,Platinum Warhammer,65181,36664,2444,146652,440,Warhammer
-440,Platinum Greatsword,81477,36664,7332,219972,441,Greatsword
-441,Dense Platinum Dagger,28109,11712,2342,70266,442,Dagger
-442,Dense Platinum Shortsword,37479,16397,3279,98376,443,Shortsword
-443,Dense Platinum Scimitar,42164,18739,5621,140532,444,Scimitar
-444,Dense Platinum Mace,46849,30452,2342,126486,445,Mace
-445,Dense Platinum Sword,46849,23424,4684,140532,446,Sword
-446,Dense Platinum Battleaxe,56219,32794,3747,154587,447,Battleaxe
-447,Dense Platinum Longsword,60904,28109,5621,168642,448,Longsword
-448,Dense Platinum Rapier,42164,21082,7027,168651,449,Rapier
-449,Dense Platinum Warhammer,74959,42164,2810,168642,450,Warhammer
-450,Dense Platinum Greatsword,93699,42164,8432,252972,451,Greatsword
-451,Noble Platinum Dagger,32326,13469,2693,80802,452,Dagger
-452,Noble Platinum Shortsword,43101,18856,3771,113133,453,Shortsword
-453,Noble Platinum Scimitar,48489,21550,6465,161625,454,Scimitar
-454,Noble Platinum Mace,53876,35020,2693,145455,455,Mace
-455,Noble Platinum Sword,53876,26938,5387,161619,456,Sword
-456,Noble Platinum Battleaxe,64652,37713,4310,177789,457,Battleaxe
-457,Noble Platinum Longsword,70040,32326,6465,193953,458,Longsword
-458,Noble Platinum Rapier,48489,24244,8081,193947,459,Rapier
-459,Noble Platinum Warhammer,86203,48489,3232,193947,460,Warhammer
-460,Noble Platinum Greatsword,107753,48489,9697,290922,461,Greatsword
-461,Mithril Dagger,37175,15489,3097,92922,462,Dagger
-462,Mithril Shortsword,49566,21685,4337,130110,463,Shortsword
-463,Mithril Scimitar,55762,24783,7435,185874,464,Scimitar
-464,Mithril Mace,61958,40273,3097,167274,465,Mace
-465,Mithril Sword,61958,30979,6195,185862,466,Sword
-466,Mithril Battleaxe,74350,43370,4956,204450,467,Battleaxe
-467,Mithril Longsword,80546,37175,7435,223050,468,Longsword
-468,Mithril Rapier,55762,27881,9293,223038,469,Rapier
-469,Mithril Warhammer,99133,55762,3717,223041,470,Warhammer
-470,Mithril Greatsword,123916,55762,11152,334566,471,Greatsword
-471,Elven Mithril Dagger,42751,17813,3562,106869,472,Dagger
-472,Elven Mithril Shortsword,57001,24938,4987,149619,473,Shortsword
-473,Elven Mithril Scimitar,64127,28500,8550,213750,474,Scimitar
-474,Elven Mithril Mace,71252,46313,3562,192369,475,Mace
-475,Elven Mithril Sword,71252,35626,7125,213753,476,Sword
-476,Elven Mithril Battleaxe,85502,49876,5700,235128,477,Battleaxe
-477,Elven Mithril Longsword,92627,42751,8550,256503,478,Longsword
-478,Elven Mithril Rapier,64127,32063,10687,256494,479,Rapier
-479,Elven Mithril Warhammer,114003,64127,4275,256506,480,Warhammer
-480,Elven Mithril Greatsword,142504,64127,12825,384756,481,Greatsword
-481,Ancient Mithril Dagger,49164,20485,4097,122910,482,Dagger
-482,Ancient Mithril Shortsword,65552,28679,5735,172062,483,Shortsword
-483,Ancient Mithril Scimitar,73746,32776,9832,245808,484,Scimitar
-484,Ancient Mithril Mace,81940,53261,4097,221238,485,Mace
-485,Ancient Mithril Sword,81940,40970,8194,245820,486,Sword
-486,Ancient Mithril Battleaxe,98328,57358,6555,270399,487,Battleaxe
-487,Ancient Mithril Longsword,106522,49164,9832,294972,488,Longsword
-488,Ancient Mithril Rapier,73746,36873,12291,294984,489,Rapier
-489,Ancient Mithril Warhammer,131104,73746,4916,294978,490,Warhammer
-490,Ancient Mithril Greatsword,163880,73746,14749,442473,491,Greatsword
-491,Celestial Mithril Dagger,56538,23557,4711,141336,492,Dagger
-492,Celestial Mithril Shortsword,75384,32980,6596,197880,493,Shortsword
-493,Celestial Mithril Scimitar,84807,37692,11307,282681,494,Scimitar
-494,Celestial Mithril Mace,94231,61250,4711,254415,495,Mace
-495,Celestial Mithril Sword,94231,47115,9423,282690,496,Sword
-496,Celestial Mithril Battleaxe,113077,65961,7538,310953,497,Battleaxe
-497,Celestial Mithril Longsword,122500,56538,11307,339219,498,Longsword
-498,Celestial Mithril Rapier,84807,42403,14134,339219,499,Rapier
-499,Celestial Mithril Warhammer,150769,84807,5653,339216,500,Warhammer
-500,Celestial Mithril Greatsword,188462,84807,16961,508836,501,Greatsword
-501,Orichalcum Dagger,65019,27091,5418,162543,502,Dagger
-502,Orichalcum Shortsword,86692,37928,7585,227559,503,Shortsword
-503,Orichalcum Scimitar,97529,43346,13003,325083,504,Scimitar
-504,Orichalcum Mace,108365,70437,5418,292581,505,Mace
-505,Orichalcum Sword,108365,54182,10836,325086,506,Sword
-506,Orichalcum Battleaxe,130038,75856,8669,357603,507,Battleaxe
-507,Orichalcum Longsword,140875,65019,13003,390102,508,Longsword
-508,Orichalcum Rapier,97529,48764,16254,390102,509,Rapier
-509,Orichalcum Warhammer,173385,97529,6501,390102,510,Warhammer
-510,Orichalcum Greatsword,216731,97529,19505,585162,511,Greatsword
-511,Dwarven Orichalcum Dagger,74772,31155,6231,186930,512,Dagger
-512,Dwarven Orichalcum Shortsword,99696,43617,8723,261696,513,Shortsword
-513,Dwarven Orichalcum Scimitar,112158,49848,14954,373854,514,Scimitar
-514,Dwarven Orichalcum Mace,124620,81003,6231,336474,515,Mace
-515,Dwarven Orichalcum Sword,124620,62310,12462,373860,516,Sword
-516,Dwarven Orichalcum Battleaxe,149544,87234,9969,411237,517,Battleaxe
-517,Dwarven Orichalcum Longsword,162006,74772,14954,448626,518,Longsword
-518,Dwarven Orichalcum Rapier,112158,56079,18693,448632,519,Rapier
-519,Dwarven Orichalcum Warhammer,199392,112158,7477,448629,520,Warhammer
-520,Dwarven Orichalcum Greatsword,249241,112158,22431,672939,521,Greatsword
-521,Magma Orichalcum Dagger,85988,35828,7165,214959,522,Dagger
-522,Magma Orichalcum Shortsword,114650,50159,10031,300942,523,Shortsword
-523,Magma Orichalcum Scimitar,128982,57325,17197,429930,524,Scimitar
-524,Magma Orichalcum Mace,143313,93153,7165,386934,525,Mace
-525,Magma Orichalcum Sword,143313,71656,14331,429933,526,Sword
-526,Magma Orichalcum Battleaxe,171976,100319,11465,472932,527,Battleaxe
-527,Magma Orichalcum Longsword,186307,85988,17197,515919,528,Longsword
-528,Magma Orichalcum Rapier,128982,64491,21497,515928,529,Rapier
-529,Magma Orichalcum Warhammer,229301,128982,8598,515916,530,Warhammer
-530,Magma Orichalcum Greatsword,286627,128982,25796,773886,531,Greatsword
-531,Adamantite Dagger,98886,41202,8240,247206,532,Dagger
-532,Adamantite Shortsword,131848,57683,11536,346089,533,Shortsword
-533,Adamantite Scimitar,148329,65924,19777,494427,534,Scimitar
-534,Adamantite Mace,164810,107126,8240,444978,535,Mace
-535,Adamantite Sword,164810,82405,16481,494430,536,Sword
-536,Adamantite Battleaxe,197772,115367,13184,543861,537,Battleaxe
-537,Adamantite Longsword,214253,98886,19777,593313,538,Longsword
-538,Adamantite Rapier,148329,74164,24721,593307,539,Rapier
-539,Adamantite Warhammer,263697,148329,9888,593307,540,Warhammer
-540,Adamantite Greatsword,329621,148329,29665,889962,541,Greatsword
-541,Hardened Adamantite Dagger,113719,47383,9476,284289,542,Dagger
-542,Hardened Adamantite Shortsword,151625,66336,13267,398013,543,Shortsword
-543,Hardened Adamantite Scimitar,170579,75812,22743,568581,544,Scimitar
-544,Hardened Adamantite Mace,189532,123196,9476,511728,545,Mace
-545,Hardened Adamantite Sword,189532,94766,18953,568593,546,Sword
-546,Hardened Adamantite Battleaxe,227438,132672,15162,625446,547,Battleaxe
-547,Hardened Adamantite Longsword,246392,113719,22743,682302,548,Longsword
-548,Hardened Adamantite Rapier,170579,85289,28429,682302,549,Rapier
-549,Hardened Adamantite Warhammer,303251,170579,11371,682302,550,Warhammer
-550,Hardened Adamantite Greatsword,379064,170579,34115,1023462,551,Greatsword
-551,Perfect Adamantite Dagger,130777,54490,10898,326940,552,Dagger
-552,Perfect Adamantite Shortsword,174369,76286,15257,457713,553,Shortsword
-553,Perfect Adamantite Scimitar,196165,87184,26155,653877,554,Scimitar
-554,Perfect Adamantite Mace,217962,141675,10898,588495,555,Mace
-555,Perfect Adamantite Sword,217962,108981,21796,653883,556,Sword
-556,Perfect Adamantite Battleaxe,261554,152573,17436,719259,557,Battleaxe
-557,Perfect Adamantite Longsword,283350,130777,26155,784656,558,Longsword
-558,Perfect Adamantite Rapier,196165,98082,32694,784656,559,Rapier
-559,Perfect Adamantite Warhammer,348739,196165,13077,784650,560,Warhammer
-560,Perfect Adamantite Greatsword,435924,196165,39233,1176990,561,Greatsword
-561,Titanium Dagger,150393,62664,12532,375972,562,Dagger
-562,Titanium Shortsword,200525,87729,17545,526362,563,Shortsword
-563,Titanium Scimitar,225590,100262,30078,751956,564,Scimitar
-564,Titanium Mace,250656,162926,12532,676758,565,Mace
-565,Titanium Sword,250656,125328,25065,751959,566,Sword
-566,Titanium Battleaxe,300787,175459,20052,827157,567,Battleaxe
-567,Titanium Longsword,325853,150393,30078,902349,568,Longsword
-568,Titanium Rapier,225590,112795,37598,902355,569,Rapier
-569,Titanium Warhammer,401050,225590,15039,902355,570,Warhammer
-570,Titanium Greatsword,501313,225590,45118,1353540,571,Greatsword
-571,Alloy Titanium Dagger,172953,72063,14412,432369,572,Dagger
-572,Alloy Titanium Shortsword,230604,100889,20177,605322,573,Shortsword
-573,Alloy Titanium Scimitar,259429,115302,34590,864756,574,Scimitar
-574,Alloy Titanium Mace,288255,187365,14412,778275,575,Mace
-575,Alloy Titanium Sword,288255,144127,28825,864756,576,Sword
-576,Alloy Titanium Battleaxe,345906,201778,23060,951234,577,Battleaxe
-577,Alloy Titanium Longsword,374731,172953,34590,1037709,578,Longsword
-578,Alloy Titanium Rapier,259429,129714,43238,1037712,579,Rapier
-579,Alloy Titanium Warhammer,461208,259429,17295,1037712,580,Warhammer
-580,Alloy Titanium Greatsword,576510,259429,51885,1556562,581,Greatsword
-581,Space Titanium Dagger,198895,82873,16574,497229,582,Dagger
-582,Space Titanium Shortsword,265194,116022,23204,696126,583,Shortsword
-583,Space Titanium Scimitar,298343,132597,39779,994476,584,Scimitar
-584,Space Titanium Mace,331493,215470,16574,895020,585,Mace
-585,Space Titanium Sword,331493,165746,33149,994473,586,Sword
-586,Space Titanium Battleaxe,397791,232045,26519,1093920,587,Battleaxe
-587,Space Titanium Longsword,430941,198895,39779,1193370,588,Longsword
-588,Space Titanium Rapier,298343,149171,49723,1193358,589,Rapier
-589,Space Titanium Warhammer,530389,298343,19889,1193364,590,Warhammer
-590,Space Titanium Greatsword,662986,298343,59668,1790049,591,Greatsword
-591,Cobalt Dagger,228730,95304,19060,571812,592,Dagger
-592,Cobalt Shortsword,304973,133426,26685,800553,593,Shortsword
-593,Cobalt Scimitar,343095,152486,45746,1143648,594,Scimitar
-594,Cobalt Mace,381217,247791,19060,1029273,595,Mace
-595,Cobalt Sword,381217,190608,38121,1143639,596,Sword
-596,Cobalt Battleaxe,457460,266852,30497,1258011,597,Battleaxe
-597,Cobalt Longsword,495582,228730,45746,1372380,598,Longsword
-598,Cobalt Rapier,343095,171547,57182,1372371,599,Rapier
-599,Cobalt Warhammer,609947,343095,22873,1372380,600,Warhammer
-600,Cobalt Greatsword,762434,343095,68619,2058570,601,Greatsword
-601,Blue Cobalt Dagger,263039,109599,21919,657582,602,Dagger
-602,Blue Cobalt Shortsword,350719,153439,30687,920622,603,Shortsword
-603,Blue Cobalt Scimitar,394559,175359,52607,1315182,604,Scimitar
-604,Blue Cobalt Mace,438399,284959,21919,1183662,605,Mace
-605,Blue Cobalt Sword,438399,219199,43839,1315182,606,Sword
-606,Blue Cobalt Battleaxe,526079,306879,35071,1446702,607,Battleaxe
-607,Blue Cobalt Longsword,569919,263039,52607,1578222,608,Longsword
-608,Blue Cobalt Rapier,394559,197279,65759,1578222,609,Rapier
-609,Blue Cobalt Warhammer,701439,394559,26303,1578222,610,Warhammer
-610,Blue Cobalt Greatsword,876799,394559,78911,2367342,611,Greatsword
-611,Azure Cobalt Dagger,302495,126039,25207,756222,612,Dagger
-612,Azure Cobalt Shortsword,403327,176455,35291,1058730,613,Shortsword
-613,Azure Cobalt Scimitar,453743,201663,60499,1512474,614,Scimitar
-614,Azure Cobalt Mace,504159,327703,25207,1361214,615,Mace
-615,Azure Cobalt Sword,504159,252079,50415,1512462,616,Sword
-616,Azure Cobalt Battleaxe,604991,352911,40332,1663713,617,Battleaxe
-617,Azure Cobalt Longsword,655407,302495,60499,1814970,618,Longsword
-618,Azure Cobalt Rapier,453743,226871,75623,1814958,619,Rapier
-619,Azure Cobalt Warhammer,806655,453743,30249,1814964,620,Warhammer
-620,Azure Cobalt Greatsword,1008319,453743,90748,2722449,621,Greatsword
-621,Crystal Dagger,347870,144945,28989,869670,622,Dagger
-622,Crystal Shortsword,463827,202924,40584,1217532,623,Shortsword
-623,Crystal Scimitar,521805,231913,69574,1739349,624,Scimitar
-624,Crystal Mace,579783,376859,28989,1565412,625,Mace
-625,Crystal Sword,579783,289891,57978,1739343,626,Sword
-626,Crystal Battleaxe,695740,405848,46382,1913274,627,Battleaxe
-627,Crystal Longsword,753718,347870,69574,2087220,628,Longsword
-628,Crystal Rapier,521805,260902,86967,2087211,629,Rapier
-629,Crystal Warhammer,927654,521805,34787,2087220,630,Warhammer
-630,Crystal Greatsword,1159567,521805,104361,3130830,631,Greatsword
-631,Quartz Dagger,400050,166687,33337,1000116,632,Dagger
-632,Quartz Shortsword,533401,233362,46672,1400166,633,Shortsword
-633,Quartz Scimitar,600076,266700,80010,2000250,634,Scimitar
-634,Quartz Mace,666751,433388,33337,1800219,635,Mace
-635,Quartz Sword,666751,333375,66675,2000250,636,Sword
-636,Quartz Battleaxe,800101,466725,53340,2200275,637,Battleaxe
-637,Quartz Longsword,866776,400050,80010,2400300,638,Longsword
-638,Quartz Rapier,600076,300038,100012,2400294,639,Rapier
-639,Quartz Warhammer,1066802,600076,40005,2400303,640,Warhammer
-640,Quartz Greatsword,1333502,600076,120015,3600453,641,Greatsword
-641,Ruby Dagger,460058,191691,38338,1150143,642,Dagger
-642,Ruby Shortsword,613411,268367,53673,1610196,643,Shortsword
-643,Ruby Scimitar,690087,306705,92011,2300280,644,Scimitar
-644,Ruby Mace,766764,498396,38338,2070258,645,Mace
-645,Ruby Sword,766764,383382,76676,2300286,646,Sword
-646,Ruby Battleaxe,920116,536734,61341,2530317,647,Battleaxe
-647,Ruby Longsword,996793,460058,92011,2760339,648,Longsword
-648,Ruby Rapier,690087,345043,115014,2760339,649,Rapier
-649,Ruby Warhammer,1226822,690087,46005,2760336,650,Warhammer
-650,Ruby Greatsword,1533528,690087,138017,4140516,651,Greatsword
-651,Sapphire Dagger,529067,220444,44088,1322652,652,Dagger
-652,Sapphire Shortsword,705422,308622,61724,1851726,653,Shortsword
-653,Sapphire Scimitar,793600,352711,105813,2645328,654,Scimitar
-654,Sapphire Mace,881778,573156,44088,2380788,655,Mace
-655,Sapphire Sword,881778,440889,88177,2645322,656,Sword
-656,Sapphire Battleaxe,1058134,617245,70542,2909865,657,Battleaxe
-657,Sapphire Longsword,1146312,529067,105813,3174396,658,Longsword
-658,Sapphire Rapier,793600,396800,132266,3174390,659,Rapier
-659,Sapphire Warhammer,1410845,793600,52906,3174390,660,Warhammer
-660,Sapphire Greatsword,1763557,793600,158720,4761600,661,Greatsword
-661,Emerald Dagger,608427,253511,50702,1521063,662,Dagger
-662,Emerald Shortsword,811236,354915,70983,2129490,663,Shortsword
-663,Emerald Scimitar,912640,405618,121685,3042129,664,Scimitar
-664,Emerald Mace,1014045,659129,50702,2737917,665,Mace
-665,Emerald Sword,1014045,507022,101404,3042126,666,Sword
-666,Emerald Battleaxe,1216854,709831,81123,3346338,667,Battleaxe
-667,Emerald Longsword,1318259,608427,121685,3650556,668,Longsword
-668,Emerald Rapier,912640,456320,152106,3650550,669,Rapier
-669,Emerald Warhammer,1622472,912640,60842,3650550,670,Warhammer
-670,Emerald Greatsword,2028091,912640,182528,5475840,671,Greatsword
-671,Diamond Dagger,699691,291538,58307,1749219,672,Dagger
-672,Diamond Shortsword,932921,408153,81630,2448909,673,Shortsword
-673,Diamond Scimitar,1049537,466460,139938,3498450,674,Scimitar
-674,Diamond Mace,1166152,757999,58307,3148602,675,Mace
-675,Diamond Sword,1166152,583076,116615,3498453,676,Sword
-676,Diamond Battleaxe,1399382,816306,93292,3848298,677,Battleaxe
-677,Diamond Longsword,1515998,699691,139938,4198143,678,Longsword
-678,Diamond Rapier,1049537,524768,174922,4198134,679,Rapier
-679,Diamond Warhammer,1865843,1049537,69969,4198146,680,Warhammer
-680,Diamond Greatsword,2332304,1049537,209907,6297216,681,Greatsword
-681,Amethyst Dagger,804645,335268,67053,2011599,682,Dagger
-682,Amethyst Shortsword,1072860,469376,93875,2816253,683,Shortsword
-683,Amethyst Scimitar,1206967,536430,160929,4023225,684,Scimitar
-684,Amethyst Mace,1341075,871698,67053,3620889,685,Mace
-685,Amethyst Sword,1341075,670537,134107,4023216,686,Sword
-686,Amethyst Battleaxe,1609290,938752,107286,4425546,687,Battleaxe
-687,Amethyst Longsword,1743397,804645,160929,4827870,688,Longsword
-688,Amethyst Rapier,1206967,603483,201161,4827864,689,Rapier
-689,Amethyst Warhammer,2145720,1206967,80464,4827861,690,Warhammer
-690,Amethyst Greatsword,2682150,1206967,241393,7241796,691,Greatsword
-691,Topaz Dagger,925341,385559,77111,2313342,692,Dagger
-692,Topaz Shortsword,1233789,539782,107956,3238686,693,Shortsword
-693,Topaz Scimitar,1388012,616894,185068,4626702,694,Scimitar
-694,Topaz Mace,1542236,1002453,77111,4164024,695,Mace
-695,Topaz Sword,1542236,771118,154223,4626699,696,Sword
-696,Topaz Battleaxe,1850683,1079565,123378,5089365,697,Battleaxe
-697,Topaz Longsword,2004907,925341,185068,5552043,698,Longsword
-698,Topaz Rapier,1388012,694006,231335,5552043,699,Rapier
-699,Topaz Warhammer,2467578,1388012,92534,5552046,700,Warhammer
-700,Topaz Greatsword,3084473,1388012,277602,8328066,701,Greatsword
-701,Onyx Dagger,1064143,443393,88678,2660349,702,Dagger
-702,Onyx Shortsword,1418857,620750,124150,3724500,703,Shortsword
-703,Onyx Scimitar,1596214,709428,212828,5320704,704,Scimitar
-704,Onyx Mace,1773572,1152821,88678,4788633,705,Mace
-705,Onyx Sword,1773572,886786,177357,5320713,706,Sword
-706,Onyx Battleaxe,2128286,1241500,141885,5852775,707,Battleaxe
-707,Onyx Longsword,2305643,1064143,212828,6384849,708,Longsword
-708,Onyx Rapier,1596214,798107,266035,6384846,709,Rapier
-709,Onyx Warhammer,2837715,1596214,106414,6384852,710,Warhammer
-710,Onyx Greatsword,3547144,1596214,319242,9577272,711,Greatsword
-711,Pearl Dagger,1223764,509901,101980,3059403,712,Dagger
-712,Pearl Shortsword,1631686,713862,142772,4283166,713,Shortsword
-713,Pearl Scimitar,1835647,815843,244752,6118809,714,Scimitar
-714,Pearl Mace,2039607,1325745,101980,5506935,715,Mace
-715,Pearl Sword,2039607,1019803,203960,6118809,716,Sword
-716,Pearl Battleaxe,2447529,1427725,163168,6730695,717,Battleaxe
-717,Pearl Longsword,2651490,1223764,244752,7342572,718,Longsword
-718,Pearl Rapier,1835647,917823,305941,7342584,719,Rapier
-719,Pearl Warhammer,3263372,1835647,122376,7342581,720,Warhammer
-720,Pearl Greatsword,4079215,1835647,367129,11013876,721,Greatsword
-721,Magma Dagger,1407329,586387,117277,3518316,722,Dagger
-722,Magma Shortsword,1876439,820942,164188,4925646,723,Shortsword
-723,Magma Scimitar,2110994,938219,281465,7036632,724,Scimitar
-724,Magma Mace,2345548,1524606,117277,6332973,725,Mace
-725,Magma Sword,2345548,1172774,234554,7036632,726,Sword
-726,Magma Battleaxe,2814658,1641884,187643,7740297,727,Battleaxe
-727,Magma Longsword,3049213,1407329,281465,8443962,728,Longsword
-728,Magma Rapier,2110994,1055497,351832,8443971,729,Rapier
-729,Magma Warhammer,3752878,2110994,140732,8443962,730,Warhammer
-730,Magma Greatsword,4691097,2110994,422198,12665952,731,Greatsword
-731,Lava Dagger,1618428,674345,134869,4046070,732,Dagger
-732,Lava Shortsword,2157905,944083,188816,5664489,733,Shortsword
-733,Lava Scimitar,2427643,1078952,323685,8092131,734,Scimitar
-734,Lava Mace,2697381,1753297,134869,7282926,735,Mace
-735,Lava Sword,2697381,1348690,269738,8092140,736,Sword
-736,Lava Battleaxe,3236857,1888166,215790,8901348,737,Battleaxe
-737,Lava Longsword,3506595,1618428,323685,9710559,738,Longsword
-738,Lava Rapier,2427643,1213821,404607,9710568,739,Rapier
-739,Lava Warhammer,4315810,2427643,161842,9710559,740,Warhammer
-740,Lava Greatsword,5394762,2427643,485528,14565849,741,Greatsword
-741,Infernal Dagger,1861193,775497,155099,4652976,742,Dagger
-742,Infernal Shortsword,2481590,1085695,217139,6514170,743,Shortsword
-743,Infernal Scimitar,2791789,1240795,372238,9305955,744,Scimitar
-744,Infernal Mace,3101988,2016292,155099,8375361,745,Mace
-745,Infernal Sword,3101988,1550994,310198,9305952,746,Sword
-746,Infernal Battleaxe,3722386,2171391,248159,10236558,747,Battleaxe
-747,Infernal Longsword,4032585,1861193,372238,11167149,748,Longsword
-748,Infernal Rapier,2791789,1395894,465298,11167152,749,Rapier
-749,Infernal Warhammer,4963181,2791789,186119,11167152,750,Warhammer
-750,Infernal Greatsword,6203977,2791789,558357,16750722,751,Greatsword
-751,Hellfire Dagger,2140372,891821,178364,5350923,752,Dagger
-752,Hellfire Shortsword,2853829,1248550,249710,7491300,753,Shortsword
-753,Hellfire Scimitar,3210558,1426914,428074,10701852,754,Scimitar
-754,Hellfire Mace,3567286,2318736,178364,9631668,755,Mace
-755,Hellfire Sword,3567286,1783643,356728,10701849,756,Sword
-756,Hellfire Battleaxe,4280744,2497100,285382,11772030,757,Battleaxe
-757,Hellfire Longsword,4637472,2140372,428074,12842226,758,Longsword
-758,Hellfire Rapier,3210558,1605279,535093,12842232,759,Rapier
-759,Hellfire Warhammer,5707658,3210558,214037,12842229,760,Warhammer
-760,Hellfire Greatsword,7134573,3210558,642111,19263339,761,Greatsword
-761,Ice Dagger,2461427,1025594,205118,6153552,762,Dagger
-762,Ice Shortsword,3281903,1435832,287166,8614986,763,Shortsword
-763,Ice Scimitar,3692141,1640951,492285,12307128,764,Scimitar
-764,Ice Mace,4102379,2666546,205118,11076408,765,Mace
-765,Ice Sword,4102379,2051189,410237,12307122,766,Sword
-766,Ice Battleaxe,4922855,2871665,328190,13537845,767,Battleaxe
-767,Ice Longsword,5333093,2461427,492285,14768556,768,Longsword
-768,Ice Rapier,3692141,1846070,615356,14768550,769,Rapier
-769,Ice Warhammer,6563807,3692141,246142,14768553,770,Warhammer
-770,Ice Greatsword,8204759,3692141,738428,22152843,771,Greatsword
-771,Frost Dagger,2830642,1179434,235886,7076592,772,Dagger
-772,Frost Shortsword,3774189,1651207,330241,9907236,773,Shortsword
-773,Frost Scimitar,4245963,1887094,566128,14153202,774,Scimitar
-774,Frost Mace,4717736,3066528,235886,12737874,775,Mace
-775,Frost Sword,4717736,2358868,471773,14153199,776,Sword
-776,Frost Battleaxe,5661284,3302415,377418,15568515,777,Battleaxe
-777,Frost Longsword,6133057,2830642,566128,16983846,778,Longsword
-778,Frost Rapier,4245963,2122981,707660,16983843,779,Rapier
-779,Frost Warhammer,7548378,4245963,283064,16983849,780,Warhammer
-780,Frost Greatsword,9435473,4245963,849192,25475769,781,Greatsword
-781,Glacial Dagger,3255238,1356349,271269,8138082,782,Dagger
-782,Glacial Shortsword,4340317,1898889,379777,11393322,783,Shortsword
-783,Glacial Scimitar,4882857,2170158,651047,16276179,784,Scimitar
-784,Glacial Mace,5425397,3526508,271269,14648559,785,Mace
-785,Glacial Sword,5425397,2712698,542539,16276179,786,Sword
-786,Glacial Battleaxe,6510476,3797778,434031,17903799,787,Battleaxe
-787,Glacial Longsword,7053016,3255238,651047,19531419,788,Longsword
-788,Glacial Rapier,4882857,2441428,813809,19531419,789,Rapier
-789,Glacial Warhammer,8680635,4882857,325523,19531416,790,Warhammer
-790,Glacial Greatsword,10850794,4882857,976571,29297136,791,Greatsword
-791,Permafrost Dagger,3743524,1559801,311960,9358803,792,Dagger
-792,Permafrost Shortsword,4991365,2183722,436744,13102326,793,Shortsword
-793,Permafrost Scimitar,5615286,2495682,748704,18717606,794,Scimitar
-794,Permafrost Mace,6239206,4055484,311960,16845852,795,Mace
-795,Permafrost Sword,6239206,3119603,623920,18717609,796,Sword
-796,Permafrost Battleaxe,7487048,4367444,499136,20589372,797,Battleaxe
-797,Permafrost Longsword,8110968,3743524,748704,22461132,798,Longsword
-798,Permafrost Rapier,5615286,2807643,935881,22461144,799,Rapier
-799,Permafrost Warhammer,9982731,5615286,374352,22461138,800,Warhammer
-800,Permafrost Greatsword,12478413,5615286,1123057,33691713,801,Greatsword
-801,Storm Dagger,4305052,1793771,358754,10762623,802,Dagger
-802,Storm Shortsword,5740070,2511280,502256,15067680,803,Shortsword
-803,Storm Scimitar,6457579,2870035,861010,21525255,804,Scimitar
-804,Storm Mace,7175087,4663807,358754,19372731,805,Mace
-805,Storm Sword,7175087,3587543,717508,21525249,806,Sword
-806,Storm Battleaxe,8610105,5022561,574007,23677788,807,Battleaxe
-807,Storm Longsword,9327614,4305052,861010,25830306,808,Longsword
-808,Storm Rapier,6457579,3228789,1076263,25830312,809,Rapier
-809,Storm Warhammer,11480140,6457579,430505,25830312,810,Warhammer
-810,Storm Greatsword,14350175,6457579,1291515,38745462,811,Greatsword
-811,Thunder Dagger,4950810,2062837,412567,12377016,812,Dagger
-812,Thunder Shortsword,6601080,2887972,577594,17327826,813,Shortsword
-813,Thunder Scimitar,7426216,3300540,990162,24754050,814,Scimitar
-814,Thunder Mace,8251351,5363378,412567,22278639,815,Mace
-815,Thunder Sword,8251351,4125675,825135,24754050,816,Sword
-816,Thunder Battleaxe,9901621,5775945,660108,27229455,817,Battleaxe
-817,Thunder Longsword,10726756,4950810,990162,29704860,818,Longsword
-818,Thunder Rapier,7426216,3713108,1237702,29704854,819,Rapier
-819,Thunder Warhammer,13202161,7426216,495081,29704863,820,Warhammer
-820,Thunder Greatsword,16502702,7426216,1485243,44557293,821,Greatsword
-821,Lightning Dagger,5693432,2372263,474452,14233569,822,Dagger
-822,Lightning Shortsword,7591243,3321168,664233,19926999,823,Shortsword
-823,Lightning Scimitar,8540148,3795621,1138686,28467153,824,Scimitar
-824,Lightning Mace,9489053,6167884,474452,25620432,825,Mace
-825,Lightning Sword,9489053,4744526,948905,28467153,826,Sword
-826,Lightning Battleaxe,11386864,6642337,759124,31313871,827,Battleaxe
-827,Lightning Longsword,12335769,5693432,1138686,34160586,828,Longsword
-828,Lightning Rapier,8540148,4270074,1423358,34160592,829,Rapier
-829,Lightning Warhammer,15182486,8540148,569343,34160589,830,Warhammer
-830,Lightning Greatsword,18978107,8540148,1708029,51240879,831,Greatsword
-831,Tempest Dagger,6547447,2728102,545620,16368606,832,Dagger
-832,Tempest Shortsword,8729929,3819344,763868,22916052,833,Shortsword
-833,Tempest Scimitar,9821170,4364964,1309489,32737227,834,Scimitar
-834,Tempest Mace,10912411,7093067,545620,29463501,835,Mace
-835,Tempest Sword,10912411,5456205,1091241,32737230,836,Sword
-836,Tempest Battleaxe,13094894,7638688,872992,36010944,837,Battleaxe
-837,Tempest Longsword,14186135,6547447,1309489,39284676,838,Longsword
-838,Tempest Rapier,9821170,4910585,1636861,39284670,839,Rapier
-839,Tempest Warhammer,17459858,9821170,654744,39284670,840,Warhammer
-840,Tempest Greatsword,21824823,9821170,1964234,58927020,841,Greatsword
-841,Void Dagger,7529564,3137318,627463,18823899,842,Dagger
-842,Void Shortsword,10039418,4392245,878449,26353470,843,Shortsword
-843,Void Scimitar,11294346,5019709,1505912,37647807,844,Scimitar
-844,Void Mace,12549273,8157027,627463,33883026,845,Mace
-845,Void Sword,12549273,6274636,1254927,37647813,846,Sword
-846,Void Battleaxe,15059128,8784491,1003941,41412588,847,Battleaxe
-847,Void Longsword,16314055,7529564,1505912,45177372,848,Longsword
-848,Void Rapier,11294346,5647173,1882391,45177384,849,Rapier
-849,Void Warhammer,20078837,11294346,752956,45177378,850,Warhammer
-850,Void Greatsword,25098547,11294346,2258869,67766073,851,Greatsword
-851,Abyssal Dagger,8658998,3607916,721583,21647493,852,Dagger
-852,Abyssal Shortsword,11545331,5051082,1010216,30306486,853,Shortsword
-853,Abyssal Scimitar,12988498,5772665,1731799,43294980,854,Scimitar
-854,Abyssal Mace,14431664,9380582,721583,38965491,855,Mace
-855,Abyssal Sword,14431664,7215832,1443166,43294986,856,Sword
-856,Abyssal Battleaxe,17317997,10102165,1154533,47624490,857,Battleaxe
-857,Abyssal Longsword,18761164,8658998,1731799,51953979,858,Longsword
-858,Abyssal Rapier,12988498,6494249,2164749,51953982,859,Rapier
-859,Abyssal Warhammer,23090663,12988498,865899,51953979,860,Warhammer
-860,Abyssal Greatsword,28863329,12988498,2597699,77930979,861,Greatsword
-861,Null Dagger,9957848,4149103,829820,24894609,862,Dagger
-862,Null Shortsword,13277131,5808745,1161749,34852470,863,Shortsword
-863,Null Scimitar,14936772,6638565,1991569,49789230,864,Scimitar
-864,Null Mace,16596414,10787669,829820,44810307,865,Mace
-865,Null Sword,16596414,8298207,1659641,49789236,866,Sword
-866,Null Battleaxe,19915697,11617490,1327713,54768165,867,Battleaxe
-867,Null Longsword,21575338,9957848,1991569,59747079,868,Longsword
-868,Null Rapier,14936772,7468386,2489462,59747088,869,Rapier
-869,Null Warhammer,26554263,14936772,995784,59747076,870,Warhammer
-870,Null Greatsword,33192828,14936772,2987354,89620626,871,Greatsword
-871,Black Hole Dagger,11451525,4771469,954293,28628802,872,Dagger
-872,Black Hole Shortsword,15268701,6680056,1336011,40080333,873,Shortsword
-873,Black Hole Scimitar,17177288,7634350,2290305,57257625,874,Scimitar
-874,Black Hole Mace,19085876,12405819,954293,51531852,875,Mace
-875,Black Hole Sword,19085876,9542938,1908587,57257619,876,Sword
-876,Black Hole Battleaxe,22903051,13360113,1526870,62983389,877,Battleaxe
-877,Black Hole Longsword,24811639,11451525,2290305,68709150,878,Longsword
-878,Black Hole Rapier,17177288,8588644,2862881,68709147,879,Rapier
-879,Black Hole Warhammer,30537402,17177288,1145152,68709144,880,Warhammer
-880,Black Hole Greatsword,38171753,17177288,3435457,103063719,881,Greatsword
-881,Light Dagger,13169254,5487189,1097437,32923122,882,Dagger
-882,Light Shortsword,17559006,7682065,1536413,46092390,883,Shortsword
-883,Light Scimitar,19753882,8779503,2633850,65846259,884,Scimitar
-884,Light Mace,21948758,14266692,1097437,59261631,885,Mace
-885,Light Sword,21948758,10974379,2194875,65846262,886,Sword
-886,Light Battleaxe,26338509,15364130,1755900,72430890,887,Battleaxe
-887,Light Longsword,28533385,13169254,2633850,79015512,888,Longsword
-888,Light Rapier,19753882,9876941,3292313,79015518,889,Rapier
-889,Light Warhammer,35118012,19753882,1316925,79015521,890,Warhammer
-890,Light Greatsword,43897516,19753882,3950776,118523286,891,Greatsword
-891,Radiant Dagger,15144643,6310267,1262053,37861596,892,Dagger
-892,Radiant Shortsword,20192857,8834375,1766875,53006250,893,Shortsword
-893,Radiant Scimitar,22716964,10096428,3028928,75723204,894,Scimitar
-894,Radiant Mace,25241071,16406696,1262053,68150883,895,Mace
-895,Radiant Sword,25241071,12620535,2524107,75723210,896,Sword
-896,Radiant Battleaxe,30289286,17668750,2019285,83295525,897,Battleaxe
-897,Radiant Longsword,32813393,15144643,3028928,90867849,898,Longsword
-898,Radiant Rapier,22716964,11358482,3786160,90867846,899,Rapier
-899,Radiant Warhammer,40385714,22716964,1514464,90867852,900,Warhammer
-900,Radiant Greatsword,50482143,22716964,4543392,136301772,901,Greatsword
-901,Luminous Dagger,17416339,7256808,1451361,43540839,902,Dagger
-902,Luminous Shortsword,23221786,10159531,2031906,60957183,903,Shortsword
-903,Luminous Scimitar,26124509,11610893,3483267,87081684,904,Scimitar
-904,Luminous Mace,29027232,18867701,1451361,78373518,905,Mace
-905,Luminous Sword,29027232,14513616,2902723,87081693,906,Sword
-906,Luminous Battleaxe,34832679,20319062,2322178,95789856,907,Battleaxe
-907,Luminous Longsword,37735402,17416339,3483267,104498022,908,Longsword
-908,Luminous Rapier,26124509,13062254,4354084,104498022,909,Rapier
-909,Luminous Warhammer,46443572,26124509,1741633,104498022,910,Warhammer
-910,Luminous Greatsword,58054465,26124509,5224901,156747042,911,Greatsword
-911,Solar Dagger,20028790,8345329,1669065,50071962,912,Dagger
-912,Solar Shortsword,26705053,11683461,2336692,70100763,913,Shortsword
-913,Solar Scimitar,30043185,13352526,4005758,100143948,914,Scimitar
-914,Solar Mace,33381317,21697856,1669065,90129543,915,Mace
-915,Solar Sword,33381317,16690658,3338131,100143939,916,Sword
-916,Solar Battleaxe,40057580,23366922,2670505,110158341,917,Battleaxe
-917,Solar Longsword,43395712,20028790,4005758,120172740,918,Longsword
-918,Solar Rapier,30043185,15021592,5007197,120172731,919,Rapier
-919,Solar Warhammer,53410107,30043185,2002879,120172740,920,Warhammer
-920,Solar Greatsword,66762634,30043185,6008637,180259110,921,Greatsword
-921,Dark Dagger,23033109,9597128,1919425,57582759,922,Dagger
-922,Dark Shortsword,30710812,13435980,2687196,80615880,923,Shortsword
-923,Dark Scimitar,34549663,15355406,4606621,115165533,924,Scimitar
-924,Dark Mace,38388515,24952534,1919425,103648977,925,Mace
-925,Dark Sword,38388515,19194257,3838851,115165536,926,Sword
-926,Dark Battleaxe,46066218,26871960,3071081,126682095,927,Battleaxe
-927,Dark Longsword,49905069,23033109,4606621,138198642,928,Longsword
-928,Dark Rapier,34549663,17274831,5758277,138198648,929,Rapier
-929,Dark Warhammer,61421624,34549663,2303310,138198639,930,Warhammer
-930,Dark Greatsword,76777030,34549663,6909932,207297969,931,Greatsword
-931,Shadow Dagger,26488075,11036698,2207339,66220179,932,Dagger
-932,Shadow Shortsword,35317433,15451377,3090275,92708256,933,Shortsword
-933,Shadow Scimitar,39732113,17658716,5297615,132440373,934,Scimitar
-934,Shadow Mace,44146792,28695414,2207339,119196327,935,Mace
-935,Shadow Sword,44146792,22073396,4414679,132440373,936,Sword
-936,Shadow Battleaxe,52976150,30902754,3531743,145684407,937,Battleaxe
-937,Shadow Longsword,57390829,26488075,5297615,158928450,938,Longsword
-938,Shadow Rapier,39732113,19866056,6622018,158928438,939,Rapier
-939,Shadow Warhammer,70634867,39732113,2648807,158928444,940,Warhammer
-940,Shadow Greatsword,88293584,39732113,7946422,238392669,941,Greatsword
-941,Umbral Dagger,30461286,12692202,2538440,76153206,942,Dagger
-942,Umbral Shortsword,40615048,17769083,3553816,106614489,943,Shortsword
-943,Umbral Scimitar,45691929,20307524,6092257,152306427,944,Scimitar
-944,Umbral Mace,50768811,32999727,2538440,137075781,945,Mace
-945,Umbral Sword,50768811,25384405,5076881,152306430,946,Sword
-946,Umbral Battleaxe,60922573,35538167,4061504,167537061,947,Battleaxe
-947,Umbral Longsword,65999454,30461286,6092257,182767713,948,Longsword
-948,Umbral Rapier,45691929,22845964,7615321,182767707,949,Rapier
-949,Umbral Warhammer,81230097,45691929,3046128,182767707,950,Warhammer
-950,Umbral Greatsword,101537622,45691929,9138385,274151562,951,Greatsword
-951,Nocturnal Dagger,35030479,14596033,2919206,87576189,952,Dagger
-952,Nocturnal Shortsword,46707306,20434446,4086889,122606673,953,Shortsword
-953,Nocturnal Scimitar,52545719,23353653,7006095,175152384,954,Scimitar
-954,Nocturnal Mace,58384132,37949686,2919206,157637148,955,Mace
-955,Nocturnal Sword,58384132,29192066,5838413,175152393,956,Sword
-956,Nocturnal Battleaxe,70060959,40868892,4670730,192667626,957,Battleaxe
-957,Nocturnal Longsword,75899372,35030479,7006095,210182862,958,Longsword
-958,Nocturnal Rapier,52545719,26272859,8757619,210182862,959,Rapier
-959,Nocturnal Warhammer,93414612,52545719,3503047,210182862,960,Warhammer
-960,Nocturnal Greatsword,116768265,52545719,10509143,315274302,961,Greatsword
-961,Blood Dagger,40285051,16785438,3357087,100712619,962,Dagger
-962,Blood Shortsword,53713402,23499613,4699922,140997669,963,Shortsword
-963,Blood Scimitar,60427577,26856701,8057010,201425253,964,Scimitar
-964,Blood Mace,67141752,43642139,3357087,181282722,965,Mace
-965,Blood Sword,67141752,33570876,6714175,201425253,966,Sword
-966,Blood Battleaxe,80570103,46999226,5371340,221567778,967,Battleaxe
-967,Blood Longsword,87284278,40285051,8057010,241710303,968,Longsword
-968,Blood Rapier,60427577,30213788,10071262,241710294,969,Rapier
-969,Blood Warhammer,107426804,60427577,4028505,241710306,970,Warhammer
-970,Blood Greatsword,134283505,60427577,12085515,362565456,971,Greatsword
-971,Crimson Dagger,46327809,19303253,3860650,115819509,972,Dagger
-972,Crimson Shortsword,61770412,27024555,5404911,162147330,973,Shortsword
-973,Crimson Scimitar,69491714,30885206,9265561,231639033,974,Scimitar
-974,Crimson Mace,77213015,50188460,3860650,208475130,975,Mace
-975,Crimson Sword,77213015,38606507,7721301,231639036,976,Sword
-976,Crimson Battleaxe,92655618,54049110,6177041,254802945,977,Battleaxe
-977,Crimson Longsword,100376920,46327809,9265561,277966842,978,Longsword
-978,Crimson Rapier,69491714,34745857,11581952,277966851,979,Rapier
-979,Crimson Warhammer,123540824,69491714,4632780,277966842,980,Warhammer
-980,Crimson Greatsword,154426031,69491714,13898342,416950272,981,Greatsword
-981,Vampiric Dagger,53276980,22198741,4439748,133192443,982,Dagger
-982,Vampiric Shortsword,71035974,31078238,6215647,186469419,983,Shortsword
-983,Vampiric Scimitar,79915471,35517987,10655396,266384901,984,Scimitar
-984,Vampiric Mace,88794967,57716729,4439748,239746407,985,Mace
-985,Vampiric Sword,88794967,44397483,8879496,266384889,986,Sword
-986,Vampiric Battleaxe,106553961,62156477,7103597,293023386,987,Battleaxe
-987,Vampiric Longsword,115433458,53276980,10655396,319661880,988,Longsword
-988,Vampiric Rapier,79915471,39957735,13319245,319661880,989,Rapier
-989,Vampiric Warhammer,142071948,79915471,5327698,319661883,990,Warhammer
-990,Vampiric Greatsword,177589935,79915471,15983094,479492823,991,Greatsword
-991,Sanguine Dagger,61268527,25528553,5105710,153171309,992,Dagger
-992,Sanguine Shortsword,81691370,35739974,7147994,214439832,993,Shortsword
-993,Sanguine Scimitar,91902791,40845685,12253705,306342630,994,Scimitar
-994,Sanguine Mace,102114213,66374238,5105710,275708364,995,Mace
-995,Sanguine Sword,102114213,51057106,10211421,306342633,996,Sword
-996,Sanguine Battleaxe,122537055,71479949,8169137,336976902,997,Battleaxe
-997,Sanguine Longsword,132748477,61268527,12253705,367611156,998,Longsword
-998,Sanguine Rapier,91902791,45951395,15317131,367611150,999,Rapier
-999,Sanguine Warhammer,163382740,91902791,6126852,367611153,1000,Warhammer
-1000,Sanguine Greatsword,204228426,91902791,18380558,551416743,,Greatsword
+TemplateId,Stage,WeaponName,HP,Iron,Coal,Price,NextTemplateId,WeaponImage
+1,1,Rusty Dagger,60,25,5,150,2,Dagger
+2,1,Rusty Shortsword,80,35,7,210,3,Shortsword
+3,1,Rusty Scimitar,90,40,12,300,4,Scimitar
+4,1,Rusty Mace,100,65,5,270,5,Mace
+5,1,Rusty Sword,100,50,10,300,6,Sword
+6,1,Rusty Battleaxe,120,70,8,330,7,Battleaxe
+7,1,Rusty Longsword,130,60,12,360,8,Longsword
+8,1,Rusty Rapier,90,45,15,360,9,Rapier
+9,1,Rusty Warhammer,160,90,6,360,10,Warhammer
+10,1,Rusty Greatsword,200,90,18,540,11,Greatsword
+11,1,Old Dagger,68,28,5,159,12,Dagger
+12,1,Old Shortsword,92,40,8,240,13,Shortsword
+13,1,Old Scimitar,103,46,13,333,14,Scimitar
+14,1,Old Mace,114,74,5,297,15,Mace
+15,1,Old Sword,114,57,11,336,16,Sword
+16,1,Old Battleaxe,137,80,9,375,17,Battleaxe
+17,1,Old Longsword,149,68,13,399,18,Longsword
+18,1,Old Rapier,103,51,17,408,19,Rapier
+19,1,Old Warhammer,184,103,6,399,20,Warhammer
+20,1,Old Greatsword,229,103,20,609,21,Greatsword
+21,1,Cracked Dagger,79,33,6,189,22,Dagger
+22,1,Cracked Shortsword,105,46,9,273,23,Shortsword
+23,1,Cracked Scimitar,119,52,15,381,24,Scimitar
+24,1,Cracked Mace,132,85,6,345,25,Mace
+25,1,Cracked Sword,132,66,13,393,26,Sword
+26,1,Cracked Battleaxe,158,92,10,426,27,Battleaxe
+27,1,Cracked Longsword,171,79,15,462,28,Longsword
+28,1,Cracked Rapier,119,59,19,462,29,Rapier
+29,1,Cracked Warhammer,211,119,7,462,30,Warhammer
+30,1,Cracked Greatsword,264,119,23,702,31,Greatsword
+31,1,Worn Dagger,91,38,7,219,32,Dagger
+32,1,Worn Shortsword,121,53,10,309,33,Shortsword
+33,1,Worn Scimitar,136,60,18,450,34,Scimitar
+34,1,Worn Mace,152,98,7,399,35,Mace
+35,1,Worn Sword,152,76,15,453,36,Sword
+36,1,Worn Battleaxe,182,106,12,498,37,Battleaxe
+37,1,Worn Longsword,197,91,18,543,38,Longsword
+38,1,Worn Rapier,136,68,22,534,39,Rapier
+39,1,Worn Warhammer,243,136,9,543,40,Warhammer
+40,1,Worn Greatsword,304,136,27,813,41,Greatsword
+41,1,Wooden Dagger,104,43,8,249,42,Dagger
+42,1,Wooden Shortsword,139,61,12,363,43,Shortsword
+43,1,Wooden Scimitar,157,69,20,507,44,Scimitar
+44,1,Wooden Mace,174,113,8,459,45,Mace
+45,1,Wooden Sword,174,87,17,516,46,Sword
+46,1,Wooden Battleaxe,209,122,13,561,47,Battleaxe
+47,1,Wooden Longsword,227,104,20,612,48,Longsword
+48,1,Wooden Rapier,157,78,26,624,49,Rapier
+49,1,Wooden Warhammer,279,157,10,621,50,Warhammer
+50,1,Wooden Greatsword,349,157,31,936,51,Greatsword
+51,1,Oak Dagger,120,50,10,300,52,Dagger
+52,1,Oak Shortsword,160,70,14,420,53,Shortsword
+53,1,Oak Scimitar,181,80,24,600,54,Scimitar
+54,1,Oak Mace,201,130,10,540,55,Mace
+55,1,Oak Sword,201,100,20,600,56,Sword
+56,1,Oak Battleaxe,241,140,16,660,57,Battleaxe
+57,1,Oak Longsword,261,120,24,720,58,Longsword
+58,1,Oak Rapier,181,90,30,720,59,Rapier
+59,1,Oak Warhammer,321,181,12,723,60,Warhammer
+60,1,Oak Greatsword,402,181,36,1083,61,Greatsword
+61,1,Hardwood Dagger,138,57,11,336,62,Dagger
+62,1,Hardwood Shortsword,185,80,16,480,63,Shortsword
+63,1,Hardwood Scimitar,208,92,27,681,64,Scimitar
+64,1,Hardwood Mace,231,150,11,615,65,Mace
+65,1,Hardwood Sword,231,115,23,690,66,Sword
+66,1,Hardwood Battleaxe,277,161,18,753,67,Battleaxe
+67,1,Hardwood Longsword,300,138,27,819,68,Longsword
+68,1,Hardwood Rapier,208,104,34,822,69,Rapier
+69,1,Hardwood Warhammer,370,208,13,819,70,Warhammer
+70,1,Hardwood Greatsword,462,208,41,1239,71,Greatsword
+71,1,Reinforced Wood Dagger,159,66,13,393,72,Dagger
+72,1,Reinforced Wood Shortsword,212,93,18,549,73,Shortsword
+73,1,Reinforced Wood Scimitar,239,106,31,783,74,Scimitar
+74,1,Reinforced Wood Mace,266,172,13,711,75,Mace
+75,1,Reinforced Wood Sword,266,133,26,789,76,Sword
+76,1,Reinforced Wood Battleaxe,319,186,21,873,77,Battleaxe
+77,1,Reinforced Wood Longsword,345,159,31,942,78,Longsword
+78,1,Reinforced Wood Rapier,239,119,39,942,79,Rapier
+79,1,Reinforced Wood Warhammer,425,239,15,942,80,Warhammer
+80,1,Reinforced Wood Greatsword,532,239,47,1422,81,Greatsword
+81,1,Stone Dagger,183,76,15,453,82,Dagger
+82,1,Stone Shortsword,244,107,21,636,83,Shortsword
+83,1,Stone Scimitar,275,122,36,906,84,Scimitar
+84,1,Stone Mace,305,198,15,819,85,Mace
+85,1,Stone Sword,305,152,30,906,86,Sword
+86,1,Stone Battleaxe,367,214,24,1002,87,Battleaxe
+87,1,Stone Longsword,397,183,36,1089,88,Longsword
+88,1,Stone Rapier,275,137,45,1086,89,Rapier
+89,1,Stone Warhammer,489,275,18,1095,90,Warhammer
+90,1,Stone Greatsword,611,275,55,1650,91,Greatsword
+91,1,Polished Stone Dagger,211,87,17,516,92,Dagger
+92,1,Polished Stone Shortsword,281,123,24,729,93,Shortsword
+93,1,Polished Stone Scimitar,316,140,42,1050,94,Scimitar
+94,1,Polished Stone Mace,351,228,17,939,95,Mace
+95,1,Polished Stone Sword,351,175,35,1050,96,Sword
+96,1,Polished Stone Battleaxe,422,246,28,1158,97,Battleaxe
+97,1,Polished Stone Longsword,457,211,42,1263,98,Longsword
+98,1,Polished Stone Rapier,316,158,52,1254,99,Rapier
+99,1,Polished Stone Warhammer,562,316,21,1263,100,Warhammer
+100,1,Polished Stone Greatsword,703,316,63,1893,101,Greatsword
+101,1,Marble Dagger,242,101,20,603,102,Dagger
+102,1,Marble Shortsword,323,141,28,843,103,Shortsword
+103,1,Marble Scimitar,364,161,48,1203,104,Scimitar
+104,1,Marble Mace,404,262,20,1086,105,Mace
+105,1,Marble Sword,404,202,40,1206,106,Sword
+106,1,Marble Battleaxe,485,283,32,1329,107,Battleaxe
+107,1,Marble Longsword,525,242,48,1446,108,Longsword
+108,1,Marble Rapier,364,182,60,1446,109,Rapier
+109,1,Marble Warhammer,647,364,24,1452,110,Warhammer
+110,1,Marble Greatsword,809,364,72,2172,111,Greatsword
+111,1,Granite Dagger,279,116,23,693,112,Dagger
+112,1,Granite Shortsword,372,162,32,966,113,Shortsword
+113,1,Granite Scimitar,418,186,55,1383,114,Scimitar
+114,1,Granite Mace,465,302,23,1251,115,Mace
+115,1,Granite Sword,465,232,46,1386,116,Sword
+116,1,Granite Battleaxe,558,325,37,1530,117,Battleaxe
+117,1,Granite Longsword,604,279,55,1662,118,Longsword
+118,1,Granite Rapier,418,209,69,1662,119,Rapier
+119,1,Granite Warhammer,744,418,27,1659,120,Warhammer
+120,1,Granite Greatsword,930,418,83,2499,121,Greatsword
+121,1,Flint Dagger,321,133,26,789,122,Dagger
+122,1,Flint Shortsword,428,187,37,1116,123,Shortsword
+123,1,Flint Scimitar,481,214,64,1602,124,Scimitar
+124,1,Flint Mace,535,347,26,1431,125,Mace
+125,1,Flint Sword,535,267,53,1596,126,Sword
+126,1,Flint Battleaxe,642,374,42,1752,127,Battleaxe
+127,1,Flint Longsword,695,321,64,1923,128,Longsword
+128,1,Flint Rapier,481,240,80,1920,129,Rapier
+129,1,Flint Warhammer,856,481,32,1923,130,Warhammer
+130,1,Flint Greatsword,1070,481,96,2883,131,Greatsword
+131,1,Obsidian Dagger,369,153,30,909,132,Dagger
+132,1,Obsidian Shortsword,492,215,43,1290,133,Shortsword
+133,1,Obsidian Scimitar,553,246,73,1833,134,Scimitar
+134,1,Obsidian Mace,615,399,30,1647,135,Mace
+135,1,Obsidian Sword,615,307,61,1836,136,Sword
+136,1,Obsidian Battleaxe,738,430,49,2025,137,Battleaxe
+137,1,Obsidian Longsword,799,369,73,2202,138,Longsword
+138,1,Obsidian Rapier,553,276,92,2208,139,Rapier
+139,1,Obsidian Warhammer,984,553,36,2199,140,Warhammer
+140,1,Obsidian Greatsword,1230,553,110,3309,141,Greatsword
+141,1,Copper Dagger,424,176,35,1053,142,Dagger
+142,1,Copper Shortsword,566,247,49,1476,143,Shortsword
+143,1,Copper Scimitar,636,283,84,2109,144,Scimitar
+144,1,Copper Mace,707,459,35,1902,145,Mace
+145,1,Copper Sword,707,353,70,2109,146,Sword
+146,1,Copper Battleaxe,849,495,56,2325,147,Battleaxe
+147,1,Copper Longsword,919,424,84,2532,148,Longsword
+148,1,Copper Rapier,636,318,106,2544,149,Rapier
+149,1,Copper Warhammer,1132,636,42,2538,150,Warhammer
+150,1,Copper Greatsword,1415,636,127,3813,151,Greatsword
+151,1,Oxidized Copper Dagger,488,203,40,1209,152,Dagger
+152,1,Oxidized Copper Shortsword,650,284,56,1692,153,Shortsword
+153,1,Oxidized Copper Scimitar,732,325,97,2430,154,Scimitar
+154,1,Oxidized Copper Mace,813,528,40,2184,155,Mace
+155,1,Oxidized Copper Sword,813,406,81,2433,156,Sword
+156,1,Oxidized Copper Battleaxe,976,569,65,2682,157,Battleaxe
+157,1,Oxidized Copper Longsword,1057,488,97,2919,158,Longsword
+158,1,Oxidized Copper Rapier,732,366,122,2928,159,Rapier
+159,1,Oxidized Copper Warhammer,1301,732,48,2916,160,Warhammer
+160,1,Oxidized Copper Greatsword,1627,732,146,4386,161,Greatsword
+161,1,Polished Copper Dagger,561,233,46,1389,162,Dagger
+162,1,Polished Copper Shortsword,748,327,65,1956,163,Shortsword
+163,1,Polished Copper Scimitar,842,374,112,2802,164,Scimitar
+164,1,Polished Copper Mace,935,608,46,2514,165,Mace
+165,1,Polished Copper Sword,935,467,93,2796,166,Sword
+166,1,Polished Copper Battleaxe,1122,655,74,3075,167,Battleaxe
+167,1,Polished Copper Longsword,1216,561,112,3363,168,Longsword
+168,1,Polished Copper Rapier,842,421,140,3363,169,Rapier
+169,1,Polished Copper Warhammer,1497,842,56,3366,170,Warhammer
+170,1,Polished Copper Greatsword,1871,842,168,5046,171,Greatsword
+171,1,Heavy Copper Dagger,645,269,53,1602,172,Dagger
+172,1,Heavy Copper Shortsword,860,376,75,2253,173,Shortsword
+173,1,Heavy Copper Scimitar,968,430,129,3225,174,Scimitar
+174,1,Heavy Copper Mace,1076,699,53,2892,175,Mace
+175,1,Heavy Copper Sword,1076,538,107,3219,176,Sword
+176,1,Heavy Copper Battleaxe,1291,753,86,3549,177,Battleaxe
+177,1,Heavy Copper Longsword,1398,645,129,3870,178,Longsword
+178,1,Heavy Copper Rapier,968,484,161,3867,179,Rapier
+179,1,Heavy Copper Warhammer,1721,968,64,3864,180,Warhammer
+180,1,Heavy Copper Greatsword,2152,968,193,5799,181,Greatsword
+181,1,Tin Dagger,742,309,61,1842,182,Dagger
+182,1,Tin Shortsword,990,433,86,2589,183,Shortsword
+183,1,Tin Scimitar,1113,495,148,3705,184,Scimitar
+184,1,Tin Mace,1237,804,61,3327,185,Mace
+185,1,Tin Sword,1237,618,123,3699,186,Sword
+186,1,Tin Battleaxe,1485,866,99,4083,187,Battleaxe
+187,1,Tin Longsword,1608,742,148,4446,188,Longsword
+188,1,Tin Rapier,1113,556,185,4443,189,Rapier
+189,1,Tin Warhammer,1980,1113,74,4449,190,Warhammer
+190,1,Tin Greatsword,2475,1113,222,6669,191,Greatsword
+191,1,Bronze Dagger,853,355,71,2130,192,Dagger
+192,1,Bronze Shortsword,1138,498,99,2979,193,Shortsword
+193,1,Bronze Scimitar,1280,569,170,4257,194,Scimitar
+194,1,Bronze Mace,1423,925,71,3840,195,Mace
+195,1,Bronze Sword,1423,711,142,4263,196,Sword
+196,1,Bronze Battleaxe,1707,996,113,4683,197,Battleaxe
+197,1,Bronze Longsword,1850,853,170,5109,198,Longsword
+198,1,Bronze Rapier,1280,640,213,5115,199,Rapier
+199,1,Bronze Warhammer,2277,1280,85,5115,200,Warhammer
+200,1,Bronze Greatsword,2846,1280,256,7680,201,Greatsword
+201,1,Ancient Bronze Dagger,981,409,81,2442,202,Dagger
+202,1,Ancient Bronze Shortsword,1309,572,114,3426,203,Shortsword
+203,1,Ancient Bronze Scimitar,1472,654,196,4902,204,Scimitar
+204,1,Ancient Bronze Mace,1636,1063,81,4404,205,Mace
+205,1,Ancient Bronze Sword,1636,818,163,4899,206,Sword
+206,1,Ancient Bronze Battleaxe,1963,1145,130,5385,207,Battleaxe
+207,1,Ancient Bronze Longsword,2127,981,196,5883,208,Longsword
+208,1,Ancient Bronze Rapier,1472,736,245,5883,209,Rapier
+209,1,Ancient Bronze Warhammer,2618,1472,98,5886,210,Warhammer
+210,1,Ancient Bronze Greatsword,3273,1472,294,8826,211,Greatsword
+211,1,Gilded Bronze Dagger,1129,470,94,2820,212,Dagger
+212,1,Gilded Bronze Shortsword,1505,658,131,3939,213,Shortsword
+213,1,Gilded Bronze Scimitar,1693,752,225,5631,214,Scimitar
+214,1,Gilded Bronze Mace,1882,1223,94,5079,215,Mace
+215,1,Gilded Bronze Sword,1882,941,188,5643,216,Sword
+216,1,Gilded Bronze Battleaxe,2258,1317,150,6201,217,Battleaxe
+217,1,Gilded Bronze Longsword,2446,1129,225,6762,218,Longsword
+218,1,Gilded Bronze Rapier,1693,846,282,6768,219,Rapier
+219,1,Gilded Bronze Warhammer,3011,1693,112,6759,220,Warhammer
+220,1,Gilded Bronze Greatsword,3764,1693,338,10149,221,Greatsword
+221,1,Brass Dagger,1298,541,108,3243,222,Dagger
+222,1,Brass Shortsword,1731,757,151,4536,223,Shortsword
+223,1,Brass Scimitar,1948,865,259,6480,224,Scimitar
+224,1,Brass Mace,2164,1406,108,5838,225,Mace
+225,1,Brass Sword,2164,1082,216,6486,226,Sword
+226,1,Brass Battleaxe,2597,1515,173,7140,227,Battleaxe
+227,1,Brass Longsword,2813,1298,259,7779,228,Longsword
+228,1,Brass Rapier,1948,974,324,7782,229,Rapier
+229,1,Brass Warhammer,3463,1948,129,7779,230,Warhammer
+230,1,Brass Greatsword,4328,1948,389,11679,231,Greatsword
+231,1,Iron Dagger,1493,622,124,3726,232,Dagger
+232,1,Iron Shortsword,1991,871,174,5223,233,Shortsword
+233,1,Iron Scimitar,2240,995,298,7455,234,Scimitar
+234,1,Iron Mace,2489,1617,124,6711,235,Mace
+235,1,Iron Sword,2489,1244,248,7452,236,Sword
+236,1,Iron Battleaxe,2986,1742,199,8211,237,Battleaxe
+237,1,Iron Longsword,3235,1493,298,8949,238,Longsword
+238,1,Iron Rapier,2240,1120,373,8955,239,Rapier
+239,1,Iron Warhammer,3982,2240,149,8955,240,Warhammer
+240,1,Iron Greatsword,4978,2240,448,13440,241,Greatsword
+241,1,Cast Iron Dagger,1717,715,143,4290,242,Dagger
+242,1,Cast Iron Shortsword,2290,1001,200,6003,243,Shortsword
+243,1,Cast Iron Scimitar,2576,1145,343,8580,244,Scimitar
+244,1,Cast Iron Mace,2862,1860,143,7725,245,Mace
+245,1,Cast Iron Sword,2862,1431,286,8583,246,Sword
+246,1,Cast Iron Battleaxe,3435,2003,229,9444,247,Battleaxe
+247,1,Cast Iron Longsword,3721,1717,343,10296,248,Longsword
+248,1,Cast Iron Rapier,2576,1288,429,10299,249,Rapier
+249,1,Cast Iron Warhammer,4580,2576,171,10293,250,Warhammer
+250,1,Cast Iron Greatsword,5725,2576,515,15453,251,Greatsword
+251,1,Wrought Iron Dagger,1975,822,164,4926,252,Dagger
+252,1,Wrought Iron Shortsword,2633,1152,230,6906,253,Shortsword
+253,1,Wrought Iron Scimitar,2962,1316,395,9873,254,Scimitar
+254,1,Wrought Iron Mace,3291,2139,164,8877,255,Mace
+255,1,Wrought Iron Sword,3291,1645,329,9870,256,Sword
+256,1,Wrought Iron Battleaxe,3950,2304,263,10857,257,Battleaxe
+257,1,Wrought Iron Longsword,4279,1975,395,11850,258,Longsword
+258,1,Wrought Iron Rapier,2962,1481,493,11838,259,Rapier
+259,1,Wrought Iron Warhammer,5267,2962,197,11841,260,Warhammer
+260,1,Wrought Iron Greatsword,6583,2962,592,17766,261,Greatsword
+261,1,Forged Iron Dagger,2271,946,189,5673,262,Dagger
+262,1,Forged Iron Shortsword,3028,1324,264,7932,263,Shortsword
+263,1,Forged Iron Scimitar,3407,1514,454,11352,264,Scimitar
+264,1,Forged Iron Mace,3785,2460,189,10215,265,Mace
+265,1,Forged Iron Sword,3785,1892,378,11346,266,Sword
+266,1,Forged Iron Battleaxe,4542,2649,302,12477,267,Battleaxe
+267,1,Forged Iron Longsword,4921,2271,454,13623,268,Longsword
+268,1,Forged Iron Rapier,3407,1703,567,13614,269,Rapier
+269,1,Forged Iron Warhammer,6057,3407,227,13626,270,Warhammer
+270,1,Forged Iron Greatsword,7571,3407,681,20436,271,Greatsword
+271,1,Steel Dagger,2612,1088,217,6519,272,Dagger
+272,1,Steel Shortsword,3482,1523,304,9129,273,Shortsword
+273,1,Steel Scimitar,3918,1741,522,13053,274,Scimitar
+274,1,Steel Mace,4353,2829,217,11742,275,Mace
+275,1,Steel Sword,4353,2176,435,13053,276,Sword
+276,1,Steel Battleaxe,5224,3047,348,14361,277,Battleaxe
+277,1,Steel Longsword,5659,2612,522,15666,278,Longsword
+278,1,Steel Rapier,3918,1959,653,15672,279,Rapier
+279,1,Steel Warhammer,6965,3918,261,15669,280,Warhammer
+280,1,Steel Greatsword,8707,3918,783,23499,281,Greatsword
+281,1,Carbon Steel Dagger,3003,1251,250,7503,282,Dagger
+282,1,Carbon Steel Shortsword,4005,1752,350,10506,283,Shortsword
+283,1,Carbon Steel Scimitar,4505,2002,600,15006,284,Scimitar
+284,1,Carbon Steel Mace,5006,3254,250,13512,285,Mace
+285,1,Carbon Steel Sword,5006,2503,500,15009,286,Sword
+286,1,Carbon Steel Battleaxe,6007,3504,400,16512,287,Battleaxe
+287,1,Carbon Steel Longsword,6508,3003,600,18009,288,Longsword
+288,1,Carbon Steel Rapier,4505,2252,750,18006,289,Rapier
+289,1,Carbon Steel Warhammer,8010,4505,300,18015,290,Warhammer
+290,1,Carbon Steel Greatsword,10013,4505,901,27030,291,Greatsword
+291,1,Damascus Steel Dagger,3454,1439,287,8622,292,Dagger
+292,1,Damascus Steel Shortsword,4606,2015,403,12090,293,Shortsword
+293,1,Damascus Steel Scimitar,5181,2303,690,17259,294,Scimitar
+294,1,Damascus Steel Mace,5757,3742,287,15531,295,Mace
+295,1,Damascus Steel Sword,5757,2878,575,17259,296,Sword
+296,1,Damascus Steel Battleaxe,6909,4030,460,18990,297,Battleaxe
+297,1,Damascus Steel Longsword,7484,3454,690,20712,298,Longsword
+298,1,Damascus Steel Rapier,5181,2590,863,20715,299,Rapier
+299,1,Damascus Steel Warhammer,9212,5181,345,20718,300,Warhammer
+300,1,Damascus Steel Greatsword,11515,5181,1036,31083,301,Greatsword
+301,1,Stainless Steel Dagger,3972,1655,331,9930,302,Dagger
+302,1,Stainless Steel Shortsword,5296,2317,463,13896,303,Shortsword
+303,1,Stainless Steel Scimitar,5959,2648,794,19854,304,Scimitar
+304,1,Stainless Steel Mace,6621,4303,331,17874,305,Mace
+305,1,Stainless Steel Sword,6621,3310,662,19860,306,Sword
+306,1,Stainless Steel Battleaxe,7945,4634,529,21837,307,Battleaxe
+307,1,Stainless Steel Longsword,8607,3972,794,23826,308,Longsword
+308,1,Stainless Steel Rapier,5959,2979,993,23832,309,Rapier
+309,1,Stainless Steel Warhammer,10593,5959,397,23832,310,Warhammer
+310,1,Stainless Steel Greatsword,13242,5959,1191,35742,311,Greatsword
+311,1,Dark Steel Dagger,4568,1903,380,11409,312,Dagger
+312,1,Dark Steel Shortsword,6091,2665,533,15990,313,Shortsword
+313,1,Dark Steel Scimitar,6852,3045,913,22830,314,Scimitar
+314,1,Dark Steel Mace,7614,4949,380,20547,315,Mace
+315,1,Dark Steel Sword,7614,3807,761,22836,316,Sword
+316,1,Dark Steel Battleaxe,9137,5330,609,25125,317,Battleaxe
+317,1,Dark Steel Longsword,9898,4568,913,27399,318,Longsword
+318,1,Dark Steel Rapier,6852,3426,1142,27408,319,Rapier
+319,1,Dark Steel Warhammer,12182,6852,456,27396,320,Warhammer
+320,1,Dark Steel Greatsword,15228,6852,1370,41106,321,Greatsword
+321,1,Black Iron Dagger,5253,2189,437,13122,322,Dagger
+322,1,Black Iron Shortsword,7005,3064,612,18372,323,Shortsword
+323,1,Black Iron Scimitar,7880,3502,1050,26256,324,Scimitar
+324,1,Black Iron Mace,8756,5691,437,23628,325,Mace
+325,1,Black Iron Sword,8756,4378,875,26259,326,Sword
+326,1,Black Iron Battleaxe,10507,6129,700,28887,327,Battleaxe
+327,1,Black Iron Longsword,11383,5253,1050,31509,328,Longsword
+328,1,Black Iron Rapier,7880,3940,1313,31515,329,Rapier
+329,1,Black Iron Warhammer,14010,7880,525,31515,330,Warhammer
+330,1,Black Iron Greatsword,17513,7880,1576,47280,331,Greatsword
+331,1,Shadow Steel Dagger,6041,2517,503,15096,332,Dagger
+332,1,Shadow Steel Shortsword,8055,3524,704,21132,333,Shortsword
+333,1,Shadow Steel Scimitar,9062,4027,1208,30201,334,Scimitar
+334,1,Shadow Steel Mace,10069,6545,503,27180,335,Mace
+335,1,Shadow Steel Sword,10069,5034,1006,30192,336,Sword
+336,1,Shadow Steel Battleaxe,12083,7048,805,33219,337,Battleaxe
+337,1,Shadow Steel Longsword,13090,6041,1208,36243,338,Longsword
+338,1,Shadow Steel Rapier,9062,4531,1510,36243,339,Rapier
+339,1,Shadow Steel Warhammer,16111,9062,604,36246,340,Warhammer
+340,1,Shadow Steel Greatsword,20139,9062,1812,54366,341,Greatsword
+341,1,Night Metal Dagger,6948,2895,579,17370,342,Dagger
+342,1,Night Metal Shortsword,9264,4053,810,24309,343,Shortsword
+343,1,Night Metal Scimitar,10422,4632,1389,34731,344,Scimitar
+344,1,Night Metal Mace,11580,7527,579,31266,345,Mace
+345,1,Night Metal Sword,11580,5790,1158,34740,346,Sword
+346,1,Night Metal Battleaxe,13896,8106,926,38208,347,Battleaxe
+347,1,Night Metal Longsword,15054,6948,1389,41679,348,Longsword
+348,1,Night Metal Rapier,10422,5211,1737,41688,349,Rapier
+349,1,Night Metal Warhammer,18528,10422,694,41676,350,Warhammer
+350,1,Night Metal Greatsword,23160,10422,2084,62526,351,Greatsword
+351,1,Silver Dagger,7990,3329,665,19962,352,Dagger
+352,1,Silver Shortsword,10654,4661,932,27963,353,Shortsword
+353,1,Silver Scimitar,11985,5327,1598,39951,354,Scimitar
+354,1,Silver Mace,13317,8656,665,35943,355,Mace
+355,1,Silver Sword,13317,6658,1331,39939,356,Sword
+356,1,Silver Battleaxe,15981,9322,1065,43941,357,Battleaxe
+357,1,Silver Longsword,17312,7990,1598,47940,358,Longsword
+358,1,Silver Rapier,11985,5992,1997,47931,359,Rapier
+359,1,Silver Warhammer,21308,11985,799,47940,360,Warhammer
+360,1,Silver Greatsword,26635,11985,2397,71910,361,Greatsword
+361,1,Sterling Silver Dagger,9189,3828,765,22959,362,Dagger
+362,1,Sterling Silver Shortsword,12252,5360,1072,32160,363,Shortsword
+363,1,Sterling Silver Scimitar,13783,6126,1837,45933,364,Scimitar
+364,1,Sterling Silver Mace,15315,9954,765,41337,365,Mace
+365,1,Sterling Silver Sword,15315,7657,1531,45936,366,Sword
+366,1,Sterling Silver Battleaxe,18378,10720,1225,50535,367,Battleaxe
+367,1,Sterling Silver Longsword,19909,9189,1837,55122,368,Longsword
+368,1,Sterling Silver Rapier,13783,6891,2297,55128,369,Rapier
+369,1,Sterling Silver Warhammer,24504,13783,918,55119,370,Warhammer
+370,1,Sterling Silver Greatsword,30630,13783,2756,82689,371,Greatsword
+371,1,Pure Silver Dagger,10567,4403,880,26409,372,Dagger
+372,1,Pure Silver Shortsword,14089,6164,1232,36972,373,Shortsword
+373,1,Pure Silver Scimitar,15851,7044,2113,52827,374,Scimitar
+374,1,Pure Silver Mace,17612,11448,880,47544,375,Mace
+375,1,Pure Silver Sword,17612,8806,1761,52833,376,Sword
+376,1,Pure Silver Battleaxe,21134,12328,1408,58104,377,Battleaxe
+377,1,Pure Silver Longsword,22896,10567,2113,63396,378,Longsword
+378,1,Pure Silver Rapier,15851,7925,2641,63390,379,Rapier
+379,1,Pure Silver Warhammer,28179,15851,1056,63393,380,Warhammer
+380,1,Pure Silver Greatsword,35224,15851,3170,95103,381,Greatsword
+381,1,Holy Silver Dagger,12152,5063,1012,30369,382,Dagger
+382,1,Holy Silver Shortsword,16203,7089,1417,42522,383,Shortsword
+383,1,Holy Silver Scimitar,18228,8101,2430,60753,384,Scimitar
+384,1,Holy Silver Mace,20254,13165,1012,54675,385,Mace
+385,1,Holy Silver Sword,20254,10127,2025,60756,386,Sword
+386,1,Holy Silver Battleaxe,24305,14178,1620,66834,387,Battleaxe
+387,1,Holy Silver Longsword,26330,12152,2430,72906,388,Longsword
+388,1,Holy Silver Rapier,18228,9114,3038,72912,389,Rapier
+389,1,Holy Silver Warhammer,32406,18228,1215,72909,390,Warhammer
+390,1,Holy Silver Greatsword,40508,18228,3645,109359,391,Greatsword
+391,1,Gold Dagger,13975,5823,1164,34929,392,Dagger
+392,1,Gold Shortsword,18633,8152,1630,48906,393,Shortsword
+393,1,Gold Scimitar,20963,9316,2795,69873,394,Scimitar
+394,1,Gold Mace,23292,15140,1164,62880,395,Mace
+395,1,Gold Sword,23292,11646,2329,69873,396,Sword
+396,1,Gold Battleaxe,27950,16304,1863,76857,397,Battleaxe
+397,1,Gold Longsword,30280,13975,2795,83850,398,Longsword
+398,1,Gold Rapier,20963,10481,3493,83838,399,Rapier
+399,1,Gold Warhammer,37267,20963,1397,83844,400,Warhammer
+400,1,Gold Greatsword,46584,20963,4192,125769,401,Greatsword
+401,1,Rose Gold Dagger,16071,6696,1339,40173,402,Dagger
+402,1,Rose Gold Shortsword,21429,9375,1875,56250,403,Shortsword
+403,1,Rose Gold Scimitar,24107,10714,3214,80352,404,Scimitar
+404,1,Rose Gold Mace,26786,17411,1339,72318,405,Mace
+405,1,Rose Gold Sword,26786,13393,2678,80349,406,Sword
+406,1,Rose Gold Battleaxe,32143,18750,2142,88380,407,Battleaxe
+407,1,Rose Gold Longsword,34822,16071,3214,96423,408,Longsword
+408,1,Rose Gold Rapier,24107,12053,4017,96414,409,Rapier
+409,1,Rose Gold Warhammer,42858,24107,1607,96426,410,Warhammer
+410,1,Rose Gold Greatsword,53572,24107,4821,144636,411,Greatsword
+411,1,White Gold Dagger,18482,7701,1540,46203,412,Dagger
+412,1,White Gold Shortsword,24643,10781,2156,64683,413,Shortsword
+413,1,White Gold Scimitar,27723,12321,3696,92403,414,Scimitar
+414,1,White Gold Mace,30804,20022,1540,83166,415,Mace
+415,1,White Gold Sword,30804,15402,3080,92406,416,Sword
+416,1,White Gold Battleaxe,36965,21563,2464,101649,417,Battleaxe
+417,1,White Gold Longsword,40045,18482,3696,110886,418,Longsword
+418,1,White Gold Rapier,27723,13861,4620,110883,419,Rapier
+419,1,White Gold Warhammer,49286,27723,1848,110889,420,Warhammer
+420,1,White Gold Greatsword,61608,27723,5544,166329,421,Greatsword
+421,1,Royal Gold Dagger,21254,8856,1771,53133,422,Dagger
+422,1,Royal Gold Shortsword,28339,12398,2479,74379,423,Shortsword
+423,1,Royal Gold Scimitar,31882,14169,4250,106257,424,Scimitar
+424,1,Royal Gold Mace,35424,23026,1771,95643,425,Mace
+425,1,Royal Gold Sword,35424,17712,3542,106266,426,Sword
+426,1,Royal Gold Battleaxe,42509,24797,2833,116886,427,Battleaxe
+427,1,Royal Gold Longsword,46052,21254,4250,127512,428,Longsword
+428,1,Royal Gold Rapier,31882,15941,5313,127518,429,Rapier
+429,1,Royal Gold Warhammer,56679,31882,2125,127521,430,Warhammer
+430,1,Royal Gold Greatsword,70849,31882,6376,191286,431,Greatsword
+431,1,Platinum Dagger,24443,10184,2036,61092,432,Dagger
+432,1,Platinum Shortsword,32590,14258,2851,85539,433,Shortsword
+433,1,Platinum Scimitar,36664,16295,4888,122205,434,Scimitar
+434,1,Platinum Mace,40738,26480,2036,109980,435,Mace
+435,1,Platinum Sword,40738,20369,4073,122202,436,Sword
+436,1,Platinum Battleaxe,48886,28517,3259,134436,437,Battleaxe
+437,1,Platinum Longsword,52960,24443,4888,146649,438,Longsword
+438,1,Platinum Rapier,36664,18332,6110,146646,439,Rapier
+439,1,Platinum Warhammer,65181,36664,2444,146652,440,Warhammer
+440,1,Platinum Greatsword,81477,36664,7332,219972,441,Greatsword
+441,1,Dense Platinum Dagger,28109,11712,2342,70266,442,Dagger
+442,1,Dense Platinum Shortsword,37479,16397,3279,98376,443,Shortsword
+443,1,Dense Platinum Scimitar,42164,18739,5621,140532,444,Scimitar
+444,1,Dense Platinum Mace,46849,30452,2342,126486,445,Mace
+445,1,Dense Platinum Sword,46849,23424,4684,140532,446,Sword
+446,1,Dense Platinum Battleaxe,56219,32794,3747,154587,447,Battleaxe
+447,1,Dense Platinum Longsword,60904,28109,5621,168642,448,Longsword
+448,1,Dense Platinum Rapier,42164,21082,7027,168651,449,Rapier
+449,1,Dense Platinum Warhammer,74959,42164,2810,168642,450,Warhammer
+450,1,Dense Platinum Greatsword,93699,42164,8432,252972,451,Greatsword
+451,1,Noble Platinum Dagger,32326,13469,2693,80802,452,Dagger
+452,1,Noble Platinum Shortsword,43101,18856,3771,113133,453,Shortsword
+453,1,Noble Platinum Scimitar,48489,21550,6465,161625,454,Scimitar
+454,1,Noble Platinum Mace,53876,35020,2693,145455,455,Mace
+455,1,Noble Platinum Sword,53876,26938,5387,161619,456,Sword
+456,1,Noble Platinum Battleaxe,64652,37713,4310,177789,457,Battleaxe
+457,1,Noble Platinum Longsword,70040,32326,6465,193953,458,Longsword
+458,1,Noble Platinum Rapier,48489,24244,8081,193947,459,Rapier
+459,1,Noble Platinum Warhammer,86203,48489,3232,193947,460,Warhammer
+460,1,Noble Platinum Greatsword,107753,48489,9697,290922,461,Greatsword
+461,1,Mithril Dagger,37175,15489,3097,92922,462,Dagger
+462,1,Mithril Shortsword,49566,21685,4337,130110,463,Shortsword
+463,1,Mithril Scimitar,55762,24783,7435,185874,464,Scimitar
+464,1,Mithril Mace,61958,40273,3097,167274,465,Mace
+465,1,Mithril Sword,61958,30979,6195,185862,466,Sword
+466,1,Mithril Battleaxe,74350,43370,4956,204450,467,Battleaxe
+467,1,Mithril Longsword,80546,37175,7435,223050,468,Longsword
+468,1,Mithril Rapier,55762,27881,9293,223038,469,Rapier
+469,1,Mithril Warhammer,99133,55762,3717,223041,470,Warhammer
+470,1,Mithril Greatsword,123916,55762,11152,334566,471,Greatsword
+471,1,Elven Mithril Dagger,42751,17813,3562,106869,472,Dagger
+472,1,Elven Mithril Shortsword,57001,24938,4987,149619,473,Shortsword
+473,1,Elven Mithril Scimitar,64127,28500,8550,213750,474,Scimitar
+474,1,Elven Mithril Mace,71252,46313,3562,192369,475,Mace
+475,1,Elven Mithril Sword,71252,35626,7125,213753,476,Sword
+476,1,Elven Mithril Battleaxe,85502,49876,5700,235128,477,Battleaxe
+477,1,Elven Mithril Longsword,92627,42751,8550,256503,478,Longsword
+478,1,Elven Mithril Rapier,64127,32063,10687,256494,479,Rapier
+479,1,Elven Mithril Warhammer,114003,64127,4275,256506,480,Warhammer
+480,1,Elven Mithril Greatsword,142504,64127,12825,384756,481,Greatsword
+481,1,Ancient Mithril Dagger,49164,20485,4097,122910,482,Dagger
+482,1,Ancient Mithril Shortsword,65552,28679,5735,172062,483,Shortsword
+483,1,Ancient Mithril Scimitar,73746,32776,9832,245808,484,Scimitar
+484,1,Ancient Mithril Mace,81940,53261,4097,221238,485,Mace
+485,1,Ancient Mithril Sword,81940,40970,8194,245820,486,Sword
+486,1,Ancient Mithril Battleaxe,98328,57358,6555,270399,487,Battleaxe
+487,1,Ancient Mithril Longsword,106522,49164,9832,294972,488,Longsword
+488,1,Ancient Mithril Rapier,73746,36873,12291,294984,489,Rapier
+489,1,Ancient Mithril Warhammer,131104,73746,4916,294978,490,Warhammer
+490,1,Ancient Mithril Greatsword,163880,73746,14749,442473,491,Greatsword
+491,1,Celestial Mithril Dagger,56538,23557,4711,141336,492,Dagger
+492,1,Celestial Mithril Shortsword,75384,32980,6596,197880,493,Shortsword
+493,1,Celestial Mithril Scimitar,84807,37692,11307,282681,494,Scimitar
+494,1,Celestial Mithril Mace,94231,61250,4711,254415,495,Mace
+495,1,Celestial Mithril Sword,94231,47115,9423,282690,496,Sword
+496,1,Celestial Mithril Battleaxe,113077,65961,7538,310953,497,Battleaxe
+497,1,Celestial Mithril Longsword,122500,56538,11307,339219,498,Longsword
+498,1,Celestial Mithril Rapier,84807,42403,14134,339219,499,Rapier
+499,1,Celestial Mithril Warhammer,150769,84807,5653,339216,500,Warhammer
+500,1,Celestial Mithril Greatsword,188462,84807,16961,508836,501,Greatsword
+501,1,Orichalcum Dagger,65019,27091,5418,162543,502,Dagger
+502,1,Orichalcum Shortsword,86692,37928,7585,227559,503,Shortsword
+503,1,Orichalcum Scimitar,97529,43346,13003,325083,504,Scimitar
+504,1,Orichalcum Mace,108365,70437,5418,292581,505,Mace
+505,1,Orichalcum Sword,108365,54182,10836,325086,506,Sword
+506,1,Orichalcum Battleaxe,130038,75856,8669,357603,507,Battleaxe
+507,1,Orichalcum Longsword,140875,65019,13003,390102,508,Longsword
+508,1,Orichalcum Rapier,97529,48764,16254,390102,509,Rapier
+509,1,Orichalcum Warhammer,173385,97529,6501,390102,510,Warhammer
+510,1,Orichalcum Greatsword,216731,97529,19505,585162,511,Greatsword
+511,1,Dwarven Orichalcum Dagger,74772,31155,6231,186930,512,Dagger
+512,1,Dwarven Orichalcum Shortsword,99696,43617,8723,261696,513,Shortsword
+513,1,Dwarven Orichalcum Scimitar,112158,49848,14954,373854,514,Scimitar
+514,1,Dwarven Orichalcum Mace,124620,81003,6231,336474,515,Mace
+515,1,Dwarven Orichalcum Sword,124620,62310,12462,373860,516,Sword
+516,1,Dwarven Orichalcum Battleaxe,149544,87234,9969,411237,517,Battleaxe
+517,1,Dwarven Orichalcum Longsword,162006,74772,14954,448626,518,Longsword
+518,1,Dwarven Orichalcum Rapier,112158,56079,18693,448632,519,Rapier
+519,1,Dwarven Orichalcum Warhammer,199392,112158,7477,448629,520,Warhammer
+520,1,Dwarven Orichalcum Greatsword,249241,112158,22431,672939,521,Greatsword
+521,1,Magma Orichalcum Dagger,85988,35828,7165,214959,522,Dagger
+522,1,Magma Orichalcum Shortsword,114650,50159,10031,300942,523,Shortsword
+523,1,Magma Orichalcum Scimitar,128982,57325,17197,429930,524,Scimitar
+524,1,Magma Orichalcum Mace,143313,93153,7165,386934,525,Mace
+525,1,Magma Orichalcum Sword,143313,71656,14331,429933,526,Sword
+526,1,Magma Orichalcum Battleaxe,171976,100319,11465,472932,527,Battleaxe
+527,1,Magma Orichalcum Longsword,186307,85988,17197,515919,528,Longsword
+528,1,Magma Orichalcum Rapier,128982,64491,21497,515928,529,Rapier
+529,1,Magma Orichalcum Warhammer,229301,128982,8598,515916,530,Warhammer
+530,1,Magma Orichalcum Greatsword,286627,128982,25796,773886,531,Greatsword
+531,1,Adamantite Dagger,98886,41202,8240,247206,532,Dagger
+532,1,Adamantite Shortsword,131848,57683,11536,346089,533,Shortsword
+533,1,Adamantite Scimitar,148329,65924,19777,494427,534,Scimitar
+534,1,Adamantite Mace,164810,107126,8240,444978,535,Mace
+535,1,Adamantite Sword,164810,82405,16481,494430,536,Sword
+536,1,Adamantite Battleaxe,197772,115367,13184,543861,537,Battleaxe
+537,1,Adamantite Longsword,214253,98886,19777,593313,538,Longsword
+538,1,Adamantite Rapier,148329,74164,24721,593307,539,Rapier
+539,1,Adamantite Warhammer,263697,148329,9888,593307,540,Warhammer
+540,1,Adamantite Greatsword,329621,148329,29665,889962,541,Greatsword
+541,1,Hardened Adamantite Dagger,113719,47383,9476,284289,542,Dagger
+542,1,Hardened Adamantite Shortsword,151625,66336,13267,398013,543,Shortsword
+543,1,Hardened Adamantite Scimitar,170579,75812,22743,568581,544,Scimitar
+544,1,Hardened Adamantite Mace,189532,123196,9476,511728,545,Mace
+545,1,Hardened Adamantite Sword,189532,94766,18953,568593,546,Sword
+546,1,Hardened Adamantite Battleaxe,227438,132672,15162,625446,547,Battleaxe
+547,1,Hardened Adamantite Longsword,246392,113719,22743,682302,548,Longsword
+548,1,Hardened Adamantite Rapier,170579,85289,28429,682302,549,Rapier
+549,1,Hardened Adamantite Warhammer,303251,170579,11371,682302,550,Warhammer
+550,1,Hardened Adamantite Greatsword,379064,170579,34115,1023462,551,Greatsword
+551,1,Perfect Adamantite Dagger,130777,54490,10898,326940,552,Dagger
+552,1,Perfect Adamantite Shortsword,174369,76286,15257,457713,553,Shortsword
+553,1,Perfect Adamantite Scimitar,196165,87184,26155,653877,554,Scimitar
+554,1,Perfect Adamantite Mace,217962,141675,10898,588495,555,Mace
+555,1,Perfect Adamantite Sword,217962,108981,21796,653883,556,Sword
+556,1,Perfect Adamantite Battleaxe,261554,152573,17436,719259,557,Battleaxe
+557,1,Perfect Adamantite Longsword,283350,130777,26155,784656,558,Longsword
+558,1,Perfect Adamantite Rapier,196165,98082,32694,784656,559,Rapier
+559,1,Perfect Adamantite Warhammer,348739,196165,13077,784650,560,Warhammer
+560,1,Perfect Adamantite Greatsword,435924,196165,39233,1176990,561,Greatsword
+561,1,Titanium Dagger,150393,62664,12532,375972,562,Dagger
+562,1,Titanium Shortsword,200525,87729,17545,526362,563,Shortsword
+563,1,Titanium Scimitar,225590,100262,30078,751956,564,Scimitar
+564,1,Titanium Mace,250656,162926,12532,676758,565,Mace
+565,1,Titanium Sword,250656,125328,25065,751959,566,Sword
+566,1,Titanium Battleaxe,300787,175459,20052,827157,567,Battleaxe
+567,1,Titanium Longsword,325853,150393,30078,902349,568,Longsword
+568,1,Titanium Rapier,225590,112795,37598,902355,569,Rapier
+569,1,Titanium Warhammer,401050,225590,15039,902355,570,Warhammer
+570,1,Titanium Greatsword,501313,225590,45118,1353540,571,Greatsword
+571,1,Alloy Titanium Dagger,172953,72063,14412,432369,572,Dagger
+572,1,Alloy Titanium Shortsword,230604,100889,20177,605322,573,Shortsword
+573,1,Alloy Titanium Scimitar,259429,115302,34590,864756,574,Scimitar
+574,1,Alloy Titanium Mace,288255,187365,14412,778275,575,Mace
+575,1,Alloy Titanium Sword,288255,144127,28825,864756,576,Sword
+576,1,Alloy Titanium Battleaxe,345906,201778,23060,951234,577,Battleaxe
+577,1,Alloy Titanium Longsword,374731,172953,34590,1037709,578,Longsword
+578,1,Alloy Titanium Rapier,259429,129714,43238,1037712,579,Rapier
+579,1,Alloy Titanium Warhammer,461208,259429,17295,1037712,580,Warhammer
+580,1,Alloy Titanium Greatsword,576510,259429,51885,1556562,581,Greatsword
+581,1,Space Titanium Dagger,198895,82873,16574,497229,582,Dagger
+582,1,Space Titanium Shortsword,265194,116022,23204,696126,583,Shortsword
+583,1,Space Titanium Scimitar,298343,132597,39779,994476,584,Scimitar
+584,1,Space Titanium Mace,331493,215470,16574,895020,585,Mace
+585,1,Space Titanium Sword,331493,165746,33149,994473,586,Sword
+586,1,Space Titanium Battleaxe,397791,232045,26519,1093920,587,Battleaxe
+587,1,Space Titanium Longsword,430941,198895,39779,1193370,588,Longsword
+588,1,Space Titanium Rapier,298343,149171,49723,1193358,589,Rapier
+589,1,Space Titanium Warhammer,530389,298343,19889,1193364,590,Warhammer
+590,1,Space Titanium Greatsword,662986,298343,59668,1790049,591,Greatsword
+591,1,Cobalt Dagger,228730,95304,19060,571812,592,Dagger
+592,1,Cobalt Shortsword,304973,133426,26685,800553,593,Shortsword
+593,1,Cobalt Scimitar,343095,152486,45746,1143648,594,Scimitar
+594,1,Cobalt Mace,381217,247791,19060,1029273,595,Mace
+595,1,Cobalt Sword,381217,190608,38121,1143639,596,Sword
+596,1,Cobalt Battleaxe,457460,266852,30497,1258011,597,Battleaxe
+597,1,Cobalt Longsword,495582,228730,45746,1372380,598,Longsword
+598,1,Cobalt Rapier,343095,171547,57182,1372371,599,Rapier
+599,1,Cobalt Warhammer,609947,343095,22873,1372380,600,Warhammer
+600,1,Cobalt Greatsword,762434,343095,68619,2058570,601,Greatsword
+601,1,Blue Cobalt Dagger,263039,109599,21919,657582,602,Dagger
+602,1,Blue Cobalt Shortsword,350719,153439,30687,920622,603,Shortsword
+603,1,Blue Cobalt Scimitar,394559,175359,52607,1315182,604,Scimitar
+604,1,Blue Cobalt Mace,438399,284959,21919,1183662,605,Mace
+605,1,Blue Cobalt Sword,438399,219199,43839,1315182,606,Sword
+606,1,Blue Cobalt Battleaxe,526079,306879,35071,1446702,607,Battleaxe
+607,1,Blue Cobalt Longsword,569919,263039,52607,1578222,608,Longsword
+608,1,Blue Cobalt Rapier,394559,197279,65759,1578222,609,Rapier
+609,1,Blue Cobalt Warhammer,701439,394559,26303,1578222,610,Warhammer
+610,1,Blue Cobalt Greatsword,876799,394559,78911,2367342,611,Greatsword
+611,1,Azure Cobalt Dagger,302495,126039,25207,756222,612,Dagger
+612,1,Azure Cobalt Shortsword,403327,176455,35291,1058730,613,Shortsword
+613,1,Azure Cobalt Scimitar,453743,201663,60499,1512474,614,Scimitar
+614,1,Azure Cobalt Mace,504159,327703,25207,1361214,615,Mace
+615,1,Azure Cobalt Sword,504159,252079,50415,1512462,616,Sword
+616,1,Azure Cobalt Battleaxe,604991,352911,40332,1663713,617,Battleaxe
+617,1,Azure Cobalt Longsword,655407,302495,60499,1814970,618,Longsword
+618,1,Azure Cobalt Rapier,453743,226871,75623,1814958,619,Rapier
+619,1,Azure Cobalt Warhammer,806655,453743,30249,1814964,620,Warhammer
+620,1,Azure Cobalt Greatsword,1008319,453743,90748,2722449,621,Greatsword
+621,1,Crystal Dagger,347870,144945,28989,869670,622,Dagger
+622,1,Crystal Shortsword,463827,202924,40584,1217532,623,Shortsword
+623,1,Crystal Scimitar,521805,231913,69574,1739349,624,Scimitar
+624,1,Crystal Mace,579783,376859,28989,1565412,625,Mace
+625,1,Crystal Sword,579783,289891,57978,1739343,626,Sword
+626,1,Crystal Battleaxe,695740,405848,46382,1913274,627,Battleaxe
+627,1,Crystal Longsword,753718,347870,69574,2087220,628,Longsword
+628,1,Crystal Rapier,521805,260902,86967,2087211,629,Rapier
+629,1,Crystal Warhammer,927654,521805,34787,2087220,630,Warhammer
+630,1,Crystal Greatsword,1159567,521805,104361,3130830,631,Greatsword
+631,1,Quartz Dagger,400050,166687,33337,1000116,632,Dagger
+632,1,Quartz Shortsword,533401,233362,46672,1400166,633,Shortsword
+633,1,Quartz Scimitar,600076,266700,80010,2000250,634,Scimitar
+634,1,Quartz Mace,666751,433388,33337,1800219,635,Mace
+635,1,Quartz Sword,666751,333375,66675,2000250,636,Sword
+636,1,Quartz Battleaxe,800101,466725,53340,2200275,637,Battleaxe
+637,1,Quartz Longsword,866776,400050,80010,2400300,638,Longsword
+638,1,Quartz Rapier,600076,300038,100012,2400294,639,Rapier
+639,1,Quartz Warhammer,1066802,600076,40005,2400303,640,Warhammer
+640,1,Quartz Greatsword,1333502,600076,120015,3600453,641,Greatsword
+641,1,Ruby Dagger,460058,191691,38338,1150143,642,Dagger
+642,1,Ruby Shortsword,613411,268367,53673,1610196,643,Shortsword
+643,1,Ruby Scimitar,690087,306705,92011,2300280,644,Scimitar
+644,1,Ruby Mace,766764,498396,38338,2070258,645,Mace
+645,1,Ruby Sword,766764,383382,76676,2300286,646,Sword
+646,1,Ruby Battleaxe,920116,536734,61341,2530317,647,Battleaxe
+647,1,Ruby Longsword,996793,460058,92011,2760339,648,Longsword
+648,1,Ruby Rapier,690087,345043,115014,2760339,649,Rapier
+649,1,Ruby Warhammer,1226822,690087,46005,2760336,650,Warhammer
+650,1,Ruby Greatsword,1533528,690087,138017,4140516,651,Greatsword
+651,1,Sapphire Dagger,529067,220444,44088,1322652,652,Dagger
+652,1,Sapphire Shortsword,705422,308622,61724,1851726,653,Shortsword
+653,1,Sapphire Scimitar,793600,352711,105813,2645328,654,Scimitar
+654,1,Sapphire Mace,881778,573156,44088,2380788,655,Mace
+655,1,Sapphire Sword,881778,440889,88177,2645322,656,Sword
+656,1,Sapphire Battleaxe,1058134,617245,70542,2909865,657,Battleaxe
+657,1,Sapphire Longsword,1146312,529067,105813,3174396,658,Longsword
+658,1,Sapphire Rapier,793600,396800,132266,3174390,659,Rapier
+659,1,Sapphire Warhammer,1410845,793600,52906,3174390,660,Warhammer
+660,1,Sapphire Greatsword,1763557,793600,158720,4761600,661,Greatsword
+661,1,Emerald Dagger,608427,253511,50702,1521063,662,Dagger
+662,1,Emerald Shortsword,811236,354915,70983,2129490,663,Shortsword
+663,1,Emerald Scimitar,912640,405618,121685,3042129,664,Scimitar
+664,1,Emerald Mace,1014045,659129,50702,2737917,665,Mace
+665,1,Emerald Sword,1014045,507022,101404,3042126,666,Sword
+666,1,Emerald Battleaxe,1216854,709831,81123,3346338,667,Battleaxe
+667,1,Emerald Longsword,1318259,608427,121685,3650556,668,Longsword
+668,1,Emerald Rapier,912640,456320,152106,3650550,669,Rapier
+669,1,Emerald Warhammer,1622472,912640,60842,3650550,670,Warhammer
+670,1,Emerald Greatsword,2028091,912640,182528,5475840,671,Greatsword
+671,1,Diamond Dagger,699691,291538,58307,1749219,672,Dagger
+672,1,Diamond Shortsword,932921,408153,81630,2448909,673,Shortsword
+673,1,Diamond Scimitar,1049537,466460,139938,3498450,674,Scimitar
+674,1,Diamond Mace,1166152,757999,58307,3148602,675,Mace
+675,1,Diamond Sword,1166152,583076,116615,3498453,676,Sword
+676,1,Diamond Battleaxe,1399382,816306,93292,3848298,677,Battleaxe
+677,1,Diamond Longsword,1515998,699691,139938,4198143,678,Longsword
+678,1,Diamond Rapier,1049537,524768,174922,4198134,679,Rapier
+679,1,Diamond Warhammer,1865843,1049537,69969,4198146,680,Warhammer
+680,1,Diamond Greatsword,2332304,1049537,209907,6297216,681,Greatsword
+681,1,Amethyst Dagger,804645,335268,67053,2011599,682,Dagger
+682,1,Amethyst Shortsword,1072860,469376,93875,2816253,683,Shortsword
+683,1,Amethyst Scimitar,1206967,536430,160929,4023225,684,Scimitar
+684,1,Amethyst Mace,1341075,871698,67053,3620889,685,Mace
+685,1,Amethyst Sword,1341075,670537,134107,4023216,686,Sword
+686,1,Amethyst Battleaxe,1609290,938752,107286,4425546,687,Battleaxe
+687,1,Amethyst Longsword,1743397,804645,160929,4827870,688,Longsword
+688,1,Amethyst Rapier,1206967,603483,201161,4827864,689,Rapier
+689,1,Amethyst Warhammer,2145720,1206967,80464,4827861,690,Warhammer
+690,1,Amethyst Greatsword,2682150,1206967,241393,7241796,691,Greatsword
+691,1,Topaz Dagger,925341,385559,77111,2313342,692,Dagger
+692,1,Topaz Shortsword,1233789,539782,107956,3238686,693,Shortsword
+693,1,Topaz Scimitar,1388012,616894,185068,4626702,694,Scimitar
+694,1,Topaz Mace,1542236,1002453,77111,4164024,695,Mace
+695,1,Topaz Sword,1542236,771118,154223,4626699,696,Sword
+696,1,Topaz Battleaxe,1850683,1079565,123378,5089365,697,Battleaxe
+697,1,Topaz Longsword,2004907,925341,185068,5552043,698,Longsword
+698,1,Topaz Rapier,1388012,694006,231335,5552043,699,Rapier
+699,1,Topaz Warhammer,2467578,1388012,92534,5552046,700,Warhammer
+700,1,Topaz Greatsword,3084473,1388012,277602,8328066,701,Greatsword
+701,1,Onyx Dagger,1064143,443393,88678,2660349,702,Dagger
+702,1,Onyx Shortsword,1418857,620750,124150,3724500,703,Shortsword
+703,1,Onyx Scimitar,1596214,709428,212828,5320704,704,Scimitar
+704,1,Onyx Mace,1773572,1152821,88678,4788633,705,Mace
+705,1,Onyx Sword,1773572,886786,177357,5320713,706,Sword
+706,1,Onyx Battleaxe,2128286,1241500,141885,5852775,707,Battleaxe
+707,1,Onyx Longsword,2305643,1064143,212828,6384849,708,Longsword
+708,1,Onyx Rapier,1596214,798107,266035,6384846,709,Rapier
+709,1,Onyx Warhammer,2837715,1596214,106414,6384852,710,Warhammer
+710,1,Onyx Greatsword,3547144,1596214,319242,9577272,711,Greatsword
+711,1,Pearl Dagger,1223764,509901,101980,3059403,712,Dagger
+712,1,Pearl Shortsword,1631686,713862,142772,4283166,713,Shortsword
+713,1,Pearl Scimitar,1835647,815843,244752,6118809,714,Scimitar
+714,1,Pearl Mace,2039607,1325745,101980,5506935,715,Mace
+715,1,Pearl Sword,2039607,1019803,203960,6118809,716,Sword
+716,1,Pearl Battleaxe,2447529,1427725,163168,6730695,717,Battleaxe
+717,1,Pearl Longsword,2651490,1223764,244752,7342572,718,Longsword
+718,1,Pearl Rapier,1835647,917823,305941,7342584,719,Rapier
+719,1,Pearl Warhammer,3263372,1835647,122376,7342581,720,Warhammer
+720,1,Pearl Greatsword,4079215,1835647,367129,11013876,721,Greatsword
+721,1,Magma Dagger,1407329,586387,117277,3518316,722,Dagger
+722,1,Magma Shortsword,1876439,820942,164188,4925646,723,Shortsword
+723,1,Magma Scimitar,2110994,938219,281465,7036632,724,Scimitar
+724,1,Magma Mace,2345548,1524606,117277,6332973,725,Mace
+725,1,Magma Sword,2345548,1172774,234554,7036632,726,Sword
+726,1,Magma Battleaxe,2814658,1641884,187643,7740297,727,Battleaxe
+727,1,Magma Longsword,3049213,1407329,281465,8443962,728,Longsword
+728,1,Magma Rapier,2110994,1055497,351832,8443971,729,Rapier
+729,1,Magma Warhammer,3752878,2110994,140732,8443962,730,Warhammer
+730,1,Magma Greatsword,4691097,2110994,422198,12665952,731,Greatsword
+731,1,Lava Dagger,1618428,674345,134869,4046070,732,Dagger
+732,1,Lava Shortsword,2157905,944083,188816,5664489,733,Shortsword
+733,1,Lava Scimitar,2427643,1078952,323685,8092131,734,Scimitar
+734,1,Lava Mace,2697381,1753297,134869,7282926,735,Mace
+735,1,Lava Sword,2697381,1348690,269738,8092140,736,Sword
+736,1,Lava Battleaxe,3236857,1888166,215790,8901348,737,Battleaxe
+737,1,Lava Longsword,3506595,1618428,323685,9710559,738,Longsword
+738,1,Lava Rapier,2427643,1213821,404607,9710568,739,Rapier
+739,1,Lava Warhammer,4315810,2427643,161842,9710559,740,Warhammer
+740,1,Lava Greatsword,5394762,2427643,485528,14565849,741,Greatsword
+741,1,Infernal Dagger,1861193,775497,155099,4652976,742,Dagger
+742,1,Infernal Shortsword,2481590,1085695,217139,6514170,743,Shortsword
+743,1,Infernal Scimitar,2791789,1240795,372238,9305955,744,Scimitar
+744,1,Infernal Mace,3101988,2016292,155099,8375361,745,Mace
+745,1,Infernal Sword,3101988,1550994,310198,9305952,746,Sword
+746,1,Infernal Battleaxe,3722386,2171391,248159,10236558,747,Battleaxe
+747,1,Infernal Longsword,4032585,1861193,372238,11167149,748,Longsword
+748,1,Infernal Rapier,2791789,1395894,465298,11167152,749,Rapier
+749,1,Infernal Warhammer,4963181,2791789,186119,11167152,750,Warhammer
+750,1,Infernal Greatsword,6203977,2791789,558357,16750722,751,Greatsword
+751,1,Hellfire Dagger,2140372,891821,178364,5350923,752,Dagger
+752,1,Hellfire Shortsword,2853829,1248550,249710,7491300,753,Shortsword
+753,1,Hellfire Scimitar,3210558,1426914,428074,10701852,754,Scimitar
+754,1,Hellfire Mace,3567286,2318736,178364,9631668,755,Mace
+755,1,Hellfire Sword,3567286,1783643,356728,10701849,756,Sword
+756,1,Hellfire Battleaxe,4280744,2497100,285382,11772030,757,Battleaxe
+757,1,Hellfire Longsword,4637472,2140372,428074,12842226,758,Longsword
+758,1,Hellfire Rapier,3210558,1605279,535093,12842232,759,Rapier
+759,1,Hellfire Warhammer,5707658,3210558,214037,12842229,760,Warhammer
+760,1,Hellfire Greatsword,7134573,3210558,642111,19263339,761,Greatsword
+761,1,Ice Dagger,2461427,1025594,205118,6153552,762,Dagger
+762,1,Ice Shortsword,3281903,1435832,287166,8614986,763,Shortsword
+763,1,Ice Scimitar,3692141,1640951,492285,12307128,764,Scimitar
+764,1,Ice Mace,4102379,2666546,205118,11076408,765,Mace
+765,1,Ice Sword,4102379,2051189,410237,12307122,766,Sword
+766,1,Ice Battleaxe,4922855,2871665,328190,13537845,767,Battleaxe
+767,1,Ice Longsword,5333093,2461427,492285,14768556,768,Longsword
+768,1,Ice Rapier,3692141,1846070,615356,14768550,769,Rapier
+769,1,Ice Warhammer,6563807,3692141,246142,14768553,770,Warhammer
+770,1,Ice Greatsword,8204759,3692141,738428,22152843,771,Greatsword
+771,1,Frost Dagger,2830642,1179434,235886,7076592,772,Dagger
+772,1,Frost Shortsword,3774189,1651207,330241,9907236,773,Shortsword
+773,1,Frost Scimitar,4245963,1887094,566128,14153202,774,Scimitar
+774,1,Frost Mace,4717736,3066528,235886,12737874,775,Mace
+775,1,Frost Sword,4717736,2358868,471773,14153199,776,Sword
+776,1,Frost Battleaxe,5661284,3302415,377418,15568515,777,Battleaxe
+777,1,Frost Longsword,6133057,2830642,566128,16983846,778,Longsword
+778,1,Frost Rapier,4245963,2122981,707660,16983843,779,Rapier
+779,1,Frost Warhammer,7548378,4245963,283064,16983849,780,Warhammer
+780,1,Frost Greatsword,9435473,4245963,849192,25475769,781,Greatsword
+781,1,Glacial Dagger,3255238,1356349,271269,8138082,782,Dagger
+782,1,Glacial Shortsword,4340317,1898889,379777,11393322,783,Shortsword
+783,1,Glacial Scimitar,4882857,2170158,651047,16276179,784,Scimitar
+784,1,Glacial Mace,5425397,3526508,271269,14648559,785,Mace
+785,1,Glacial Sword,5425397,2712698,542539,16276179,786,Sword
+786,1,Glacial Battleaxe,6510476,3797778,434031,17903799,787,Battleaxe
+787,1,Glacial Longsword,7053016,3255238,651047,19531419,788,Longsword
+788,1,Glacial Rapier,4882857,2441428,813809,19531419,789,Rapier
+789,1,Glacial Warhammer,8680635,4882857,325523,19531416,790,Warhammer
+790,1,Glacial Greatsword,10850794,4882857,976571,29297136,791,Greatsword
+791,1,Permafrost Dagger,3743524,1559801,311960,9358803,792,Dagger
+792,1,Permafrost Shortsword,4991365,2183722,436744,13102326,793,Shortsword
+793,1,Permafrost Scimitar,5615286,2495682,748704,18717606,794,Scimitar
+794,1,Permafrost Mace,6239206,4055484,311960,16845852,795,Mace
+795,1,Permafrost Sword,6239206,3119603,623920,18717609,796,Sword
+796,1,Permafrost Battleaxe,7487048,4367444,499136,20589372,797,Battleaxe
+797,1,Permafrost Longsword,8110968,3743524,748704,22461132,798,Longsword
+798,1,Permafrost Rapier,5615286,2807643,935881,22461144,799,Rapier
+799,1,Permafrost Warhammer,9982731,5615286,374352,22461138,800,Warhammer
+800,1,Permafrost Greatsword,12478413,5615286,1123057,33691713,801,Greatsword
+801,1,Storm Dagger,4305052,1793771,358754,10762623,802,Dagger
+802,1,Storm Shortsword,5740070,2511280,502256,15067680,803,Shortsword
+803,1,Storm Scimitar,6457579,2870035,861010,21525255,804,Scimitar
+804,1,Storm Mace,7175087,4663807,358754,19372731,805,Mace
+805,1,Storm Sword,7175087,3587543,717508,21525249,806,Sword
+806,1,Storm Battleaxe,8610105,5022561,574007,23677788,807,Battleaxe
+807,1,Storm Longsword,9327614,4305052,861010,25830306,808,Longsword
+808,1,Storm Rapier,6457579,3228789,1076263,25830312,809,Rapier
+809,1,Storm Warhammer,11480140,6457579,430505,25830312,810,Warhammer
+810,1,Storm Greatsword,14350175,6457579,1291515,38745462,811,Greatsword
+811,1,Thunder Dagger,4950810,2062837,412567,12377016,812,Dagger
+812,1,Thunder Shortsword,6601080,2887972,577594,17327826,813,Shortsword
+813,1,Thunder Scimitar,7426216,3300540,990162,24754050,814,Scimitar
+814,1,Thunder Mace,8251351,5363378,412567,22278639,815,Mace
+815,1,Thunder Sword,8251351,4125675,825135,24754050,816,Sword
+816,1,Thunder Battleaxe,9901621,5775945,660108,27229455,817,Battleaxe
+817,1,Thunder Longsword,10726756,4950810,990162,29704860,818,Longsword
+818,1,Thunder Rapier,7426216,3713108,1237702,29704854,819,Rapier
+819,1,Thunder Warhammer,13202161,7426216,495081,29704863,820,Warhammer
+820,1,Thunder Greatsword,16502702,7426216,1485243,44557293,821,Greatsword
+821,1,Lightning Dagger,5693432,2372263,474452,14233569,822,Dagger
+822,1,Lightning Shortsword,7591243,3321168,664233,19926999,823,Shortsword
+823,1,Lightning Scimitar,8540148,3795621,1138686,28467153,824,Scimitar
+824,1,Lightning Mace,9489053,6167884,474452,25620432,825,Mace
+825,1,Lightning Sword,9489053,4744526,948905,28467153,826,Sword
+826,1,Lightning Battleaxe,11386864,6642337,759124,31313871,827,Battleaxe
+827,1,Lightning Longsword,12335769,5693432,1138686,34160586,828,Longsword
+828,1,Lightning Rapier,8540148,4270074,1423358,34160592,829,Rapier
+829,1,Lightning Warhammer,15182486,8540148,569343,34160589,830,Warhammer
+830,1,Lightning Greatsword,18978107,8540148,1708029,51240879,831,Greatsword
+831,1,Tempest Dagger,6547447,2728102,545620,16368606,832,Dagger
+832,1,Tempest Shortsword,8729929,3819344,763868,22916052,833,Shortsword
+833,1,Tempest Scimitar,9821170,4364964,1309489,32737227,834,Scimitar
+834,1,Tempest Mace,10912411,7093067,545620,29463501,835,Mace
+835,1,Tempest Sword,10912411,5456205,1091241,32737230,836,Sword
+836,1,Tempest Battleaxe,13094894,7638688,872992,36010944,837,Battleaxe
+837,1,Tempest Longsword,14186135,6547447,1309489,39284676,838,Longsword
+838,1,Tempest Rapier,9821170,4910585,1636861,39284670,839,Rapier
+839,1,Tempest Warhammer,17459858,9821170,654744,39284670,840,Warhammer
+840,1,Tempest Greatsword,21824823,9821170,1964234,58927020,841,Greatsword
+841,1,Void Dagger,7529564,3137318,627463,18823899,842,Dagger
+842,1,Void Shortsword,10039418,4392245,878449,26353470,843,Shortsword
+843,1,Void Scimitar,11294346,5019709,1505912,37647807,844,Scimitar
+844,1,Void Mace,12549273,8157027,627463,33883026,845,Mace
+845,1,Void Sword,12549273,6274636,1254927,37647813,846,Sword
+846,1,Void Battleaxe,15059128,8784491,1003941,41412588,847,Battleaxe
+847,1,Void Longsword,16314055,7529564,1505912,45177372,848,Longsword
+848,1,Void Rapier,11294346,5647173,1882391,45177384,849,Rapier
+849,1,Void Warhammer,20078837,11294346,752956,45177378,850,Warhammer
+850,1,Void Greatsword,25098547,11294346,2258869,67766073,851,Greatsword
+851,1,Abyssal Dagger,8658998,3607916,721583,21647493,852,Dagger
+852,1,Abyssal Shortsword,11545331,5051082,1010216,30306486,853,Shortsword
+853,1,Abyssal Scimitar,12988498,5772665,1731799,43294980,854,Scimitar
+854,1,Abyssal Mace,14431664,9380582,721583,38965491,855,Mace
+855,1,Abyssal Sword,14431664,7215832,1443166,43294986,856,Sword
+856,1,Abyssal Battleaxe,17317997,10102165,1154533,47624490,857,Battleaxe
+857,1,Abyssal Longsword,18761164,8658998,1731799,51953979,858,Longsword
+858,1,Abyssal Rapier,12988498,6494249,2164749,51953982,859,Rapier
+859,1,Abyssal Warhammer,23090663,12988498,865899,51953979,860,Warhammer
+860,1,Abyssal Greatsword,28863329,12988498,2597699,77930979,861,Greatsword
+861,1,Null Dagger,9957848,4149103,829820,24894609,862,Dagger
+862,1,Null Shortsword,13277131,5808745,1161749,34852470,863,Shortsword
+863,1,Null Scimitar,14936772,6638565,1991569,49789230,864,Scimitar
+864,1,Null Mace,16596414,10787669,829820,44810307,865,Mace
+865,1,Null Sword,16596414,8298207,1659641,49789236,866,Sword
+866,1,Null Battleaxe,19915697,11617490,1327713,54768165,867,Battleaxe
+867,1,Null Longsword,21575338,9957848,1991569,59747079,868,Longsword
+868,1,Null Rapier,14936772,7468386,2489462,59747088,869,Rapier
+869,1,Null Warhammer,26554263,14936772,995784,59747076,870,Warhammer
+870,1,Null Greatsword,33192828,14936772,2987354,89620626,871,Greatsword
+871,1,Black Hole Dagger,11451525,4771469,954293,28628802,872,Dagger
+872,1,Black Hole Shortsword,15268701,6680056,1336011,40080333,873,Shortsword
+873,1,Black Hole Scimitar,17177288,7634350,2290305,57257625,874,Scimitar
+874,1,Black Hole Mace,19085876,12405819,954293,51531852,875,Mace
+875,1,Black Hole Sword,19085876,9542938,1908587,57257619,876,Sword
+876,1,Black Hole Battleaxe,22903051,13360113,1526870,62983389,877,Battleaxe
+877,1,Black Hole Longsword,24811639,11451525,2290305,68709150,878,Longsword
+878,1,Black Hole Rapier,17177288,8588644,2862881,68709147,879,Rapier
+879,1,Black Hole Warhammer,30537402,17177288,1145152,68709144,880,Warhammer
+880,1,Black Hole Greatsword,38171753,17177288,3435457,103063719,881,Greatsword
+881,1,Light Dagger,13169254,5487189,1097437,32923122,882,Dagger
+882,1,Light Shortsword,17559006,7682065,1536413,46092390,883,Shortsword
+883,1,Light Scimitar,19753882,8779503,2633850,65846259,884,Scimitar
+884,1,Light Mace,21948758,14266692,1097437,59261631,885,Mace
+885,1,Light Sword,21948758,10974379,2194875,65846262,886,Sword
+886,1,Light Battleaxe,26338509,15364130,1755900,72430890,887,Battleaxe
+887,1,Light Longsword,28533385,13169254,2633850,79015512,888,Longsword
+888,1,Light Rapier,19753882,9876941,3292313,79015518,889,Rapier
+889,1,Light Warhammer,35118012,19753882,1316925,79015521,890,Warhammer
+890,1,Light Greatsword,43897516,19753882,3950776,118523286,891,Greatsword
+891,1,Radiant Dagger,15144643,6310267,1262053,37861596,892,Dagger
+892,1,Radiant Shortsword,20192857,8834375,1766875,53006250,893,Shortsword
+893,1,Radiant Scimitar,22716964,10096428,3028928,75723204,894,Scimitar
+894,1,Radiant Mace,25241071,16406696,1262053,68150883,895,Mace
+895,1,Radiant Sword,25241071,12620535,2524107,75723210,896,Sword
+896,1,Radiant Battleaxe,30289286,17668750,2019285,83295525,897,Battleaxe
+897,1,Radiant Longsword,32813393,15144643,3028928,90867849,898,Longsword
+898,1,Radiant Rapier,22716964,11358482,3786160,90867846,899,Rapier
+899,1,Radiant Warhammer,40385714,22716964,1514464,90867852,900,Warhammer
+900,1,Radiant Greatsword,50482143,22716964,4543392,136301772,901,Greatsword
+901,1,Luminous Dagger,17416339,7256808,1451361,43540839,902,Dagger
+902,1,Luminous Shortsword,23221786,10159531,2031906,60957183,903,Shortsword
+903,1,Luminous Scimitar,26124509,11610893,3483267,87081684,904,Scimitar
+904,1,Luminous Mace,29027232,18867701,1451361,78373518,905,Mace
+905,1,Luminous Sword,29027232,14513616,2902723,87081693,906,Sword
+906,1,Luminous Battleaxe,34832679,20319062,2322178,95789856,907,Battleaxe
+907,1,Luminous Longsword,37735402,17416339,3483267,104498022,908,Longsword
+908,1,Luminous Rapier,26124509,13062254,4354084,104498022,909,Rapier
+909,1,Luminous Warhammer,46443572,26124509,1741633,104498022,910,Warhammer
+910,1,Luminous Greatsword,58054465,26124509,5224901,156747042,911,Greatsword
+911,1,Solar Dagger,20028790,8345329,1669065,50071962,912,Dagger
+912,1,Solar Shortsword,26705053,11683461,2336692,70100763,913,Shortsword
+913,1,Solar Scimitar,30043185,13352526,4005758,100143948,914,Scimitar
+914,1,Solar Mace,33381317,21697856,1669065,90129543,915,Mace
+915,1,Solar Sword,33381317,16690658,3338131,100143939,916,Sword
+916,1,Solar Battleaxe,40057580,23366922,2670505,110158341,917,Battleaxe
+917,1,Solar Longsword,43395712,20028790,4005758,120172740,918,Longsword
+918,1,Solar Rapier,30043185,15021592,5007197,120172731,919,Rapier
+919,1,Solar Warhammer,53410107,30043185,2002879,120172740,920,Warhammer
+920,1,Solar Greatsword,66762634,30043185,6008637,180259110,921,Greatsword
+921,1,Dark Dagger,23033109,9597128,1919425,57582759,922,Dagger
+922,1,Dark Shortsword,30710812,13435980,2687196,80615880,923,Shortsword
+923,1,Dark Scimitar,34549663,15355406,4606621,115165533,924,Scimitar
+924,1,Dark Mace,38388515,24952534,1919425,103648977,925,Mace
+925,1,Dark Sword,38388515,19194257,3838851,115165536,926,Sword
+926,1,Dark Battleaxe,46066218,26871960,3071081,126682095,927,Battleaxe
+927,1,Dark Longsword,49905069,23033109,4606621,138198642,928,Longsword
+928,1,Dark Rapier,34549663,17274831,5758277,138198648,929,Rapier
+929,1,Dark Warhammer,61421624,34549663,2303310,138198639,930,Warhammer
+930,1,Dark Greatsword,76777030,34549663,6909932,207297969,931,Greatsword
+931,1,Shadow Dagger,26488075,11036698,2207339,66220179,932,Dagger
+932,1,Shadow Shortsword,35317433,15451377,3090275,92708256,933,Shortsword
+933,1,Shadow Scimitar,39732113,17658716,5297615,132440373,934,Scimitar
+934,1,Shadow Mace,44146792,28695414,2207339,119196327,935,Mace
+935,1,Shadow Sword,44146792,22073396,4414679,132440373,936,Sword
+936,1,Shadow Battleaxe,52976150,30902754,3531743,145684407,937,Battleaxe
+937,1,Shadow Longsword,57390829,26488075,5297615,158928450,938,Longsword
+938,1,Shadow Rapier,39732113,19866056,6622018,158928438,939,Rapier
+939,1,Shadow Warhammer,70634867,39732113,2648807,158928444,940,Warhammer
+940,1,Shadow Greatsword,88293584,39732113,7946422,238392669,941,Greatsword
+941,1,Umbral Dagger,30461286,12692202,2538440,76153206,942,Dagger
+942,1,Umbral Shortsword,40615048,17769083,3553816,106614489,943,Shortsword
+943,1,Umbral Scimitar,45691929,20307524,6092257,152306427,944,Scimitar
+944,1,Umbral Mace,50768811,32999727,2538440,137075781,945,Mace
+945,1,Umbral Sword,50768811,25384405,5076881,152306430,946,Sword
+946,1,Umbral Battleaxe,60922573,35538167,4061504,167537061,947,Battleaxe
+947,1,Umbral Longsword,65999454,30461286,6092257,182767713,948,Longsword
+948,1,Umbral Rapier,45691929,22845964,7615321,182767707,949,Rapier
+949,1,Umbral Warhammer,81230097,45691929,3046128,182767707,950,Warhammer
+950,1,Umbral Greatsword,101537622,45691929,9138385,274151562,951,Greatsword
+951,1,Nocturnal Dagger,35030479,14596033,2919206,87576189,952,Dagger
+952,1,Nocturnal Shortsword,46707306,20434446,4086889,122606673,953,Shortsword
+953,1,Nocturnal Scimitar,52545719,23353653,7006095,175152384,954,Scimitar
+954,1,Nocturnal Mace,58384132,37949686,2919206,157637148,955,Mace
+955,1,Nocturnal Sword,58384132,29192066,5838413,175152393,956,Sword
+956,1,Nocturnal Battleaxe,70060959,40868892,4670730,192667626,957,Battleaxe
+957,1,Nocturnal Longsword,75899372,35030479,7006095,210182862,958,Longsword
+958,1,Nocturnal Rapier,52545719,26272859,8757619,210182862,959,Rapier
+959,1,Nocturnal Warhammer,93414612,52545719,3503047,210182862,960,Warhammer
+960,1,Nocturnal Greatsword,116768265,52545719,10509143,315274302,961,Greatsword
+961,1,Blood Dagger,40285051,16785438,3357087,100712619,962,Dagger
+962,1,Blood Shortsword,53713402,23499613,4699922,140997669,963,Shortsword
+963,1,Blood Scimitar,60427577,26856701,8057010,201425253,964,Scimitar
+964,1,Blood Mace,67141752,43642139,3357087,181282722,965,Mace
+965,1,Blood Sword,67141752,33570876,6714175,201425253,966,Sword
+966,1,Blood Battleaxe,80570103,46999226,5371340,221567778,967,Battleaxe
+967,1,Blood Longsword,87284278,40285051,8057010,241710303,968,Longsword
+968,1,Blood Rapier,60427577,30213788,10071262,241710294,969,Rapier
+969,1,Blood Warhammer,107426804,60427577,4028505,241710306,970,Warhammer
+970,1,Blood Greatsword,134283505,60427577,12085515,362565456,971,Greatsword
+971,1,Crimson Dagger,46327809,19303253,3860650,115819509,972,Dagger
+972,1,Crimson Shortsword,61770412,27024555,5404911,162147330,973,Shortsword
+973,1,Crimson Scimitar,69491714,30885206,9265561,231639033,974,Scimitar
+974,1,Crimson Mace,77213015,50188460,3860650,208475130,975,Mace
+975,1,Crimson Sword,77213015,38606507,7721301,231639036,976,Sword
+976,1,Crimson Battleaxe,92655618,54049110,6177041,254802945,977,Battleaxe
+977,1,Crimson Longsword,100376920,46327809,9265561,277966842,978,Longsword
+978,1,Crimson Rapier,69491714,34745857,11581952,277966851,979,Rapier
+979,1,Crimson Warhammer,123540824,69491714,4632780,277966842,980,Warhammer
+980,1,Crimson Greatsword,154426031,69491714,13898342,416950272,981,Greatsword
+981,1,Vampiric Dagger,53276980,22198741,4439748,133192443,982,Dagger
+982,1,Vampiric Shortsword,71035974,31078238,6215647,186469419,983,Shortsword
+983,1,Vampiric Scimitar,79915471,35517987,10655396,266384901,984,Scimitar
+984,1,Vampiric Mace,88794967,57716729,4439748,239746407,985,Mace
+985,1,Vampiric Sword,88794967,44397483,8879496,266384889,986,Sword
+986,1,Vampiric Battleaxe,106553961,62156477,7103597,293023386,987,Battleaxe
+987,1,Vampiric Longsword,115433458,53276980,10655396,319661880,988,Longsword
+988,1,Vampiric Rapier,79915471,39957735,13319245,319661880,989,Rapier
+989,1,Vampiric Warhammer,142071948,79915471,5327698,319661883,990,Warhammer
+990,1,Vampiric Greatsword,177589935,79915471,15983094,479492823,991,Greatsword
+991,1,Sanguine Dagger,61268527,25528553,5105710,153171309,992,Dagger
+992,1,Sanguine Shortsword,81691370,35739974,7147994,214439832,993,Shortsword
+993,1,Sanguine Scimitar,91902791,40845685,12253705,306342630,994,Scimitar
+994,1,Sanguine Mace,102114213,66374238,5105710,275708364,995,Mace
+995,1,Sanguine Sword,102114213,51057106,10211421,306342633,996,Sword
+996,1,Sanguine Battleaxe,122537055,71479949,8169137,336976902,997,Battleaxe
+997,1,Sanguine Longsword,132748477,61268527,12253705,367611156,998,Longsword
+998,1,Sanguine Rapier,91902791,45951395,15317131,367611150,999,Rapier
+999,1,Sanguine Warhammer,163382740,91902791,6126852,367611153,1000,Warhammer
+1000,1,Sanguine Greatsword,204228426,91902791,18380558,551416743,,Greatsword

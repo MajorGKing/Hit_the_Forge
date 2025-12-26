@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Services.LevelPlay;
 using UnityEngine;
 
@@ -26,6 +27,25 @@ public class PlayerManager
         }
     }
 
+    private int _stage = 1;
+    public int Stage
+    {
+        get => _stage;
+        private set
+        {
+            if (_stage != value)
+            {
+                _stage = value;
+                OnPlayerSave?.Invoke();
+            }
+        }
+    }
+
+    public void SetStage(int stage)
+    {
+        Stage = stage;
+    }
+
     public void SetClearedWeaponCount(int count)
     {
         ClearedWeaponCount = count;
@@ -46,47 +66,69 @@ public class PlayerManager
     {
         if (false == Managers.Save.LoadGame())
         {
-
-            currency[(int)Define.ECurrency.Gold] = 0;
-            currency[(int)Define.ECurrency.Iron] = 5000;
-            currency[(int)Define.ECurrency.Coal] = 5000;
-
-            playerStatLevel[(int)Define.EPlayerStat.Str] = 100001;
-            playerStatLevel[(int)Define.EPlayerStat.Skill] = 200001;
-            playerStatLevel[(int)Define.EPlayerStat.Dex] = 0;
-            playerStatLevel[(int)Define.EPlayerStat.Mastery] = 300001;
-
-            forgeStatLevel[(int)Define.EPlayerForgeStat.CoalTime] = 100001;
-            forgeStatLevel[(int)Define.EPlayerForgeStat.Skill] = 200001;
-            forgeStatLevel[(int)Define.EPlayerForgeStat.Mastery] = 300001;
-
-            townStatLevel[(int)Define.EPlayerTownStat.GoldMax] = 100001;
-            townStatLevel[(int)Define.EPlayerTownStat.IronMax] = 200001;
-            townStatLevel[(int)Define.EPlayerTownStat.IronRegeneration] = 300001;
-            townStatLevel[(int)Define.EPlayerTownStat.CoalMax] = 400001;
-            townStatLevel[(int)Define.EPlayerTownStat.CoalRegeneration] = 500001;
-            townStatLevel[(int)Define.EPlayerTownStat.ShopSellBonus] = 600001;
-            townStatLevel[(int)Define.EPlayerTownStat.ShopBuyBonus] = 700001;
-
-            {
-                // shopProducts[(int)Define.EShopProductType.BuyIron] = 1;
-                // shopProducts[(int)Define.EShopProductType.BuyCoal] = 11;
-                foreach (var shopData in Managers.Data.ShopProductDict.Values)
-                {
-                    Debug.Log(shopData.TemplateId);
-                    shopProducts.Add(shopData.TemplateId);
-                }
-            }
-
-
-            ownedWeapons.Add(1);
-            SetClearedWeaponCount(0);
-
+            InitByStage(1);
             OnPlayerSave?.Invoke();
         }
 
         Managers.Ad.OnRewardedEarned -= RewardAdEarned;
         Managers.Ad.OnRewardedEarned += RewardAdEarned;
+    }
+
+    public void InitByStage(int stageNum)
+    {
+        SetStage(stageNum);
+
+        // 기본 자원 초기화
+        currency[(int)Define.ECurrency.Gold] = 0;
+        currency[(int)Define.ECurrency.Iron] = 5000;
+        currency[(int)Define.ECurrency.Coal] = 5000;
+
+        // Player Stats 초기화 (OriginalTemplateId가 자신인 것이 1레벨)
+        foreach (Define.EPlayerStat stat in Enum.GetValues(typeof(Define.EPlayerStat)))
+        {
+            var data = Managers.Data.PlayerUpgradeDict.Values
+                .FirstOrDefault(d => d.Stage == stageNum && d.StatType == stat && d.TemplateId == d.OriginalTemplateId);
+            
+            playerStatLevel[(int)stat] = (data != null) ? data.TemplateId : 0;
+        }
+
+        // Forge Stats 초기화
+        foreach (Define.EPlayerForgeStat stat in Enum.GetValues(typeof(Define.EPlayerForgeStat)))
+        {
+            var data = Managers.Data.ForgeUpgradeDict.Values
+                .FirstOrDefault(d => d.Stage == stageNum && d.StatType == stat && d.TemplateId == d.OriginalTemplateId);
+            
+            forgeStatLevel[(int)stat] = (data != null) ? data.TemplateId : 0;
+        }
+
+        // Town Stats 초기화
+        foreach (Define.EPlayerTownStat stat in Enum.GetValues(typeof(Define.EPlayerTownStat)))
+        {
+            var data = Managers.Data.TownUpgradeDict.Values
+                .FirstOrDefault(d => d.Stage == stageNum && d.StatType == stat && d.TemplateId == d.OriginalTemplateId);
+            
+            townStatLevel[(int)stat] = (data != null) ? data.TemplateId : 0;
+        }
+
+        // Shop Products 초기화 (해당 스테이지의 상품만 등록)
+        shopProducts.Clear();
+        foreach (var shopData in Managers.Data.ShopProductDict.Values)
+        {
+            if (shopData.Stage == stageNum)
+                shopProducts.Add(shopData.TemplateId);
+        }
+
+        // 무기 초기화 (해당 스테이지의 첫 번째 무기)
+        ownedWeapons.Clear();
+        var firstWeapon = Managers.Data.WeaponDict.Values
+            .Where(w => w.Stage == stageNum)
+            .OrderBy(w => w.TemplateId)
+            .FirstOrDefault();
+
+        if (firstWeapon != null)
+            ownedWeapons.Add(firstWeapon.TemplateId);
+
+        SetClearedWeaponCount(0);
     }
 
     public void SetCurrency(Define.ECurrency type, long value)
@@ -469,6 +511,7 @@ public class PlayerManager
         data.shopProducts = new List<int>(shopProducts);
         data.ownedWeapons = new List<int>(ownedWeapons);
         data.clearedWeaponCount = ClearedWeaponCount;
+        data.stage = Stage;
         return data;
     }
 
@@ -481,6 +524,7 @@ public class PlayerManager
         shopProducts = new List<int>(data.shopProducts);
         ownedWeapons = new List<int>(data.ownedWeapons);
         SetClearedWeaponCount(data.clearedWeaponCount);
+        SetStage(data.stage == 0 ? 1 : data.stage);
 
         OnCurrenciesChanged?.Invoke();
         OnPlayerUpgradeChanged?.Invoke();

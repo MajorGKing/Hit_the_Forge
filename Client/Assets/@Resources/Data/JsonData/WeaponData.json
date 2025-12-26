@@ -2,6 +2,7 @@
   "weapons": [
     {
       "TemplateId": 1,
+      "Stage": 1,
       "WeaponName": "Rusty Dagger",
       "HP": 60,
       "Iron": 25,
@@ -12,6 +13,7 @@
     },
     {
       "TemplateId": 2,
+      "Stage": 1,
       "WeaponName": "Rusty Shortsword",
       "HP": 80,
       "Iron": 35,
@@ -22,6 +24,7 @@
     },
     {
       "TemplateId": 3,
+      "Stage": 1,
       "WeaponName": "Rusty Scimitar",
       "HP": 90,
       "Iron": 40,
@@ -32,6 +35,7 @@
     },
     {
       "TemplateId": 4,
+      "Stage": 1,
       "WeaponName": "Rusty Mace",
       "HP": 100,
       "Iron": 65,
@@ -42,6 +46,7 @@
     },
     {
       "TemplateId": 5,
+      "Stage": 1,
       "WeaponName": "Rusty Sword",
       "HP": 100,
       "Iron": 50,
@@ -52,6 +57,7 @@
     },
     {
       "TemplateId": 6,
+      "Stage": 1,
       "WeaponName": "Rusty Battleaxe",
       "HP": 120,
       "Iron": 70,
@@ -62,6 +68,7 @@
     },
     {
       "TemplateId": 7,
+      "Stage": 1,
       "WeaponName": "Rusty Longsword",
       "HP": 130,
       "Iron": 60,
@@ -72,6 +79,7 @@
     },
     {
       "TemplateId": 8,
+      "Stage": 1,
       "WeaponName": "Rusty Rapier",
       "HP": 90,
       "Iron": 45,
@@ -82,6 +90,7 @@
     },
     {
       "TemplateId": 9,
+      "Stage": 1,
       "WeaponName": "Rusty Warhammer",
       "HP": 160,
       "Iron": 90,
@@ -92,6 +101,7 @@
     },
     {
       "TemplateId": 10,
+      "Stage": 1,
       "WeaponName": "Rusty Greatsword",
       "HP": 200,
       "Iron": 90,
@@ -102,6 +112,7 @@
     },
     {
       "TemplateId": 11,
+      "Stage": 1,
       "WeaponName": "Old Dagger",
       "HP": 68,
       "Iron": 28,
@@ -112,6 +123,7 @@
     },
     {
       "TemplateId": 12,
+      "Stage": 1,
       "WeaponName": "Old Shortsword",
       "HP": 92,
       "Iron": 40,
@@ -122,6 +134,7 @@
     },
     {
       "TemplateId": 13,
+      "Stage": 1,
       "WeaponName": "Old Scimitar",
       "HP": 103,
       "Iron": 46,
@@ -132,6 +145,7 @@
     },
     {
       "TemplateId": 14,
+      "Stage": 1,
       "WeaponName": "Old Mace",
       "HP": 114,
       "Iron": 74,
@@ -142,6 +156,7 @@
     },
     {
       "TemplateId": 15,
+      "Stage": 1,
       "WeaponName": "Old Sword",
       "HP": 114,
       "Iron": 57,
@@ -152,6 +167,7 @@
     },
     {
       "TemplateId": 16,
+      "Stage": 1,
       "WeaponName": "Old Battleaxe",
       "HP": 137,
       "Iron": 80,
@@ -162,6 +178,7 @@
     },
     {
       "TemplateId": 17,
+      "Stage": 1,
       "WeaponName": "Old Longsword",
       "HP": 149,
       "Iron": 68,
@@ -172,6 +189,7 @@
     },
     {
       "TemplateId": 18,
+      "Stage": 1,
       "WeaponName": "Old Rapier",
       "HP": 103,
       "Iron": 51,
@@ -182,6 +200,7 @@
     },
     {
       "TemplateId": 19,
+      "Stage": 1,
       "WeaponName": "Old Warhammer",
       "HP": 184,
       "Iron": 103,
@@ -192,6 +211,7 @@
     },
     {
       "TemplateId": 20,
+      "Stage": 1,
       "WeaponName": "Old Greatsword",
       "HP": 229,
       "Iron": 103,
@@ -202,6 +222,7 @@
     },
     {
       "TemplateId": 21,
+      "Stage": 1,
       "WeaponName": "Cracked Dagger",
       "HP": 79,
       "Iron": 33,
@@ -212,6 +233,7 @@
     },
     {
       "TemplateId": 22,
+      "Stage": 1,
       "WeaponName": "Cracked Shortsword",
       "HP": 105,
       "Iron": 46,
@@ -222,6 +244,7 @@
     },
     {
       "TemplateId": 23,
+      "Stage": 1,
       "WeaponName": "Cracked Scimitar",
       "HP": 119,
       "Iron": 52,
@@ -232,6 +255,7 @@
     },
     {
       "TemplateId": 24,
+      "Stage": 1,
       "WeaponName": "Cracked Mace",
       "HP": 132,
       "Iron": 85,
@@ -242,6 +266,7 @@
     },
     {
       "TemplateId": 25,
+      "Stage": 1,
       "WeaponName": "Cracked Sword",
       "HP": 132,
       "Iron": 66,
@@ -252,6 +277,7 @@
     },
     {
       "TemplateId": 26,
+      "Stage": 1,
       "WeaponName": "Cracked Battleaxe",
       "HP": 158,
       "Iron": 92,
@@ -262,6 +288,7 @@
     },
     {
       "TemplateId": 27,
+      "Stage": 1,
       "WeaponName": "Cracked Longsword",
       "HP": 171,
       "Iron": 79,
@@ -272,6 +299,7 @@
     },
     {
       "TemplateId": 28,
+      "Stage": 1,
       "WeaponName": "Cracked Rapier",
       "HP": 119,
       "Iron": 59,
@@ -282,6 +310,7 @@
     },
     {
       "TemplateId": 29,
+      "Stage": 1,
       "WeaponName": "Cracked Warhammer",
       "HP": 211,
       "Iron": 119,
@@ -292,6 +321,7 @@
     },
     {
       "TemplateId": 30,
+      "Stage": 1,
       "WeaponName": "Cracked Greatsword",
       "HP": 264,
       "Iron": 119,
@@ -302,6 +332,7 @@
     },
     {
       "TemplateId": 31,
+      "Stage": 1,
       "WeaponName": "Worn Dagger",
       "HP": 91,
       "Iron": 38,
@@ -312,6 +343,7 @@
     },
     {
       "TemplateId": 32,
+      "Stage": 1,
       "WeaponName": "Worn Shortsword",
       "HP": 121,
       "Iron": 53,
@@ -322,6 +354,7 @@
     },
     {
       "TemplateId": 33,
+      "Stage": 1,
       "WeaponName": "Worn Scimitar",
       "HP": 136,
       "Iron": 60,
@@ -332,6 +365,7 @@
     },
     {
       "TemplateId": 34,
+      "Stage": 1,
       "WeaponName": "Worn Mace",
       "HP": 152,
       "Iron": 98,
@@ -342,6 +376,7 @@
     },
     {
       "TemplateId": 35,
+      "Stage": 1,
       "WeaponName": "Worn Sword",
       "HP": 152,
       "Iron": 76,
@@ -352,6 +387,7 @@
     },
     {
       "TemplateId": 36,
+      "Stage": 1,
       "WeaponName": "Worn Battleaxe",
       "HP": 182,
       "Iron": 106,
@@ -362,6 +398,7 @@
     },
     {
       "TemplateId": 37,
+      "Stage": 1,
       "WeaponName": "Worn Longsword",
       "HP": 197,
       "Iron": 91,
@@ -372,6 +409,7 @@
     },
     {
       "TemplateId": 38,
+      "Stage": 1,
       "WeaponName": "Worn Rapier",
       "HP": 136,
       "Iron": 68,
@@ -382,6 +420,7 @@
     },
     {
       "TemplateId": 39,
+      "Stage": 1,
       "WeaponName": "Worn Warhammer",
       "HP": 243,
       "Iron": 136,
@@ -392,6 +431,7 @@
     },
     {
       "TemplateId": 40,
+      "Stage": 1,
       "WeaponName": "Worn Greatsword",
       "HP": 304,
       "Iron": 136,
@@ -402,6 +442,7 @@
     },
     {
       "TemplateId": 41,
+      "Stage": 1,
       "WeaponName": "Wooden Dagger",
       "HP": 104,
       "Iron": 43,
@@ -412,6 +453,7 @@
     },
     {
       "TemplateId": 42,
+      "Stage": 1,
       "WeaponName": "Wooden Shortsword",
       "HP": 139,
       "Iron": 61,
@@ -422,6 +464,7 @@
     },
     {
       "TemplateId": 43,
+      "Stage": 1,
       "WeaponName": "Wooden Scimitar",
       "HP": 157,
       "Iron": 69,
@@ -432,6 +475,7 @@
     },
     {
       "TemplateId": 44,
+      "Stage": 1,
       "WeaponName": "Wooden Mace",
       "HP": 174,
       "Iron": 113,
@@ -442,6 +486,7 @@
     },
     {
       "TemplateId": 45,
+      "Stage": 1,
       "WeaponName": "Wooden Sword",
       "HP": 174,
       "Iron": 87,
@@ -452,6 +497,7 @@
     },
     {
       "TemplateId": 46,
+      "Stage": 1,
       "WeaponName": "Wooden Battleaxe",
       "HP": 209,
       "Iron": 122,
@@ -462,6 +508,7 @@
     },
     {
       "TemplateId": 47,
+      "Stage": 1,
       "WeaponName": "Wooden Longsword",
       "HP": 227,
       "Iron": 104,
@@ -472,6 +519,7 @@
     },
     {
       "TemplateId": 48,
+      "Stage": 1,
       "WeaponName": "Wooden Rapier",
       "HP": 157,
       "Iron": 78,
@@ -482,6 +530,7 @@
     },
     {
       "TemplateId": 49,
+      "Stage": 1,
       "WeaponName": "Wooden Warhammer",
       "HP": 279,
       "Iron": 157,
@@ -492,6 +541,7 @@
     },
     {
       "TemplateId": 50,
+      "Stage": 1,
       "WeaponName": "Wooden Greatsword",
       "HP": 349,
       "Iron": 157,
@@ -502,6 +552,7 @@
     },
     {
       "TemplateId": 51,
+      "Stage": 1,
       "WeaponName": "Oak Dagger",
       "HP": 120,
       "Iron": 50,
@@ -512,6 +563,7 @@
     },
     {
       "TemplateId": 52,
+      "Stage": 1,
       "WeaponName": "Oak Shortsword",
       "HP": 160,
       "Iron": 70,
@@ -522,6 +574,7 @@
     },
     {
       "TemplateId": 53,
+      "Stage": 1,
       "WeaponName": "Oak Scimitar",
       "HP": 181,
       "Iron": 80,
@@ -532,6 +585,7 @@
     },
     {
       "TemplateId": 54,
+      "Stage": 1,
       "WeaponName": "Oak Mace",
       "HP": 201,
       "Iron": 130,
@@ -542,6 +596,7 @@
     },
     {
       "TemplateId": 55,
+      "Stage": 1,
       "WeaponName": "Oak Sword",
       "HP": 201,
       "Iron": 100,
@@ -552,6 +607,7 @@
     },
     {
       "TemplateId": 56,
+      "Stage": 1,
       "WeaponName": "Oak Battleaxe",
       "HP": 241,
       "Iron": 140,
@@ -562,6 +618,7 @@
     },
     {
       "TemplateId": 57,
+      "Stage": 1,
       "WeaponName": "Oak Longsword",
       "HP": 261,
       "Iron": 120,
@@ -572,6 +629,7 @@
     },
     {
       "TemplateId": 58,
+      "Stage": 1,
       "WeaponName": "Oak Rapier",
       "HP": 181,
       "Iron": 90,
@@ -582,6 +640,7 @@
     },
     {
       "TemplateId": 59,
+      "Stage": 1,
       "WeaponName": "Oak Warhammer",
       "HP": 321,
       "Iron": 181,
@@ -592,6 +651,7 @@
     },
     {
       "TemplateId": 60,
+      "Stage": 1,
       "WeaponName": "Oak Greatsword",
       "HP": 402,
       "Iron": 181,
@@ -602,6 +662,7 @@
     },
     {
       "TemplateId": 61,
+      "Stage": 1,
       "WeaponName": "Hardwood Dagger",
       "HP": 138,
       "Iron": 57,
@@ -612,6 +673,7 @@
     },
     {
       "TemplateId": 62,
+      "Stage": 1,
       "WeaponName": "Hardwood Shortsword",
       "HP": 185,
       "Iron": 80,
@@ -622,6 +684,7 @@
     },
     {
       "TemplateId": 63,
+      "Stage": 1,
       "WeaponName": "Hardwood Scimitar",
       "HP": 208,
       "Iron": 92,
@@ -632,6 +695,7 @@
     },
     {
       "TemplateId": 64,
+      "Stage": 1,
       "WeaponName": "Hardwood Mace",
       "HP": 231,
       "Iron": 150,
@@ -642,6 +706,7 @@
     },
     {
       "TemplateId": 65,
+      "Stage": 1,
       "WeaponName": "Hardwood Sword",
       "HP": 231,
       "Iron": 115,
@@ -652,6 +717,7 @@
     },
     {
       "TemplateId": 66,
+      "Stage": 1,
       "WeaponName": "Hardwood Battleaxe",
       "HP": 277,
       "Iron": 161,
@@ -662,6 +728,7 @@
     },
     {
       "TemplateId": 67,
+      "Stage": 1,
       "WeaponName": "Hardwood Longsword",
       "HP": 300,
       "Iron": 138,
@@ -672,6 +739,7 @@
     },
     {
       "TemplateId": 68,
+      "Stage": 1,
       "WeaponName": "Hardwood Rapier",
       "HP": 208,
       "Iron": 104,
@@ -682,6 +750,7 @@
     },
     {
       "TemplateId": 69,
+      "Stage": 1,
       "WeaponName": "Hardwood Warhammer",
       "HP": 370,
       "Iron": 208,
@@ -692,6 +761,7 @@
     },
     {
       "TemplateId": 70,
+      "Stage": 1,
       "WeaponName": "Hardwood Greatsword",
       "HP": 462,
       "Iron": 208,
@@ -702,6 +772,7 @@
     },
     {
       "TemplateId": 71,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Dagger",
       "HP": 159,
       "Iron": 66,
@@ -712,6 +783,7 @@
     },
     {
       "TemplateId": 72,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Shortsword",
       "HP": 212,
       "Iron": 93,
@@ -722,6 +794,7 @@
     },
     {
       "TemplateId": 73,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Scimitar",
       "HP": 239,
       "Iron": 106,
@@ -732,6 +805,7 @@
     },
     {
       "TemplateId": 74,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Mace",
       "HP": 266,
       "Iron": 172,
@@ -742,6 +816,7 @@
     },
     {
       "TemplateId": 75,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Sword",
       "HP": 266,
       "Iron": 133,
@@ -752,6 +827,7 @@
     },
     {
       "TemplateId": 76,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Battleaxe",
       "HP": 319,
       "Iron": 186,
@@ -762,6 +838,7 @@
     },
     {
       "TemplateId": 77,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Longsword",
       "HP": 345,
       "Iron": 159,
@@ -772,6 +849,7 @@
     },
     {
       "TemplateId": 78,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Rapier",
       "HP": 239,
       "Iron": 119,
@@ -782,6 +860,7 @@
     },
     {
       "TemplateId": 79,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Warhammer",
       "HP": 425,
       "Iron": 239,
@@ -792,6 +871,7 @@
     },
     {
       "TemplateId": 80,
+      "Stage": 1,
       "WeaponName": "Reinforced Wood Greatsword",
       "HP": 532,
       "Iron": 239,
@@ -802,6 +882,7 @@
     },
     {
       "TemplateId": 81,
+      "Stage": 1,
       "WeaponName": "Stone Dagger",
       "HP": 183,
       "Iron": 76,
@@ -812,6 +893,7 @@
     },
     {
       "TemplateId": 82,
+      "Stage": 1,
       "WeaponName": "Stone Shortsword",
       "HP": 244,
       "Iron": 107,
@@ -822,6 +904,7 @@
     },
     {
       "TemplateId": 83,
+      "Stage": 1,
       "WeaponName": "Stone Scimitar",
       "HP": 275,
       "Iron": 122,
@@ -832,6 +915,7 @@
     },
     {
       "TemplateId": 84,
+      "Stage": 1,
       "WeaponName": "Stone Mace",
       "HP": 305,
       "Iron": 198,
@@ -842,6 +926,7 @@
     },
     {
       "TemplateId": 85,
+      "Stage": 1,
       "WeaponName": "Stone Sword",
       "HP": 305,
       "Iron": 152,
@@ -852,6 +937,7 @@
     },
     {
       "TemplateId": 86,
+      "Stage": 1,
       "WeaponName": "Stone Battleaxe",
       "HP": 367,
       "Iron": 214,
@@ -862,6 +948,7 @@
     },
     {
       "TemplateId": 87,
+      "Stage": 1,
       "WeaponName": "Stone Longsword",
       "HP": 397,
       "Iron": 183,
@@ -872,6 +959,7 @@
     },
     {
       "TemplateId": 88,
+      "Stage": 1,
       "WeaponName": "Stone Rapier",
       "HP": 275,
       "Iron": 137,
@@ -882,6 +970,7 @@
     },
     {
       "TemplateId": 89,
+      "Stage": 1,
       "WeaponName": "Stone Warhammer",
       "HP": 489,
       "Iron": 275,
@@ -892,6 +981,7 @@
     },
     {
       "TemplateId": 90,
+      "Stage": 1,
       "WeaponName": "Stone Greatsword",
       "HP": 611,
       "Iron": 275,
@@ -902,6 +992,7 @@
     },
     {
       "TemplateId": 91,
+      "Stage": 1,
       "WeaponName": "Polished Stone Dagger",
       "HP": 211,
       "Iron": 87,
@@ -912,6 +1003,7 @@
     },
     {
       "TemplateId": 92,
+      "Stage": 1,
       "WeaponName": "Polished Stone Shortsword",
       "HP": 281,
       "Iron": 123,
@@ -922,6 +1014,7 @@
     },
     {
       "TemplateId": 93,
+      "Stage": 1,
       "WeaponName": "Polished Stone Scimitar",
       "HP": 316,
       "Iron": 140,
@@ -932,6 +1025,7 @@
     },
     {
       "TemplateId": 94,
+      "Stage": 1,
       "WeaponName": "Polished Stone Mace",
       "HP": 351,
       "Iron": 228,
@@ -942,6 +1036,7 @@
     },
     {
       "TemplateId": 95,
+      "Stage": 1,
       "WeaponName": "Polished Stone Sword",
       "HP": 351,
       "Iron": 175,
@@ -952,6 +1047,7 @@
     },
     {
       "TemplateId": 96,
+      "Stage": 1,
       "WeaponName": "Polished Stone Battleaxe",
       "HP": 422,
       "Iron": 246,
@@ -962,6 +1058,7 @@
     },
     {
       "TemplateId": 97,
+      "Stage": 1,
       "WeaponName": "Polished Stone Longsword",
       "HP": 457,
       "Iron": 211,
@@ -972,6 +1069,7 @@
     },
     {
       "TemplateId": 98,
+      "Stage": 1,
       "WeaponName": "Polished Stone Rapier",
       "HP": 316,
       "Iron": 158,
@@ -982,6 +1080,7 @@
     },
     {
       "TemplateId": 99,
+      "Stage": 1,
       "WeaponName": "Polished Stone Warhammer",
       "HP": 562,
       "Iron": 316,
@@ -992,6 +1091,7 @@
     },
     {
       "TemplateId": 100,
+      "Stage": 1,
       "WeaponName": "Polished Stone Greatsword",
       "HP": 703,
       "Iron": 316,
@@ -1002,6 +1102,7 @@
     },
     {
       "TemplateId": 101,
+      "Stage": 1,
       "WeaponName": "Marble Dagger",
       "HP": 242,
       "Iron": 101,
@@ -1012,6 +1113,7 @@
     },
     {
       "TemplateId": 102,
+      "Stage": 1,
       "WeaponName": "Marble Shortsword",
       "HP": 323,
       "Iron": 141,
@@ -1022,6 +1124,7 @@
     },
     {
       "TemplateId": 103,
+      "Stage": 1,
       "WeaponName": "Marble Scimitar",
       "HP": 364,
       "Iron": 161,
@@ -1032,6 +1135,7 @@
     },
     {
       "TemplateId": 104,
+      "Stage": 1,
       "WeaponName": "Marble Mace",
       "HP": 404,
       "Iron": 262,
@@ -1042,6 +1146,7 @@
     },
     {
       "TemplateId": 105,
+      "Stage": 1,
       "WeaponName": "Marble Sword",
       "HP": 404,
       "Iron": 202,
@@ -1052,6 +1157,7 @@
     },
     {
       "TemplateId": 106,
+      "Stage": 1,
       "WeaponName": "Marble Battleaxe",
       "HP": 485,
       "Iron": 283,
@@ -1062,6 +1168,7 @@
     },
     {
       "TemplateId": 107,
+      "Stage": 1,
       "WeaponName": "Marble Longsword",
       "HP": 525,
       "Iron": 242,
@@ -1072,6 +1179,7 @@
     },
     {
       "TemplateId": 108,
+      "Stage": 1,
       "WeaponName": "Marble Rapier",
       "HP": 364,
       "Iron": 182,
@@ -1082,6 +1190,7 @@
     },
     {
       "TemplateId": 109,
+      "Stage": 1,
       "WeaponName": "Marble Warhammer",
       "HP": 647,
       "Iron": 364,
@@ -1092,6 +1201,7 @@
     },
     {
       "TemplateId": 110,
+      "Stage": 1,
       "WeaponName": "Marble Greatsword",
       "HP": 809,
       "Iron": 364,
@@ -1102,6 +1212,7 @@
     },
     {
       "TemplateId": 111,
+      "Stage": 1,
       "WeaponName": "Granite Dagger",
       "HP": 279,
       "Iron": 116,
@@ -1112,6 +1223,7 @@
     },
     {
       "TemplateId": 112,
+      "Stage": 1,
       "WeaponName": "Granite Shortsword",
       "HP": 372,
       "Iron": 162,
@@ -1122,6 +1234,7 @@
     },
     {
       "TemplateId": 113,
+      "Stage": 1,
       "WeaponName": "Granite Scimitar",
       "HP": 418,
       "Iron": 186,
@@ -1132,6 +1245,7 @@
     },
     {
       "TemplateId": 114,
+      "Stage": 1,
       "WeaponName": "Granite Mace",
       "HP": 465,
       "Iron": 302,
@@ -1142,6 +1256,7 @@
     },
     {
       "TemplateId": 115,
+      "Stage": 1,
       "WeaponName": "Granite Sword",
       "HP": 465,
       "Iron": 232,
@@ -1152,6 +1267,7 @@
     },
     {
       "TemplateId": 116,
+      "Stage": 1,
       "WeaponName": "Granite Battleaxe",
       "HP": 558,
       "Iron": 325,
@@ -1162,6 +1278,7 @@
     },
     {
       "TemplateId": 117,
+      "Stage": 1,
       "WeaponName": "Granite Longsword",
       "HP": 604,
       "Iron": 279,
@@ -1172,6 +1289,7 @@
     },
     {
       "TemplateId": 118,
+      "Stage": 1,
       "WeaponName": "Granite Rapier",
       "HP": 418,
       "Iron": 209,
@@ -1182,6 +1300,7 @@
     },
     {
       "TemplateId": 119,
+      "Stage": 1,
       "WeaponName": "Granite Warhammer",
       "HP": 744,
       "Iron": 418,
@@ -1192,6 +1311,7 @@
     },
     {
       "TemplateId": 120,
+      "Stage": 1,
       "WeaponName": "Granite Greatsword",
       "HP": 930,
       "Iron": 418,
@@ -1202,6 +1322,7 @@
     },
     {
       "TemplateId": 121,
+      "Stage": 1,
       "WeaponName": "Flint Dagger",
       "HP": 321,
       "Iron": 133,
@@ -1212,6 +1333,7 @@
     },
     {
       "TemplateId": 122,
+      "Stage": 1,
       "WeaponName": "Flint Shortsword",
       "HP": 428,
       "Iron": 187,
@@ -1222,6 +1344,7 @@
     },
     {
       "TemplateId": 123,
+      "Stage": 1,
       "WeaponName": "Flint Scimitar",
       "HP": 481,
       "Iron": 214,
@@ -1232,6 +1355,7 @@
     },
     {
       "TemplateId": 124,
+      "Stage": 1,
       "WeaponName": "Flint Mace",
       "HP": 535,
       "Iron": 347,
@@ -1242,6 +1366,7 @@
     },
     {
       "TemplateId": 125,
+      "Stage": 1,
       "WeaponName": "Flint Sword",
       "HP": 535,
       "Iron": 267,
@@ -1252,6 +1377,7 @@
     },
     {
       "TemplateId": 126,
+      "Stage": 1,
       "WeaponName": "Flint Battleaxe",
       "HP": 642,
       "Iron": 374,
@@ -1262,6 +1388,7 @@
     },
     {
       "TemplateId": 127,
+      "Stage": 1,
       "WeaponName": "Flint Longsword",
       "HP": 695,
       "Iron": 321,
@@ -1272,6 +1399,7 @@
     },
     {
       "TemplateId": 128,
+      "Stage": 1,
       "WeaponName": "Flint Rapier",
       "HP": 481,
       "Iron": 240,
@@ -1282,6 +1410,7 @@
     },
     {
       "TemplateId": 129,
+      "Stage": 1,
       "WeaponName": "Flint Warhammer",
       "HP": 856,
       "Iron": 481,
@@ -1292,6 +1421,7 @@
     },
     {
       "TemplateId": 130,
+      "Stage": 1,
       "WeaponName": "Flint Greatsword",
       "HP": 1070,
       "Iron": 481,
@@ -1302,6 +1432,7 @@
     },
     {
       "TemplateId": 131,
+      "Stage": 1,
       "WeaponName": "Obsidian Dagger",
       "HP": 369,
       "Iron": 153,
@@ -1312,6 +1443,7 @@
     },
     {
       "TemplateId": 132,
+      "Stage": 1,
       "WeaponName": "Obsidian Shortsword",
       "HP": 492,
       "Iron": 215,
@@ -1322,6 +1454,7 @@
     },
     {
       "TemplateId": 133,
+      "Stage": 1,
       "WeaponName": "Obsidian Scimitar",
       "HP": 553,
       "Iron": 246,
@@ -1332,6 +1465,7 @@
     },
     {
       "TemplateId": 134,
+      "Stage": 1,
       "WeaponName": "Obsidian Mace",
       "HP": 615,
       "Iron": 399,
@@ -1342,6 +1476,7 @@
     },
     {
       "TemplateId": 135,
+      "Stage": 1,
       "WeaponName": "Obsidian Sword",
       "HP": 615,
       "Iron": 307,
@@ -1352,6 +1487,7 @@
     },
     {
       "TemplateId": 136,
+      "Stage": 1,
       "WeaponName": "Obsidian Battleaxe",
       "HP": 738,
       "Iron": 430,
@@ -1362,6 +1498,7 @@
     },
     {
       "TemplateId": 137,
+      "Stage": 1,
       "WeaponName": "Obsidian Longsword",
       "HP": 799,
       "Iron": 369,
@@ -1372,6 +1509,7 @@
     },
     {
       "TemplateId": 138,
+      "Stage": 1,
       "WeaponName": "Obsidian Rapier",
       "HP": 553,
       "Iron": 276,
@@ -1382,6 +1520,7 @@
     },
     {
       "TemplateId": 139,
+      "Stage": 1,
       "WeaponName": "Obsidian Warhammer",
       "HP": 984,
       "Iron": 553,
@@ -1392,6 +1531,7 @@
     },
     {
       "TemplateId": 140,
+      "Stage": 1,
       "WeaponName": "Obsidian Greatsword",
       "HP": 1230,
       "Iron": 553,
@@ -1402,6 +1542,7 @@
     },
     {
       "TemplateId": 141,
+      "Stage": 1,
       "WeaponName": "Copper Dagger",
       "HP": 424,
       "Iron": 176,
@@ -1412,6 +1553,7 @@
     },
     {
       "TemplateId": 142,
+      "Stage": 1,
       "WeaponName": "Copper Shortsword",
       "HP": 566,
       "Iron": 247,
@@ -1422,6 +1564,7 @@
     },
     {
       "TemplateId": 143,
+      "Stage": 1,
       "WeaponName": "Copper Scimitar",
       "HP": 636,
       "Iron": 283,
@@ -1432,6 +1575,7 @@
     },
     {
       "TemplateId": 144,
+      "Stage": 1,
       "WeaponName": "Copper Mace",
       "HP": 707,
       "Iron": 459,
@@ -1442,6 +1586,7 @@
     },
     {
       "TemplateId": 145,
+      "Stage": 1,
       "WeaponName": "Copper Sword",
       "HP": 707,
       "Iron": 353,
@@ -1452,6 +1597,7 @@
     },
     {
       "TemplateId": 146,
+      "Stage": 1,
       "WeaponName": "Copper Battleaxe",
       "HP": 849,
       "Iron": 495,
@@ -1462,6 +1608,7 @@
     },
     {
       "TemplateId": 147,
+      "Stage": 1,
       "WeaponName": "Copper Longsword",
       "HP": 919,
       "Iron": 424,
@@ -1472,6 +1619,7 @@
     },
     {
       "TemplateId": 148,
+      "Stage": 1,
       "WeaponName": "Copper Rapier",
       "HP": 636,
       "Iron": 318,
@@ -1482,6 +1630,7 @@
     },
     {
       "TemplateId": 149,
+      "Stage": 1,
       "WeaponName": "Copper Warhammer",
       "HP": 1132,
       "Iron": 636,
@@ -1492,6 +1641,7 @@
     },
     {
       "TemplateId": 150,
+      "Stage": 1,
       "WeaponName": "Copper Greatsword",
       "HP": 1415,
       "Iron": 636,
@@ -1502,6 +1652,7 @@
     },
     {
       "TemplateId": 151,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Dagger",
       "HP": 488,
       "Iron": 203,
@@ -1512,6 +1663,7 @@
     },
     {
       "TemplateId": 152,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Shortsword",
       "HP": 650,
       "Iron": 284,
@@ -1522,6 +1674,7 @@
     },
     {
       "TemplateId": 153,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Scimitar",
       "HP": 732,
       "Iron": 325,
@@ -1532,6 +1685,7 @@
     },
     {
       "TemplateId": 154,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Mace",
       "HP": 813,
       "Iron": 528,
@@ -1542,6 +1696,7 @@
     },
     {
       "TemplateId": 155,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Sword",
       "HP": 813,
       "Iron": 406,
@@ -1552,6 +1707,7 @@
     },
     {
       "TemplateId": 156,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Battleaxe",
       "HP": 976,
       "Iron": 569,
@@ -1562,6 +1718,7 @@
     },
     {
       "TemplateId": 157,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Longsword",
       "HP": 1057,
       "Iron": 488,
@@ -1572,6 +1729,7 @@
     },
     {
       "TemplateId": 158,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Rapier",
       "HP": 732,
       "Iron": 366,
@@ -1582,6 +1740,7 @@
     },
     {
       "TemplateId": 159,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Warhammer",
       "HP": 1301,
       "Iron": 732,
@@ -1592,6 +1751,7 @@
     },
     {
       "TemplateId": 160,
+      "Stage": 1,
       "WeaponName": "Oxidized Copper Greatsword",
       "HP": 1627,
       "Iron": 732,
@@ -1602,6 +1762,7 @@
     },
     {
       "TemplateId": 161,
+      "Stage": 1,
       "WeaponName": "Polished Copper Dagger",
       "HP": 561,
       "Iron": 233,
@@ -1612,6 +1773,7 @@
     },
     {
       "TemplateId": 162,
+      "Stage": 1,
       "WeaponName": "Polished Copper Shortsword",
       "HP": 748,
       "Iron": 327,
@@ -1622,6 +1784,7 @@
     },
     {
       "TemplateId": 163,
+      "Stage": 1,
       "WeaponName": "Polished Copper Scimitar",
       "HP": 842,
       "Iron": 374,
@@ -1632,6 +1795,7 @@
     },
     {
       "TemplateId": 164,
+      "Stage": 1,
       "WeaponName": "Polished Copper Mace",
       "HP": 935,
       "Iron": 608,
@@ -1642,6 +1806,7 @@
     },
     {
       "TemplateId": 165,
+      "Stage": 1,
       "WeaponName": "Polished Copper Sword",
       "HP": 935,
       "Iron": 467,
@@ -1652,6 +1817,7 @@
     },
     {
       "TemplateId": 166,
+      "Stage": 1,
       "WeaponName": "Polished Copper Battleaxe",
       "HP": 1122,
       "Iron": 655,
@@ -1662,6 +1828,7 @@
     },
     {
       "TemplateId": 167,
+      "Stage": 1,
       "WeaponName": "Polished Copper Longsword",
       "HP": 1216,
       "Iron": 561,
@@ -1672,6 +1839,7 @@
     },
     {
       "TemplateId": 168,
+      "Stage": 1,
       "WeaponName": "Polished Copper Rapier",
       "HP": 842,
       "Iron": 421,
@@ -1682,6 +1850,7 @@
     },
     {
       "TemplateId": 169,
+      "Stage": 1,
       "WeaponName": "Polished Copper Warhammer",
       "HP": 1497,
       "Iron": 842,
@@ -1692,6 +1861,7 @@
     },
     {
       "TemplateId": 170,
+      "Stage": 1,
       "WeaponName": "Polished Copper Greatsword",
       "HP": 1871,
       "Iron": 842,
@@ -1702,6 +1872,7 @@
     },
     {
       "TemplateId": 171,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Dagger",
       "HP": 645,
       "Iron": 269,
@@ -1712,6 +1883,7 @@
     },
     {
       "TemplateId": 172,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Shortsword",
       "HP": 860,
       "Iron": 376,
@@ -1722,6 +1894,7 @@
     },
     {
       "TemplateId": 173,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Scimitar",
       "HP": 968,
       "Iron": 430,
@@ -1732,6 +1905,7 @@
     },
     {
       "TemplateId": 174,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Mace",
       "HP": 1076,
       "Iron": 699,
@@ -1742,6 +1916,7 @@
     },
     {
       "TemplateId": 175,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Sword",
       "HP": 1076,
       "Iron": 538,
@@ -1752,6 +1927,7 @@
     },
     {
       "TemplateId": 176,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Battleaxe",
       "HP": 1291,
       "Iron": 753,
@@ -1762,6 +1938,7 @@
     },
     {
       "TemplateId": 177,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Longsword",
       "HP": 1398,
       "Iron": 645,
@@ -1772,6 +1949,7 @@
     },
     {
       "TemplateId": 178,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Rapier",
       "HP": 968,
       "Iron": 484,
@@ -1782,6 +1960,7 @@
     },
     {
       "TemplateId": 179,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Warhammer",
       "HP": 1721,
       "Iron": 968,
@@ -1792,6 +1971,7 @@
     },
     {
       "TemplateId": 180,
+      "Stage": 1,
       "WeaponName": "Heavy Copper Greatsword",
       "HP": 2152,
       "Iron": 968,
@@ -1802,6 +1982,7 @@
     },
     {
       "TemplateId": 181,
+      "Stage": 1,
       "WeaponName": "Tin Dagger",
       "HP": 742,
       "Iron": 309,
@@ -1812,6 +1993,7 @@
     },
     {
       "TemplateId": 182,
+      "Stage": 1,
       "WeaponName": "Tin Shortsword",
       "HP": 990,
       "Iron": 433,
@@ -1822,6 +2004,7 @@
     },
     {
       "TemplateId": 183,
+      "Stage": 1,
       "WeaponName": "Tin Scimitar",
       "HP": 1113,
       "Iron": 495,
@@ -1832,6 +2015,7 @@
     },
     {
       "TemplateId": 184,
+      "Stage": 1,
       "WeaponName": "Tin Mace",
       "HP": 1237,
       "Iron": 804,
@@ -1842,6 +2026,7 @@
     },
     {
       "TemplateId": 185,
+      "Stage": 1,
       "WeaponName": "Tin Sword",
       "HP": 1237,
       "Iron": 618,
@@ -1852,6 +2037,7 @@
     },
     {
       "TemplateId": 186,
+      "Stage": 1,
       "WeaponName": "Tin Battleaxe",
       "HP": 1485,
       "Iron": 866,
@@ -1862,6 +2048,7 @@
     },
     {
       "TemplateId": 187,
+      "Stage": 1,
       "WeaponName": "Tin Longsword",
       "HP": 1608,
       "Iron": 742,
@@ -1872,6 +2059,7 @@
     },
     {
       "TemplateId": 188,
+      "Stage": 1,
       "WeaponName": "Tin Rapier",
       "HP": 1113,
       "Iron": 556,
@@ -1882,6 +2070,7 @@
     },
     {
       "TemplateId": 189,
+      "Stage": 1,
       "WeaponName": "Tin Warhammer",
       "HP": 1980,
       "Iron": 1113,
@@ -1892,6 +2081,7 @@
     },
     {
       "TemplateId": 190,
+      "Stage": 1,
       "WeaponName": "Tin Greatsword",
       "HP": 2475,
       "Iron": 1113,
@@ -1902,6 +2092,7 @@
     },
     {
       "TemplateId": 191,
+      "Stage": 1,
       "WeaponName": "Bronze Dagger",
       "HP": 853,
       "Iron": 355,
@@ -1912,6 +2103,7 @@
     },
     {
       "TemplateId": 192,
+      "Stage": 1,
       "WeaponName": "Bronze Shortsword",
       "HP": 1138,
       "Iron": 498,
@@ -1922,6 +2114,7 @@
     },
     {
       "TemplateId": 193,
+      "Stage": 1,
       "WeaponName": "Bronze Scimitar",
       "HP": 1280,
       "Iron": 569,
@@ -1932,6 +2125,7 @@
     },
     {
       "TemplateId": 194,
+      "Stage": 1,
       "WeaponName": "Bronze Mace",
       "HP": 1423,
       "Iron": 925,
@@ -1942,6 +2136,7 @@
     },
     {
       "TemplateId": 195,
+      "Stage": 1,
       "WeaponName": "Bronze Sword",
       "HP": 1423,
       "Iron": 711,
@@ -1952,6 +2147,7 @@
     },
     {
       "TemplateId": 196,
+      "Stage": 1,
       "WeaponName": "Bronze Battleaxe",
       "HP": 1707,
       "Iron": 996,
@@ -1962,6 +2158,7 @@
     },
     {
       "TemplateId": 197,
+      "Stage": 1,
       "WeaponName": "Bronze Longsword",
       "HP": 1850,
       "Iron": 853,
@@ -1972,6 +2169,7 @@
     },
     {
       "TemplateId": 198,
+      "Stage": 1,
       "WeaponName": "Bronze Rapier",
       "HP": 1280,
       "Iron": 640,
@@ -1982,6 +2180,7 @@
     },
     {
       "TemplateId": 199,
+      "Stage": 1,
       "WeaponName": "Bronze Warhammer",
       "HP": 2277,
       "Iron": 1280,
@@ -1992,6 +2191,7 @@
     },
     {
       "TemplateId": 200,
+      "Stage": 1,
       "WeaponName": "Bronze Greatsword",
       "HP": 2846,
       "Iron": 1280,
@@ -2002,6 +2202,7 @@
     },
     {
       "TemplateId": 201,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Dagger",
       "HP": 981,
       "Iron": 409,
@@ -2012,6 +2213,7 @@
     },
     {
       "TemplateId": 202,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Shortsword",
       "HP": 1309,
       "Iron": 572,
@@ -2022,6 +2224,7 @@
     },
     {
       "TemplateId": 203,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Scimitar",
       "HP": 1472,
       "Iron": 654,
@@ -2032,6 +2235,7 @@
     },
     {
       "TemplateId": 204,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Mace",
       "HP": 1636,
       "Iron": 1063,
@@ -2042,6 +2246,7 @@
     },
     {
       "TemplateId": 205,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Sword",
       "HP": 1636,
       "Iron": 818,
@@ -2052,6 +2257,7 @@
     },
     {
       "TemplateId": 206,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Battleaxe",
       "HP": 1963,
       "Iron": 1145,
@@ -2062,6 +2268,7 @@
     },
     {
       "TemplateId": 207,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Longsword",
       "HP": 2127,
       "Iron": 981,
@@ -2072,6 +2279,7 @@
     },
     {
       "TemplateId": 208,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Rapier",
       "HP": 1472,
       "Iron": 736,
@@ -2082,6 +2290,7 @@
     },
     {
       "TemplateId": 209,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Warhammer",
       "HP": 2618,
       "Iron": 1472,
@@ -2092,6 +2301,7 @@
     },
     {
       "TemplateId": 210,
+      "Stage": 1,
       "WeaponName": "Ancient Bronze Greatsword",
       "HP": 3273,
       "Iron": 1472,
@@ -2102,6 +2312,7 @@
     },
     {
       "TemplateId": 211,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Dagger",
       "HP": 1129,
       "Iron": 470,
@@ -2112,6 +2323,7 @@
     },
     {
       "TemplateId": 212,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Shortsword",
       "HP": 1505,
       "Iron": 658,
@@ -2122,6 +2334,7 @@
     },
     {
       "TemplateId": 213,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Scimitar",
       "HP": 1693,
       "Iron": 752,
@@ -2132,6 +2345,7 @@
     },
     {
       "TemplateId": 214,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Mace",
       "HP": 1882,
       "Iron": 1223,
@@ -2142,6 +2356,7 @@
     },
     {
       "TemplateId": 215,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Sword",
       "HP": 1882,
       "Iron": 941,
@@ -2152,6 +2367,7 @@
     },
     {
       "TemplateId": 216,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Battleaxe",
       "HP": 2258,
       "Iron": 1317,
@@ -2162,6 +2378,7 @@
     },
     {
       "TemplateId": 217,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Longsword",
       "HP": 2446,
       "Iron": 1129,
@@ -2172,6 +2389,7 @@
     },
     {
       "TemplateId": 218,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Rapier",
       "HP": 1693,
       "Iron": 846,
@@ -2182,6 +2400,7 @@
     },
     {
       "TemplateId": 219,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Warhammer",
       "HP": 3011,
       "Iron": 1693,
@@ -2192,6 +2411,7 @@
     },
     {
       "TemplateId": 220,
+      "Stage": 1,
       "WeaponName": "Gilded Bronze Greatsword",
       "HP": 3764,
       "Iron": 1693,
@@ -2202,6 +2422,7 @@
     },
     {
       "TemplateId": 221,
+      "Stage": 1,
       "WeaponName": "Brass Dagger",
       "HP": 1298,
       "Iron": 541,
@@ -2212,6 +2433,7 @@
     },
     {
       "TemplateId": 222,
+      "Stage": 1,
       "WeaponName": "Brass Shortsword",
       "HP": 1731,
       "Iron": 757,
@@ -2222,6 +2444,7 @@
     },
     {
       "TemplateId": 223,
+      "Stage": 1,
       "WeaponName": "Brass Scimitar",
       "HP": 1948,
       "Iron": 865,
@@ -2232,6 +2455,7 @@
     },
     {
       "TemplateId": 224,
+      "Stage": 1,
       "WeaponName": "Brass Mace",
       "HP": 2164,
       "Iron": 1406,
@@ -2242,6 +2466,7 @@
     },
     {
       "TemplateId": 225,
+      "Stage": 1,
       "WeaponName": "Brass Sword",
       "HP": 2164,
       "Iron": 1082,
@@ -2252,6 +2477,7 @@
     },
     {
       "TemplateId": 226,
+      "Stage": 1,
       "WeaponName": "Brass Battleaxe",
       "HP": 2597,
       "Iron": 1515,
@@ -2262,6 +2488,7 @@
     },
     {
       "TemplateId": 227,
+      "Stage": 1,
       "WeaponName": "Brass Longsword",
       "HP": 2813,
       "Iron": 1298,
@@ -2272,6 +2499,7 @@
     },
     {
       "TemplateId": 228,
+      "Stage": 1,
       "WeaponName": "Brass Rapier",
       "HP": 1948,
       "Iron": 974,
@@ -2282,6 +2510,7 @@
     },
     {
       "TemplateId": 229,
+      "Stage": 1,
       "WeaponName": "Brass Warhammer",
       "HP": 3463,
       "Iron": 1948,
@@ -2292,6 +2521,7 @@
     },
     {
       "TemplateId": 230,
+      "Stage": 1,
       "WeaponName": "Brass Greatsword",
       "HP": 4328,
       "Iron": 1948,
@@ -2302,6 +2532,7 @@
     },
     {
       "TemplateId": 231,
+      "Stage": 1,
       "WeaponName": "Iron Dagger",
       "HP": 1493,
       "Iron": 622,
@@ -2312,6 +2543,7 @@
     },
     {
       "TemplateId": 232,
+      "Stage": 1,
       "WeaponName": "Iron Shortsword",
       "HP": 1991,
       "Iron": 871,
@@ -2322,6 +2554,7 @@
     },
     {
       "TemplateId": 233,
+      "Stage": 1,
       "WeaponName": "Iron Scimitar",
       "HP": 2240,
       "Iron": 995,
@@ -2332,6 +2565,7 @@
     },
     {
       "TemplateId": 234,
+      "Stage": 1,
       "WeaponName": "Iron Mace",
       "HP": 2489,
       "Iron": 1617,
@@ -2342,6 +2576,7 @@
     },
     {
       "TemplateId": 235,
+      "Stage": 1,
       "WeaponName": "Iron Sword",
       "HP": 2489,
       "Iron": 1244,
@@ -2352,6 +2587,7 @@
     },
     {
       "TemplateId": 236,
+      "Stage": 1,
       "WeaponName": "Iron Battleaxe",
       "HP": 2986,
       "Iron": 1742,
@@ -2362,6 +2598,7 @@
     },
     {
       "TemplateId": 237,
+      "Stage": 1,
       "WeaponName": "Iron Longsword",
       "HP": 3235,
       "Iron": 1493,
@@ -2372,6 +2609,7 @@
     },
     {
       "TemplateId": 238,
+      "Stage": 1,
       "WeaponName": "Iron Rapier",
       "HP": 2240,
       "Iron": 1120,
@@ -2382,6 +2620,7 @@
     },
     {
       "TemplateId": 239,
+      "Stage": 1,
       "WeaponName": "Iron Warhammer",
       "HP": 3982,
       "Iron": 2240,
@@ -2392,6 +2631,7 @@
     },
     {
       "TemplateId": 240,
+      "Stage": 1,
       "WeaponName": "Iron Greatsword",
       "HP": 4978,
       "Iron": 2240,
@@ -2402,6 +2642,7 @@
     },
     {
       "TemplateId": 241,
+      "Stage": 1,
       "WeaponName": "Cast Iron Dagger",
       "HP": 1717,
       "Iron": 715,
@@ -2412,6 +2653,7 @@
     },
     {
       "TemplateId": 242,
+      "Stage": 1,
       "WeaponName": "Cast Iron Shortsword",
       "HP": 2290,
       "Iron": 1001,
@@ -2422,6 +2664,7 @@
     },
     {
       "TemplateId": 243,
+      "Stage": 1,
       "WeaponName": "Cast Iron Scimitar",
       "HP": 2576,
       "Iron": 1145,
@@ -2432,6 +2675,7 @@
     },
     {
       "TemplateId": 244,
+      "Stage": 1,
       "WeaponName": "Cast Iron Mace",
       "HP": 2862,
       "Iron": 1860,
@@ -2442,6 +2686,7 @@
     },
     {
       "TemplateId": 245,
+      "Stage": 1,
       "WeaponName": "Cast Iron Sword",
       "HP": 2862,
       "Iron": 1431,
@@ -2452,6 +2697,7 @@
     },
     {
       "TemplateId": 246,
+      "Stage": 1,
       "WeaponName": "Cast Iron Battleaxe",
       "HP": 3435,
       "Iron": 2003,
@@ -2462,6 +2708,7 @@
     },
     {
       "TemplateId": 247,
+      "Stage": 1,
       "WeaponName": "Cast Iron Longsword",
       "HP": 3721,
       "Iron": 1717,
@@ -2472,6 +2719,7 @@
     },
     {
       "TemplateId": 248,
+      "Stage": 1,
       "WeaponName": "Cast Iron Rapier",
       "HP": 2576,
       "Iron": 1288,
@@ -2482,6 +2730,7 @@
     },
     {
       "TemplateId": 249,
+      "Stage": 1,
       "WeaponName": "Cast Iron Warhammer",
       "HP": 4580,
       "Iron": 2576,
@@ -2492,6 +2741,7 @@
     },
     {
       "TemplateId": 250,
+      "Stage": 1,
       "WeaponName": "Cast Iron Greatsword",
       "HP": 5725,
       "Iron": 2576,
@@ -2502,6 +2752,7 @@
     },
     {
       "TemplateId": 251,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Dagger",
       "HP": 1975,
       "Iron": 822,
@@ -2512,6 +2763,7 @@
     },
     {
       "TemplateId": 252,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Shortsword",
       "HP": 2633,
       "Iron": 1152,
@@ -2522,6 +2774,7 @@
     },
     {
       "TemplateId": 253,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Scimitar",
       "HP": 2962,
       "Iron": 1316,
@@ -2532,6 +2785,7 @@
     },
     {
       "TemplateId": 254,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Mace",
       "HP": 3291,
       "Iron": 2139,
@@ -2542,6 +2796,7 @@
     },
     {
       "TemplateId": 255,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Sword",
       "HP": 3291,
       "Iron": 1645,
@@ -2552,6 +2807,7 @@
     },
     {
       "TemplateId": 256,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Battleaxe",
       "HP": 3950,
       "Iron": 2304,
@@ -2562,6 +2818,7 @@
     },
     {
       "TemplateId": 257,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Longsword",
       "HP": 4279,
       "Iron": 1975,
@@ -2572,6 +2829,7 @@
     },
     {
       "TemplateId": 258,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Rapier",
       "HP": 2962,
       "Iron": 1481,
@@ -2582,6 +2840,7 @@
     },
     {
       "TemplateId": 259,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Warhammer",
       "HP": 5267,
       "Iron": 2962,
@@ -2592,6 +2851,7 @@
     },
     {
       "TemplateId": 260,
+      "Stage": 1,
       "WeaponName": "Wrought Iron Greatsword",
       "HP": 6583,
       "Iron": 2962,
@@ -2602,6 +2862,7 @@
     },
     {
       "TemplateId": 261,
+      "Stage": 1,
       "WeaponName": "Forged Iron Dagger",
       "HP": 2271,
       "Iron": 946,
@@ -2612,6 +2873,7 @@
     },
     {
       "TemplateId": 262,
+      "Stage": 1,
       "WeaponName": "Forged Iron Shortsword",
       "HP": 3028,
       "Iron": 1324,
@@ -2622,6 +2884,7 @@
     },
     {
       "TemplateId": 263,
+      "Stage": 1,
       "WeaponName": "Forged Iron Scimitar",
       "HP": 3407,
       "Iron": 1514,
@@ -2632,6 +2895,7 @@
     },
     {
       "TemplateId": 264,
+      "Stage": 1,
       "WeaponName": "Forged Iron Mace",
       "HP": 3785,
       "Iron": 2460,
@@ -2642,6 +2906,7 @@
     },
     {
       "TemplateId": 265,
+      "Stage": 1,
       "WeaponName": "Forged Iron Sword",
       "HP": 3785,
       "Iron": 1892,
@@ -2652,6 +2917,7 @@
     },
     {
       "TemplateId": 266,
+      "Stage": 1,
       "WeaponName": "Forged Iron Battleaxe",
       "HP": 4542,
       "Iron": 2649,
@@ -2662,6 +2928,7 @@
     },
     {
       "TemplateId": 267,
+      "Stage": 1,
       "WeaponName": "Forged Iron Longsword",
       "HP": 4921,
       "Iron": 2271,
@@ -2672,6 +2939,7 @@
     },
     {
       "TemplateId": 268,
+      "Stage": 1,
       "WeaponName": "Forged Iron Rapier",
       "HP": 3407,
       "Iron": 1703,
@@ -2682,6 +2950,7 @@
     },
     {
       "TemplateId": 269,
+      "Stage": 1,
       "WeaponName": "Forged Iron Warhammer",
       "HP": 6057,
       "Iron": 3407,
@@ -2692,6 +2961,7 @@
     },
     {
       "TemplateId": 270,
+      "Stage": 1,
       "WeaponName": "Forged Iron Greatsword",
       "HP": 7571,
       "Iron": 3407,
@@ -2702,6 +2972,7 @@
     },
     {
       "TemplateId": 271,
+      "Stage": 1,
       "WeaponName": "Steel Dagger",
       "HP": 2612,
       "Iron": 1088,
@@ -2712,6 +2983,7 @@
     },
     {
       "TemplateId": 272,
+      "Stage": 1,
       "WeaponName": "Steel Shortsword",
       "HP": 3482,
       "Iron": 1523,
@@ -2722,6 +2994,7 @@
     },
     {
       "TemplateId": 273,
+      "Stage": 1,
       "WeaponName": "Steel Scimitar",
       "HP": 3918,
       "Iron": 1741,
@@ -2732,6 +3005,7 @@
     },
     {
       "TemplateId": 274,
+      "Stage": 1,
       "WeaponName": "Steel Mace",
       "HP": 4353,
       "Iron": 2829,
@@ -2742,6 +3016,7 @@
     },
     {
       "TemplateId": 275,
+      "Stage": 1,
       "WeaponName": "Steel Sword",
       "HP": 4353,
       "Iron": 2176,
@@ -2752,6 +3027,7 @@
     },
     {
       "TemplateId": 276,
+      "Stage": 1,
       "WeaponName": "Steel Battleaxe",
       "HP": 5224,
       "Iron": 3047,
@@ -2762,6 +3038,7 @@
     },
     {
       "TemplateId": 277,
+      "Stage": 1,
       "WeaponName": "Steel Longsword",
       "HP": 5659,
       "Iron": 2612,
@@ -2772,6 +3049,7 @@
     },
     {
       "TemplateId": 278,
+      "Stage": 1,
       "WeaponName": "Steel Rapier",
       "HP": 3918,
       "Iron": 1959,
@@ -2782,6 +3060,7 @@
     },
     {
       "TemplateId": 279,
+      "Stage": 1,
       "WeaponName": "Steel Warhammer",
       "HP": 6965,
       "Iron": 3918,
@@ -2792,6 +3071,7 @@
     },
     {
       "TemplateId": 280,
+      "Stage": 1,
       "WeaponName": "Steel Greatsword",
       "HP": 8707,
       "Iron": 3918,
@@ -2802,6 +3082,7 @@
     },
     {
       "TemplateId": 281,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Dagger",
       "HP": 3003,
       "Iron": 1251,
@@ -2812,6 +3093,7 @@
     },
     {
       "TemplateId": 282,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Shortsword",
       "HP": 4005,
       "Iron": 1752,
@@ -2822,6 +3104,7 @@
     },
     {
       "TemplateId": 283,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Scimitar",
       "HP": 4505,
       "Iron": 2002,
@@ -2832,6 +3115,7 @@
     },
     {
       "TemplateId": 284,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Mace",
       "HP": 5006,
       "Iron": 3254,
@@ -2842,6 +3126,7 @@
     },
     {
       "TemplateId": 285,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Sword",
       "HP": 5006,
       "Iron": 2503,
@@ -2852,6 +3137,7 @@
     },
     {
       "TemplateId": 286,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Battleaxe",
       "HP": 6007,
       "Iron": 3504,
@@ -2862,6 +3148,7 @@
     },
     {
       "TemplateId": 287,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Longsword",
       "HP": 6508,
       "Iron": 3003,
@@ -2872,6 +3159,7 @@
     },
     {
       "TemplateId": 288,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Rapier",
       "HP": 4505,
       "Iron": 2252,
@@ -2882,6 +3170,7 @@
     },
     {
       "TemplateId": 289,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Warhammer",
       "HP": 8010,
       "Iron": 4505,
@@ -2892,6 +3181,7 @@
     },
     {
       "TemplateId": 290,
+      "Stage": 1,
       "WeaponName": "Carbon Steel Greatsword",
       "HP": 10013,
       "Iron": 4505,
@@ -2902,6 +3192,7 @@
     },
     {
       "TemplateId": 291,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Dagger",
       "HP": 3454,
       "Iron": 1439,
@@ -2912,6 +3203,7 @@
     },
     {
       "TemplateId": 292,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Shortsword",
       "HP": 4606,
       "Iron": 2015,
@@ -2922,6 +3214,7 @@
     },
     {
       "TemplateId": 293,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Scimitar",
       "HP": 5181,
       "Iron": 2303,
@@ -2932,6 +3225,7 @@
     },
     {
       "TemplateId": 294,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Mace",
       "HP": 5757,
       "Iron": 3742,
@@ -2942,6 +3236,7 @@
     },
     {
       "TemplateId": 295,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Sword",
       "HP": 5757,
       "Iron": 2878,
@@ -2952,6 +3247,7 @@
     },
     {
       "TemplateId": 296,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Battleaxe",
       "HP": 6909,
       "Iron": 4030,
@@ -2962,6 +3258,7 @@
     },
     {
       "TemplateId": 297,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Longsword",
       "HP": 7484,
       "Iron": 3454,
@@ -2972,6 +3269,7 @@
     },
     {
       "TemplateId": 298,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Rapier",
       "HP": 5181,
       "Iron": 2590,
@@ -2982,6 +3280,7 @@
     },
     {
       "TemplateId": 299,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Warhammer",
       "HP": 9212,
       "Iron": 5181,
@@ -2992,6 +3291,7 @@
     },
     {
       "TemplateId": 300,
+      "Stage": 1,
       "WeaponName": "Damascus Steel Greatsword",
       "HP": 11515,
       "Iron": 5181,
@@ -3002,6 +3302,7 @@
     },
     {
       "TemplateId": 301,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Dagger",
       "HP": 3972,
       "Iron": 1655,
@@ -3012,6 +3313,7 @@
     },
     {
       "TemplateId": 302,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Shortsword",
       "HP": 5296,
       "Iron": 2317,
@@ -3022,6 +3324,7 @@
     },
     {
       "TemplateId": 303,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Scimitar",
       "HP": 5959,
       "Iron": 2648,
@@ -3032,6 +3335,7 @@
     },
     {
       "TemplateId": 304,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Mace",
       "HP": 6621,
       "Iron": 4303,
@@ -3042,6 +3346,7 @@
     },
     {
       "TemplateId": 305,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Sword",
       "HP": 6621,
       "Iron": 3310,
@@ -3052,6 +3357,7 @@
     },
     {
       "TemplateId": 306,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Battleaxe",
       "HP": 7945,
       "Iron": 4634,
@@ -3062,6 +3368,7 @@
     },
     {
       "TemplateId": 307,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Longsword",
       "HP": 8607,
       "Iron": 3972,
@@ -3072,6 +3379,7 @@
     },
     {
       "TemplateId": 308,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Rapier",
       "HP": 5959,
       "Iron": 2979,
@@ -3082,6 +3390,7 @@
     },
     {
       "TemplateId": 309,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Warhammer",
       "HP": 10593,
       "Iron": 5959,
@@ -3092,6 +3401,7 @@
     },
     {
       "TemplateId": 310,
+      "Stage": 1,
       "WeaponName": "Stainless Steel Greatsword",
       "HP": 13242,
       "Iron": 5959,
@@ -3102,6 +3412,7 @@
     },
     {
       "TemplateId": 311,
+      "Stage": 1,
       "WeaponName": "Dark Steel Dagger",
       "HP": 4568,
       "Iron": 1903,
@@ -3112,6 +3423,7 @@
     },
     {
       "TemplateId": 312,
+      "Stage": 1,
       "WeaponName": "Dark Steel Shortsword",
       "HP": 6091,
       "Iron": 2665,
@@ -3122,6 +3434,7 @@
     },
     {
       "TemplateId": 313,
+      "Stage": 1,
       "WeaponName": "Dark Steel Scimitar",
       "HP": 6852,
       "Iron": 3045,
@@ -3132,6 +3445,7 @@
     },
     {
       "TemplateId": 314,
+      "Stage": 1,
       "WeaponName": "Dark Steel Mace",
       "HP": 7614,
       "Iron": 4949,
@@ -3142,6 +3456,7 @@
     },
     {
       "TemplateId": 315,
+      "Stage": 1,
       "WeaponName": "Dark Steel Sword",
       "HP": 7614,
       "Iron": 3807,
@@ -3152,6 +3467,7 @@
     },
     {
       "TemplateId": 316,
+      "Stage": 1,
       "WeaponName": "Dark Steel Battleaxe",
       "HP": 9137,
       "Iron": 5330,
@@ -3162,6 +3478,7 @@
     },
     {
       "TemplateId": 317,
+      "Stage": 1,
       "WeaponName": "Dark Steel Longsword",
       "HP": 9898,
       "Iron": 4568,
@@ -3172,6 +3489,7 @@
     },
     {
       "TemplateId": 318,
+      "Stage": 1,
       "WeaponName": "Dark Steel Rapier",
       "HP": 6852,
       "Iron": 3426,
@@ -3182,6 +3500,7 @@
     },
     {
       "TemplateId": 319,
+      "Stage": 1,
       "WeaponName": "Dark Steel Warhammer",
       "HP": 12182,
       "Iron": 6852,
@@ -3192,6 +3511,7 @@
     },
     {
       "TemplateId": 320,
+      "Stage": 1,
       "WeaponName": "Dark Steel Greatsword",
       "HP": 15228,
       "Iron": 6852,
@@ -3202,6 +3522,7 @@
     },
     {
       "TemplateId": 321,
+      "Stage": 1,
       "WeaponName": "Black Iron Dagger",
       "HP": 5253,
       "Iron": 2189,
@@ -3212,6 +3533,7 @@
     },
     {
       "TemplateId": 322,
+      "Stage": 1,
       "WeaponName": "Black Iron Shortsword",
       "HP": 7005,
       "Iron": 3064,
@@ -3222,6 +3544,7 @@
     },
     {
       "TemplateId": 323,
+      "Stage": 1,
       "WeaponName": "Black Iron Scimitar",
       "HP": 7880,
       "Iron": 3502,
@@ -3232,6 +3555,7 @@
     },
     {
       "TemplateId": 324,
+      "Stage": 1,
       "WeaponName": "Black Iron Mace",
       "HP": 8756,
       "Iron": 5691,
@@ -3242,6 +3566,7 @@
     },
     {
       "TemplateId": 325,
+      "Stage": 1,
       "WeaponName": "Black Iron Sword",
       "HP": 8756,
       "Iron": 4378,
@@ -3252,6 +3577,7 @@
     },
     {
       "TemplateId": 326,
+      "Stage": 1,
       "WeaponName": "Black Iron Battleaxe",
       "HP": 10507,
       "Iron": 6129,
@@ -3262,6 +3588,7 @@
     },
     {
       "TemplateId": 327,
+      "Stage": 1,
       "WeaponName": "Black Iron Longsword",
       "HP": 11383,
       "Iron": 5253,
@@ -3272,6 +3599,7 @@
     },
     {
       "TemplateId": 328,
+      "Stage": 1,
       "WeaponName": "Black Iron Rapier",
       "HP": 7880,
       "Iron": 3940,
@@ -3282,6 +3610,7 @@
     },
     {
       "TemplateId": 329,
+      "Stage": 1,
       "WeaponName": "Black Iron Warhammer",
       "HP": 14010,
       "Iron": 7880,
@@ -3292,6 +3621,7 @@
     },
     {
       "TemplateId": 330,
+      "Stage": 1,
       "WeaponName": "Black Iron Greatsword",
       "HP": 17513,
       "Iron": 7880,
@@ -3302,6 +3632,7 @@
     },
     {
       "TemplateId": 331,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Dagger",
       "HP": 6041,
       "Iron": 2517,
@@ -3312,6 +3643,7 @@
     },
     {
       "TemplateId": 332,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Shortsword",
       "HP": 8055,
       "Iron": 3524,
@@ -3322,6 +3654,7 @@
     },
     {
       "TemplateId": 333,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Scimitar",
       "HP": 9062,
       "Iron": 4027,
@@ -3332,6 +3665,7 @@
     },
     {
       "TemplateId": 334,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Mace",
       "HP": 10069,
       "Iron": 6545,
@@ -3342,6 +3676,7 @@
     },
     {
       "TemplateId": 335,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Sword",
       "HP": 10069,
       "Iron": 5034,
@@ -3352,6 +3687,7 @@
     },
     {
       "TemplateId": 336,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Battleaxe",
       "HP": 12083,
       "Iron": 7048,
@@ -3362,6 +3698,7 @@
     },
     {
       "TemplateId": 337,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Longsword",
       "HP": 13090,
       "Iron": 6041,
@@ -3372,6 +3709,7 @@
     },
     {
       "TemplateId": 338,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Rapier",
       "HP": 9062,
       "Iron": 4531,
@@ -3382,6 +3720,7 @@
     },
     {
       "TemplateId": 339,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Warhammer",
       "HP": 16111,
       "Iron": 9062,
@@ -3392,6 +3731,7 @@
     },
     {
       "TemplateId": 340,
+      "Stage": 1,
       "WeaponName": "Shadow Steel Greatsword",
       "HP": 20139,
       "Iron": 9062,
@@ -3402,6 +3742,7 @@
     },
     {
       "TemplateId": 341,
+      "Stage": 1,
       "WeaponName": "Night Metal Dagger",
       "HP": 6948,
       "Iron": 2895,
@@ -3412,6 +3753,7 @@
     },
     {
       "TemplateId": 342,
+      "Stage": 1,
       "WeaponName": "Night Metal Shortsword",
       "HP": 9264,
       "Iron": 4053,
@@ -3422,6 +3764,7 @@
     },
     {
       "TemplateId": 343,
+      "Stage": 1,
       "WeaponName": "Night Metal Scimitar",
       "HP": 10422,
       "Iron": 4632,
@@ -3432,6 +3775,7 @@
     },
     {
       "TemplateId": 344,
+      "Stage": 1,
       "WeaponName": "Night Metal Mace",
       "HP": 11580,
       "Iron": 7527,
@@ -3442,6 +3786,7 @@
     },
     {
       "TemplateId": 345,
+      "Stage": 1,
       "WeaponName": "Night Metal Sword",
       "HP": 11580,
       "Iron": 5790,
@@ -3452,6 +3797,7 @@
     },
     {
       "TemplateId": 346,
+      "Stage": 1,
       "WeaponName": "Night Metal Battleaxe",
       "HP": 13896,
       "Iron": 8106,
@@ -3462,6 +3808,7 @@
     },
     {
       "TemplateId": 347,
+      "Stage": 1,
       "WeaponName": "Night Metal Longsword",
       "HP": 15054,
       "Iron": 6948,
@@ -3472,6 +3819,7 @@
     },
     {
       "TemplateId": 348,
+      "Stage": 1,
       "WeaponName": "Night Metal Rapier",
       "HP": 10422,
       "Iron": 5211,
@@ -3482,6 +3830,7 @@
     },
     {
       "TemplateId": 349,
+      "Stage": 1,
       "WeaponName": "Night Metal Warhammer",
       "HP": 18528,
       "Iron": 10422,
@@ -3492,6 +3841,7 @@
     },
     {
       "TemplateId": 350,
+      "Stage": 1,
       "WeaponName": "Night Metal Greatsword",
       "HP": 23160,
       "Iron": 10422,
@@ -3502,6 +3852,7 @@
     },
     {
       "TemplateId": 351,
+      "Stage": 1,
       "WeaponName": "Silver Dagger",
       "HP": 7990,
       "Iron": 3329,
@@ -3512,6 +3863,7 @@
     },
     {
       "TemplateId": 352,
+      "Stage": 1,
       "WeaponName": "Silver Shortsword",
       "HP": 10654,
       "Iron": 4661,
@@ -3522,6 +3874,7 @@
     },
     {
       "TemplateId": 353,
+      "Stage": 1,
       "WeaponName": "Silver Scimitar",
       "HP": 11985,
       "Iron": 5327,
@@ -3532,6 +3885,7 @@
     },
     {
       "TemplateId": 354,
+      "Stage": 1,
       "WeaponName": "Silver Mace",
       "HP": 13317,
       "Iron": 8656,
@@ -3542,6 +3896,7 @@
     },
     {
       "TemplateId": 355,
+      "Stage": 1,
       "WeaponName": "Silver Sword",
       "HP": 13317,
       "Iron": 6658,
@@ -3552,6 +3907,7 @@
     },
     {
       "TemplateId": 356,
+      "Stage": 1,
       "WeaponName": "Silver Battleaxe",
       "HP": 15981,
       "Iron": 9322,
@@ -3562,6 +3918,7 @@
     },
     {
       "TemplateId": 357,
+      "Stage": 1,
       "WeaponName": "Silver Longsword",
       "HP": 17312,
       "Iron": 7990,
@@ -3572,6 +3929,7 @@
     },
     {
       "TemplateId": 358,
+      "Stage": 1,
       "WeaponName": "Silver Rapier",
       "HP": 11985,
       "Iron": 5992,
@@ -3582,6 +3940,7 @@
     },
     {
       "TemplateId": 359,
+      "Stage": 1,
       "WeaponName": "Silver Warhammer",
       "HP": 21308,
       "Iron": 11985,
@@ -3592,6 +3951,7 @@
     },
     {
       "TemplateId": 360,
+      "Stage": 1,
       "WeaponName": "Silver Greatsword",
       "HP": 26635,
       "Iron": 11985,
@@ -3602,6 +3962,7 @@
     },
     {
       "TemplateId": 361,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Dagger",
       "HP": 9189,
       "Iron": 3828,
@@ -3612,6 +3973,7 @@
     },
     {
       "TemplateId": 362,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Shortsword",
       "HP": 12252,
       "Iron": 5360,
@@ -3622,6 +3984,7 @@
     },
     {
       "TemplateId": 363,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Scimitar",
       "HP": 13783,
       "Iron": 6126,
@@ -3632,6 +3995,7 @@
     },
     {
       "TemplateId": 364,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Mace",
       "HP": 15315,
       "Iron": 9954,
@@ -3642,6 +4006,7 @@
     },
     {
       "TemplateId": 365,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Sword",
       "HP": 15315,
       "Iron": 7657,
@@ -3652,6 +4017,7 @@
     },
     {
       "TemplateId": 366,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Battleaxe",
       "HP": 18378,
       "Iron": 10720,
@@ -3662,6 +4028,7 @@
     },
     {
       "TemplateId": 367,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Longsword",
       "HP": 19909,
       "Iron": 9189,
@@ -3672,6 +4039,7 @@
     },
     {
       "TemplateId": 368,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Rapier",
       "HP": 13783,
       "Iron": 6891,
@@ -3682,6 +4050,7 @@
     },
     {
       "TemplateId": 369,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Warhammer",
       "HP": 24504,
       "Iron": 13783,
@@ -3692,6 +4061,7 @@
     },
     {
       "TemplateId": 370,
+      "Stage": 1,
       "WeaponName": "Sterling Silver Greatsword",
       "HP": 30630,
       "Iron": 13783,
@@ -3702,6 +4072,7 @@
     },
     {
       "TemplateId": 371,
+      "Stage": 1,
       "WeaponName": "Pure Silver Dagger",
       "HP": 10567,
       "Iron": 4403,
@@ -3712,6 +4083,7 @@
     },
     {
       "TemplateId": 372,
+      "Stage": 1,
       "WeaponName": "Pure Silver Shortsword",
       "HP": 14089,
       "Iron": 6164,
@@ -3722,6 +4094,7 @@
     },
     {
       "TemplateId": 373,
+      "Stage": 1,
       "WeaponName": "Pure Silver Scimitar",
       "HP": 15851,
       "Iron": 7044,
@@ -3732,6 +4105,7 @@
     },
     {
       "TemplateId": 374,
+      "Stage": 1,
       "WeaponName": "Pure Silver Mace",
       "HP": 17612,
       "Iron": 11448,
@@ -3742,6 +4116,7 @@
     },
     {
       "TemplateId": 375,
+      "Stage": 1,
       "WeaponName": "Pure Silver Sword",
       "HP": 17612,
       "Iron": 8806,
@@ -3752,6 +4127,7 @@
     },
     {
       "TemplateId": 376,
+      "Stage": 1,
       "WeaponName": "Pure Silver Battleaxe",
       "HP": 21134,
       "Iron": 12328,
@@ -3762,6 +4138,7 @@
     },
     {
       "TemplateId": 377,
+      "Stage": 1,
       "WeaponName": "Pure Silver Longsword",
       "HP": 22896,
       "Iron": 10567,
@@ -3772,6 +4149,7 @@
     },
     {
       "TemplateId": 378,
+      "Stage": 1,
       "WeaponName": "Pure Silver Rapier",
       "HP": 15851,
       "Iron": 7925,
@@ -3782,6 +4160,7 @@
     },
     {
       "TemplateId": 379,
+      "Stage": 1,
       "WeaponName": "Pure Silver Warhammer",
       "HP": 28179,
       "Iron": 15851,
@@ -3792,6 +4171,7 @@
     },
     {
       "TemplateId": 380,
+      "Stage": 1,
       "WeaponName": "Pure Silver Greatsword",
       "HP": 35224,
       "Iron": 15851,
@@ -3802,6 +4182,7 @@
     },
     {
       "TemplateId": 381,
+      "Stage": 1,
       "WeaponName": "Holy Silver Dagger",
       "HP": 12152,
       "Iron": 5063,
@@ -3812,6 +4193,7 @@
     },
     {
       "TemplateId": 382,
+      "Stage": 1,
       "WeaponName": "Holy Silver Shortsword",
       "HP": 16203,
       "Iron": 7089,
@@ -3822,6 +4204,7 @@
     },
     {
       "TemplateId": 383,
+      "Stage": 1,
       "WeaponName": "Holy Silver Scimitar",
       "HP": 18228,
       "Iron": 8101,
@@ -3832,6 +4215,7 @@
     },
     {
       "TemplateId": 384,
+      "Stage": 1,
       "WeaponName": "Holy Silver Mace",
       "HP": 20254,
       "Iron": 13165,
@@ -3842,6 +4226,7 @@
     },
     {
       "TemplateId": 385,
+      "Stage": 1,
       "WeaponName": "Holy Silver Sword",
       "HP": 20254,
       "Iron": 10127,
@@ -3852,6 +4237,7 @@
     },
     {
       "TemplateId": 386,
+      "Stage": 1,
       "WeaponName": "Holy Silver Battleaxe",
       "HP": 24305,
       "Iron": 14178,
@@ -3862,6 +4248,7 @@
     },
     {
       "TemplateId": 387,
+      "Stage": 1,
       "WeaponName": "Holy Silver Longsword",
       "HP": 26330,
       "Iron": 12152,
@@ -3872,6 +4259,7 @@
     },
     {
       "TemplateId": 388,
+      "Stage": 1,
       "WeaponName": "Holy Silver Rapier",
       "HP": 18228,
       "Iron": 9114,
@@ -3882,6 +4270,7 @@
     },
     {
       "TemplateId": 389,
+      "Stage": 1,
       "WeaponName": "Holy Silver Warhammer",
       "HP": 32406,
       "Iron": 18228,
@@ -3892,6 +4281,7 @@
     },
     {
       "TemplateId": 390,
+      "Stage": 1,
       "WeaponName": "Holy Silver Greatsword",
       "HP": 40508,
       "Iron": 18228,
@@ -3902,6 +4292,7 @@
     },
     {
       "TemplateId": 391,
+      "Stage": 1,
       "WeaponName": "Gold Dagger",
       "HP": 13975,
       "Iron": 5823,
@@ -3912,6 +4303,7 @@
     },
     {
       "TemplateId": 392,
+      "Stage": 1,
       "WeaponName": "Gold Shortsword",
       "HP": 18633,
       "Iron": 8152,
@@ -3922,6 +4314,7 @@
     },
     {
       "TemplateId": 393,
+      "Stage": 1,
       "WeaponName": "Gold Scimitar",
       "HP": 20963,
       "Iron": 9316,
@@ -3932,6 +4325,7 @@
     },
     {
       "TemplateId": 394,
+      "Stage": 1,
       "WeaponName": "Gold Mace",
       "HP": 23292,
       "Iron": 15140,
@@ -3942,6 +4336,7 @@
     },
     {
       "TemplateId": 395,
+      "Stage": 1,
       "WeaponName": "Gold Sword",
       "HP": 23292,
       "Iron": 11646,
@@ -3952,6 +4347,7 @@
     },
     {
       "TemplateId": 396,
+      "Stage": 1,
       "WeaponName": "Gold Battleaxe",
       "HP": 27950,
       "Iron": 16304,
@@ -3962,6 +4358,7 @@
     },
     {
       "TemplateId": 397,
+      "Stage": 1,
       "WeaponName": "Gold Longsword",
       "HP": 30280,
       "Iron": 13975,
@@ -3972,6 +4369,7 @@
     },
     {
       "TemplateId": 398,
+      "Stage": 1,
       "WeaponName": "Gold Rapier",
       "HP": 20963,
       "Iron": 10481,
@@ -3982,6 +4380,7 @@
     },
     {
       "TemplateId": 399,
+      "Stage": 1,
       "WeaponName": "Gold Warhammer",
       "HP": 37267,
       "Iron": 20963,
@@ -3992,6 +4391,7 @@
     },
     {
       "TemplateId": 400,
+      "Stage": 1,
       "WeaponName": "Gold Greatsword",
       "HP": 46584,
       "Iron": 20963,
@@ -4002,6 +4402,7 @@
     },
     {
       "TemplateId": 401,
+      "Stage": 1,
       "WeaponName": "Rose Gold Dagger",
       "HP": 16071,
       "Iron": 6696,
@@ -4012,6 +4413,7 @@
     },
     {
       "TemplateId": 402,
+      "Stage": 1,
       "WeaponName": "Rose Gold Shortsword",
       "HP": 21429,
       "Iron": 9375,
@@ -4022,6 +4424,7 @@
     },
     {
       "TemplateId": 403,
+      "Stage": 1,
       "WeaponName": "Rose Gold Scimitar",
       "HP": 24107,
       "Iron": 10714,
@@ -4032,6 +4435,7 @@
     },
     {
       "TemplateId": 404,
+      "Stage": 1,
       "WeaponName": "Rose Gold Mace",
       "HP": 26786,
       "Iron": 17411,
@@ -4042,6 +4446,7 @@
     },
     {
       "TemplateId": 405,
+      "Stage": 1,
       "WeaponName": "Rose Gold Sword",
       "HP": 26786,
       "Iron": 13393,
@@ -4052,6 +4457,7 @@
     },
     {
       "TemplateId": 406,
+      "Stage": 1,
       "WeaponName": "Rose Gold Battleaxe",
       "HP": 32143,
       "Iron": 18750,
@@ -4062,6 +4468,7 @@
     },
     {
       "TemplateId": 407,
+      "Stage": 1,
       "WeaponName": "Rose Gold Longsword",
       "HP": 34822,
       "Iron": 16071,
@@ -4072,6 +4479,7 @@
     },
     {
       "TemplateId": 408,
+      "Stage": 1,
       "WeaponName": "Rose Gold Rapier",
       "HP": 24107,
       "Iron": 12053,
@@ -4082,6 +4490,7 @@
     },
     {
       "TemplateId": 409,
+      "Stage": 1,
       "WeaponName": "Rose Gold Warhammer",
       "HP": 42858,
       "Iron": 24107,
@@ -4092,6 +4501,7 @@
     },
     {
       "TemplateId": 410,
+      "Stage": 1,
       "WeaponName": "Rose Gold Greatsword",
       "HP": 53572,
       "Iron": 24107,
@@ -4102,6 +4512,7 @@
     },
     {
       "TemplateId": 411,
+      "Stage": 1,
       "WeaponName": "White Gold Dagger",
       "HP": 18482,
       "Iron": 7701,
@@ -4112,6 +4523,7 @@
     },
     {
       "TemplateId": 412,
+      "Stage": 1,
       "WeaponName": "White Gold Shortsword",
       "HP": 24643,
       "Iron": 10781,
@@ -4122,6 +4534,7 @@
     },
     {
       "TemplateId": 413,
+      "Stage": 1,
       "WeaponName": "White Gold Scimitar",
       "HP": 27723,
       "Iron": 12321,
@@ -4132,6 +4545,7 @@
     },
     {
       "TemplateId": 414,
+      "Stage": 1,
       "WeaponName": "White Gold Mace",
       "HP": 30804,
       "Iron": 20022,
@@ -4142,6 +4556,7 @@
     },
     {
       "TemplateId": 415,
+      "Stage": 1,
       "WeaponName": "White Gold Sword",
       "HP": 30804,
       "Iron": 15402,
@@ -4152,6 +4567,7 @@
     },
     {
       "TemplateId": 416,
+      "Stage": 1,
       "WeaponName": "White Gold Battleaxe",
       "HP": 36965,
       "Iron": 21563,
@@ -4162,6 +4578,7 @@
     },
     {
       "TemplateId": 417,
+      "Stage": 1,
       "WeaponName": "White Gold Longsword",
       "HP": 40045,
       "Iron": 18482,
@@ -4172,6 +4589,7 @@
     },
     {
       "TemplateId": 418,
+      "Stage": 1,
       "WeaponName": "White Gold Rapier",
       "HP": 27723,
       "Iron": 13861,
@@ -4182,6 +4600,7 @@
     },
     {
       "TemplateId": 419,
+      "Stage": 1,
       "WeaponName": "White Gold Warhammer",
       "HP": 49286,
       "Iron": 27723,
@@ -4192,6 +4611,7 @@
     },
     {
       "TemplateId": 420,
+      "Stage": 1,
       "WeaponName": "White Gold Greatsword",
       "HP": 61608,
       "Iron": 27723,
@@ -4202,6 +4622,7 @@
     },
     {
       "TemplateId": 421,
+      "Stage": 1,
       "WeaponName": "Royal Gold Dagger",
       "HP": 21254,
       "Iron": 8856,
@@ -4212,6 +4633,7 @@
     },
     {
       "TemplateId": 422,
+      "Stage": 1,
       "WeaponName": "Royal Gold Shortsword",
       "HP": 28339,
       "Iron": 12398,
@@ -4222,6 +4644,7 @@
     },
     {
       "TemplateId": 423,
+      "Stage": 1,
       "WeaponName": "Royal Gold Scimitar",
       "HP": 31882,
       "Iron": 14169,
@@ -4232,6 +4655,7 @@
     },
     {
       "TemplateId": 424,
+      "Stage": 1,
       "WeaponName": "Royal Gold Mace",
       "HP": 35424,
       "Iron": 23026,
@@ -4242,6 +4666,7 @@
     },
     {
       "TemplateId": 425,
+      "Stage": 1,
       "WeaponName": "Royal Gold Sword",
       "HP": 35424,
       "Iron": 17712,
@@ -4252,6 +4677,7 @@
     },
     {
       "TemplateId": 426,
+      "Stage": 1,
       "WeaponName": "Royal Gold Battleaxe",
       "HP": 42509,
       "Iron": 24797,
@@ -4262,6 +4688,7 @@
     },
     {
       "TemplateId": 427,
+      "Stage": 1,
       "WeaponName": "Royal Gold Longsword",
       "HP": 46052,
       "Iron": 21254,
@@ -4272,6 +4699,7 @@
     },
     {
       "TemplateId": 428,
+      "Stage": 1,
       "WeaponName": "Royal Gold Rapier",
       "HP": 31882,
       "Iron": 15941,
@@ -4282,6 +4710,7 @@
     },
     {
       "TemplateId": 429,
+      "Stage": 1,
       "WeaponName": "Royal Gold Warhammer",
       "HP": 56679,
       "Iron": 31882,
@@ -4292,6 +4721,7 @@
     },
     {
       "TemplateId": 430,
+      "Stage": 1,
       "WeaponName": "Royal Gold Greatsword",
       "HP": 70849,
       "Iron": 31882,
@@ -4302,6 +4732,7 @@
     },
     {
       "TemplateId": 431,
+      "Stage": 1,
       "WeaponName": "Platinum Dagger",
       "HP": 24443,
       "Iron": 10184,
@@ -4312,6 +4743,7 @@
     },
     {
       "TemplateId": 432,
+      "Stage": 1,
       "WeaponName": "Platinum Shortsword",
       "HP": 32590,
       "Iron": 14258,
@@ -4322,6 +4754,7 @@
     },
     {
       "TemplateId": 433,
+      "Stage": 1,
       "WeaponName": "Platinum Scimitar",
       "HP": 36664,
       "Iron": 16295,
@@ -4332,6 +4765,7 @@
     },
     {
       "TemplateId": 434,
+      "Stage": 1,
       "WeaponName": "Platinum Mace",
       "HP": 40738,
       "Iron": 26480,
@@ -4342,6 +4776,7 @@
     },
     {
       "TemplateId": 435,
+      "Stage": 1,
       "WeaponName": "Platinum Sword",
       "HP": 40738,
       "Iron": 20369,
@@ -4352,6 +4787,7 @@
     },
     {
       "TemplateId": 436,
+      "Stage": 1,
       "WeaponName": "Platinum Battleaxe",
       "HP": 48886,
       "Iron": 28517,
@@ -4362,6 +4798,7 @@
     },
     {
       "TemplateId": 437,
+      "Stage": 1,
       "WeaponName": "Platinum Longsword",
       "HP": 52960,
       "Iron": 24443,
@@ -4372,6 +4809,7 @@
     },
     {
       "TemplateId": 438,
+      "Stage": 1,
       "WeaponName": "Platinum Rapier",
       "HP": 36664,
       "Iron": 18332,
@@ -4382,6 +4820,7 @@
     },
     {
       "TemplateId": 439,
+      "Stage": 1,
       "WeaponName": "Platinum Warhammer",
       "HP": 65181,
       "Iron": 36664,
@@ -4392,6 +4831,7 @@
     },
     {
       "TemplateId": 440,
+      "Stage": 1,
       "WeaponName": "Platinum Greatsword",
       "HP": 81477,
       "Iron": 36664,
@@ -4402,6 +4842,7 @@
     },
     {
       "TemplateId": 441,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Dagger",
       "HP": 28109,
       "Iron": 11712,
@@ -4412,6 +4853,7 @@
     },
     {
       "TemplateId": 442,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Shortsword",
       "HP": 37479,
       "Iron": 16397,
@@ -4422,6 +4864,7 @@
     },
     {
       "TemplateId": 443,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Scimitar",
       "HP": 42164,
       "Iron": 18739,
@@ -4432,6 +4875,7 @@
     },
     {
       "TemplateId": 444,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Mace",
       "HP": 46849,
       "Iron": 30452,
@@ -4442,6 +4886,7 @@
     },
     {
       "TemplateId": 445,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Sword",
       "HP": 46849,
       "Iron": 23424,
@@ -4452,6 +4897,7 @@
     },
     {
       "TemplateId": 446,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Battleaxe",
       "HP": 56219,
       "Iron": 32794,
@@ -4462,6 +4908,7 @@
     },
     {
       "TemplateId": 447,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Longsword",
       "HP": 60904,
       "Iron": 28109,
@@ -4472,6 +4919,7 @@
     },
     {
       "TemplateId": 448,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Rapier",
       "HP": 42164,
       "Iron": 21082,
@@ -4482,6 +4930,7 @@
     },
     {
       "TemplateId": 449,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Warhammer",
       "HP": 74959,
       "Iron": 42164,
@@ -4492,6 +4941,7 @@
     },
     {
       "TemplateId": 450,
+      "Stage": 1,
       "WeaponName": "Dense Platinum Greatsword",
       "HP": 93699,
       "Iron": 42164,
@@ -4502,6 +4952,7 @@
     },
     {
       "TemplateId": 451,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Dagger",
       "HP": 32326,
       "Iron": 13469,
@@ -4512,6 +4963,7 @@
     },
     {
       "TemplateId": 452,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Shortsword",
       "HP": 43101,
       "Iron": 18856,
@@ -4522,6 +4974,7 @@
     },
     {
       "TemplateId": 453,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Scimitar",
       "HP": 48489,
       "Iron": 21550,
@@ -4532,6 +4985,7 @@
     },
     {
       "TemplateId": 454,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Mace",
       "HP": 53876,
       "Iron": 35020,
@@ -4542,6 +4996,7 @@
     },
     {
       "TemplateId": 455,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Sword",
       "HP": 53876,
       "Iron": 26938,
@@ -4552,6 +5007,7 @@
     },
     {
       "TemplateId": 456,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Battleaxe",
       "HP": 64652,
       "Iron": 37713,
@@ -4562,6 +5018,7 @@
     },
     {
       "TemplateId": 457,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Longsword",
       "HP": 70040,
       "Iron": 32326,
@@ -4572,6 +5029,7 @@
     },
     {
       "TemplateId": 458,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Rapier",
       "HP": 48489,
       "Iron": 24244,
@@ -4582,6 +5040,7 @@
     },
     {
       "TemplateId": 459,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Warhammer",
       "HP": 86203,
       "Iron": 48489,
@@ -4592,6 +5051,7 @@
     },
     {
       "TemplateId": 460,
+      "Stage": 1,
       "WeaponName": "Noble Platinum Greatsword",
       "HP": 107753,
       "Iron": 48489,
@@ -4602,6 +5062,7 @@
     },
     {
       "TemplateId": 461,
+      "Stage": 1,
       "WeaponName": "Mithril Dagger",
       "HP": 37175,
       "Iron": 15489,
@@ -4612,6 +5073,7 @@
     },
     {
       "TemplateId": 462,
+      "Stage": 1,
       "WeaponName": "Mithril Shortsword",
       "HP": 49566,
       "Iron": 21685,
@@ -4622,6 +5084,7 @@
     },
     {
       "TemplateId": 463,
+      "Stage": 1,
       "WeaponName": "Mithril Scimitar",
       "HP": 55762,
       "Iron": 24783,
@@ -4632,6 +5095,7 @@
     },
     {
       "TemplateId": 464,
+      "Stage": 1,
       "WeaponName": "Mithril Mace",
       "HP": 61958,
       "Iron": 40273,
@@ -4642,6 +5106,7 @@
     },
     {
       "TemplateId": 465,
+      "Stage": 1,
       "WeaponName": "Mithril Sword",
       "HP": 61958,
       "Iron": 30979,
@@ -4652,6 +5117,7 @@
     },
     {
       "TemplateId": 466,
+      "Stage": 1,
       "WeaponName": "Mithril Battleaxe",
       "HP": 74350,
       "Iron": 43370,
@@ -4662,6 +5128,7 @@
     },
     {
       "TemplateId": 467,
+      "Stage": 1,
       "WeaponName": "Mithril Longsword",
       "HP": 80546,
       "Iron": 37175,
@@ -4672,6 +5139,7 @@
     },
     {
       "TemplateId": 468,
+      "Stage": 1,
       "WeaponName": "Mithril Rapier",
       "HP": 55762,
       "Iron": 27881,
@@ -4682,6 +5150,7 @@
     },
     {
       "TemplateId": 469,
+      "Stage": 1,
       "WeaponName": "Mithril Warhammer",
       "HP": 99133,
       "Iron": 55762,
@@ -4692,6 +5161,7 @@
     },
     {
       "TemplateId": 470,
+      "Stage": 1,
       "WeaponName": "Mithril Greatsword",
       "HP": 123916,
       "Iron": 55762,
@@ -4702,6 +5172,7 @@
     },
     {
       "TemplateId": 471,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Dagger",
       "HP": 42751,
       "Iron": 17813,
@@ -4712,6 +5183,7 @@
     },
     {
       "TemplateId": 472,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Shortsword",
       "HP": 57001,
       "Iron": 24938,
@@ -4722,6 +5194,7 @@
     },
     {
       "TemplateId": 473,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Scimitar",
       "HP": 64127,
       "Iron": 28500,
@@ -4732,6 +5205,7 @@
     },
     {
       "TemplateId": 474,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Mace",
       "HP": 71252,
       "Iron": 46313,
@@ -4742,6 +5216,7 @@
     },
     {
       "TemplateId": 475,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Sword",
       "HP": 71252,
       "Iron": 35626,
@@ -4752,6 +5227,7 @@
     },
     {
       "TemplateId": 476,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Battleaxe",
       "HP": 85502,
       "Iron": 49876,
@@ -4762,6 +5238,7 @@
     },
     {
       "TemplateId": 477,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Longsword",
       "HP": 92627,
       "Iron": 42751,
@@ -4772,6 +5249,7 @@
     },
     {
       "TemplateId": 478,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Rapier",
       "HP": 64127,
       "Iron": 32063,
@@ -4782,6 +5260,7 @@
     },
     {
       "TemplateId": 479,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Warhammer",
       "HP": 114003,
       "Iron": 64127,
@@ -4792,6 +5271,7 @@
     },
     {
       "TemplateId": 480,
+      "Stage": 1,
       "WeaponName": "Elven Mithril Greatsword",
       "HP": 142504,
       "Iron": 64127,
@@ -4802,6 +5282,7 @@
     },
     {
       "TemplateId": 481,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Dagger",
       "HP": 49164,
       "Iron": 20485,
@@ -4812,6 +5293,7 @@
     },
     {
       "TemplateId": 482,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Shortsword",
       "HP": 65552,
       "Iron": 28679,
@@ -4822,6 +5304,7 @@
     },
     {
       "TemplateId": 483,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Scimitar",
       "HP": 73746,
       "Iron": 32776,
@@ -4832,6 +5315,7 @@
     },
     {
       "TemplateId": 484,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Mace",
       "HP": 81940,
       "Iron": 53261,
@@ -4842,6 +5326,7 @@
     },
     {
       "TemplateId": 485,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Sword",
       "HP": 81940,
       "Iron": 40970,
@@ -4852,6 +5337,7 @@
     },
     {
       "TemplateId": 486,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Battleaxe",
       "HP": 98328,
       "Iron": 57358,
@@ -4862,6 +5348,7 @@
     },
     {
       "TemplateId": 487,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Longsword",
       "HP": 106522,
       "Iron": 49164,
@@ -4872,6 +5359,7 @@
     },
     {
       "TemplateId": 488,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Rapier",
       "HP": 73746,
       "Iron": 36873,
@@ -4882,6 +5370,7 @@
     },
     {
       "TemplateId": 489,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Warhammer",
       "HP": 131104,
       "Iron": 73746,
@@ -4892,6 +5381,7 @@
     },
     {
       "TemplateId": 490,
+      "Stage": 1,
       "WeaponName": "Ancient Mithril Greatsword",
       "HP": 163880,
       "Iron": 73746,
@@ -4902,6 +5392,7 @@
     },
     {
       "TemplateId": 491,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Dagger",
       "HP": 56538,
       "Iron": 23557,
@@ -4912,6 +5403,7 @@
     },
     {
       "TemplateId": 492,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Shortsword",
       "HP": 75384,
       "Iron": 32980,
@@ -4922,6 +5414,7 @@
     },
     {
       "TemplateId": 493,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Scimitar",
       "HP": 84807,
       "Iron": 37692,
@@ -4932,6 +5425,7 @@
     },
     {
       "TemplateId": 494,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Mace",
       "HP": 94231,
       "Iron": 61250,
@@ -4942,6 +5436,7 @@
     },
     {
       "TemplateId": 495,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Sword",
       "HP": 94231,
       "Iron": 47115,
@@ -4952,6 +5447,7 @@
     },
     {
       "TemplateId": 496,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Battleaxe",
       "HP": 113077,
       "Iron": 65961,
@@ -4962,6 +5458,7 @@
     },
     {
       "TemplateId": 497,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Longsword",
       "HP": 122500,
       "Iron": 56538,
@@ -4972,6 +5469,7 @@
     },
     {
       "TemplateId": 498,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Rapier",
       "HP": 84807,
       "Iron": 42403,
@@ -4982,6 +5480,7 @@
     },
     {
       "TemplateId": 499,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Warhammer",
       "HP": 150769,
       "Iron": 84807,
@@ -4992,6 +5491,7 @@
     },
     {
       "TemplateId": 500,
+      "Stage": 1,
       "WeaponName": "Celestial Mithril Greatsword",
       "HP": 188462,
       "Iron": 84807,
@@ -5002,6 +5502,7 @@
     },
     {
       "TemplateId": 501,
+      "Stage": 1,
       "WeaponName": "Orichalcum Dagger",
       "HP": 65019,
       "Iron": 27091,
@@ -5012,6 +5513,7 @@
     },
     {
       "TemplateId": 502,
+      "Stage": 1,
       "WeaponName": "Orichalcum Shortsword",
       "HP": 86692,
       "Iron": 37928,
@@ -5022,6 +5524,7 @@
     },
     {
       "TemplateId": 503,
+      "Stage": 1,
       "WeaponName": "Orichalcum Scimitar",
       "HP": 97529,
       "Iron": 43346,
@@ -5032,6 +5535,7 @@
     },
     {
       "TemplateId": 504,
+      "Stage": 1,
       "WeaponName": "Orichalcum Mace",
       "HP": 108365,
       "Iron": 70437,
@@ -5042,6 +5546,7 @@
     },
     {
       "TemplateId": 505,
+      "Stage": 1,
       "WeaponName": "Orichalcum Sword",
       "HP": 108365,
       "Iron": 54182,
@@ -5052,6 +5557,7 @@
     },
     {
       "TemplateId": 506,
+      "Stage": 1,
       "WeaponName": "Orichalcum Battleaxe",
       "HP": 130038,
       "Iron": 75856,
@@ -5062,6 +5568,7 @@
     },
     {
       "TemplateId": 507,
+      "Stage": 1,
       "WeaponName": "Orichalcum Longsword",
       "HP": 140875,
       "Iron": 65019,
@@ -5072,6 +5579,7 @@
     },
     {
       "TemplateId": 508,
+      "Stage": 1,
       "WeaponName": "Orichalcum Rapier",
       "HP": 97529,
       "Iron": 48764,
@@ -5082,6 +5590,7 @@
     },
     {
       "TemplateId": 509,
+      "Stage": 1,
       "WeaponName": "Orichalcum Warhammer",
       "HP": 173385,
       "Iron": 97529,
@@ -5092,6 +5601,7 @@
     },
     {
       "TemplateId": 510,
+      "Stage": 1,
       "WeaponName": "Orichalcum Greatsword",
       "HP": 216731,
       "Iron": 97529,
@@ -5102,6 +5612,7 @@
     },
     {
       "TemplateId": 511,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Dagger",
       "HP": 74772,
       "Iron": 31155,
@@ -5112,6 +5623,7 @@
     },
     {
       "TemplateId": 512,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Shortsword",
       "HP": 99696,
       "Iron": 43617,
@@ -5122,6 +5634,7 @@
     },
     {
       "TemplateId": 513,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Scimitar",
       "HP": 112158,
       "Iron": 49848,
@@ -5132,6 +5645,7 @@
     },
     {
       "TemplateId": 514,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Mace",
       "HP": 124620,
       "Iron": 81003,
@@ -5142,6 +5656,7 @@
     },
     {
       "TemplateId": 515,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Sword",
       "HP": 124620,
       "Iron": 62310,
@@ -5152,6 +5667,7 @@
     },
     {
       "TemplateId": 516,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Battleaxe",
       "HP": 149544,
       "Iron": 87234,
@@ -5162,6 +5678,7 @@
     },
     {
       "TemplateId": 517,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Longsword",
       "HP": 162006,
       "Iron": 74772,
@@ -5172,6 +5689,7 @@
     },
     {
       "TemplateId": 518,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Rapier",
       "HP": 112158,
       "Iron": 56079,
@@ -5182,6 +5700,7 @@
     },
     {
       "TemplateId": 519,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Warhammer",
       "HP": 199392,
       "Iron": 112158,
@@ -5192,6 +5711,7 @@
     },
     {
       "TemplateId": 520,
+      "Stage": 1,
       "WeaponName": "Dwarven Orichalcum Greatsword",
       "HP": 249241,
       "Iron": 112158,
@@ -5202,6 +5722,7 @@
     },
     {
       "TemplateId": 521,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Dagger",
       "HP": 85988,
       "Iron": 35828,
@@ -5212,6 +5733,7 @@
     },
     {
       "TemplateId": 522,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Shortsword",
       "HP": 114650,
       "Iron": 50159,
@@ -5222,6 +5744,7 @@
     },
     {
       "TemplateId": 523,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Scimitar",
       "HP": 128982,
       "Iron": 57325,
@@ -5232,6 +5755,7 @@
     },
     {
       "TemplateId": 524,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Mace",
       "HP": 143313,
       "Iron": 93153,
@@ -5242,6 +5766,7 @@
     },
     {
       "TemplateId": 525,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Sword",
       "HP": 143313,
       "Iron": 71656,
@@ -5252,6 +5777,7 @@
     },
     {
       "TemplateId": 526,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Battleaxe",
       "HP": 171976,
       "Iron": 100319,
@@ -5262,6 +5788,7 @@
     },
     {
       "TemplateId": 527,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Longsword",
       "HP": 186307,
       "Iron": 85988,
@@ -5272,6 +5799,7 @@
     },
     {
       "TemplateId": 528,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Rapier",
       "HP": 128982,
       "Iron": 64491,
@@ -5282,6 +5810,7 @@
     },
     {
       "TemplateId": 529,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Warhammer",
       "HP": 229301,
       "Iron": 128982,
@@ -5292,6 +5821,7 @@
     },
     {
       "TemplateId": 530,
+      "Stage": 1,
       "WeaponName": "Magma Orichalcum Greatsword",
       "HP": 286627,
       "Iron": 128982,
@@ -5302,6 +5832,7 @@
     },
     {
       "TemplateId": 531,
+      "Stage": 1,
       "WeaponName": "Adamantite Dagger",
       "HP": 98886,
       "Iron": 41202,
@@ -5312,6 +5843,7 @@
     },
     {
       "TemplateId": 532,
+      "Stage": 1,
       "WeaponName": "Adamantite Shortsword",
       "HP": 131848,
       "Iron": 57683,
@@ -5322,6 +5854,7 @@
     },
     {
       "TemplateId": 533,
+      "Stage": 1,
       "WeaponName": "Adamantite Scimitar",
       "HP": 148329,
       "Iron": 65924,
@@ -5332,6 +5865,7 @@
     },
     {
       "TemplateId": 534,
+      "Stage": 1,
       "WeaponName": "Adamantite Mace",
       "HP": 164810,
       "Iron": 107126,
@@ -5342,6 +5876,7 @@
     },
     {
       "TemplateId": 535,
+      "Stage": 1,
       "WeaponName": "Adamantite Sword",
       "HP": 164810,
       "Iron": 82405,
@@ -5352,6 +5887,7 @@
     },
     {
       "TemplateId": 536,
+      "Stage": 1,
       "WeaponName": "Adamantite Battleaxe",
       "HP": 197772,
       "Iron": 115367,
@@ -5362,6 +5898,7 @@
     },
     {
       "TemplateId": 537,
+      "Stage": 1,
       "WeaponName": "Adamantite Longsword",
       "HP": 214253,
       "Iron": 98886,
@@ -5372,6 +5909,7 @@
     },
     {
       "TemplateId": 538,
+      "Stage": 1,
       "WeaponName": "Adamantite Rapier",
       "HP": 148329,
       "Iron": 74164,
@@ -5382,6 +5920,7 @@
     },
     {
       "TemplateId": 539,
+      "Stage": 1,
       "WeaponName": "Adamantite Warhammer",
       "HP": 263697,
       "Iron": 148329,
@@ -5392,6 +5931,7 @@
     },
     {
       "TemplateId": 540,
+      "Stage": 1,
       "WeaponName": "Adamantite Greatsword",
       "HP": 329621,
       "Iron": 148329,
@@ -5402,6 +5942,7 @@
     },
     {
       "TemplateId": 541,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Dagger",
       "HP": 113719,
       "Iron": 47383,
@@ -5412,6 +5953,7 @@
     },
     {
       "TemplateId": 542,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Shortsword",
       "HP": 151625,
       "Iron": 66336,
@@ -5422,6 +5964,7 @@
     },
     {
       "TemplateId": 543,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Scimitar",
       "HP": 170579,
       "Iron": 75812,
@@ -5432,6 +5975,7 @@
     },
     {
       "TemplateId": 544,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Mace",
       "HP": 189532,
       "Iron": 123196,
@@ -5442,6 +5986,7 @@
     },
     {
       "TemplateId": 545,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Sword",
       "HP": 189532,
       "Iron": 94766,
@@ -5452,6 +5997,7 @@
     },
     {
       "TemplateId": 546,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Battleaxe",
       "HP": 227438,
       "Iron": 132672,
@@ -5462,6 +6008,7 @@
     },
     {
       "TemplateId": 547,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Longsword",
       "HP": 246392,
       "Iron": 113719,
@@ -5472,6 +6019,7 @@
     },
     {
       "TemplateId": 548,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Rapier",
       "HP": 170579,
       "Iron": 85289,
@@ -5482,6 +6030,7 @@
     },
     {
       "TemplateId": 549,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Warhammer",
       "HP": 303251,
       "Iron": 170579,
@@ -5492,6 +6041,7 @@
     },
     {
       "TemplateId": 550,
+      "Stage": 1,
       "WeaponName": "Hardened Adamantite Greatsword",
       "HP": 379064,
       "Iron": 170579,
@@ -5502,6 +6052,7 @@
     },
     {
       "TemplateId": 551,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Dagger",
       "HP": 130777,
       "Iron": 54490,
@@ -5512,6 +6063,7 @@
     },
     {
       "TemplateId": 552,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Shortsword",
       "HP": 174369,
       "Iron": 76286,
@@ -5522,6 +6074,7 @@
     },
     {
       "TemplateId": 553,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Scimitar",
       "HP": 196165,
       "Iron": 87184,
@@ -5532,6 +6085,7 @@
     },
     {
       "TemplateId": 554,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Mace",
       "HP": 217962,
       "Iron": 141675,
@@ -5542,6 +6096,7 @@
     },
     {
       "TemplateId": 555,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Sword",
       "HP": 217962,
       "Iron": 108981,
@@ -5552,6 +6107,7 @@
     },
     {
       "TemplateId": 556,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Battleaxe",
       "HP": 261554,
       "Iron": 152573,
@@ -5562,6 +6118,7 @@
     },
     {
       "TemplateId": 557,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Longsword",
       "HP": 283350,
       "Iron": 130777,
@@ -5572,6 +6129,7 @@
     },
     {
       "TemplateId": 558,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Rapier",
       "HP": 196165,
       "Iron": 98082,
@@ -5582,6 +6140,7 @@
     },
     {
       "TemplateId": 559,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Warhammer",
       "HP": 348739,
       "Iron": 196165,
@@ -5592,6 +6151,7 @@
     },
     {
       "TemplateId": 560,
+      "Stage": 1,
       "WeaponName": "Perfect Adamantite Greatsword",
       "HP": 435924,
       "Iron": 196165,
@@ -5602,6 +6162,7 @@
     },
     {
       "TemplateId": 561,
+      "Stage": 1,
       "WeaponName": "Titanium Dagger",
       "HP": 150393,
       "Iron": 62664,
@@ -5612,6 +6173,7 @@
     },
     {
       "TemplateId": 562,
+      "Stage": 1,
       "WeaponName": "Titanium Shortsword",
       "HP": 200525,
       "Iron": 87729,
@@ -5622,6 +6184,7 @@
     },
     {
       "TemplateId": 563,
+      "Stage": 1,
       "WeaponName": "Titanium Scimitar",
       "HP": 225590,
       "Iron": 100262,
@@ -5632,6 +6195,7 @@
     },
     {
       "TemplateId": 564,
+      "Stage": 1,
       "WeaponName": "Titanium Mace",
       "HP": 250656,
       "Iron": 162926,
@@ -5642,6 +6206,7 @@
     },
     {
       "TemplateId": 565,
+      "Stage": 1,
       "WeaponName": "Titanium Sword",
       "HP": 250656,
       "Iron": 125328,
@@ -5652,6 +6217,7 @@
     },
     {
       "TemplateId": 566,
+      "Stage": 1,
       "WeaponName": "Titanium Battleaxe",
       "HP": 300787,
       "Iron": 175459,
@@ -5662,6 +6228,7 @@
     },
     {
       "TemplateId": 567,
+      "Stage": 1,
       "WeaponName": "Titanium Longsword",
       "HP": 325853,
       "Iron": 150393,
@@ -5672,6 +6239,7 @@
     },
     {
       "TemplateId": 568,
+      "Stage": 1,
       "WeaponName": "Titanium Rapier",
       "HP": 225590,
       "Iron": 112795,
@@ -5682,6 +6250,7 @@
     },
     {
       "TemplateId": 569,
+      "Stage": 1,
       "WeaponName": "Titanium Warhammer",
       "HP": 401050,
       "Iron": 225590,
@@ -5692,6 +6261,7 @@
     },
     {
       "TemplateId": 570,
+      "Stage": 1,
       "WeaponName": "Titanium Greatsword",
       "HP": 501313,
       "Iron": 225590,
@@ -5702,6 +6272,7 @@
     },
     {
       "TemplateId": 571,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Dagger",
       "HP": 172953,
       "Iron": 72063,
@@ -5712,6 +6283,7 @@
     },
     {
       "TemplateId": 572,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Shortsword",
       "HP": 230604,
       "Iron": 100889,
@@ -5722,6 +6294,7 @@
     },
     {
       "TemplateId": 573,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Scimitar",
       "HP": 259429,
       "Iron": 115302,
@@ -5732,6 +6305,7 @@
     },
     {
       "TemplateId": 574,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Mace",
       "HP": 288255,
       "Iron": 187365,
@@ -5742,6 +6316,7 @@
     },
     {
       "TemplateId": 575,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Sword",
       "HP": 288255,
       "Iron": 144127,
@@ -5752,6 +6327,7 @@
     },
     {
       "TemplateId": 576,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Battleaxe",
       "HP": 345906,
       "Iron": 201778,
@@ -5762,6 +6338,7 @@
     },
     {
       "TemplateId": 577,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Longsword",
       "HP": 374731,
       "Iron": 172953,
@@ -5772,6 +6349,7 @@
     },
     {
       "TemplateId": 578,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Rapier",
       "HP": 259429,
       "Iron": 129714,
@@ -5782,6 +6360,7 @@
     },
     {
       "TemplateId": 579,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Warhammer",
       "HP": 461208,
       "Iron": 259429,
@@ -5792,6 +6371,7 @@
     },
     {
       "TemplateId": 580,
+      "Stage": 1,
       "WeaponName": "Alloy Titanium Greatsword",
       "HP": 576510,
       "Iron": 259429,
@@ -5802,6 +6382,7 @@
     },
     {
       "TemplateId": 581,
+      "Stage": 1,
       "WeaponName": "Space Titanium Dagger",
       "HP": 198895,
       "Iron": 82873,
@@ -5812,6 +6393,7 @@
     },
     {
       "TemplateId": 582,
+      "Stage": 1,
       "WeaponName": "Space Titanium Shortsword",
       "HP": 265194,
       "Iron": 116022,
@@ -5822,6 +6404,7 @@
     },
     {
       "TemplateId": 583,
+      "Stage": 1,
       "WeaponName": "Space Titanium Scimitar",
       "HP": 298343,
       "Iron": 132597,
@@ -5832,6 +6415,7 @@
     },
     {
       "TemplateId": 584,
+      "Stage": 1,
       "WeaponName": "Space Titanium Mace",
       "HP": 331493,
       "Iron": 215470,
@@ -5842,6 +6426,7 @@
     },
     {
       "TemplateId": 585,
+      "Stage": 1,
       "WeaponName": "Space Titanium Sword",
       "HP": 331493,
       "Iron": 165746,
@@ -5852,6 +6437,7 @@
     },
     {
       "TemplateId": 586,
+      "Stage": 1,
       "WeaponName": "Space Titanium Battleaxe",
       "HP": 397791,
       "Iron": 232045,
@@ -5862,6 +6448,7 @@
     },
     {
       "TemplateId": 587,
+      "Stage": 1,
       "WeaponName": "Space Titanium Longsword",
       "HP": 430941,
       "Iron": 198895,
@@ -5872,6 +6459,7 @@
     },
     {
       "TemplateId": 588,
+      "Stage": 1,
       "WeaponName": "Space Titanium Rapier",
       "HP": 298343,
       "Iron": 149171,
@@ -5882,6 +6470,7 @@
     },
     {
       "TemplateId": 589,
+      "Stage": 1,
       "WeaponName": "Space Titanium Warhammer",
       "HP": 530389,
       "Iron": 298343,
@@ -5892,6 +6481,7 @@
     },
     {
       "TemplateId": 590,
+      "Stage": 1,
       "WeaponName": "Space Titanium Greatsword",
       "HP": 662986,
       "Iron": 298343,
@@ -5902,6 +6492,7 @@
     },
     {
       "TemplateId": 591,
+      "Stage": 1,
       "WeaponName": "Cobalt Dagger",
       "HP": 228730,
       "Iron": 95304,
@@ -5912,6 +6503,7 @@
     },
     {
       "TemplateId": 592,
+      "Stage": 1,
       "WeaponName": "Cobalt Shortsword",
       "HP": 304973,
       "Iron": 133426,
@@ -5922,6 +6514,7 @@
     },
     {
       "TemplateId": 593,
+      "Stage": 1,
       "WeaponName": "Cobalt Scimitar",
       "HP": 343095,
       "Iron": 152486,
@@ -5932,6 +6525,7 @@
     },
     {
       "TemplateId": 594,
+      "Stage": 1,
       "WeaponName": "Cobalt Mace",
       "HP": 381217,
       "Iron": 247791,
@@ -5942,6 +6536,7 @@
     },
     {
       "TemplateId": 595,
+      "Stage": 1,
       "WeaponName": "Cobalt Sword",
       "HP": 381217,
       "Iron": 190608,
@@ -5952,6 +6547,7 @@
     },
     {
       "TemplateId": 596,
+      "Stage": 1,
       "WeaponName": "Cobalt Battleaxe",
       "HP": 457460,
       "Iron": 266852,
@@ -5962,6 +6558,7 @@
     },
     {
       "TemplateId": 597,
+      "Stage": 1,
       "WeaponName": "Cobalt Longsword",
       "HP": 495582,
       "Iron": 228730,
@@ -5972,6 +6569,7 @@
     },
     {
       "TemplateId": 598,
+      "Stage": 1,
       "WeaponName": "Cobalt Rapier",
       "HP": 343095,
       "Iron": 171547,
@@ -5982,6 +6580,7 @@
     },
     {
       "TemplateId": 599,
+      "Stage": 1,
       "WeaponName": "Cobalt Warhammer",
       "HP": 609947,
       "Iron": 343095,
@@ -5992,6 +6591,7 @@
     },
     {
       "TemplateId": 600,
+      "Stage": 1,
       "WeaponName": "Cobalt Greatsword",
       "HP": 762434,
       "Iron": 343095,
@@ -6002,6 +6602,7 @@
     },
     {
       "TemplateId": 601,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Dagger",
       "HP": 263039,
       "Iron": 109599,
@@ -6012,6 +6613,7 @@
     },
     {
       "TemplateId": 602,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Shortsword",
       "HP": 350719,
       "Iron": 153439,
@@ -6022,6 +6624,7 @@
     },
     {
       "TemplateId": 603,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Scimitar",
       "HP": 394559,
       "Iron": 175359,
@@ -6032,6 +6635,7 @@
     },
     {
       "TemplateId": 604,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Mace",
       "HP": 438399,
       "Iron": 284959,
@@ -6042,6 +6646,7 @@
     },
     {
       "TemplateId": 605,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Sword",
       "HP": 438399,
       "Iron": 219199,
@@ -6052,6 +6657,7 @@
     },
     {
       "TemplateId": 606,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Battleaxe",
       "HP": 526079,
       "Iron": 306879,
@@ -6062,6 +6668,7 @@
     },
     {
       "TemplateId": 607,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Longsword",
       "HP": 569919,
       "Iron": 263039,
@@ -6072,6 +6679,7 @@
     },
     {
       "TemplateId": 608,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Rapier",
       "HP": 394559,
       "Iron": 197279,
@@ -6082,6 +6690,7 @@
     },
     {
       "TemplateId": 609,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Warhammer",
       "HP": 701439,
       "Iron": 394559,
@@ -6092,6 +6701,7 @@
     },
     {
       "TemplateId": 610,
+      "Stage": 1,
       "WeaponName": "Blue Cobalt Greatsword",
       "HP": 876799,
       "Iron": 394559,
@@ -6102,6 +6712,7 @@
     },
     {
       "TemplateId": 611,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Dagger",
       "HP": 302495,
       "Iron": 126039,
@@ -6112,6 +6723,7 @@
     },
     {
       "TemplateId": 612,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Shortsword",
       "HP": 403327,
       "Iron": 176455,
@@ -6122,6 +6734,7 @@
     },
     {
       "TemplateId": 613,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Scimitar",
       "HP": 453743,
       "Iron": 201663,
@@ -6132,6 +6745,7 @@
     },
     {
       "TemplateId": 614,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Mace",
       "HP": 504159,
       "Iron": 327703,
@@ -6142,6 +6756,7 @@
     },
     {
       "TemplateId": 615,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Sword",
       "HP": 504159,
       "Iron": 252079,
@@ -6152,6 +6767,7 @@
     },
     {
       "TemplateId": 616,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Battleaxe",
       "HP": 604991,
       "Iron": 352911,
@@ -6162,6 +6778,7 @@
     },
     {
       "TemplateId": 617,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Longsword",
       "HP": 655407,
       "Iron": 302495,
@@ -6172,6 +6789,7 @@
     },
     {
       "TemplateId": 618,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Rapier",
       "HP": 453743,
       "Iron": 226871,
@@ -6182,6 +6800,7 @@
     },
     {
       "TemplateId": 619,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Warhammer",
       "HP": 806655,
       "Iron": 453743,
@@ -6192,6 +6811,7 @@
     },
     {
       "TemplateId": 620,
+      "Stage": 1,
       "WeaponName": "Azure Cobalt Greatsword",
       "HP": 1008319,
       "Iron": 453743,
@@ -6202,6 +6822,7 @@
     },
     {
       "TemplateId": 621,
+      "Stage": 1,
       "WeaponName": "Crystal Dagger",
       "HP": 347870,
       "Iron": 144945,
@@ -6212,6 +6833,7 @@
     },
     {
       "TemplateId": 622,
+      "Stage": 1,
       "WeaponName": "Crystal Shortsword",
       "HP": 463827,
       "Iron": 202924,
@@ -6222,6 +6844,7 @@
     },
     {
       "TemplateId": 623,
+      "Stage": 1,
       "WeaponName": "Crystal Scimitar",
       "HP": 521805,
       "Iron": 231913,
@@ -6232,6 +6855,7 @@
     },
     {
       "TemplateId": 624,
+      "Stage": 1,
       "WeaponName": "Crystal Mace",
       "HP": 579783,
       "Iron": 376859,
@@ -6242,6 +6866,7 @@
     },
     {
       "TemplateId": 625,
+      "Stage": 1,
       "WeaponName": "Crystal Sword",
       "HP": 579783,
       "Iron": 289891,
@@ -6252,6 +6877,7 @@
     },
     {
       "TemplateId": 626,
+      "Stage": 1,
       "WeaponName": "Crystal Battleaxe",
       "HP": 695740,
       "Iron": 405848,
@@ -6262,6 +6888,7 @@
     },
     {
       "TemplateId": 627,
+      "Stage": 1,
       "WeaponName": "Crystal Longsword",
       "HP": 753718,
       "Iron": 347870,
@@ -6272,6 +6899,7 @@
     },
     {
       "TemplateId": 628,
+      "Stage": 1,
       "WeaponName": "Crystal Rapier",
       "HP": 521805,
       "Iron": 260902,
@@ -6282,6 +6910,7 @@
     },
     {
       "TemplateId": 629,
+      "Stage": 1,
       "WeaponName": "Crystal Warhammer",
       "HP": 927654,
       "Iron": 521805,
@@ -6292,6 +6921,7 @@
     },
     {
       "TemplateId": 630,
+      "Stage": 1,
       "WeaponName": "Crystal Greatsword",
       "HP": 1159567,
       "Iron": 521805,
@@ -6302,6 +6932,7 @@
     },
     {
       "TemplateId": 631,
+      "Stage": 1,
       "WeaponName": "Quartz Dagger",
       "HP": 400050,
       "Iron": 166687,
@@ -6312,6 +6943,7 @@
     },
     {
       "TemplateId": 632,
+      "Stage": 1,
       "WeaponName": "Quartz Shortsword",
       "HP": 533401,
       "Iron": 233362,
@@ -6322,6 +6954,7 @@
     },
     {
       "TemplateId": 633,
+      "Stage": 1,
       "WeaponName": "Quartz Scimitar",
       "HP": 600076,
       "Iron": 266700,
@@ -6332,6 +6965,7 @@
     },
     {
       "TemplateId": 634,
+      "Stage": 1,
       "WeaponName": "Quartz Mace",
       "HP": 666751,
       "Iron": 433388,
@@ -6342,6 +6976,7 @@
     },
     {
       "TemplateId": 635,
+      "Stage": 1,
       "WeaponName": "Quartz Sword",
       "HP": 666751,
       "Iron": 333375,
@@ -6352,6 +6987,7 @@
     },
     {
       "TemplateId": 636,
+      "Stage": 1,
       "WeaponName": "Quartz Battleaxe",
       "HP": 800101,
       "Iron": 466725,
@@ -6362,6 +6998,7 @@
     },
     {
       "TemplateId": 637,
+      "Stage": 1,
       "WeaponName": "Quartz Longsword",
       "HP": 866776,
       "Iron": 400050,
@@ -6372,6 +7009,7 @@
     },
     {
       "TemplateId": 638,
+      "Stage": 1,
       "WeaponName": "Quartz Rapier",
       "HP": 600076,
       "Iron": 300038,
@@ -6382,6 +7020,7 @@
     },
     {
       "TemplateId": 639,
+      "Stage": 1,
       "WeaponName": "Quartz Warhammer",
       "HP": 1066802,
       "Iron": 600076,
@@ -6392,6 +7031,7 @@
     },
     {
       "TemplateId": 640,
+      "Stage": 1,
       "WeaponName": "Quartz Greatsword",
       "HP": 1333502,
       "Iron": 600076,
@@ -6402,6 +7042,7 @@
     },
     {
       "TemplateId": 641,
+      "Stage": 1,
       "WeaponName": "Ruby Dagger",
       "HP": 460058,
       "Iron": 191691,
@@ -6412,6 +7053,7 @@
     },
     {
       "TemplateId": 642,
+      "Stage": 1,
       "WeaponName": "Ruby Shortsword",
       "HP": 613411,
       "Iron": 268367,
@@ -6422,6 +7064,7 @@
     },
     {
       "TemplateId": 643,
+      "Stage": 1,
       "WeaponName": "Ruby Scimitar",
       "HP": 690087,
       "Iron": 306705,
@@ -6432,6 +7075,7 @@
     },
     {
       "TemplateId": 644,
+      "Stage": 1,
       "WeaponName": "Ruby Mace",
       "HP": 766764,
       "Iron": 498396,
@@ -6442,6 +7086,7 @@
     },
     {
       "TemplateId": 645,
+      "Stage": 1,
       "WeaponName": "Ruby Sword",
       "HP": 766764,
       "Iron": 383382,
@@ -6452,6 +7097,7 @@
     },
     {
       "TemplateId": 646,
+      "Stage": 1,
       "WeaponName": "Ruby Battleaxe",
       "HP": 920116,
       "Iron": 536734,
@@ -6462,6 +7108,7 @@
     },
     {
       "TemplateId": 647,
+      "Stage": 1,
       "WeaponName": "Ruby Longsword",
       "HP": 996793,
       "Iron": 460058,
@@ -6472,6 +7119,7 @@
     },
     {
       "TemplateId": 648,
+      "Stage": 1,
       "WeaponName": "Ruby Rapier",
       "HP": 690087,
       "Iron": 345043,
@@ -6482,6 +7130,7 @@
     },
     {
       "TemplateId": 649,
+      "Stage": 1,
       "WeaponName": "Ruby Warhammer",
       "HP": 1226822,
       "Iron": 690087,
@@ -6492,6 +7141,7 @@
     },
     {
       "TemplateId": 650,
+      "Stage": 1,
       "WeaponName": "Ruby Greatsword",
       "HP": 1533528,
       "Iron": 690087,
@@ -6502,6 +7152,7 @@
     },
     {
       "TemplateId": 651,
+      "Stage": 1,
       "WeaponName": "Sapphire Dagger",
       "HP": 529067,
       "Iron": 220444,
@@ -6512,6 +7163,7 @@
     },
     {
       "TemplateId": 652,
+      "Stage": 1,
       "WeaponName": "Sapphire Shortsword",
       "HP": 705422,
       "Iron": 308622,
@@ -6522,6 +7174,7 @@
     },
     {
       "TemplateId": 653,
+      "Stage": 1,
       "WeaponName": "Sapphire Scimitar",
       "HP": 793600,
       "Iron": 352711,
@@ -6532,6 +7185,7 @@
     },
     {
       "TemplateId": 654,
+      "Stage": 1,
       "WeaponName": "Sapphire Mace",
       "HP": 881778,
       "Iron": 573156,
@@ -6542,6 +7196,7 @@
     },
     {
       "TemplateId": 655,
+      "Stage": 1,
       "WeaponName": "Sapphire Sword",
       "HP": 881778,
       "Iron": 440889,
@@ -6552,6 +7207,7 @@
     },
     {
       "TemplateId": 656,
+      "Stage": 1,
       "WeaponName": "Sapphire Battleaxe",
       "HP": 1058134,
       "Iron": 617245,
@@ -6562,6 +7218,7 @@
     },
     {
       "TemplateId": 657,
+      "Stage": 1,
       "WeaponName": "Sapphire Longsword",
       "HP": 1146312,
       "Iron": 529067,
@@ -6572,6 +7229,7 @@
     },
     {
       "TemplateId": 658,
+      "Stage": 1,
       "WeaponName": "Sapphire Rapier",
       "HP": 793600,
       "Iron": 396800,
@@ -6582,6 +7240,7 @@
     },
     {
       "TemplateId": 659,
+      "Stage": 1,
       "WeaponName": "Sapphire Warhammer",
       "HP": 1410845,
       "Iron": 793600,
@@ -6592,6 +7251,7 @@
     },
     {
       "TemplateId": 660,
+      "Stage": 1,
       "WeaponName": "Sapphire Greatsword",
       "HP": 1763557,
       "Iron": 793600,
@@ -6602,6 +7262,7 @@
     },
     {
       "TemplateId": 661,
+      "Stage": 1,
       "WeaponName": "Emerald Dagger",
       "HP": 608427,
       "Iron": 253511,
@@ -6612,6 +7273,7 @@
     },
     {
       "TemplateId": 662,
+      "Stage": 1,
       "WeaponName": "Emerald Shortsword",
       "HP": 811236,
       "Iron": 354915,
@@ -6622,6 +7284,7 @@
     },
     {
       "TemplateId": 663,
+      "Stage": 1,
       "WeaponName": "Emerald Scimitar",
       "HP": 912640,
       "Iron": 405618,
@@ -6632,6 +7295,7 @@
     },
     {
       "TemplateId": 664,
+      "Stage": 1,
       "WeaponName": "Emerald Mace",
       "HP": 1014045,
       "Iron": 659129,
@@ -6642,6 +7306,7 @@
     },
     {
       "TemplateId": 665,
+      "Stage": 1,
       "WeaponName": "Emerald Sword",
       "HP": 1014045,
       "Iron": 507022,
@@ -6652,6 +7317,7 @@
     },
     {
       "TemplateId": 666,
+      "Stage": 1,
       "WeaponName": "Emerald Battleaxe",
       "HP": 1216854,
       "Iron": 709831,
@@ -6662,6 +7328,7 @@
     },
     {
       "TemplateId": 667,
+      "Stage": 1,
       "WeaponName": "Emerald Longsword",
       "HP": 1318259,
       "Iron": 608427,
@@ -6672,6 +7339,7 @@
     },
     {
       "TemplateId": 668,
+      "Stage": 1,
       "WeaponName": "Emerald Rapier",
       "HP": 912640,
       "Iron": 456320,
@@ -6682,6 +7350,7 @@
     },
     {
       "TemplateId": 669,
+      "Stage": 1,
       "WeaponName": "Emerald Warhammer",
       "HP": 1622472,
       "Iron": 912640,
@@ -6692,6 +7361,7 @@
     },
     {
       "TemplateId": 670,
+      "Stage": 1,
       "WeaponName": "Emerald Greatsword",
       "HP": 2028091,
       "Iron": 912640,
@@ -6702,6 +7372,7 @@
     },
     {
       "TemplateId": 671,
+      "Stage": 1,
       "WeaponName": "Diamond Dagger",
       "HP": 699691,
       "Iron": 291538,
@@ -6712,6 +7383,7 @@
     },
     {
       "TemplateId": 672,
+      "Stage": 1,
       "WeaponName": "Diamond Shortsword",
       "HP": 932921,
       "Iron": 408153,
@@ -6722,6 +7394,7 @@
     },
     {
       "TemplateId": 673,
+      "Stage": 1,
       "WeaponName": "Diamond Scimitar",
       "HP": 1049537,
       "Iron": 466460,
@@ -6732,6 +7405,7 @@
     },
     {
       "TemplateId": 674,
+      "Stage": 1,
       "WeaponName": "Diamond Mace",
       "HP": 1166152,
       "Iron": 757999,
@@ -6742,6 +7416,7 @@
     },
     {
       "TemplateId": 675,
+      "Stage": 1,
       "WeaponName": "Diamond Sword",
       "HP": 1166152,
       "Iron": 583076,
@@ -6752,6 +7427,7 @@
     },
     {
       "TemplateId": 676,
+      "Stage": 1,
       "WeaponName": "Diamond Battleaxe",
       "HP": 1399382,
       "Iron": 816306,
@@ -6762,6 +7438,7 @@
     },
     {
       "TemplateId": 677,
+      "Stage": 1,
       "WeaponName": "Diamond Longsword",
       "HP": 1515998,
       "Iron": 699691,
@@ -6772,6 +7449,7 @@
     },
     {
       "TemplateId": 678,
+      "Stage": 1,
       "WeaponName": "Diamond Rapier",
       "HP": 1049537,
       "Iron": 524768,
@@ -6782,6 +7460,7 @@
     },
     {
       "TemplateId": 679,
+      "Stage": 1,
       "WeaponName": "Diamond Warhammer",
       "HP": 1865843,
       "Iron": 1049537,
@@ -6792,6 +7471,7 @@
     },
     {
       "TemplateId": 680,
+      "Stage": 1,
       "WeaponName": "Diamond Greatsword",
       "HP": 2332304,
       "Iron": 1049537,
@@ -6802,6 +7482,7 @@
     },
     {
       "TemplateId": 681,
+      "Stage": 1,
       "WeaponName": "Amethyst Dagger",
       "HP": 804645,
       "Iron": 335268,
@@ -6812,6 +7493,7 @@
     },
     {
       "TemplateId": 682,
+      "Stage": 1,
       "WeaponName": "Amethyst Shortsword",
       "HP": 1072860,
       "Iron": 469376,
@@ -6822,6 +7504,7 @@
     },
     {
       "TemplateId": 683,
+      "Stage": 1,
       "WeaponName": "Amethyst Scimitar",
       "HP": 1206967,
       "Iron": 536430,
@@ -6832,6 +7515,7 @@
     },
     {
       "TemplateId": 684,
+      "Stage": 1,
       "WeaponName": "Amethyst Mace",
       "HP": 1341075,
       "Iron": 871698,
@@ -6842,6 +7526,7 @@
     },
     {
       "TemplateId": 685,
+      "Stage": 1,
       "WeaponName": "Amethyst Sword",
       "HP": 1341075,
       "Iron": 670537,
@@ -6852,6 +7537,7 @@
     },
     {
       "TemplateId": 686,
+      "Stage": 1,
       "WeaponName": "Amethyst Battleaxe",
       "HP": 1609290,
       "Iron": 938752,
@@ -6862,6 +7548,7 @@
     },
     {
       "TemplateId": 687,
+      "Stage": 1,
       "WeaponName": "Amethyst Longsword",
       "HP": 1743397,
       "Iron": 804645,
@@ -6872,6 +7559,7 @@
     },
     {
       "TemplateId": 688,
+      "Stage": 1,
       "WeaponName": "Amethyst Rapier",
       "HP": 1206967,
       "Iron": 603483,
@@ -6882,6 +7570,7 @@
     },
     {
       "TemplateId": 689,
+      "Stage": 1,
       "WeaponName": "Amethyst Warhammer",
       "HP": 2145720,
       "Iron": 1206967,
@@ -6892,6 +7581,7 @@
     },
     {
       "TemplateId": 690,
+      "Stage": 1,
       "WeaponName": "Amethyst Greatsword",
       "HP": 2682150,
       "Iron": 1206967,
@@ -6902,6 +7592,7 @@
     },
     {
       "TemplateId": 691,
+      "Stage": 1,
       "WeaponName": "Topaz Dagger",
       "HP": 925341,
       "Iron": 385559,
@@ -6912,6 +7603,7 @@
     },
     {
       "TemplateId": 692,
+      "Stage": 1,
       "WeaponName": "Topaz Shortsword",
       "HP": 1233789,
       "Iron": 539782,
@@ -6922,6 +7614,7 @@
     },
     {
       "TemplateId": 693,
+      "Stage": 1,
       "WeaponName": "Topaz Scimitar",
       "HP": 1388012,
       "Iron": 616894,
@@ -6932,6 +7625,7 @@
     },
     {
       "TemplateId": 694,
+      "Stage": 1,
       "WeaponName": "Topaz Mace",
       "HP": 1542236,
       "Iron": 1002453,
@@ -6942,6 +7636,7 @@
     },
     {
       "TemplateId": 695,
+      "Stage": 1,
       "WeaponName": "Topaz Sword",
       "HP": 1542236,
       "Iron": 771118,
@@ -6952,6 +7647,7 @@
     },
     {
       "TemplateId": 696,
+      "Stage": 1,
       "WeaponName": "Topaz Battleaxe",
       "HP": 1850683,
       "Iron": 1079565,
@@ -6962,6 +7658,7 @@
     },
     {
       "TemplateId": 697,
+      "Stage": 1,
       "WeaponName": "Topaz Longsword",
       "HP": 2004907,
       "Iron": 925341,
@@ -6972,6 +7669,7 @@
     },
     {
       "TemplateId": 698,
+      "Stage": 1,
       "WeaponName": "Topaz Rapier",
       "HP": 1388012,
       "Iron": 694006,
@@ -6982,6 +7680,7 @@
     },
     {
       "TemplateId": 699,
+      "Stage": 1,
       "WeaponName": "Topaz Warhammer",
       "HP": 2467578,
       "Iron": 1388012,
@@ -6992,6 +7691,7 @@
     },
     {
       "TemplateId": 700,
+      "Stage": 1,
       "WeaponName": "Topaz Greatsword",
       "HP": 3084473,
       "Iron": 1388012,
@@ -7002,6 +7702,7 @@
     },
     {
       "TemplateId": 701,
+      "Stage": 1,
       "WeaponName": "Onyx Dagger",
       "HP": 1064143,
       "Iron": 443393,
@@ -7012,6 +7713,7 @@
     },
     {
       "TemplateId": 702,
+      "Stage": 1,
       "WeaponName": "Onyx Shortsword",
       "HP": 1418857,
       "Iron": 620750,
@@ -7022,6 +7724,7 @@
     },
     {
       "TemplateId": 703,
+      "Stage": 1,
       "WeaponName": "Onyx Scimitar",
       "HP": 1596214,
       "Iron": 709428,
@@ -7032,6 +7735,7 @@
     },
     {
       "TemplateId": 704,
+      "Stage": 1,
       "WeaponName": "Onyx Mace",
       "HP": 1773572,
       "Iron": 1152821,
@@ -7042,6 +7746,7 @@
     },
     {
       "TemplateId": 705,
+      "Stage": 1,
       "WeaponName": "Onyx Sword",
       "HP": 1773572,
       "Iron": 886786,
@@ -7052,6 +7757,7 @@
     },
     {
       "TemplateId": 706,
+      "Stage": 1,
       "WeaponName": "Onyx Battleaxe",
       "HP": 2128286,
       "Iron": 1241500,
@@ -7062,6 +7768,7 @@
     },
     {
       "TemplateId": 707,
+      "Stage": 1,
       "WeaponName": "Onyx Longsword",
       "HP": 2305643,
       "Iron": 1064143,
@@ -7072,6 +7779,7 @@
     },
     {
       "TemplateId": 708,
+      "Stage": 1,
       "WeaponName": "Onyx Rapier",
       "HP": 1596214,
       "Iron": 798107,
@@ -7082,6 +7790,7 @@
     },
     {
       "TemplateId": 709,
+      "Stage": 1,
       "WeaponName": "Onyx Warhammer",
       "HP": 2837715,
       "Iron": 1596214,
@@ -7092,6 +7801,7 @@
     },
     {
       "TemplateId": 710,
+      "Stage": 1,
       "WeaponName": "Onyx Greatsword",
       "HP": 3547144,
       "Iron": 1596214,
@@ -7102,6 +7812,7 @@
     },
     {
       "TemplateId": 711,
+      "Stage": 1,
       "WeaponName": "Pearl Dagger",
       "HP": 1223764,
       "Iron": 509901,
@@ -7112,6 +7823,7 @@
     },
     {
       "TemplateId": 712,
+      "Stage": 1,
       "WeaponName": "Pearl Shortsword",
       "HP": 1631686,
       "Iron": 713862,
@@ -7122,6 +7834,7 @@
     },
     {
       "TemplateId": 713,
+      "Stage": 1,
       "WeaponName": "Pearl Scimitar",
       "HP": 1835647,
       "Iron": 815843,
@@ -7132,6 +7845,7 @@
     },
     {
       "TemplateId": 714,
+      "Stage": 1,
       "WeaponName": "Pearl Mace",
       "HP": 2039607,
       "Iron": 1325745,
@@ -7142,6 +7856,7 @@
     },
     {
       "TemplateId": 715,
+      "Stage": 1,
       "WeaponName": "Pearl Sword",
       "HP": 2039607,
       "Iron": 1019803,
@@ -7152,6 +7867,7 @@
     },
     {
       "TemplateId": 716,
+      "Stage": 1,
       "WeaponName": "Pearl Battleaxe",
       "HP": 2447529,
       "Iron": 1427725,
@@ -7162,6 +7878,7 @@
     },
     {
       "TemplateId": 717,
+      "Stage": 1,
       "WeaponName": "Pearl Longsword",
       "HP": 2651490,
       "Iron": 1223764,
@@ -7172,6 +7889,7 @@
     },
     {
       "TemplateId": 718,
+      "Stage": 1,
       "WeaponName": "Pearl Rapier",
       "HP": 1835647,
       "Iron": 917823,
@@ -7182,6 +7900,7 @@
     },
     {
       "TemplateId": 719,
+      "Stage": 1,
       "WeaponName": "Pearl Warhammer",
       "HP": 3263372,
       "Iron": 1835647,
@@ -7192,6 +7911,7 @@
     },
     {
       "TemplateId": 720,
+      "Stage": 1,
       "WeaponName": "Pearl Greatsword",
       "HP": 4079215,
       "Iron": 1835647,
@@ -7202,6 +7922,7 @@
     },
     {
       "TemplateId": 721,
+      "Stage": 1,
       "WeaponName": "Magma Dagger",
       "HP": 1407329,
       "Iron": 586387,
@@ -7212,6 +7933,7 @@
     },
     {
       "TemplateId": 722,
+      "Stage": 1,
       "WeaponName": "Magma Shortsword",
       "HP": 1876439,
       "Iron": 820942,
@@ -7222,6 +7944,7 @@
     },
     {
       "TemplateId": 723,
+      "Stage": 1,
       "WeaponName": "Magma Scimitar",
       "HP": 2110994,
       "Iron": 938219,
@@ -7232,6 +7955,7 @@
     },
     {
       "TemplateId": 724,
+      "Stage": 1,
       "WeaponName": "Magma Mace",
       "HP": 2345548,
       "Iron": 1524606,
@@ -7242,6 +7966,7 @@
     },
     {
       "TemplateId": 725,
+      "Stage": 1,
       "WeaponName": "Magma Sword",
       "HP": 2345548,
       "Iron": 1172774,
@@ -7252,6 +7977,7 @@
     },
     {
       "TemplateId": 726,
+      "Stage": 1,
       "WeaponName": "Magma Battleaxe",
       "HP": 2814658,
       "Iron": 1641884,
@@ -7262,6 +7988,7 @@
     },
     {
       "TemplateId": 727,
+      "Stage": 1,
       "WeaponName": "Magma Longsword",
       "HP": 3049213,
       "Iron": 1407329,
@@ -7272,6 +7999,7 @@
     },
     {
       "TemplateId": 728,
+      "Stage": 1,
       "WeaponName": "Magma Rapier",
       "HP": 2110994,
       "Iron": 1055497,
@@ -7282,6 +8010,7 @@
     },
     {
       "TemplateId": 729,
+      "Stage": 1,
       "WeaponName": "Magma Warhammer",
       "HP": 3752878,
       "Iron": 2110994,
@@ -7292,6 +8021,7 @@
     },
     {
       "TemplateId": 730,
+      "Stage": 1,
       "WeaponName": "Magma Greatsword",
       "HP": 4691097,
       "Iron": 2110994,
@@ -7302,6 +8032,7 @@
     },
     {
       "TemplateId": 731,
+      "Stage": 1,
       "WeaponName": "Lava Dagger",
       "HP": 1618428,
       "Iron": 674345,
@@ -7312,6 +8043,7 @@
     },
     {
       "TemplateId": 732,
+      "Stage": 1,
       "WeaponName": "Lava Shortsword",
       "HP": 2157905,
       "Iron": 944083,
@@ -7322,6 +8054,7 @@
     },
     {
       "TemplateId": 733,
+      "Stage": 1,
       "WeaponName": "Lava Scimitar",
       "HP": 2427643,
       "Iron": 1078952,
@@ -7332,6 +8065,7 @@
     },
     {
       "TemplateId": 734,
+      "Stage": 1,
       "WeaponName": "Lava Mace",
       "HP": 2697381,
       "Iron": 1753297,
@@ -7342,6 +8076,7 @@
     },
     {
       "TemplateId": 735,
+      "Stage": 1,
       "WeaponName": "Lava Sword",
       "HP": 2697381,
       "Iron": 1348690,
@@ -7352,6 +8087,7 @@
     },
     {
       "TemplateId": 736,
+      "Stage": 1,
       "WeaponName": "Lava Battleaxe",
       "HP": 3236857,
       "Iron": 1888166,
@@ -7362,6 +8098,7 @@
     },
     {
       "TemplateId": 737,
+      "Stage": 1,
       "WeaponName": "Lava Longsword",
       "HP": 3506595,
       "Iron": 1618428,
@@ -7372,6 +8109,7 @@
     },
     {
       "TemplateId": 738,
+      "Stage": 1,
       "WeaponName": "Lava Rapier",
       "HP": 2427643,
       "Iron": 1213821,
@@ -7382,6 +8120,7 @@
     },
     {
       "TemplateId": 739,
+      "Stage": 1,
       "WeaponName": "Lava Warhammer",
       "HP": 4315810,
       "Iron": 2427643,
@@ -7392,6 +8131,7 @@
     },
     {
       "TemplateId": 740,
+      "Stage": 1,
       "WeaponName": "Lava Greatsword",
       "HP": 5394762,
       "Iron": 2427643,
@@ -7402,6 +8142,7 @@
     },
     {
       "TemplateId": 741,
+      "Stage": 1,
       "WeaponName": "Infernal Dagger",
       "HP": 1861193,
       "Iron": 775497,
@@ -7412,6 +8153,7 @@
     },
     {
       "TemplateId": 742,
+      "Stage": 1,
       "WeaponName": "Infernal Shortsword",
       "HP": 2481590,
       "Iron": 1085695,
@@ -7422,6 +8164,7 @@
     },
     {
       "TemplateId": 743,
+      "Stage": 1,
       "WeaponName": "Infernal Scimitar",
       "HP": 2791789,
       "Iron": 1240795,
@@ -7432,6 +8175,7 @@
     },
     {
       "TemplateId": 744,
+      "Stage": 1,
       "WeaponName": "Infernal Mace",
       "HP": 3101988,
       "Iron": 2016292,
@@ -7442,6 +8186,7 @@
     },
     {
       "TemplateId": 745,
+      "Stage": 1,
       "WeaponName": "Infernal Sword",
       "HP": 3101988,
       "Iron": 1550994,
@@ -7452,6 +8197,7 @@
     },
     {
       "TemplateId": 746,
+      "Stage": 1,
       "WeaponName": "Infernal Battleaxe",
       "HP": 3722386,
       "Iron": 2171391,
@@ -7462,6 +8208,7 @@
     },
     {
       "TemplateId": 747,
+      "Stage": 1,
       "WeaponName": "Infernal Longsword",
       "HP": 4032585,
       "Iron": 1861193,
@@ -7472,6 +8219,7 @@
     },
     {
       "TemplateId": 748,
+      "Stage": 1,
       "WeaponName": "Infernal Rapier",
       "HP": 2791789,
       "Iron": 1395894,
@@ -7482,6 +8230,7 @@
     },
     {
       "TemplateId": 749,
+      "Stage": 1,
       "WeaponName": "Infernal Warhammer",
       "HP": 4963181,
       "Iron": 2791789,
@@ -7492,6 +8241,7 @@
     },
     {
       "TemplateId": 750,
+      "Stage": 1,
       "WeaponName": "Infernal Greatsword",
       "HP": 6203977,
       "Iron": 2791789,
@@ -7502,6 +8252,7 @@
     },
     {
       "TemplateId": 751,
+      "Stage": 1,
       "WeaponName": "Hellfire Dagger",
       "HP": 2140372,
       "Iron": 891821,
@@ -7512,6 +8263,7 @@
     },
     {
       "TemplateId": 752,
+      "Stage": 1,
       "WeaponName": "Hellfire Shortsword",
       "HP": 2853829,
       "Iron": 1248550,
@@ -7522,6 +8274,7 @@
     },
     {
       "TemplateId": 753,
+      "Stage": 1,
       "WeaponName": "Hellfire Scimitar",
       "HP": 3210558,
       "Iron": 1426914,
@@ -7532,6 +8285,7 @@
     },
     {
       "TemplateId": 754,
+      "Stage": 1,
       "WeaponName": "Hellfire Mace",
       "HP": 3567286,
       "Iron": 2318736,
@@ -7542,6 +8296,7 @@
     },
     {
       "TemplateId": 755,
+      "Stage": 1,
       "WeaponName": "Hellfire Sword",
       "HP": 3567286,
       "Iron": 1783643,
@@ -7552,6 +8307,7 @@
     },
     {
       "TemplateId": 756,
+      "Stage": 1,
       "WeaponName": "Hellfire Battleaxe",
       "HP": 4280744,
       "Iron": 2497100,
@@ -7562,6 +8318,7 @@
     },
     {
       "TemplateId": 757,
+      "Stage": 1,
       "WeaponName": "Hellfire Longsword",
       "HP": 4637472,
       "Iron": 2140372,
@@ -7572,6 +8329,7 @@
     },
     {
       "TemplateId": 758,
+      "Stage": 1,
       "WeaponName": "Hellfire Rapier",
       "HP": 3210558,
       "Iron": 1605279,
@@ -7582,6 +8340,7 @@
     },
     {
       "TemplateId": 759,
+      "Stage": 1,
       "WeaponName": "Hellfire Warhammer",
       "HP": 5707658,
       "Iron": 3210558,
@@ -7592,6 +8351,7 @@
     },
     {
       "TemplateId": 760,
+      "Stage": 1,
       "WeaponName": "Hellfire Greatsword",
       "HP": 7134573,
       "Iron": 3210558,
@@ -7602,6 +8362,7 @@
     },
     {
       "TemplateId": 761,
+      "Stage": 1,
       "WeaponName": "Ice Dagger",
       "HP": 2461427,
       "Iron": 1025594,
@@ -7612,6 +8373,7 @@
     },
     {
       "TemplateId": 762,
+      "Stage": 1,
       "WeaponName": "Ice Shortsword",
       "HP": 3281903,
       "Iron": 1435832,
@@ -7622,6 +8384,7 @@
     },
     {
       "TemplateId": 763,
+      "Stage": 1,
       "WeaponName": "Ice Scimitar",
       "HP": 3692141,
       "Iron": 1640951,
@@ -7632,6 +8395,7 @@
     },
     {
       "TemplateId": 764,
+      "Stage": 1,
       "WeaponName": "Ice Mace",
       "HP": 4102379,
       "Iron": 2666546,
@@ -7642,6 +8406,7 @@
     },
     {
       "TemplateId": 765,
+      "Stage": 1,
       "WeaponName": "Ice Sword",
       "HP": 4102379,
       "Iron": 2051189,
@@ -7652,6 +8417,7 @@
     },
     {
       "TemplateId": 766,
+      "Stage": 1,
       "WeaponName": "Ice Battleaxe",
       "HP": 4922855,
       "Iron": 2871665,
@@ -7662,6 +8428,7 @@
     },
     {
       "TemplateId": 767,
+      "Stage": 1,
       "WeaponName": "Ice Longsword",
       "HP": 5333093,
       "Iron": 2461427,
@@ -7672,6 +8439,7 @@
     },
     {
       "TemplateId": 768,
+      "Stage": 1,
       "WeaponName": "Ice Rapier",
       "HP": 3692141,
       "Iron": 1846070,
@@ -7682,6 +8450,7 @@
     },
     {
       "TemplateId": 769,
+      "Stage": 1,
       "WeaponName": "Ice Warhammer",
       "HP": 6563807,
       "Iron": 3692141,
@@ -7692,6 +8461,7 @@
     },
     {
       "TemplateId": 770,
+      "Stage": 1,
       "WeaponName": "Ice Greatsword",
       "HP": 8204759,
       "Iron": 3692141,
@@ -7702,6 +8472,7 @@
     },
     {
       "TemplateId": 771,
+      "Stage": 1,
       "WeaponName": "Frost Dagger",
       "HP": 2830642,
       "Iron": 1179434,
@@ -7712,6 +8483,7 @@
     },
     {
       "TemplateId": 772,
+      "Stage": 1,
       "WeaponName": "Frost Shortsword",
       "HP": 3774189,
       "Iron": 1651207,
@@ -7722,6 +8494,7 @@
     },
     {
       "TemplateId": 773,
+      "Stage": 1,
       "WeaponName": "Frost Scimitar",
       "HP": 4245963,
       "Iron": 1887094,
@@ -7732,6 +8505,7 @@
     },
     {
       "TemplateId": 774,
+      "Stage": 1,
       "WeaponName": "Frost Mace",
       "HP": 4717736,
       "Iron": 3066528,
@@ -7742,6 +8516,7 @@
     },
     {
       "TemplateId": 775,
+      "Stage": 1,
       "WeaponName": "Frost Sword",
       "HP": 4717736,
       "Iron": 2358868,
@@ -7752,6 +8527,7 @@
     },
     {
       "TemplateId": 776,
+      "Stage": 1,
       "WeaponName": "Frost Battleaxe",
       "HP": 5661284,
       "Iron": 3302415,
@@ -7762,6 +8538,7 @@
     },
     {
       "TemplateId": 777,
+      "Stage": 1,
       "WeaponName": "Frost Longsword",
       "HP": 6133057,
       "Iron": 2830642,
@@ -7772,6 +8549,7 @@
     },
     {
       "TemplateId": 778,
+      "Stage": 1,
       "WeaponName": "Frost Rapier",
       "HP": 4245963,
       "Iron": 2122981,
@@ -7782,6 +8560,7 @@
     },
     {
       "TemplateId": 779,
+      "Stage": 1,
       "WeaponName": "Frost Warhammer",
       "HP": 7548378,
       "Iron": 4245963,
@@ -7792,6 +8571,7 @@
     },
     {
       "TemplateId": 780,
+      "Stage": 1,
       "WeaponName": "Frost Greatsword",
       "HP": 9435473,
       "Iron": 4245963,
@@ -7802,6 +8582,7 @@
     },
     {
       "TemplateId": 781,
+      "Stage": 1,
       "WeaponName": "Glacial Dagger",
       "HP": 3255238,
       "Iron": 1356349,
@@ -7812,6 +8593,7 @@
     },
     {
       "TemplateId": 782,
+      "Stage": 1,
       "WeaponName": "Glacial Shortsword",
       "HP": 4340317,
       "Iron": 1898889,
@@ -7822,6 +8604,7 @@
     },
     {
       "TemplateId": 783,
+      "Stage": 1,
       "WeaponName": "Glacial Scimitar",
       "HP": 4882857,
       "Iron": 2170158,
@@ -7832,6 +8615,7 @@
     },
     {
       "TemplateId": 784,
+      "Stage": 1,
       "WeaponName": "Glacial Mace",
       "HP": 5425397,
       "Iron": 3526508,
@@ -7842,6 +8626,7 @@
     },
     {
       "TemplateId": 785,
+      "Stage": 1,
       "WeaponName": "Glacial Sword",
       "HP": 5425397,
       "Iron": 2712698,
@@ -7852,6 +8637,7 @@
     },
     {
       "TemplateId": 786,
+      "Stage": 1,
       "WeaponName": "Glacial Battleaxe",
       "HP": 6510476,
       "Iron": 3797778,
@@ -7862,6 +8648,7 @@
     },
     {
       "TemplateId": 787,
+      "Stage": 1,
       "WeaponName": "Glacial Longsword",
       "HP": 7053016,
       "Iron": 3255238,
@@ -7872,6 +8659,7 @@
     },
     {
       "TemplateId": 788,
+      "Stage": 1,
       "WeaponName": "Glacial Rapier",
       "HP": 4882857,
       "Iron": 2441428,
@@ -7882,6 +8670,7 @@
     },
     {
       "TemplateId": 789,
+      "Stage": 1,
       "WeaponName": "Glacial Warhammer",
       "HP": 8680635,
       "Iron": 4882857,
@@ -7892,6 +8681,7 @@
     },
     {
       "TemplateId": 790,
+      "Stage": 1,
       "WeaponName": "Glacial Greatsword",
       "HP": 10850794,
       "Iron": 4882857,
@@ -7902,6 +8692,7 @@
     },
     {
       "TemplateId": 791,
+      "Stage": 1,
       "WeaponName": "Permafrost Dagger",
       "HP": 3743524,
       "Iron": 1559801,
@@ -7912,6 +8703,7 @@
     },
     {
       "TemplateId": 792,
+      "Stage": 1,
       "WeaponName": "Permafrost Shortsword",
       "HP": 4991365,
       "Iron": 2183722,
@@ -7922,6 +8714,7 @@
     },
     {
       "TemplateId": 793,
+      "Stage": 1,
       "WeaponName": "Permafrost Scimitar",
       "HP": 5615286,
       "Iron": 2495682,
@@ -7932,6 +8725,7 @@
     },
     {
       "TemplateId": 794,
+      "Stage": 1,
       "WeaponName": "Permafrost Mace",
       "HP": 6239206,
       "Iron": 4055484,
@@ -7942,6 +8736,7 @@
     },
     {
       "TemplateId": 795,
+      "Stage": 1,
       "WeaponName": "Permafrost Sword",
       "HP": 6239206,
       "Iron": 3119603,
@@ -7952,6 +8747,7 @@
     },
     {
       "TemplateId": 796,
+      "Stage": 1,
       "WeaponName": "Permafrost Battleaxe",
       "HP": 7487048,
       "Iron": 4367444,
@@ -7962,6 +8758,7 @@
     },
     {
       "TemplateId": 797,
+      "Stage": 1,
       "WeaponName": "Permafrost Longsword",
       "HP": 8110968,
       "Iron": 3743524,
@@ -7972,6 +8769,7 @@
     },
     {
       "TemplateId": 798,
+      "Stage": 1,
       "WeaponName": "Permafrost Rapier",
       "HP": 5615286,
       "Iron": 2807643,
@@ -7982,6 +8780,7 @@
     },
     {
       "TemplateId": 799,
+      "Stage": 1,
       "WeaponName": "Permafrost Warhammer",
       "HP": 9982731,
       "Iron": 5615286,
@@ -7992,6 +8791,7 @@
     },
     {
       "TemplateId": 800,
+      "Stage": 1,
       "WeaponName": "Permafrost Greatsword",
       "HP": 12478413,
       "Iron": 5615286,
@@ -8002,6 +8802,7 @@
     },
     {
       "TemplateId": 801,
+      "Stage": 1,
       "WeaponName": "Storm Dagger",
       "HP": 4305052,
       "Iron": 1793771,
@@ -8012,6 +8813,7 @@
     },
     {
       "TemplateId": 802,
+      "Stage": 1,
       "WeaponName": "Storm Shortsword",
       "HP": 5740070,
       "Iron": 2511280,
@@ -8022,6 +8824,7 @@
     },
     {
       "TemplateId": 803,
+      "Stage": 1,
       "WeaponName": "Storm Scimitar",
       "HP": 6457579,
       "Iron": 2870035,
@@ -8032,6 +8835,7 @@
     },
     {
       "TemplateId": 804,
+      "Stage": 1,
       "WeaponName": "Storm Mace",
       "HP": 7175087,
       "Iron": 4663807,
@@ -8042,6 +8846,7 @@
     },
     {
       "TemplateId": 805,
+      "Stage": 1,
       "WeaponName": "Storm Sword",
       "HP": 7175087,
       "Iron": 3587543,
@@ -8052,6 +8857,7 @@
     },
     {
       "TemplateId": 806,
+      "Stage": 1,
       "WeaponName": "Storm Battleaxe",
       "HP": 8610105,
       "Iron": 5022561,
@@ -8062,6 +8868,7 @@
     },
     {
       "TemplateId": 807,
+      "Stage": 1,
       "WeaponName": "Storm Longsword",
       "HP": 9327614,
       "Iron": 4305052,
@@ -8072,6 +8879,7 @@
     },
     {
       "TemplateId": 808,
+      "Stage": 1,
       "WeaponName": "Storm Rapier",
       "HP": 6457579,
       "Iron": 3228789,
@@ -8082,6 +8890,7 @@
     },
     {
       "TemplateId": 809,
+      "Stage": 1,
       "WeaponName": "Storm Warhammer",
       "HP": 11480140,
       "Iron": 6457579,
@@ -8092,6 +8901,7 @@
     },
     {
       "TemplateId": 810,
+      "Stage": 1,
       "WeaponName": "Storm Greatsword",
       "HP": 14350175,
       "Iron": 6457579,
@@ -8102,6 +8912,7 @@
     },
     {
       "TemplateId": 811,
+      "Stage": 1,
       "WeaponName": "Thunder Dagger",
       "HP": 4950810,
       "Iron": 2062837,
@@ -8112,6 +8923,7 @@
     },
     {
       "TemplateId": 812,
+      "Stage": 1,
       "WeaponName": "Thunder Shortsword",
       "HP": 6601080,
       "Iron": 2887972,
@@ -8122,6 +8934,7 @@
     },
     {
       "TemplateId": 813,
+      "Stage": 1,
       "WeaponName": "Thunder Scimitar",
       "HP": 7426216,
       "Iron": 3300540,
@@ -8132,6 +8945,7 @@
     },
     {
       "TemplateId": 814,
+      "Stage": 1,
       "WeaponName": "Thunder Mace",
       "HP": 8251351,
       "Iron": 5363378,
@@ -8142,6 +8956,7 @@
     },
     {
       "TemplateId": 815,
+      "Stage": 1,
       "WeaponName": "Thunder Sword",
       "HP": 8251351,
       "Iron": 4125675,
@@ -8152,6 +8967,7 @@
     },
     {
       "TemplateId": 816,
+      "Stage": 1,
       "WeaponName": "Thunder Battleaxe",
       "HP": 9901621,
       "Iron": 5775945,
@@ -8162,6 +8978,7 @@
     },
     {
       "TemplateId": 817,
+      "Stage": 1,
       "WeaponName": "Thunder Longsword",
       "HP": 10726756,
       "Iron": 4950810,
@@ -8172,6 +8989,7 @@
     },
     {
       "TemplateId": 818,
+      "Stage": 1,
       "WeaponName": "Thunder Rapier",
       "HP": 7426216,
       "Iron": 3713108,
@@ -8182,6 +9000,7 @@
     },
     {
       "TemplateId": 819,
+      "Stage": 1,
       "WeaponName": "Thunder Warhammer",
       "HP": 13202161,
       "Iron": 7426216,
@@ -8192,6 +9011,7 @@
     },
     {
       "TemplateId": 820,
+      "Stage": 1,
       "WeaponName": "Thunder Greatsword",
       "HP": 16502702,
       "Iron": 7426216,
@@ -8202,6 +9022,7 @@
     },
     {
       "TemplateId": 821,
+      "Stage": 1,
       "WeaponName": "Lightning Dagger",
       "HP": 5693432,
       "Iron": 2372263,
@@ -8212,6 +9033,7 @@
     },
     {
       "TemplateId": 822,
+      "Stage": 1,
       "WeaponName": "Lightning Shortsword",
       "HP": 7591243,
       "Iron": 3321168,
@@ -8222,6 +9044,7 @@
     },
     {
       "TemplateId": 823,
+      "Stage": 1,
       "WeaponName": "Lightning Scimitar",
       "HP": 8540148,
       "Iron": 3795621,
@@ -8232,6 +9055,7 @@
     },
     {
       "TemplateId": 824,
+      "Stage": 1,
       "WeaponName": "Lightning Mace",
       "HP": 9489053,
       "Iron": 6167884,
@@ -8242,6 +9066,7 @@
     },
     {
       "TemplateId": 825,
+      "Stage": 1,
       "WeaponName": "Lightning Sword",
       "HP": 9489053,
       "Iron": 4744526,
@@ -8252,6 +9077,7 @@
     },
     {
       "TemplateId": 826,
+      "Stage": 1,
       "WeaponName": "Lightning Battleaxe",
       "HP": 11386864,
       "Iron": 6642337,
@@ -8262,6 +9088,7 @@
     },
     {
       "TemplateId": 827,
+      "Stage": 1,
       "WeaponName": "Lightning Longsword",
       "HP": 12335769,
       "Iron": 5693432,
@@ -8272,6 +9099,7 @@
     },
     {
       "TemplateId": 828,
+      "Stage": 1,
       "WeaponName": "Lightning Rapier",
       "HP": 8540148,
       "Iron": 4270074,
@@ -8282,6 +9110,7 @@
     },
     {
       "TemplateId": 829,
+      "Stage": 1,
       "WeaponName": "Lightning Warhammer",
       "HP": 15182486,
       "Iron": 8540148,
@@ -8292,6 +9121,7 @@
     },
     {
       "TemplateId": 830,
+      "Stage": 1,
       "WeaponName": "Lightning Greatsword",
       "HP": 18978107,
       "Iron": 8540148,
@@ -8302,6 +9132,7 @@
     },
     {
       "TemplateId": 831,
+      "Stage": 1,
       "WeaponName": "Tempest Dagger",
       "HP": 6547447,
       "Iron": 2728102,
@@ -8312,6 +9143,7 @@
     },
     {
       "TemplateId": 832,
+      "Stage": 1,
       "WeaponName": "Tempest Shortsword",
       "HP": 8729929,
       "Iron": 3819344,
@@ -8322,6 +9154,7 @@
     },
     {
       "TemplateId": 833,
+      "Stage": 1,
       "WeaponName": "Tempest Scimitar",
       "HP": 9821170,
       "Iron": 4364964,
@@ -8332,6 +9165,7 @@
     },
     {
       "TemplateId": 834,
+      "Stage": 1,
       "WeaponName": "Tempest Mace",
       "HP": 10912411,
       "Iron": 7093067,
@@ -8342,6 +9176,7 @@
     },
     {
       "TemplateId": 835,
+      "Stage": 1,
       "WeaponName": "Tempest Sword",
       "HP": 10912411,
       "Iron": 5456205,
@@ -8352,6 +9187,7 @@
     },
     {
       "TemplateId": 836,
+      "Stage": 1,
       "WeaponName": "Tempest Battleaxe",
       "HP": 13094894,
       "Iron": 7638688,
@@ -8362,6 +9198,7 @@
     },
     {
       "TemplateId": 837,
+      "Stage": 1,
       "WeaponName": "Tempest Longsword",
       "HP": 14186135,
       "Iron": 6547447,
@@ -8372,6 +9209,7 @@
     },
     {
       "TemplateId": 838,
+      "Stage": 1,
       "WeaponName": "Tempest Rapier",
       "HP": 9821170,
       "Iron": 4910585,
@@ -8382,6 +9220,7 @@
     },
     {
       "TemplateId": 839,
+      "Stage": 1,
       "WeaponName": "Tempest Warhammer",
       "HP": 17459858,
       "Iron": 9821170,
@@ -8392,6 +9231,7 @@
     },
     {
       "TemplateId": 840,
+      "Stage": 1,
       "WeaponName": "Tempest Greatsword",
       "HP": 21824823,
       "Iron": 9821170,
@@ -8402,6 +9242,7 @@
     },
     {
       "TemplateId": 841,
+      "Stage": 1,
       "WeaponName": "Void Dagger",
       "HP": 7529564,
       "Iron": 3137318,
@@ -8412,6 +9253,7 @@
     },
     {
       "TemplateId": 842,
+      "Stage": 1,
       "WeaponName": "Void Shortsword",
       "HP": 10039418,
       "Iron": 4392245,
@@ -8422,6 +9264,7 @@
     },
     {
       "TemplateId": 843,
+      "Stage": 1,
       "WeaponName": "Void Scimitar",
       "HP": 11294346,
       "Iron": 5019709,
@@ -8432,6 +9275,7 @@
     },
     {
       "TemplateId": 844,
+      "Stage": 1,
       "WeaponName": "Void Mace",
       "HP": 12549273,
       "Iron": 8157027,
@@ -8442,6 +9286,7 @@
     },
     {
       "TemplateId": 845,
+      "Stage": 1,
       "WeaponName": "Void Sword",
       "HP": 12549273,
       "Iron": 6274636,
@@ -8452,6 +9297,7 @@
     },
     {
       "TemplateId": 846,
+      "Stage": 1,
       "WeaponName": "Void Battleaxe",
       "HP": 15059128,
       "Iron": 8784491,
@@ -8462,6 +9308,7 @@
     },
     {
       "TemplateId": 847,
+      "Stage": 1,
       "WeaponName": "Void Longsword",
       "HP": 16314055,
       "Iron": 7529564,
@@ -8472,6 +9319,7 @@
     },
     {
       "TemplateId": 848,
+      "Stage": 1,
       "WeaponName": "Void Rapier",
       "HP": 11294346,
       "Iron": 5647173,
@@ -8482,6 +9330,7 @@
     },
     {
       "TemplateId": 849,
+      "Stage": 1,
       "WeaponName": "Void Warhammer",
       "HP": 20078837,
       "Iron": 11294346,
@@ -8492,6 +9341,7 @@
     },
     {
       "TemplateId": 850,
+      "Stage": 1,
       "WeaponName": "Void Greatsword",
       "HP": 25098547,
       "Iron": 11294346,
@@ -8502,6 +9352,7 @@
     },
     {
       "TemplateId": 851,
+      "Stage": 1,
       "WeaponName": "Abyssal Dagger",
       "HP": 8658998,
       "Iron": 3607916,
@@ -8512,6 +9363,7 @@
     },
     {
       "TemplateId": 852,
+      "Stage": 1,
       "WeaponName": "Abyssal Shortsword",
       "HP": 11545331,
       "Iron": 5051082,
@@ -8522,6 +9374,7 @@
     },
     {
       "TemplateId": 853,
+      "Stage": 1,
       "WeaponName": "Abyssal Scimitar",
       "HP": 12988498,
       "Iron": 5772665,
@@ -8532,6 +9385,7 @@
     },
     {
       "TemplateId": 854,
+      "Stage": 1,
       "WeaponName": "Abyssal Mace",
       "HP": 14431664,
       "Iron": 9380582,
@@ -8542,6 +9396,7 @@
     },
     {
       "TemplateId": 855,
+      "Stage": 1,
       "WeaponName": "Abyssal Sword",
       "HP": 14431664,
       "Iron": 7215832,
@@ -8552,6 +9407,7 @@
     },
     {
       "TemplateId": 856,
+      "Stage": 1,
       "WeaponName": "Abyssal Battleaxe",
       "HP": 17317997,
       "Iron": 10102165,
@@ -8562,6 +9418,7 @@
     },
     {
       "TemplateId": 857,
+      "Stage": 1,
       "WeaponName": "Abyssal Longsword",
       "HP": 18761164,
       "Iron": 8658998,
@@ -8572,6 +9429,7 @@
     },
     {
       "TemplateId": 858,
+      "Stage": 1,
       "WeaponName": "Abyssal Rapier",
       "HP": 12988498,
       "Iron": 6494249,
@@ -8582,6 +9440,7 @@
     },
     {
       "TemplateId": 859,
+      "Stage": 1,
       "WeaponName": "Abyssal Warhammer",
       "HP": 23090663,
       "Iron": 12988498,
@@ -8592,6 +9451,7 @@
     },
     {
       "TemplateId": 860,
+      "Stage": 1,
       "WeaponName": "Abyssal Greatsword",
       "HP": 28863329,
       "Iron": 12988498,
@@ -8602,6 +9462,7 @@
     },
     {
       "TemplateId": 861,
+      "Stage": 1,
       "WeaponName": "Null Dagger",
       "HP": 9957848,
       "Iron": 4149103,
@@ -8612,6 +9473,7 @@
     },
     {
       "TemplateId": 862,
+      "Stage": 1,
       "WeaponName": "Null Shortsword",
       "HP": 13277131,
       "Iron": 5808745,
@@ -8622,6 +9484,7 @@
     },
     {
       "TemplateId": 863,
+      "Stage": 1,
       "WeaponName": "Null Scimitar",
       "HP": 14936772,
       "Iron": 6638565,
@@ -8632,6 +9495,7 @@
     },
     {
       "TemplateId": 864,
+      "Stage": 1,
       "WeaponName": "Null Mace",
       "HP": 16596414,
       "Iron": 10787669,
@@ -8642,6 +9506,7 @@
     },
     {
       "TemplateId": 865,
+      "Stage": 1,
       "WeaponName": "Null Sword",
       "HP": 16596414,
       "Iron": 8298207,
@@ -8652,6 +9517,7 @@
     },
     {
       "TemplateId": 866,
+      "Stage": 1,
       "WeaponName": "Null Battleaxe",
       "HP": 19915697,
       "Iron": 11617490,
@@ -8662,6 +9528,7 @@
     },
     {
       "TemplateId": 867,
+      "Stage": 1,
       "WeaponName": "Null Longsword",
       "HP": 21575338,
       "Iron": 9957848,
@@ -8672,6 +9539,7 @@
     },
     {
       "TemplateId": 868,
+      "Stage": 1,
       "WeaponName": "Null Rapier",
       "HP": 14936772,
       "Iron": 7468386,
@@ -8682,6 +9550,7 @@
     },
     {
       "TemplateId": 869,
+      "Stage": 1,
       "WeaponName": "Null Warhammer",
       "HP": 26554263,
       "Iron": 14936772,
@@ -8692,6 +9561,7 @@
     },
     {
       "TemplateId": 870,
+      "Stage": 1,
       "WeaponName": "Null Greatsword",
       "HP": 33192828,
       "Iron": 14936772,
@@ -8702,6 +9572,7 @@
     },
     {
       "TemplateId": 871,
+      "Stage": 1,
       "WeaponName": "Black Hole Dagger",
       "HP": 11451525,
       "Iron": 4771469,
@@ -8712,6 +9583,7 @@
     },
     {
       "TemplateId": 872,
+      "Stage": 1,
       "WeaponName": "Black Hole Shortsword",
       "HP": 15268701,
       "Iron": 6680056,
@@ -8722,6 +9594,7 @@
     },
     {
       "TemplateId": 873,
+      "Stage": 1,
       "WeaponName": "Black Hole Scimitar",
       "HP": 17177288,
       "Iron": 7634350,
@@ -8732,6 +9605,7 @@
     },
     {
       "TemplateId": 874,
+      "Stage": 1,
       "WeaponName": "Black Hole Mace",
       "HP": 19085876,
       "Iron": 12405819,
@@ -8742,6 +9616,7 @@
     },
     {
       "TemplateId": 875,
+      "Stage": 1,
       "WeaponName": "Black Hole Sword",
       "HP": 19085876,
       "Iron": 9542938,
@@ -8752,6 +9627,7 @@
     },
     {
       "TemplateId": 876,
+      "Stage": 1,
       "WeaponName": "Black Hole Battleaxe",
       "HP": 22903051,
       "Iron": 13360113,
@@ -8762,6 +9638,7 @@
     },
     {
       "TemplateId": 877,
+      "Stage": 1,
       "WeaponName": "Black Hole Longsword",
       "HP": 24811639,
       "Iron": 11451525,
@@ -8772,6 +9649,7 @@
     },
     {
       "TemplateId": 878,
+      "Stage": 1,
       "WeaponName": "Black Hole Rapier",
       "HP": 17177288,
       "Iron": 8588644,
@@ -8782,6 +9660,7 @@
     },
     {
       "TemplateId": 879,
+      "Stage": 1,
       "WeaponName": "Black Hole Warhammer",
       "HP": 30537402,
       "Iron": 17177288,
@@ -8792,6 +9671,7 @@
     },
     {
       "TemplateId": 880,
+      "Stage": 1,
       "WeaponName": "Black Hole Greatsword",
       "HP": 38171753,
       "Iron": 17177288,
@@ -8802,6 +9682,7 @@
     },
     {
       "TemplateId": 881,
+      "Stage": 1,
       "WeaponName": "Light Dagger",
       "HP": 13169254,
       "Iron": 5487189,
@@ -8812,6 +9693,7 @@
     },
     {
       "TemplateId": 882,
+      "Stage": 1,
       "WeaponName": "Light Shortsword",
       "HP": 17559006,
       "Iron": 7682065,
@@ -8822,6 +9704,7 @@
     },
     {
       "TemplateId": 883,
+      "Stage": 1,
       "WeaponName": "Light Scimitar",
       "HP": 19753882,
       "Iron": 8779503,
@@ -8832,6 +9715,7 @@
     },
     {
       "TemplateId": 884,
+      "Stage": 1,
       "WeaponName": "Light Mace",
       "HP": 21948758,
       "Iron": 14266692,
@@ -8842,6 +9726,7 @@
     },
     {
       "TemplateId": 885,
+      "Stage": 1,
       "WeaponName": "Light Sword",
       "HP": 21948758,
       "Iron": 10974379,
@@ -8852,6 +9737,7 @@
     },
     {
       "TemplateId": 886,
+      "Stage": 1,
       "WeaponName": "Light Battleaxe",
       "HP": 26338509,
       "Iron": 15364130,
@@ -8862,6 +9748,7 @@
     },
     {
       "TemplateId": 887,
+      "Stage": 1,
       "WeaponName": "Light Longsword",
       "HP": 28533385,
       "Iron": 13169254,
@@ -8872,6 +9759,7 @@
     },
     {
       "TemplateId": 888,
+      "Stage": 1,
       "WeaponName": "Light Rapier",
       "HP": 19753882,
       "Iron": 9876941,
@@ -8882,6 +9770,7 @@
     },
     {
       "TemplateId": 889,
+      "Stage": 1,
       "WeaponName": "Light Warhammer",
       "HP": 35118012,
       "Iron": 19753882,
@@ -8892,6 +9781,7 @@
     },
     {
       "TemplateId": 890,
+      "Stage": 1,
       "WeaponName": "Light Greatsword",
       "HP": 43897516,
       "Iron": 19753882,
@@ -8902,6 +9792,7 @@
     },
     {
       "TemplateId": 891,
+      "Stage": 1,
       "WeaponName": "Radiant Dagger",
       "HP": 15144643,
       "Iron": 6310267,
@@ -8912,6 +9803,7 @@
     },
     {
       "TemplateId": 892,
+      "Stage": 1,
       "WeaponName": "Radiant Shortsword",
       "HP": 20192857,
       "Iron": 8834375,
@@ -8922,6 +9814,7 @@
     },
     {
       "TemplateId": 893,
+      "Stage": 1,
       "WeaponName": "Radiant Scimitar",
       "HP": 22716964,
       "Iron": 10096428,
@@ -8932,6 +9825,7 @@
     },
     {
       "TemplateId": 894,
+      "Stage": 1,
       "WeaponName": "Radiant Mace",
       "HP": 25241071,
       "Iron": 16406696,
@@ -8942,6 +9836,7 @@
     },
     {
       "TemplateId": 895,
+      "Stage": 1,
       "WeaponName": "Radiant Sword",
       "HP": 25241071,
       "Iron": 12620535,
@@ -8952,6 +9847,7 @@
     },
     {
       "TemplateId": 896,
+      "Stage": 1,
       "WeaponName": "Radiant Battleaxe",
       "HP": 30289286,
       "Iron": 17668750,
@@ -8962,6 +9858,7 @@
     },
     {
       "TemplateId": 897,
+      "Stage": 1,
       "WeaponName": "Radiant Longsword",
       "HP": 32813393,
       "Iron": 15144643,
@@ -8972,6 +9869,7 @@
     },
     {
       "TemplateId": 898,
+      "Stage": 1,
       "WeaponName": "Radiant Rapier",
       "HP": 22716964,
       "Iron": 11358482,
@@ -8982,6 +9880,7 @@
     },
     {
       "TemplateId": 899,
+      "Stage": 1,
       "WeaponName": "Radiant Warhammer",
       "HP": 40385714,
       "Iron": 22716964,
@@ -8992,6 +9891,7 @@
     },
     {
       "TemplateId": 900,
+      "Stage": 1,
       "WeaponName": "Radiant Greatsword",
       "HP": 50482143,
       "Iron": 22716964,
@@ -9002,6 +9902,7 @@
     },
     {
       "TemplateId": 901,
+      "Stage": 1,
       "WeaponName": "Luminous Dagger",
       "HP": 17416339,
       "Iron": 7256808,
@@ -9012,6 +9913,7 @@
     },
     {
       "TemplateId": 902,
+      "Stage": 1,
       "WeaponName": "Luminous Shortsword",
       "HP": 23221786,
       "Iron": 10159531,
@@ -9022,6 +9924,7 @@
     },
     {
       "TemplateId": 903,
+      "Stage": 1,
       "WeaponName": "Luminous Scimitar",
       "HP": 26124509,
       "Iron": 11610893,
@@ -9032,6 +9935,7 @@
     },
     {
       "TemplateId": 904,
+      "Stage": 1,
       "WeaponName": "Luminous Mace",
       "HP": 29027232,
       "Iron": 18867701,
@@ -9042,6 +9946,7 @@
     },
     {
       "TemplateId": 905,
+      "Stage": 1,
       "WeaponName": "Luminous Sword",
       "HP": 29027232,
       "Iron": 14513616,
@@ -9052,6 +9957,7 @@
     },
     {
       "TemplateId": 906,
+      "Stage": 1,
       "WeaponName": "Luminous Battleaxe",
       "HP": 34832679,
       "Iron": 20319062,
@@ -9062,6 +9968,7 @@
     },
     {
       "TemplateId": 907,
+      "Stage": 1,
       "WeaponName": "Luminous Longsword",
       "HP": 37735402,
       "Iron": 17416339,
@@ -9072,6 +9979,7 @@
     },
     {
       "TemplateId": 908,
+      "Stage": 1,
       "WeaponName": "Luminous Rapier",
       "HP": 26124509,
       "Iron": 13062254,
@@ -9082,6 +9990,7 @@
     },
     {
       "TemplateId": 909,
+      "Stage": 1,
       "WeaponName": "Luminous Warhammer",
       "HP": 46443572,
       "Iron": 26124509,
@@ -9092,6 +10001,7 @@
     },
     {
       "TemplateId": 910,
+      "Stage": 1,
       "WeaponName": "Luminous Greatsword",
       "HP": 58054465,
       "Iron": 26124509,
@@ -9102,6 +10012,7 @@
     },
     {
       "TemplateId": 911,
+      "Stage": 1,
       "WeaponName": "Solar Dagger",
       "HP": 20028790,
       "Iron": 8345329,
@@ -9112,6 +10023,7 @@
     },
     {
       "TemplateId": 912,
+      "Stage": 1,
       "WeaponName": "Solar Shortsword",
       "HP": 26705053,
       "Iron": 11683461,
@@ -9122,6 +10034,7 @@
     },
     {
       "TemplateId": 913,
+      "Stage": 1,
       "WeaponName": "Solar Scimitar",
       "HP": 30043185,
       "Iron": 13352526,
@@ -9132,6 +10045,7 @@
     },
     {
       "TemplateId": 914,
+      "Stage": 1,
       "WeaponName": "Solar Mace",
       "HP": 33381317,
       "Iron": 21697856,
@@ -9142,6 +10056,7 @@
     },
     {
       "TemplateId": 915,
+      "Stage": 1,
       "WeaponName": "Solar Sword",
       "HP": 33381317,
       "Iron": 16690658,
@@ -9152,6 +10067,7 @@
     },
     {
       "TemplateId": 916,
+      "Stage": 1,
       "WeaponName": "Solar Battleaxe",
       "HP": 40057580,
       "Iron": 23366922,
@@ -9162,6 +10078,7 @@
     },
     {
       "TemplateId": 917,
+      "Stage": 1,
       "WeaponName": "Solar Longsword",
       "HP": 43395712,
       "Iron": 20028790,
@@ -9172,6 +10089,7 @@
     },
     {
       "TemplateId": 918,
+      "Stage": 1,
       "WeaponName": "Solar Rapier",
       "HP": 30043185,
       "Iron": 15021592,
@@ -9182,6 +10100,7 @@
     },
     {
       "TemplateId": 919,
+      "Stage": 1,
       "WeaponName": "Solar Warhammer",
       "HP": 53410107,
       "Iron": 30043185,
@@ -9192,6 +10111,7 @@
     },
     {
       "TemplateId": 920,
+      "Stage": 1,
       "WeaponName": "Solar Greatsword",
       "HP": 66762634,
       "Iron": 30043185,
@@ -9202,6 +10122,7 @@
     },
     {
       "TemplateId": 921,
+      "Stage": 1,
       "WeaponName": "Dark Dagger",
       "HP": 23033109,
       "Iron": 9597128,
@@ -9212,6 +10133,7 @@
     },
     {
       "TemplateId": 922,
+      "Stage": 1,
       "WeaponName": "Dark Shortsword",
       "HP": 30710812,
       "Iron": 13435980,
@@ -9222,6 +10144,7 @@
     },
     {
       "TemplateId": 923,
+      "Stage": 1,
       "WeaponName": "Dark Scimitar",
       "HP": 34549663,
       "Iron": 15355406,
@@ -9232,6 +10155,7 @@
     },
     {
       "TemplateId": 924,
+      "Stage": 1,
       "WeaponName": "Dark Mace",
       "HP": 38388515,
       "Iron": 24952534,
@@ -9242,6 +10166,7 @@
     },
     {
       "TemplateId": 925,
+      "Stage": 1,
       "WeaponName": "Dark Sword",
       "HP": 38388515,
       "Iron": 19194257,
@@ -9252,6 +10177,7 @@
     },
     {
       "TemplateId": 926,
+      "Stage": 1,
       "WeaponName": "Dark Battleaxe",
       "HP": 46066218,
       "Iron": 26871960,
@@ -9262,6 +10188,7 @@
     },
     {
       "TemplateId": 927,
+      "Stage": 1,
       "WeaponName": "Dark Longsword",
       "HP": 49905069,
       "Iron": 23033109,
@@ -9272,6 +10199,7 @@
     },
     {
       "TemplateId": 928,
+      "Stage": 1,
       "WeaponName": "Dark Rapier",
       "HP": 34549663,
       "Iron": 17274831,
@@ -9282,6 +10210,7 @@
     },
     {
       "TemplateId": 929,
+      "Stage": 1,
       "WeaponName": "Dark Warhammer",
       "HP": 61421624,
       "Iron": 34549663,
@@ -9292,6 +10221,7 @@
     },
     {
       "TemplateId": 930,
+      "Stage": 1,
       "WeaponName": "Dark Greatsword",
       "HP": 76777030,
       "Iron": 34549663,
@@ -9302,6 +10232,7 @@
     },
     {
       "TemplateId": 931,
+      "Stage": 1,
       "WeaponName": "Shadow Dagger",
       "HP": 26488075,
       "Iron": 11036698,
@@ -9312,6 +10243,7 @@
     },
     {
       "TemplateId": 932,
+      "Stage": 1,
       "WeaponName": "Shadow Shortsword",
       "HP": 35317433,
       "Iron": 15451377,
@@ -9322,6 +10254,7 @@
     },
     {
       "TemplateId": 933,
+      "Stage": 1,
       "WeaponName": "Shadow Scimitar",
       "HP": 39732113,
       "Iron": 17658716,
@@ -9332,6 +10265,7 @@
     },
     {
       "TemplateId": 934,
+      "Stage": 1,
       "WeaponName": "Shadow Mace",
       "HP": 44146792,
       "Iron": 28695414,
@@ -9342,6 +10276,7 @@
     },
     {
       "TemplateId": 935,
+      "Stage": 1,
       "WeaponName": "Shadow Sword",
       "HP": 44146792,
       "Iron": 22073396,
@@ -9352,6 +10287,7 @@
     },
     {
       "TemplateId": 936,
+      "Stage": 1,
       "WeaponName": "Shadow Battleaxe",
       "HP": 52976150,
       "Iron": 30902754,
@@ -9362,6 +10298,7 @@
     },
     {
       "TemplateId": 937,
+      "Stage": 1,
       "WeaponName": "Shadow Longsword",
       "HP": 57390829,
       "Iron": 26488075,
@@ -9372,6 +10309,7 @@
     },
     {
       "TemplateId": 938,
+      "Stage": 1,
       "WeaponName": "Shadow Rapier",
       "HP": 39732113,
       "Iron": 19866056,
@@ -9382,6 +10320,7 @@
     },
     {
       "TemplateId": 939,
+      "Stage": 1,
       "WeaponName": "Shadow Warhammer",
       "HP": 70634867,
       "Iron": 39732113,
@@ -9392,6 +10331,7 @@
     },
     {
       "TemplateId": 940,
+      "Stage": 1,
       "WeaponName": "Shadow Greatsword",
       "HP": 88293584,
       "Iron": 39732113,
@@ -9402,6 +10342,7 @@
     },
     {
       "TemplateId": 941,
+      "Stage": 1,
       "WeaponName": "Umbral Dagger",
       "HP": 30461286,
       "Iron": 12692202,
@@ -9412,6 +10353,7 @@
     },
     {
       "TemplateId": 942,
+      "Stage": 1,
       "WeaponName": "Umbral Shortsword",
       "HP": 40615048,
       "Iron": 17769083,
@@ -9422,6 +10364,7 @@
     },
     {
       "TemplateId": 943,
+      "Stage": 1,
       "WeaponName": "Umbral Scimitar",
       "HP": 45691929,
       "Iron": 20307524,
@@ -9432,6 +10375,7 @@
     },
     {
       "TemplateId": 944,
+      "Stage": 1,
       "WeaponName": "Umbral Mace",
       "HP": 50768811,
       "Iron": 32999727,
@@ -9442,6 +10386,7 @@
     },
     {
       "TemplateId": 945,
+      "Stage": 1,
       "WeaponName": "Umbral Sword",
       "HP": 50768811,
       "Iron": 25384405,
@@ -9452,6 +10397,7 @@
     },
     {
       "TemplateId": 946,
+      "Stage": 1,
       "WeaponName": "Umbral Battleaxe",
       "HP": 60922573,
       "Iron": 35538167,
@@ -9462,6 +10408,7 @@
     },
     {
       "TemplateId": 947,
+      "Stage": 1,
       "WeaponName": "Umbral Longsword",
       "HP": 65999454,
       "Iron": 30461286,
@@ -9472,6 +10419,7 @@
     },
     {
       "TemplateId": 948,
+      "Stage": 1,
       "WeaponName": "Umbral Rapier",
       "HP": 45691929,
       "Iron": 22845964,
@@ -9482,6 +10430,7 @@
     },
     {
       "TemplateId": 949,
+      "Stage": 1,
       "WeaponName": "Umbral Warhammer",
       "HP": 81230097,
       "Iron": 45691929,
@@ -9492,6 +10441,7 @@
     },
     {
       "TemplateId": 950,
+      "Stage": 1,
       "WeaponName": "Umbral Greatsword",
       "HP": 101537622,
       "Iron": 45691929,
@@ -9502,6 +10452,7 @@
     },
     {
       "TemplateId": 951,
+      "Stage": 1,
       "WeaponName": "Nocturnal Dagger",
       "HP": 35030479,
       "Iron": 14596033,
@@ -9512,6 +10463,7 @@
     },
     {
       "TemplateId": 952,
+      "Stage": 1,
       "WeaponName": "Nocturnal Shortsword",
       "HP": 46707306,
       "Iron": 20434446,
@@ -9522,6 +10474,7 @@
     },
     {
       "TemplateId": 953,
+      "Stage": 1,
       "WeaponName": "Nocturnal Scimitar",
       "HP": 52545719,
       "Iron": 23353653,
@@ -9532,6 +10485,7 @@
     },
     {
       "TemplateId": 954,
+      "Stage": 1,
       "WeaponName": "Nocturnal Mace",
       "HP": 58384132,
       "Iron": 37949686,
@@ -9542,6 +10496,7 @@
     },
     {
       "TemplateId": 955,
+      "Stage": 1,
       "WeaponName": "Nocturnal Sword",
       "HP": 58384132,
       "Iron": 29192066,
@@ -9552,6 +10507,7 @@
     },
     {
       "TemplateId": 956,
+      "Stage": 1,
       "WeaponName": "Nocturnal Battleaxe",
       "HP": 70060959,
       "Iron": 40868892,
@@ -9562,6 +10518,7 @@
     },
     {
       "TemplateId": 957,
+      "Stage": 1,
       "WeaponName": "Nocturnal Longsword",
       "HP": 75899372,
       "Iron": 35030479,
@@ -9572,6 +10529,7 @@
     },
     {
       "TemplateId": 958,
+      "Stage": 1,
       "WeaponName": "Nocturnal Rapier",
       "HP": 52545719,
       "Iron": 26272859,
@@ -9582,6 +10540,7 @@
     },
     {
       "TemplateId": 959,
+      "Stage": 1,
       "WeaponName": "Nocturnal Warhammer",
       "HP": 93414612,
       "Iron": 52545719,
@@ -9592,6 +10551,7 @@
     },
     {
       "TemplateId": 960,
+      "Stage": 1,
       "WeaponName": "Nocturnal Greatsword",
       "HP": 116768265,
       "Iron": 52545719,
@@ -9602,6 +10562,7 @@
     },
     {
       "TemplateId": 961,
+      "Stage": 1,
       "WeaponName": "Blood Dagger",
       "HP": 40285051,
       "Iron": 16785438,
@@ -9612,6 +10573,7 @@
     },
     {
       "TemplateId": 962,
+      "Stage": 1,
       "WeaponName": "Blood Shortsword",
       "HP": 53713402,
       "Iron": 23499613,
@@ -9622,6 +10584,7 @@
     },
     {
       "TemplateId": 963,
+      "Stage": 1,
       "WeaponName": "Blood Scimitar",
       "HP": 60427577,
       "Iron": 26856701,
@@ -9632,6 +10595,7 @@
     },
     {
       "TemplateId": 964,
+      "Stage": 1,
       "WeaponName": "Blood Mace",
       "HP": 67141752,
       "Iron": 43642139,
@@ -9642,6 +10606,7 @@
     },
     {
       "TemplateId": 965,
+      "Stage": 1,
       "WeaponName": "Blood Sword",
       "HP": 67141752,
       "Iron": 33570876,
@@ -9652,6 +10617,7 @@
     },
     {
       "TemplateId": 966,
+      "Stage": 1,
       "WeaponName": "Blood Battleaxe",
       "HP": 80570103,
       "Iron": 46999226,
@@ -9662,6 +10628,7 @@
     },
     {
       "TemplateId": 967,
+      "Stage": 1,
       "WeaponName": "Blood Longsword",
       "HP": 87284278,
       "Iron": 40285051,
@@ -9672,6 +10639,7 @@
     },
     {
       "TemplateId": 968,
+      "Stage": 1,
       "WeaponName": "Blood Rapier",
       "HP": 60427577,
       "Iron": 30213788,
@@ -9682,6 +10650,7 @@
     },
     {
       "TemplateId": 969,
+      "Stage": 1,
       "WeaponName": "Blood Warhammer",
       "HP": 107426804,
       "Iron": 60427577,
@@ -9692,6 +10661,7 @@
     },
     {
       "TemplateId": 970,
+      "Stage": 1,
       "WeaponName": "Blood Greatsword",
       "HP": 134283505,
       "Iron": 60427577,
@@ -9702,6 +10672,7 @@
     },
     {
       "TemplateId": 971,
+      "Stage": 1,
       "WeaponName": "Crimson Dagger",
       "HP": 46327809,
       "Iron": 19303253,
@@ -9712,6 +10683,7 @@
     },
     {
       "TemplateId": 972,
+      "Stage": 1,
       "WeaponName": "Crimson Shortsword",
       "HP": 61770412,
       "Iron": 27024555,
@@ -9722,6 +10694,7 @@
     },
     {
       "TemplateId": 973,
+      "Stage": 1,
       "WeaponName": "Crimson Scimitar",
       "HP": 69491714,
       "Iron": 30885206,
@@ -9732,6 +10705,7 @@
     },
     {
       "TemplateId": 974,
+      "Stage": 1,
       "WeaponName": "Crimson Mace",
       "HP": 77213015,
       "Iron": 50188460,
@@ -9742,6 +10716,7 @@
     },
     {
       "TemplateId": 975,
+      "Stage": 1,
       "WeaponName": "Crimson Sword",
       "HP": 77213015,
       "Iron": 38606507,
@@ -9752,6 +10727,7 @@
     },
     {
       "TemplateId": 976,
+      "Stage": 1,
       "WeaponName": "Crimson Battleaxe",
       "HP": 92655618,
       "Iron": 54049110,
@@ -9762,6 +10738,7 @@
     },
     {
       "TemplateId": 977,
+      "Stage": 1,
       "WeaponName": "Crimson Longsword",
       "HP": 100376920,
       "Iron": 46327809,
@@ -9772,6 +10749,7 @@
     },
     {
       "TemplateId": 978,
+      "Stage": 1,
       "WeaponName": "Crimson Rapier",
       "HP": 69491714,
       "Iron": 34745857,
@@ -9782,6 +10760,7 @@
     },
     {
       "TemplateId": 979,
+      "Stage": 1,
       "WeaponName": "Crimson Warhammer",
       "HP": 123540824,
       "Iron": 69491714,
@@ -9792,6 +10771,7 @@
     },
     {
       "TemplateId": 980,
+      "Stage": 1,
       "WeaponName": "Crimson Greatsword",
       "HP": 154426031,
       "Iron": 69491714,
@@ -9802,6 +10782,7 @@
     },
     {
       "TemplateId": 981,
+      "Stage": 1,
       "WeaponName": "Vampiric Dagger",
       "HP": 53276980,
       "Iron": 22198741,
@@ -9812,6 +10793,7 @@
     },
     {
       "TemplateId": 982,
+      "Stage": 1,
       "WeaponName": "Vampiric Shortsword",
       "HP": 71035974,
       "Iron": 31078238,
@@ -9822,6 +10804,7 @@
     },
     {
       "TemplateId": 983,
+      "Stage": 1,
       "WeaponName": "Vampiric Scimitar",
       "HP": 79915471,
       "Iron": 35517987,
@@ -9832,6 +10815,7 @@
     },
     {
       "TemplateId": 984,
+      "Stage": 1,
       "WeaponName": "Vampiric Mace",
       "HP": 88794967,
       "Iron": 57716729,
@@ -9842,6 +10826,7 @@
     },
     {
       "TemplateId": 985,
+      "Stage": 1,
       "WeaponName": "Vampiric Sword",
       "HP": 88794967,
       "Iron": 44397483,
@@ -9852,6 +10837,7 @@
     },
     {
       "TemplateId": 986,
+      "Stage": 1,
       "WeaponName": "Vampiric Battleaxe",
       "HP": 106553961,
       "Iron": 62156477,
@@ -9862,6 +10848,7 @@
     },
     {
       "TemplateId": 987,
+      "Stage": 1,
       "WeaponName": "Vampiric Longsword",
       "HP": 115433458,
       "Iron": 53276980,
@@ -9872,6 +10859,7 @@
     },
     {
       "TemplateId": 988,
+      "Stage": 1,
       "WeaponName": "Vampiric Rapier",
       "HP": 79915471,
       "Iron": 39957735,
@@ -9882,6 +10870,7 @@
     },
     {
       "TemplateId": 989,
+      "Stage": 1,
       "WeaponName": "Vampiric Warhammer",
       "HP": 142071948,
       "Iron": 79915471,
@@ -9892,6 +10881,7 @@
     },
     {
       "TemplateId": 990,
+      "Stage": 1,
       "WeaponName": "Vampiric Greatsword",
       "HP": 177589935,
       "Iron": 79915471,
@@ -9902,6 +10892,7 @@
     },
     {
       "TemplateId": 991,
+      "Stage": 1,
       "WeaponName": "Sanguine Dagger",
       "HP": 61268527,
       "Iron": 25528553,
@@ -9912,6 +10903,7 @@
     },
     {
       "TemplateId": 992,
+      "Stage": 1,
       "WeaponName": "Sanguine Shortsword",
       "HP": 81691370,
       "Iron": 35739974,
@@ -9922,6 +10914,7 @@
     },
     {
       "TemplateId": 993,
+      "Stage": 1,
       "WeaponName": "Sanguine Scimitar",
       "HP": 91902791,
       "Iron": 40845685,
@@ -9932,6 +10925,7 @@
     },
     {
       "TemplateId": 994,
+      "Stage": 1,
       "WeaponName": "Sanguine Mace",
       "HP": 102114213,
       "Iron": 66374238,
@@ -9942,6 +10936,7 @@
     },
     {
       "TemplateId": 995,
+      "Stage": 1,
       "WeaponName": "Sanguine Sword",
       "HP": 102114213,
       "Iron": 51057106,
@@ -9952,6 +10947,7 @@
     },
     {
       "TemplateId": 996,
+      "Stage": 1,
       "WeaponName": "Sanguine Battleaxe",
       "HP": 122537055,
       "Iron": 71479949,
@@ -9962,6 +10958,7 @@
     },
     {
       "TemplateId": 997,
+      "Stage": 1,
       "WeaponName": "Sanguine Longsword",
       "HP": 132748477,
       "Iron": 61268527,
@@ -9972,6 +10969,7 @@
     },
     {
       "TemplateId": 998,
+      "Stage": 1,
       "WeaponName": "Sanguine Rapier",
       "HP": 91902791,
       "Iron": 45951395,
@@ -9982,6 +10980,7 @@
     },
     {
       "TemplateId": 999,
+      "Stage": 1,
       "WeaponName": "Sanguine Warhammer",
       "HP": 163382740,
       "Iron": 91902791,
@@ -9992,6 +10991,7 @@
     },
     {
       "TemplateId": 1000,
+      "Stage": 1,
       "WeaponName": "Sanguine Greatsword",
       "HP": 204228426,
       "Iron": 91902791,
