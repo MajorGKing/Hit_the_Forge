@@ -12,6 +12,24 @@ public class PlayerManager
     private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
     private List<int> shopProducts = new List<int>();
     private List<int> ownedWeapons = new List<int>();
+    private int _clearedWeaponCount;
+    public int ClearedWeaponCount
+    {
+        get => _clearedWeaponCount;
+        private set
+        {
+            if (_clearedWeaponCount != value)
+            {
+                _clearedWeaponCount = value;
+                OnPlayerSave?.Invoke();
+            }
+        }
+    }
+
+    public void SetClearedWeaponCount(int count)
+    {
+        ClearedWeaponCount = count;
+    }
 
 
     public void Clear()
@@ -62,7 +80,8 @@ public class PlayerManager
 
 
             ownedWeapons.Add(1);
-            
+            SetClearedWeaponCount(0);
+
             OnPlayerSave?.Invoke();
         }
 
@@ -449,6 +468,7 @@ public class PlayerManager
         data.townStatLevel = (int[])townStatLevel.Clone();
         data.shopProducts = new List<int>(shopProducts);
         data.ownedWeapons = new List<int>(ownedWeapons);
+        data.clearedWeaponCount = ClearedWeaponCount;
         return data;
     }
 
@@ -460,6 +480,7 @@ public class PlayerManager
         townStatLevel = (int[])data.townStatLevel.Clone();
         shopProducts = new List<int>(data.shopProducts);
         ownedWeapons = new List<int>(data.ownedWeapons);
+        SetClearedWeaponCount(data.clearedWeaponCount);
 
         OnCurrenciesChanged?.Invoke();
         OnPlayerUpgradeChanged?.Invoke();

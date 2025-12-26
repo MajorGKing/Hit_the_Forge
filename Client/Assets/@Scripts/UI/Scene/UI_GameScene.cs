@@ -133,6 +133,8 @@ public class UI_GameScene : UI_Scene
         Managers.Player.OnPlayerUpgradeChanged += RefreshUI;
         Managers.Game.OnNewWeaponAdded -= WeaponSelectReset;
         Managers.Game.OnNewWeaponAdded += WeaponSelectReset;
+        Managers.Game.OnNewWeaponAdded -= RefreshUI;
+        Managers.Game.OnNewWeaponAdded += RefreshUI;
     }
 
     private void OnDisable()
@@ -142,6 +144,7 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
         Managers.Game.OnNewWeaponAdded -= WeaponSelectReset;
+        Managers.Game.OnNewWeaponAdded -= RefreshUI;
     }
 
     public void SetInfo()
@@ -154,8 +157,8 @@ public class UI_GameScene : UI_Scene
         GetText((int)Texts.Text_Gold).text = Managers.Player.GetCurrency(Define.ECurrency.Gold).ToAbbreviatedString();
         GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToAbbreviatedString();
         GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToAbbreviatedString();
-
-        GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.GetOwnedWeapons().Count - 1} / {Managers.Data.WeaponDict.Count}";
+ 
+        GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.ClearedWeaponCount} / {Managers.Data.WeaponDict.Count}";
 
         var countTime = Managers.Game.GetEnhancementCount();
         if(countTime < 0)

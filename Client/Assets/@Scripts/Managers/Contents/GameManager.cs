@@ -333,6 +333,7 @@ public class GameManager
             if (Managers.Player.HasWeapon(currentWeaponInfo.NextTemplateId) == false)
             {
                 Managers.Player.AddOwnedWeapon(currentWeaponInfo.NextTemplateId);
+                Managers.Player.SetClearedWeaponCount(Managers.Player.GetOwnedWeapons().Count - 1);
 
                 var nextWeaponName = Managers.Data.WeaponDict[currentWeaponInfo.NextTemplateId].WeaponName;
 
@@ -341,10 +342,14 @@ public class GameManager
                 OnNewWeaponAdded?.Invoke();
             }
         }
-
-        if (currentWeaponInfo.NextTemplateId == 0)
+        else // currentWeaponInfo.NextTemplateId == 0
         {
-            Managers.UI.ShowToast($"다음 업데이트를 기다려 주세요", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+            if (Managers.Player.ClearedWeaponCount != Managers.Player.GetOwnedWeapons().Count)
+            {
+                Managers.Player.SetClearedWeaponCount(Managers.Player.GetOwnedWeapons().Count);
+                Managers.UI.ShowToast($"다음 업데이트를 기다려 주세요", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+                OnNewWeaponAdded?.Invoke();
+            }
         }
 
         ChangeState(EWeaponMakeProcess.BeginHold);

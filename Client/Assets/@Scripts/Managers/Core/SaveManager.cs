@@ -11,6 +11,7 @@ public class SaveData
     public int[] townStatLevel;
     public List<int> shopProducts;
     public List<int> ownedWeapons;
+    public int clearedWeaponCount;
 }
 
 public class SaveManager
