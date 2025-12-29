@@ -28,10 +28,13 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         GetButton((int)Buttons.Button_Weapon).gameObject.BindEvent(OnClickedWeaponButton);
     }
 
-    public void SetInfo(int templateId)
+    public void SetInfo(int weaponNumber)
     {
-        weaponInfo = Managers.Data.WeaponDict[templateId];
-        RefreshUI();
+        if (Managers.Data.WeaponDict.TryGetValue(Managers.Player.Stage, out var stageWeapons))
+        {
+            stageWeapons.TryGetValue(weaponNumber, out weaponInfo);
+        }
+         RefreshUI();
     }
 
     private void RefreshUI()
@@ -49,9 +52,7 @@ public class UI_WeaponSelectSubItem : UI_SubItem
 
     private void OnClickedWeaponButton(PointerEventData eventData)
     {
-        //if (GetButton((int)Buttons.Button_Weapon).interactable == false)
-        //    return;
-
-        Managers.Game.StartWeaponMake(weaponInfo.TemplateId);
+        if (weaponInfo == null) return;
+        Managers.Game.StartWeaponMake(weaponInfo.Stage, weaponInfo.WeaponNumber);
     }
 }

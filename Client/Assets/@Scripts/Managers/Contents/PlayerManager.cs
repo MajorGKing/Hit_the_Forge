@@ -8,10 +8,10 @@ using UnityEngine;
 public class PlayerManager
 {
     private long[] currency = new long[Enum.GetValues(typeof(Define.ECurrency)).Length];
-    private int[] playerStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
-    private int[] forgeStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
-    private int[] townStatLevel = new int[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
-    private List<int> shopProducts = new List<int>();
+    private long[] playerStatLevel = new long[Enum.GetValues(typeof(Define.EPlayerStat)).Length];
+    private long[] forgeStatLevel = new long[Enum.GetValues(typeof(Define.EPlayerForgeStat)).Length];
+    private long[] townStatLevel = new long[Enum.GetValues(typeof(Define.EPlayerTownStat)).Length];
+    private List<long> shopProducts = new List<long>();
     private List<int> ownedWeapons = new List<int>();
     private int _clearedWeaponCount;
     public int ClearedWeaponCount
@@ -43,6 +43,10 @@ public class PlayerManager
 
     public void SetStage(int stage)
     {
+        if (stage < 1)
+        {
+            Debug.LogError($"[PlayerManager] Invalid Stage set: {stage}. Stage must be at least 1.");
+        }
         Stage = stage;
     }
 
@@ -120,13 +124,15 @@ public class PlayerManager
 
         // 무기 초기화 (해당 스테이지의 첫 번째 무기)
         ownedWeapons.Clear();
-        var firstWeapon = Managers.Data.WeaponDict.Values
-            .Where(w => w.Stage == stageNum)
-            .OrderBy(w => w.TemplateId)
-            .FirstOrDefault();
+        if (Managers.Data.WeaponDict.TryGetValue(stageNum, out var stageWeapons))
+        {
+            var firstWeapon = stageWeapons.Values
+                .OrderBy(w => w.WeaponNumber)
+                .FirstOrDefault();
 
-        if (firstWeapon != null)
-            ownedWeapons.Add(firstWeapon.TemplateId);
+            if (firstWeapon != null)
+                ownedWeapons.Add(firstWeapon.WeaponNumber);
+        }
 
         SetClearedWeaponCount(0);
     }
@@ -196,7 +202,7 @@ public class PlayerManager
 
     private long GetCurrencyMaxFromTowndata(Define.EPlayerTownStat stat)
     {
-        int templateId = townStatLevel[(int)stat];
+        var templateId = townStatLevel[(int)stat];
         if (Managers.Data.TownUpgradeDict.TryGetValue(templateId, out var data))
             return data.CurrentValue;
 
@@ -206,7 +212,7 @@ public class PlayerManager
 
     public long GetPlayerStat(Define.EPlayerStat type)
     {
-        int templateId = playerStatLevel[(int)type];
+        var templateId = playerStatLevel[(int)type];
 
         if (Managers.Data.PlayerUpgradeDict.TryGetValue(templateId, out var d))
             return d.CurrentValue;
@@ -216,7 +222,7 @@ public class PlayerManager
 
     public long GetForgeStat(Define.EPlayerForgeStat type)
     {
-        int templateId = forgeStatLevel[(int)type];
+        var templateId = forgeStatLevel[(int)type];
 
         if (Managers.Data.ForgeUpgradeDict.TryGetValue(templateId, out var d))
             return d.CurrentValue;
@@ -226,7 +232,7 @@ public class PlayerManager
 
     public long GetTownStat(Define.EPlayerTownStat type)
     {
-        int templateId = townStatLevel[(int)type];
+        var templateId = townStatLevel[(int)type];
 
         if (Managers.Data.TownUpgradeDict.TryGetValue(templateId, out var d))
             return d.CurrentValue;
@@ -234,25 +240,25 @@ public class PlayerManager
         return 0;
     }
 
-    public int[] GetPlayerAllStat() => playerStatLevel;
-    public int[] GetForgeAllStat() => forgeStatLevel;
-    public int[] GetTownAllStat() => townStatLevel;
-    public List<int> GetShopAllStat() => shopProducts;
+    public long[] GetPlayerAllStat() => playerStatLevel;
+    public long[] GetForgeAllStat() => forgeStatLevel;
+    public long[] GetTownAllStat() => townStatLevel;
+    public List<long> GetShopAllStat() => shopProducts;
     public List<int> GetOwnedWeapons() => ownedWeapons;
 
-    public void AddOwnedWeapon(int templateId)
+    public void AddOwnedWeapon(int weaponNumber)
     {
-        if (!ownedWeapons.Contains(templateId))
+        if (!ownedWeapons.Contains(weaponNumber))
         {
-            ownedWeapons.Add(templateId);
+            ownedWeapons.Add(weaponNumber);
             OnPlayerSave?.Invoke();
         }
     }
 
-    public bool HasWeapon(int templateId) => ownedWeapons.Contains(templateId);
+    public bool HasWeapon(int weaponNumber) => ownedWeapons.Contains(weaponNumber);
 
     #region UpgradeHelper
-    private int GetTemplateIdFor(Define.EUpgradeType upgradeType, int type)
+    private long GetTemplateIdFor(Define.EUpgradeType upgradeType, int type)
     {
         switch (upgradeType)
         {
@@ -269,7 +275,7 @@ public class PlayerManager
         }
     }
 
-    private Data.UpgradeData GetUpgradeDataFor(Define.EUpgradeType upgradeType, int templateId)
+    private Data.UpgradeData GetUpgradeDataFor(Define.EUpgradeType upgradeType, long templateId)
     {
         if (templateId <= 0) return null;
 
@@ -295,55 +301,38 @@ public class PlayerManager
 
     public void StatUpgrade(Define.EUpgradeType upgradeType, int slotIndex)
     {
-        int templateId = 0;
-        // Shop의 경우 TemplateId를 전달 받음
-        if(upgradeType == Define.EUpgradeType.Shop)
-        {
-            templateId = slotIndex;
-        }
-        else
-        {
-            templateId = GetTemplateIdFor(upgradeType, slotIndex);
-        }
+        long templateId = GetTemplateIdFor(upgradeType, slotIndex);;
 
         var data = GetUpgradeDataFor(upgradeType, templateId);
 
         if (data == null)
             return;
 
-        // Shop이 아닌 경우 다음 레벨 가능 여부 체크
-        if (upgradeType != Define.EUpgradeType.Shop && data.NextTempalteId == 0)
+        // 다음 레벨 가능 여부 체크
+        if (data.NextTempalteId == 0)
             return;
 
-        // Upgrade하기
-        if (upgradeType == Define.EUpgradeType.Shop)
+        // Gold 체크
+        if (data.Price > GetCurrency(Define.ECurrency.Gold))
         {
-            // Shop인 경우 tempalteId를 활용하여 업데이트
-            ProcessShopPurchase(templateId);
+            ShowLessMessage(Define.ECurrency.Gold);
+            return;
         }
-        else
-        {
-            // Gold 체크
-            if (data.Price > GetCurrency(Define.ECurrency.Gold))
-            {
-                ShowLessMessage(Define.ECurrency.Gold);
-                return;
-            }
 
-            // Gold 차감
-            CurrencySubtract(Define.ECurrency.Gold, data.Price);
+        // Gold 차감
+        CurrencySubtract(Define.ECurrency.Gold, data.Price);
 
-            // 공통 업그레이드 처리
-            ApplyUpgradeLevel(upgradeType, slotIndex, data.NextTempalteId);
+        // 공통 업그레이드 처리
+        ApplyUpgradeLevel(upgradeType, slotIndex, data.NextTempalteId);
 
-            Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
-        }
+        Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
+
 
         OnPlayerUpgradeChanged?.Invoke();
         OnPlayerSave?.Invoke();
     }
 
-    private void ApplyUpgradeLevel(Define.EUpgradeType upgradeType, int slotIndex, int nextTemplateId)
+    private void ApplyUpgradeLevel(Define.EUpgradeType upgradeType, int slotIndex, long nextTemplateId)
     {
         switch (upgradeType)
         {
@@ -361,10 +350,13 @@ public class PlayerManager
         }
     }
 
-    private void ProcessShopPurchase(int templateId)
+    public void ProcessShopPurchase(long templateId)
     {
-        int shopTemplateId = templateId;
+        long shopTemplateId = templateId;
         if (!Managers.Data.ShopProductDict.TryGetValue(shopTemplateId, out var dataValue))
+            return;
+
+        if(dataValue.Stage != Stage)
             return;
 
         // 어떤 자원인지 판별
@@ -505,10 +497,10 @@ public class PlayerManager
     {
         SaveData data = new SaveData();
         data.currency = (long[])currency.Clone();
-        data.playerStatLevel = (int[])playerStatLevel.Clone();
-        data.forgeStatLevel = (int[])forgeStatLevel.Clone();
-        data.townStatLevel = (int[])townStatLevel.Clone();
-        data.shopProducts = new List<int>(shopProducts);
+        data.playerStatLevel = (long[])playerStatLevel.Clone();
+        data.forgeStatLevel = (long[])forgeStatLevel.Clone();
+        data.townStatLevel = (long[])townStatLevel.Clone();
+        data.shopProducts = new List<long>(shopProducts);
         data.ownedWeapons = new List<int>(ownedWeapons);
         data.clearedWeaponCount = ClearedWeaponCount;
         data.stage = Stage;
@@ -517,14 +509,91 @@ public class PlayerManager
 
     public void RestoreFromSaveData(SaveData data)
     {
-        currency = (long[])data.currency.Clone();
-        playerStatLevel = (int[])data.playerStatLevel.Clone();
-        forgeStatLevel = (int[])data.forgeStatLevel.Clone();
-        townStatLevel = (int[])data.townStatLevel.Clone();
-        shopProducts = new List<int>(data.shopProducts);
-        ownedWeapons = new List<int>(data.ownedWeapons);
+        if (data.stage < 1)
+        {
+            Debug.LogError($"[PlayerManager] RestoreFromSaveData failed: Invalid stage {data.stage} in save data.");
+            return;
+        }
+
+        int savedStage = data.stage;
+
+        // 1. 해당 스테이지의 기본값으로 전체 초기화 (Define 추가에 대비)
+        InitByStage(savedStage);
+
+        // 2. 통화 복사 (있는 데이터만)
+        if (data.currency != null)
+        {
+            for (int i = 0; i < currency.Length && i < data.currency.Length; i++)
+                currency[i] = data.currency[i];
+        }
+
+        // 3. 업그레이드 레벨 복사 (있는 데이터만 적용, 데이터 유효성 검사 수행)
+        if (data.playerStatLevel != null)
+        {
+            for (int i = 0; i < playerStatLevel.Length && i < data.playerStatLevel.Length; i++)
+            {
+                long savedId = data.playerStatLevel[i];
+                if (Managers.Data.PlayerUpgradeDict.ContainsKey(savedId))
+                    playerStatLevel[i] = savedId;
+            }
+        }
+
+        if (data.forgeStatLevel != null)
+        {
+            for (int i = 0; i < forgeStatLevel.Length && i < data.forgeStatLevel.Length; i++)
+            {
+                long savedId = data.forgeStatLevel[i];
+                if (Managers.Data.ForgeUpgradeDict.ContainsKey(savedId))
+                    forgeStatLevel[i] = savedId;
+            }
+        }
+
+        if (data.townStatLevel != null)
+        {
+            for (int i = 0; i < townStatLevel.Length && i < data.townStatLevel.Length; i++)
+            {
+                long savedId = data.townStatLevel[i];
+                if (Managers.Data.TownUpgradeDict.ContainsKey(savedId))
+                    townStatLevel[i] = savedId;
+            }
+        }
+
+        // 4. 리스트 복구 (유효한 데이터만 필터링)
+        shopProducts.Clear();
+        if (data.shopProducts != null)
+        {
+            foreach (var id in data.shopProducts)
+            {
+                if (Managers.Data.ShopProductDict.TryGetValue(id, out var shopData))
+                {
+                    // 해당 스테이지 상품이 맞는 경우에만 복구
+                    if (shopData.Stage == savedStage)
+                        shopProducts.Add(id);
+                }
+            }
+        }
+
+        ownedWeapons.Clear();
+        if (data.ownedWeapons != null)
+        {
+            if (Managers.Data.WeaponDict.TryGetValue(savedStage, out var stageWeapons))
+            {
+                foreach (var weaponNum in data.ownedWeapons)
+                {
+                    if (stageWeapons.ContainsKey(weaponNum))
+                        ownedWeapons.Add(weaponNum);
+                }
+            }
+            
+            // 만약 유효한 무기가 하나도 남지 않았다면 첫 무기 강제 추가 (InitByStage에서 이미 처리됨)
+            if (ownedWeapons.Count == 0 && Managers.Data.WeaponDict.TryGetValue(savedStage, out var sw))
+            {
+                var first = sw.Values.OrderBy(w => w.WeaponNumber).FirstOrDefault();
+                if (first != null) ownedWeapons.Add(first.WeaponNumber);
+            }
+        }
+
         SetClearedWeaponCount(data.clearedWeaponCount);
-        SetStage(data.stage == 0 ? 1 : data.stage);
 
         OnCurrenciesChanged?.Invoke();
         OnPlayerUpgradeChanged?.Invoke();

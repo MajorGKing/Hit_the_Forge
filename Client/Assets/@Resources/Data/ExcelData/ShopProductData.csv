@@ -1,6 +1,6 @@
 TemplateId,Stage,UpgradeName,Price,CurrentValue,NextValue,OriginalTemplateId,NextTempalteId,StatType,BuyType
-100001,1,BuyIron,5,10,,100001,,BuyIron,Gold
-200001,1,BuyCoal,10,10,,200001,,BuyCoal,Gold
-300001,1,BuyGold,1,20,,300001,,BuyGold,Ad
-400001,1,BuyIron,1,10,,400001,,BuyIron,Ad
-500001,1,BuyCoal,1,10,,500001,,BuyCoal,Ad
+101000001,1,BuyIron,5,10,,101000001,,BuyIron,Gold
+102000001,1,BuyCoal,10,10,,102000001,,BuyCoal,Gold
+103000001,1,BuyGold,1,20,,103000001,,BuyGold,Ad
+104000001,1,BuyIron,1,10,,104000001,,BuyIron,Ad
+105000001,1,BuyCoal,1,10,,105000001,,BuyCoal,Ad

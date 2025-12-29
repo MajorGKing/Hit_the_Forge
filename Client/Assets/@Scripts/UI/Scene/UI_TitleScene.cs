@@ -1,8 +1,5 @@
 ﻿using Google.Protobuf.Protocol;
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Net;
 using UnityEngine;
 using static Define;
 using Object = UnityEngine.Object;
@@ -11,7 +8,7 @@ public class UI_TitleScene : UI_Scene
 {
 	private enum GameObjects
 	{
-		//StartButton,
+		Object_Start,
 	}
 
 	private enum Texts
@@ -42,16 +39,16 @@ public class UI_TitleScene : UI_Scene
 				case TitleSceneState.None:
 					break;
 				case TitleSceneState.AssetLoading:
-					GetText((int)Texts.StatusText).text = $"TODO 로딩중";
+					//GetText((int)Texts.StatusText).text = $"TODO 로딩중";
                     break;
 				case TitleSceneState.AssetLoaded:
-					GetText((int)Texts.StatusText).text = "TODO 로딩 완료";
+					//GetText((int)Texts.StatusText).text = "TODO 로딩 완료";
                     break;
 				case TitleSceneState.ConnectingToServer:
-					GetText((int)Texts.StatusText).text = "TODO 서버 접속중";
+					//GetText((int)Texts.StatusText).text = "TODO 서버 접속중";
                     break;
 				case TitleSceneState.ConnectedToServer:
-					GetText((int)Texts.StatusText).text = "TODO 서버 접속 성공";
+					//GetText((int)Texts.StatusText).text = "TODO 서버 접속 성공";
                     break;
 				case TitleSceneState.FailedToConnectToServer:
 					GetText((int)Texts.StatusText).text = "TODO 서버 접속 실패";
@@ -67,13 +64,20 @@ public class UI_TitleScene : UI_Scene
 		BindObjects(typeof(GameObjects));
 		BindTexts(typeof(Texts));
 
-		GetText((int)Texts.StartText).gameObject.BindEvent((evt) =>
+		// GetText((int)Texts.StartText).gameObject.BindEvent((evt) =>
+		// {
+		// 	Debug.Log("OnClick");
+		// 	Managers.Scene.LoadScene(EScene.LoadingScene);
+		// });
+
+		GetGameObject((int)GameObjects.Object_Start).BindEvent((evt) =>
 		{
 			Debug.Log("OnClick");
 			Managers.Scene.LoadScene(EScene.LoadingScene);
 		});
 
         GetText((int)Texts.StartText).gameObject.SetActive(false);
+		GetGameObject((int)GameObjects.Object_Start).SetActive(false);
 	}
 
 	protected override void Start()
@@ -85,7 +89,7 @@ public class UI_TitleScene : UI_Scene
 
 		Managers.Resource.LoadAllAsync<Object>("Preload", (key, count, totalCount) =>
 		{
-			GetText((int)Texts.StatusText).text = $"TODO �ε��� : {key} {count}/{totalCount}";
+			//GetText((int)Texts.StatusText).text = $"TODO �ε��� : {key} {count}/{totalCount}";
             //Debug.Log(GetText((int)Texts.StatusText).text);
 
             if (count == totalCount)
@@ -119,6 +123,7 @@ public class UI_TitleScene : UI_Scene
 		State = TitleSceneState.ConnectedToServer;
 
 		GetText((int)Texts.StartText).gameObject.SetActive(true);
+		GetGameObject((int)GameObjects.Object_Start).SetActive(true);
 
 		StartCoroutine(CoSendTestPackets());
 	}

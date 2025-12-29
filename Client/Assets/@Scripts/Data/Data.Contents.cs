@@ -11,7 +11,7 @@ namespace Data
     [Serializable]
     public class CreatureData
     {
-        public int TemplateId;
+        public long TemplateId;
         public int Stage;
         public string NameTextID;
         public float ColliderOffsetX;
@@ -35,12 +35,12 @@ namespace Data
     }
 
     [Serializable]
-    public class CreatureDataLoader : ILoader<int, CreatureData>
+    public class CreatureDataLoader : ILoader<long, CreatureData>
     {
         public List<CreatureData> creatures = new List<CreatureData>();
-        public Dictionary<int, CreatureData> MakeDict()
+        public Dictionary<long, CreatureData> MakeDict()
         {
-            Dictionary<int, CreatureData> dict = new Dictionary<int, CreatureData>();
+            Dictionary<long, CreatureData> dict = new Dictionary<long, CreatureData>();
             foreach (CreatureData creature in creatures)
                 dict.Add(creature.TemplateId, creature);
             return dict;
@@ -85,26 +85,31 @@ namespace Data
     [Serializable]
     public class WeaponData
     {
-        public int TemplateId;
+        public int WeaponNumber;
         public int Stage;
         public string WeaponName;
         public long HP;
         public long Iron;
         public long Coal;
         public long Price;
-        public int NextTemplateId;
+        public int NextWeaponNumber;
         public string WeaponImage;
     }
 
     [Serializable]
-    public class WeaponDataLoader : ILoader<int, WeaponData>
+    public class WeaponDataLoader : ILoader<int, Dictionary<int, WeaponData>>
     {
         public List<WeaponData> weapons = new List<WeaponData>();
-        public Dictionary<int, WeaponData> MakeDict()
+        public Dictionary<int, Dictionary<int, WeaponData>> MakeDict()
         {
-            Dictionary<int, WeaponData> dict = new Dictionary<int, WeaponData>();
+            Dictionary<int, Dictionary<int, WeaponData>> dict = new Dictionary<int, Dictionary<int, WeaponData>>();
             foreach (WeaponData weapon in weapons)
-                dict.Add(weapon.TemplateId, weapon);
+            {
+                if (!dict.ContainsKey(weapon.Stage))
+                    dict.Add(weapon.Stage, new Dictionary<int, WeaponData>());
+
+                dict[weapon.Stage].Add(weapon.WeaponNumber, weapon);
+            }
             return dict;
         }
 
@@ -153,14 +158,14 @@ namespace Data
     [Serializable]
     public class UpgradeData
     {
-        public int TemplateId;
+        public long TemplateId;
         public int Stage;
         public string UpgradeName;
         public long Price;
         public long CurrentValue;
         public long NextValue;
-        public int OriginalTemplateId;
-        public int NextTempalteId;
+        public long OriginalTemplateId;
+        public long NextTempalteId;
 
         //[ExcludeFieldAttribute]
         //public int StatIndex;
@@ -181,12 +186,12 @@ namespace Data
     }
 
     [Serializable]
-    public class PlayerUpgradeDataLoader : ILoader<int, PlayerUpgradeData>
+    public class PlayerUpgradeDataLoader : ILoader<long, PlayerUpgradeData>
     {
         public List<PlayerUpgradeData> upgrades = new List<PlayerUpgradeData>();
-        public Dictionary<int, PlayerUpgradeData> MakeDict()
+        public Dictionary<long, PlayerUpgradeData> MakeDict()
         {
-            Dictionary<int, PlayerUpgradeData> dict = new Dictionary<int, PlayerUpgradeData>();
+            Dictionary<long, PlayerUpgradeData> dict = new Dictionary<long, PlayerUpgradeData>();
             foreach (PlayerUpgradeData upgrade in upgrades)
                 dict.Add(upgrade.TemplateId, upgrade);
             return dict;
@@ -214,12 +219,12 @@ namespace Data
     }
 
     [Serializable]
-    public class ForgeUpgradeDataLoader : ILoader<int, ForgeUpgradeData>
+    public class ForgeUpgradeDataLoader : ILoader<long, ForgeUpgradeData>
     {
         public List<ForgeUpgradeData> upgrades = new List<ForgeUpgradeData>();
-        public Dictionary<int, ForgeUpgradeData> MakeDict()
+        public Dictionary<long, ForgeUpgradeData> MakeDict()
         {
-            Dictionary<int, ForgeUpgradeData> dict = new Dictionary<int, ForgeUpgradeData>();
+            Dictionary<long, ForgeUpgradeData> dict = new Dictionary<long, ForgeUpgradeData>();
             foreach (ForgeUpgradeData upgrade in upgrades)
                 dict.Add(upgrade.TemplateId, upgrade);
             return dict;
@@ -240,12 +245,12 @@ namespace Data
     }
 
     [Serializable]
-    public class TownUpgradeDataLoader : ILoader<int, TownUpgradeData>
+    public class TownUpgradeDataLoader : ILoader<long, TownUpgradeData>
     {
         public List<TownUpgradeData> upgrades = new List<TownUpgradeData>();
-        public Dictionary<int, TownUpgradeData> MakeDict()
+        public Dictionary<long, TownUpgradeData> MakeDict()
         {
-            Dictionary<int, TownUpgradeData> dict = new Dictionary<int, TownUpgradeData>();
+            Dictionary<long, TownUpgradeData> dict = new Dictionary<long, TownUpgradeData>();
             foreach (TownUpgradeData upgrade in upgrades) 
                 dict.Add(upgrade.TemplateId, upgrade);
             
@@ -268,12 +273,12 @@ namespace Data
     }
 
     [Serializable]
-    public class ShopProductDataLoader : ILoader<int, ShopProductData>
+    public class ShopProductDataLoader : ILoader<long, ShopProductData>
     {
         public List<ShopProductData> products = new List<ShopProductData>();
-        public Dictionary<int, ShopProductData> MakeDict()
+        public Dictionary<long, ShopProductData> MakeDict()
         {
-            Dictionary<int, ShopProductData> dict = new Dictionary<int, ShopProductData>();
+            Dictionary<long, ShopProductData> dict = new Dictionary<long, ShopProductData>();
             foreach (ShopProductData product in products)
                 dict.Add(product.TemplateId, product);
 

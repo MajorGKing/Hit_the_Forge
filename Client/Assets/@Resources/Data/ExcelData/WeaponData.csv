@@ -1,4 +1,4 @@
-TemplateId,Stage,WeaponName,HP,Iron,Coal,Price,NextTemplateId,WeaponImage
+WeaponNumber,Stage,WeaponName,HP,Iron,Coal,Price,NextWeaponNumber,WeaponImage
 1,1,Rusty Dagger,60,25,5,150,2,Dagger
 2,1,Rusty Shortsword,80,35,7,210,3,Shortsword
 3,1,Rusty Scimitar,90,40,12,300,4,Scimitar

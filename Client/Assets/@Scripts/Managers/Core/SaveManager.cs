@@ -6,10 +6,10 @@ public class SaveData
 {
     public int Version = 1;
     public long[] currency;
-    public int[] playerStatLevel;
-    public int[] forgeStatLevel;
-    public int[] townStatLevel;
-    public List<int> shopProducts;
+    public long[] playerStatLevel;
+    public long[] forgeStatLevel;
+    public long[] townStatLevel;
+    public List<long> shopProducts;
     public List<int> ownedWeapons;
     public int clearedWeaponCount;
     public int stage;

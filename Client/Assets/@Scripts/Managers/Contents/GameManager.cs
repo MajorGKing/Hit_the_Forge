@@ -328,16 +328,21 @@ public class GameManager
             Managers.Sound.Play(Define.ESound.Effect, "SellEffect");
         }
 
-        if (currentWeaponInfo.NextTemplateId > 0)
+        if (currentWeaponInfo.NextWeaponNumber > 0)
         {
-            if (Managers.Player.HasWeapon(currentWeaponInfo.NextTemplateId) == false)
+            if (Managers.Player.HasWeapon(currentWeaponInfo.NextWeaponNumber) == false)
             {
-                Managers.Player.AddOwnedWeapon(currentWeaponInfo.NextTemplateId);
+                Managers.Player.AddOwnedWeapon(currentWeaponInfo.NextWeaponNumber);
                 Managers.Player.SetClearedWeaponCount(Managers.Player.GetOwnedWeapons().Count - 1);
 
-                var nextWeaponName = Managers.Data.WeaponDict[currentWeaponInfo.NextTemplateId].WeaponName;
-
-                Managers.UI.ShowToast($"{nextWeaponName} 추가 되었습니다.", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+                if (Managers.Data.WeaponDict.TryGetValue(Managers.Player.Stage, out var stageWeapons))
+                {
+                    if (stageWeapons.TryGetValue(currentWeaponInfo.NextWeaponNumber, out var nextWeaponData))
+                    {
+                        var nextWeaponName = nextWeaponData.WeaponName;
+                        Managers.UI.ShowToast($"{nextWeaponName} 추가 되었습니다.", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+                    }
+                }
 
                 OnNewWeaponAdded?.Invoke();
             }
@@ -382,7 +387,7 @@ public class GameManager
 
         if(makeProcessState == EWeaponMakeProcess.BeginHold)
         {
-            StartWeaponMake(currentWeaponInfo.TemplateId);
+            StartWeaponMake(currentWeaponInfo.Stage, currentWeaponInfo.WeaponNumber);
         }
 
         if (makeProcessState == EWeaponMakeProcess.Ready)
@@ -429,14 +434,15 @@ public class GameManager
     }
 
 
-    public bool StartWeaponMake(int templateId)
+    public bool StartWeaponMake(int stageNumber, int weaponNumber)
     {
         if(makeProcessState != EWeaponMakeProcess.BeginHold) 
             return false;
 
-        var weaponInfo = Managers.Data.WeaponDict[templateId];
+        if (Managers.Data.WeaponDict.TryGetValue(stageNumber, out var stageWeapons) == false)
+            return false;
 
-        if (weaponInfo == null)
+        if (stageWeapons.TryGetValue(weaponNumber, out var weaponInfo) == false)
             return false;
 
         if (weaponInfo.Iron > Managers.Player.GetCurrency(Define.ECurrency.Iron))

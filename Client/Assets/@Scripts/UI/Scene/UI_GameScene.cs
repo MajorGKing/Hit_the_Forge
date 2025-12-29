@@ -158,7 +158,11 @@ public class UI_GameScene : UI_Scene
         GetText((int)Texts.Text_Iron).text = Managers.Player.GetCurrency(Define.ECurrency.Iron).ToAbbreviatedString();
         GetText((int)Texts.Text_Coal).text = Managers.Player.GetCurrency(Define.ECurrency.Coal).ToAbbreviatedString();
  
-        GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.ClearedWeaponCount} / {Managers.Data.WeaponDict.Count}";
+        int totalWeapons = 0;
+        if (Managers.Data.WeaponDict.TryGetValue(Managers.Player.Stage, out var stageWeapons))
+            totalWeapons = stageWeapons.Count;
+
+        GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.ClearedWeaponCount} / {totalWeapons}";
 
         var countTime = Managers.Game.GetEnhancementCount();
         if(countTime < 0)

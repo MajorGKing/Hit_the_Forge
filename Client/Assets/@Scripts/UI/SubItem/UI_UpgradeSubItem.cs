@@ -48,7 +48,7 @@ public class UI_UpgradeSubItem : UI_SubItem
         RefreshUI();
     }
 
-    public void SetInfo(Define.EUpgradeType type, int templateId)
+    public void SetInfo(Define.EUpgradeType type, long templateId)
     {
         upgradeType = type;
 
@@ -294,7 +294,7 @@ public class UI_UpgradeSubItem : UI_SubItem
                 GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
             }
 
-            Managers.Player.StatUpgrade(Define.EUpgradeType.Shop, shopProductData.TemplateId);
+            Managers.Player.ProcessShopPurchase(shopProductData.TemplateId);
         }
     }
 

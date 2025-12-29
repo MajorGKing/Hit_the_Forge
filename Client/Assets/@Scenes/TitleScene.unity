@@ -159,14 +159,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 551830675}
     m_Modifications:
-    - target: {fileID: 1746005055967567108, guid: 6463b10154205bb4fb608143fb2e3e12, type: 3}
-      propertyPath: m_ReferenceResolution.x
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 1746005055967567108, guid: 6463b10154205bb4fb608143fb2e3e12, type: 3}
-      propertyPath: m_ReferenceResolution.y
-      value: 1920
-      objectReference: {fileID: 0}
     - target: {fileID: 2574696820024513748, guid: 6463b10154205bb4fb608143fb2e3e12, type: 3}
       propertyPath: m_Name
       value: UI_TitleScene
