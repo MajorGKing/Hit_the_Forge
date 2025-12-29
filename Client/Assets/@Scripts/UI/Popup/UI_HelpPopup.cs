@@ -33,7 +33,7 @@ public class UI_HelpPopup : UI_Popup
     {
         helpStep++;
 
-        if(helpStep == 7)
+        if(helpStep == 8)
         {
             Managers.UI.ClosePopupUI(this);
             return;

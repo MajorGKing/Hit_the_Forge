@@ -81,6 +81,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aee7a7c9501dd4a1facb5caa6af21978
+    m_Address: help07
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dffe49a3f7a5249689aa52737370035a
     m_Address: Battleaxe
     m_ReadOnly: 0

@@ -19,7 +19,7 @@ public class AdManager
     }
 
     private bool[] retrying;
-    private bool _isBannerRetrying = false;
+    private bool _isBannerActivated = false;
     private CancellationTokenSource adsCts;
     private CancellationTokenSource initCts;
 
@@ -112,15 +112,28 @@ public class AdManager
             InitializeRewardedAd(currency, adUnitId, token);
         }
 
-        // Create Banner object
-        //bannerAd = new LevelPlayBannerAd(AdConfig.BannerAdUnitId);
+        CreateBanner();
+        
+        // 배너 감시 루프 시작 (한 번만 실행됨)
+        if (adsCts != null)
+            RetryLoadBannerAd(adsCts.Token).Forget();
+    }
+
+    private void CreateBanner()
+    {
+        if (bannerAd != null)
+        {
+            bannerAd.DestroyAd();
+            bannerAd = null;
+        }
+
         var configBuilder = new LevelPlayBannerAd.Config.Builder();
         configBuilder.SetSize(LevelPlayAdSize.BANNER);
         configBuilder.SetPosition(LevelPlayBannerPosition.BottomCenter);
         configBuilder.SetDisplayOnLoad(true);
-        configBuilder.SetRespectSafeArea(true); // Only relevant for Android
+        configBuilder.SetRespectSafeArea(true); 
         configBuilder.SetPlacementName("bannerPlacement");
-        configBuilder.SetBidFloor(0.01); // Minimum bid price in USD
+        configBuilder.SetBidFloor(0.01); 
         var bannerConfig = configBuilder.Build();
 
         bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
@@ -135,9 +148,35 @@ public class AdManager
             Debug.LogError($"Banner Load Failed: {error}");
         };
 
-        RetryLoadBannerAd(token).Forget();
+        // 설정 단계에서는 직접 LoadAd를 호출하지 않음 (LoadBanner에서 호출)
+    }
 
-        //bannerAd.LoadAd();
+    private async UniTaskVoid RetryLoadBannerAd(CancellationToken token)
+    {
+        try
+        {
+            while (!token.IsCancellationRequested)
+            {
+                // 주기적인 모니터링 (30초 간격)
+                await UniTask.Delay(TimeSpan.FromSeconds(30), cancellationToken: token);
+
+                // 사용자가 활성화를 원하는데 배너가 없거나 문제가 발생한 경우 복구
+                if (_isBannerActivated)
+                {
+                    if (bannerAd == null)
+                    {
+                        Debug.Log("Banner Ad object lost. Recreating...");
+                        CreateBanner();
+                        bannerAd?.LoadAd();
+                    }
+                }
+            }
+        }
+        catch (OperationCanceledException) { }
+        finally
+        {
+
+        }
     }
 
     private void InitializeRewardedAd(Define.ECurrency currency, string adUnitId, CancellationToken token)
@@ -177,52 +216,6 @@ public class AdManager
         };
         rewardedVideoAds[(int)currency] = ad;
         ad.LoadAd();
-    }
-
-    private async UniTaskVoid RetryLoadBannerAd(CancellationToken token)
-    {
-        // 1. 활성화될 때까지 짧은 주기로 체크 (응답성 향상)
-        while (_isBannerRetrying == false)
-        {
-            if (token.IsCancellationRequested) return;
-            await UniTask.Delay(TimeSpan.FromSeconds(1), cancellationToken: token);
-        }
-
-
-        // 이미 로직 진입 시 true로 고정 (LoadBanner에서 설정됨)
-        try
-        {
-            while (!token.IsCancellationRequested)
-            {
-                // 주기적 로드
-                await UniTask.Delay(TimeSpan.FromSeconds(30), cancellationToken: token);
-
-                if (bannerAd != null)
-                {
-                    //Debug.Log("Banner Ad Refreshing (30s interval)...");
-                    //bannerAd.LoadAd();
-                }
-                else
-                {
-                    var configBuilder = new LevelPlayBannerAd.Config.Builder();
-                    configBuilder.SetSize(LevelPlayAdSize.BANNER);
-                    configBuilder.SetPosition(LevelPlayBannerPosition.BottomCenter);
-                    configBuilder.SetDisplayOnLoad(true);
-                    configBuilder.SetRespectSafeArea(true); // Only relevant for Android
-                    configBuilder.SetPlacementName("bannerPlacement");
-                    configBuilder.SetBidFloor(0.01); // Minimum bid price in USD
-                    var bannerConfig = configBuilder.Build();
-
-                    bannerAd = new LevelPlayBannerAd(BannerAdUnitId, bannerConfig);
-                    bannerAd.LoadAd();
-                }
-            }
-        }
-        catch (OperationCanceledException) { }
-        finally
-        {
-            _isBannerRetrying = false;
-        }
     }
 
     private async UniTaskVoid RetryLoadRewardedAd(LevelPlayRewardedAd ad, Define.ECurrency currency, CancellationToken token)
@@ -416,9 +409,12 @@ public class AdManager
 
     public void LoadBanner()
     {
-        bannerAd.LoadAd();
+        _isBannerActivated = true;
 
-        _isBannerRetrying = true;
+        if (bannerAd == null)
+            CreateBanner();
+        
+        bannerAd?.LoadAd();
     }
 
     public void ShowRewardAd(Define.ECurrency currency)
@@ -441,10 +437,13 @@ public class AdManager
 
         Debug.Log("RefreshAds: Refreshing Ads...");
 
-        // 1. 배너 광고 체크 및 로드
-        if (bannerAd != null)
+        // 1. 배너 광고 복구
+        if (_isBannerActivated)
         {
-            bannerAd.LoadAd();
+            if (bannerAd == null)
+                CreateBanner();
+            
+            bannerAd?.LoadAd();
         }
 
         // 2. 보상형 광고 체크 및 로드
