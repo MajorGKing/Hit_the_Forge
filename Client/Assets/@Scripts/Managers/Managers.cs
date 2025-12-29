@@ -108,6 +108,14 @@ public class Managers : MonoBehaviour
         _game?.Update();
     }
 
+    private void OnApplicationPause(bool pause)
+    {
+        if (pause == false)
+        {
+            _ad?.RefreshAds();
+        }
+    }
+
 	public static void Clear()
     {
         Sound.Clear();

@@ -21,6 +21,7 @@ public class AdManager
     private bool[] retrying;
     private bool _isBannerRetrying = false;
     private CancellationTokenSource adsCts;
+    private CancellationTokenSource initCts;
 
     public void Init()
     {
@@ -32,11 +33,35 @@ public class AdManager
         LevelPlay.Init(AppKey);
     }
 
+    private async UniTaskVoid RetryInitialization()
+    {
+        initCts?.Cancel();
+        initCts?.Dispose();
+        initCts = new CancellationTokenSource();
+        CancellationToken token = initCts.Token;
+
+        try
+        {
+            Debug.Log("LevelPlay Init Failed. Retrying in 5 seconds...");
+            await UniTask.Delay(TimeSpan.FromSeconds(5), cancellationToken: token);
+            Debug.Log("Retrying LevelPlay Init...");
+            LevelPlay.Init(AppKey);
+        }
+        catch (OperationCanceledException)
+        {
+            Debug.Log("LevelPlay Initialization retry cancelled.");
+        }
+    }
+
     public void Clear()
     {
         adsCts?.Cancel();
         adsCts?.Dispose();
         adsCts = null;
+
+        initCts?.Cancel();
+        initCts?.Dispose();
+        initCts = null;
 
         LevelPlay.OnInitSuccess -= SdkInitializationCompletedEvent;
         LevelPlay.OnInitFailed -= SdkInitializationFailedEvent;
@@ -48,6 +73,10 @@ public class AdManager
         adsCts?.Cancel();
         adsCts?.Dispose();
         adsCts = null;
+
+        initCts?.Cancel();
+        initCts?.Dispose();
+        initCts = null;
 
         LevelPlay.OnInitSuccess -= SdkInitializationCompletedEvent;
         LevelPlay.OnInitFailed -= SdkInitializationFailedEvent;
@@ -81,51 +110,6 @@ public class AdManager
                 continue;
 
             InitializeRewardedAd(currency, adUnitId, token);
-
-            // var ad = new LevelPlayRewardedAd(adUnitId);
-
-            // // currency를 캡처해서 이벤트 연결
-            // Define.ECurrency capturedCurrency = currency;
-
-            // Debug.Log($"capturedCurrency : {capturedCurrency}");
-
-            // ad.OnAdLoaded += (adInfo) =>
-            // {
-            //     retrying[(int)capturedCurrency] = false; // 재시도 중단
-            //     OnRewardedLoaded?.Invoke(capturedCurrency, adInfo);
-            // };
-
-            // ad.OnAdLoadFailed += error =>
-            // {
-            //     Debug.LogError($"{capturedCurrency} rewarded load failed: {error}");
-            //     OnRewardedLoadFailed?.Invoke(capturedCurrency, error.ToString());
-
-            //     RetryLoadRewardedAd(ad, capturedCurrency, token).Forget();
-            // };
-
-            // ad.OnAdClosed += (adInfo) =>
-            // {
-            //     Debug.Log($"{capturedCurrency} rewarded ad closed");
-            //     OnRewardedClosed?.Invoke(capturedCurrency, adInfo);
-            //     ad.LoadAd(); // 광고 닫히면 다시 로드
-            // };
-
-            // ad.OnAdDisplayFailed += (adInfo, error) =>
-            // {
-            //     Debug.LogError($"{capturedCurrency} rewarded ad display failed: {error}");
-            //     OnRewardedLoadFailed?.Invoke(capturedCurrency, error.ToString());
-            //     ad.LoadAd(); // 표시 실패시에도 다시 로드 시도
-            // };
-
-            // ad.OnAdRewarded += (adInfo, reward) =>
-            // {
-            //     Debug.Log($"{capturedCurrency} rewarded ad rewarded");
-            //     OnRewardedEarned?.Invoke(capturedCurrency, adInfo, reward);
-            // };
-
-            // Debug.Log($"ads capturedCurrency : {(int)currency}");
-            // rewardedVideoAds[(int)currency] = ad;
-            // ad.LoadAd();
         }
 
         // Create Banner object
@@ -276,13 +260,18 @@ public class AdManager
 
     private void SdkInitializationCompletedEvent(LevelPlayConfiguration config)
     {
+        initCts?.Cancel();
+        initCts?.Dispose();
+        initCts = null;
+
         EnableAds();
         IsAdsEnabled = true;
     }
 
     private void SdkInitializationFailedEvent(LevelPlayInitError error)
     {
-
+        Debug.LogError($"LevelPlay Init Failed: {error.ErrorMessage}");
+        RetryInitialization().Forget();
     }
 
     void RewardedVideoOnLoadedEvent(LevelPlayAdInfo adInfo)
@@ -438,6 +427,44 @@ public class AdManager
         {
             Debug.Log($"(int)currency {(int)currency}");
             rewardedVideoAds[(int)currency].ShowAd();
+        }
+    }
+
+    public void RefreshAds()
+    {
+        if (IsAdsEnabled == false)
+        {
+            Debug.Log("RefreshAds: LevelPlay not initialized. Retrying Init...");
+            Init();
+            return;
+        }
+
+        Debug.Log("RefreshAds: Refreshing Ads...");
+
+        // 1. 배너 광고 체크 및 로드
+        if (bannerAd != null)
+        {
+            bannerAd.LoadAd();
+        }
+
+        // 2. 보상형 광고 체크 및 로드
+        if (rewardedVideoAds != null)
+        {
+            for (int i = 0; i < rewardedVideoAds.Length; i++)
+            {
+                var ad = rewardedVideoAds[i];
+                if (ad == null) continue;
+
+                Define.ECurrency currency = (Define.ECurrency)i;
+                if (currency == Define.ECurrency.None) continue;
+
+                // 광고가 준비되지 않았고, 현재 재시도 루틴이 도는 중이 아니라면 로드 시도
+                if (ad.IsAdReady() == false && (retrying.Length > i && retrying[i] == false))
+                {
+                    Debug.Log($"RefreshAds: Refreshing Rewarded Ad for {currency}");
+                    ad.LoadAd();
+                }
+            }
         }
     }
 
