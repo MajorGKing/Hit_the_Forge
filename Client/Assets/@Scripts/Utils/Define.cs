@@ -8,6 +8,9 @@ public class Define
     public const char MAP_TOOL_WALL = '0';
     public const char MAP_TOOL_NONE = '1';
 
+    public const int DEFAULT_REGENERATE_IRON_TIME = 3000;
+    public const int DEFAULT_REGENERATE_COAL_TIME = 3000;
+
     public enum EScene
     {
         Unknown,
@@ -145,6 +148,9 @@ public class Define
         CoalRegeneration,
         ShopSellBonus,
         ShopBuyBonus,
+        RegenerateIronTime,
+        RegenerateCoalTime,
+
     }
 
     public enum EShopProductType

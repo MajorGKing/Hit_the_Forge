@@ -592,7 +592,22 @@ public class GameManager
         {
             while (!token.IsCancellationRequested)
             {
-                await UniTask.Delay(3000, cancellationToken: token);
+                int statTime = Define.DEFAULT_REGENERATE_IRON_TIME;
+                int regenerateResourceTime = statTime;
+                
+                if(currency == Define.ECurrency.Iron)
+                {
+                    statTime = (int)Managers.Player.GetTownStat(Define.EPlayerTownStat.RegenerateIronTime);
+                    regenerateResourceTime = statTime == 0 ? Define.DEFAULT_REGENERATE_IRON_TIME : statTime;
+                }
+                else if(currency == Define.ECurrency.Coal)
+                {
+                    statTime = (int)Managers.Player.GetTownStat(Define.EPlayerTownStat.RegenerateCoalTime);
+                    regenerateResourceTime = statTime == 0 ? Define.DEFAULT_REGENERATE_COAL_TIME : statTime;
+                }
+                
+
+                await UniTask.Delay(regenerateResourceTime, cancellationToken: token);
 
                 Managers.Player.CurrencyAdd(currency, Managers.Player.GetTownStat(regenStat));
             }
