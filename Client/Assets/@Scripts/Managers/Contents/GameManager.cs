@@ -595,7 +595,12 @@ public class GameManager
                 int statTime = Define.DEFAULT_REGENERATE_IRON_TIME;
                 int regenerateResourceTime = statTime;
                 
-                if(currency == Define.ECurrency.Iron)
+                if(currency == Define.ECurrency.Gold)
+                {
+                    statTime = (int)Managers.Player.GetTownStat(Define.EPlayerTownStat.RegenerateGoldTime);
+                    regenerateResourceTime = statTime == 0 ? Define.DEFAULT_REGENERATE_GOLD_TIME : statTime;
+                }
+                else if(currency == Define.ECurrency.Iron)
                 {
                     statTime = (int)Managers.Player.GetTownStat(Define.EPlayerTownStat.RegenerateIronTime);
                     regenerateResourceTime = statTime == 0 ? Define.DEFAULT_REGENERATE_IRON_TIME : statTime;

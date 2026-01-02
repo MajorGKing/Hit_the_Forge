@@ -1,6 +1,5 @@
 ﻿using Cysharp.Threading.Tasks;
 using System;
-using System.Collections.Generic;
 using System.Threading;
 using Unity.Services.LevelPlay;
 using UnityEngine;
@@ -29,6 +28,7 @@ public class AdManager
         LevelPlay.OnInitSuccess += SdkInitializationCompletedEvent;
         LevelPlay.OnInitFailed -= SdkInitializationFailedEvent;
         LevelPlay.OnInitFailed += SdkInitializationFailedEvent;
+
         // SDK init
         LevelPlay.Init(AppKey);
     }
