@@ -14,6 +14,27 @@ public class PlayerManager
     private List<long> shopProducts = new List<long>();
     private List<int> ownedWeapons = new List<int>();
     private int _clearedWeaponCount;
+    private Define.ELanguage _language;
+    private int _stage = 1;
+
+
+    
+    public Define.ELanguage language
+    {
+        get => _language;
+        private set
+        {
+            if(_language != value)
+            {
+                _language = value;
+                Managers.Language = _language;
+                OnPlayerSave?.Invoke();
+                OnLanguageChange?.Invoke();
+            }
+        }
+        
+    }
+
     public int ClearedWeaponCount
     {
         get => _clearedWeaponCount;
@@ -27,7 +48,7 @@ public class PlayerManager
         }
     }
 
-    private int _stage = 1;
+    
     public int Stage
     {
         get => _stage;
@@ -55,6 +76,11 @@ public class PlayerManager
         ClearedWeaponCount = count;
     }
 
+    public void ChangeLanguage()
+    {
+        language = language == Define.ELanguage.Korean ? Define.ELanguage.English : Define.ELanguage.Korean;
+    }
+
 
     public void Clear()
     {
@@ -71,6 +97,7 @@ public class PlayerManager
         if (false == Managers.Save.LoadGame())
         {
             InitByStage(1);
+            language = Managers.Language;
             OnPlayerSave?.Invoke();
         }
 
@@ -463,10 +490,10 @@ public class PlayerManager
     {
         string message = currency switch
         {
-            Define.ECurrency.Gold => "골드가 부족합니다.",
-            Define.ECurrency.Iron => "재료가 부족합니다.",
-            Define.ECurrency.Coal => "연료가 부족합니다.",
-            _ => "자원이 부족합니다."
+            Define.ECurrency.Gold => Managers.GetText("NotEnoughGold"),
+            Define.ECurrency.Iron => Managers.GetText("NotEnoughMaterial"),
+            Define.ECurrency.Coal => Managers.GetText("NotEnoughFuel"),
+            _ => Managers.GetText("NotEnoughResources")
         };
 
         Managers.UI.ShowToast(message, 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
@@ -476,10 +503,10 @@ public class PlayerManager
     {
         string message = currency switch
         {
-            Define.ECurrency.Gold => "골드가 최대치입니다.",
-            Define.ECurrency.Iron => "재료가 최대치입니다.",
-            Define.ECurrency.Coal => "연료가 최대치입니다.",
-            _ => "자원이 가득합니다."
+            Define.ECurrency.Gold => Managers.GetText("GoldMax"),
+            Define.ECurrency.Iron => Managers.GetText("MaterialMax"),
+            Define.ECurrency.Coal => Managers.GetText("CoalMax"),
+            _ => Managers.GetText("ResourcesMax")
         };
 
         Managers.UI.ShowToast(message, 1, Define.EToastColor.Orange, Define.EToastPosition.MiddleCenter);
@@ -490,6 +517,7 @@ public class PlayerManager
     public event Action OnCurrenciesChanged;
     public event Action OnPlayerUpgradeChanged;
     public event Action OnPlayerSave;
+    public event Action OnLanguageChange;
     #endregion
 
     #region Save&Load
@@ -504,6 +532,7 @@ public class PlayerManager
         data.ownedWeapons = new List<int>(ownedWeapons);
         data.clearedWeaponCount = ClearedWeaponCount;
         data.stage = Stage;
+        data.language = language;
         return data;
     }
 
@@ -514,6 +543,9 @@ public class PlayerManager
             Debug.LogError($"[PlayerManager] RestoreFromSaveData failed: Invalid stage {data.stage} in save data.");
             return;
         }
+
+        language = data.language;
+        Managers.Language = language;
 
         int savedStage = data.stage;
 

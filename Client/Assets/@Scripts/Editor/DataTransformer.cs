@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEditor;
@@ -18,6 +18,7 @@ public class DataTransformer : EditorWindow
     [MenuItem("Tools/ParseExcel _F4")]  // 추가 단축키: Control + K
     public static void ParseExcelDataToJson()
     {
+        ParseExcelDataToJson<TextDataLoader, TextData>("Text");
         ParseExcelDataToJson<WeaponDataLoader, WeaponData>("Weapon");
         ParseExcelDataToJson<EnhancementDataLoader, EnhancementData>("Enhancement");
         ParseExcelDataToJson<PlayerUpgradeDataLoader, PlayerUpgradeData>("PlayerUpgrade");

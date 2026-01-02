@@ -65,7 +65,7 @@ public class Managers : MonoBehaviour
             case Define.ELanguage.Korean:
                 return Data.TextDict[textId].KOR;
             case Define.ELanguage.English:
-                break;
+                return Data.TextDict[textId].ENG;
             case Define.ELanguage.French:
                 break;
             case Define.ELanguage.SimplifiedChinese:

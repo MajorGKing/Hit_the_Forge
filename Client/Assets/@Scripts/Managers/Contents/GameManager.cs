@@ -340,7 +340,8 @@ public class GameManager
                     if (stageWeapons.TryGetValue(currentWeaponInfo.NextWeaponNumber, out var nextWeaponData))
                     {
                         var nextWeaponName = nextWeaponData.WeaponName;
-                        Managers.UI.ShowToast($"{nextWeaponName} 추가 되었습니다.", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+                        var addedText = Managers.GetText("AddedText");
+                        Managers.UI.ShowToast($"{nextWeaponName} {addedText}.", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
                     }
                 }
 
@@ -352,7 +353,8 @@ public class GameManager
             if (Managers.Player.ClearedWeaponCount != Managers.Player.GetOwnedWeapons().Count)
             {
                 Managers.Player.SetClearedWeaponCount(Managers.Player.GetOwnedWeapons().Count);
-                Managers.UI.ShowToast($"다음 업데이트를 기다려 주세요", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+                var waitNextUpdate = Managers.GetText("WaitNextUpdate");
+                Managers.UI.ShowToast($"{waitNextUpdate}", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
                 OnNewWeaponAdded?.Invoke();
             }
         }
@@ -405,8 +407,8 @@ public class GameManager
         {
             if (needCoal > Managers.Player.GetCurrency(Define.ECurrency.Coal))
             {
-                // TODO ILHAK 석탄 부족 표시
-                Managers.UI.ShowToast("연료가 부족합니다.", 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
+                var notEnougFuel = Managers.GetText("NotEnoughFuel");
+                Managers.UI.ShowToast($"{notEnougFuel}.", 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
                 return;
             }
 
@@ -447,7 +449,8 @@ public class GameManager
 
         if (weaponInfo.Iron > Managers.Player.GetCurrency(Define.ECurrency.Iron))
         {
-            Managers.UI.ShowToast("재료가 부족합니다.", 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
+            var notEnoughMaterial = Managers.GetText("NotEnoughMaterial");
+            Managers.UI.ShowToast($"{notEnoughMaterial}.", 1, Define.EToastColor.Red, Define.EToastPosition.MiddleCenter);
             return false;
         }
 

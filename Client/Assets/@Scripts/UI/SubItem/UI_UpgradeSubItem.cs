@@ -95,15 +95,18 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (playerUpgradeData.StatType == Define.EPlayerStat.Str)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "터치시 공격력을 올립니다.";
+                var increasesAttackPower = Managers.GetText("IncreasesAttackPower");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesAttackPower}.";
             }
             else if (playerUpgradeData.StatType == Define.EPlayerStat.Skill)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "제품의 품질을 높입니다.";
+                var increasesProductQuality = Managers.GetText("IncreasesProductQuality");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesProductQuality}.";
             }
             else if (playerUpgradeData.StatType == Define.EPlayerStat.Mastery)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "강화 성공확률을 높입니다.";
+                var increasesEnhancementSuccessRate = Managers.GetText("IncreasesEnhancementSuccessRate");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesEnhancementSuccessRate}.";
             }
 
             GetText((int)Texts.Text_UpgradeStat).text = $"{playerUpgradeData.CurrentValue.ToAbbreviatedString()} > {playerUpgradeData.NextValue.ToAbbreviatedString()}";
@@ -124,15 +127,18 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.CoalTime)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "연료 사용시간을 늘립니다.";
+                var ExtendsFuelUsageTime = Managers.GetText("ExtendsFuelUsageTime");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{ExtendsFuelUsageTime}.";
             }
             else if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.Skill)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "제품의 품질을 높입니다.";
+                var increasesProductQuality = Managers.GetText("IncreasesProductQuality");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesProductQuality}.";
             }
             else if (forgeUpgradeData.StatType == Define.EPlayerForgeStat.Mastery)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "강화 성공확률을 높입니다.";
+                var increasesEnhancementSuccessRate = Managers.GetText("IncreasesEnhancementSuccessRate");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesEnhancementSuccessRate}.";
             }
 
             GetText((int)Texts.Text_UpgradeStat).text = $"{forgeUpgradeData.CurrentValue.ToAbbreviatedString()} > {forgeUpgradeData.NextValue.ToAbbreviatedString()}";
@@ -153,31 +159,38 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (townUpgradeData.StatType == Define.EPlayerTownStat.GoldMax)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "골드 최대 소유량을 늘립니다.";
+                var increasesMaxGoldCapacity = Managers.GetText("IncreasesMaxGoldCapacity");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesMaxGoldCapacity}.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.IronMax)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "자원 최대 소유량을 늘립니다.";
+                var increasesMaxMaterialCapacity = Managers.GetText("IncreasesMaxMaterialCapacity");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesMaxMaterialCapacity}.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.IronRegeneration)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "자원 생산량을 늘립니다.";
+                var increasesMaterialProduction = Managers.GetText("IncreasesMaterialProduction");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesMaterialProduction}.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.CoalMax)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "연로 최대 소유량을 늘립니다.";
+                var increasesMaxFuelCapacity = Managers.GetText("IncreasesMaxFuelCapacity");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesMaxFuelCapacity}.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.CoalRegeneration)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "연로 생산량을 늘립니다.";
+                var increasesFuelProduction = Managers.GetText("IncreasesFuelProduction");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesFuelProduction}.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.ShopSellBonus)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "판매시 받는 골드 보너스를 늘립니다.";
+                var increasesGoldBonuswhenSellingItems = Managers.GetText("IncreasesGoldBonuswhenSellingItems");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesGoldBonuswhenSellingItems}.";
             }
             else if (townUpgradeData.StatType == Define.EPlayerTownStat.ShopBuyBonus)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "상점 구매시 받는 구매량을 늘립니다.";
+                var increasesPurchaseAmountFromtheShop = Managers.GetText("IncreasesPurchaseAmountFromtheShop");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{increasesPurchaseAmountFromtheShop}.";
             }
 
             GetText((int)Texts.Text_UpgradeStat).text = $"{townUpgradeData.CurrentValue.ToAbbreviatedString()} > {townUpgradeData.NextValue.ToAbbreviatedString()}";
@@ -198,11 +211,13 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if(shopProductData.BuyType == Define.EShopBuyType.Gold)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "골드를 사용해 ";
+                var usingGold = Managers.GetText("UsingGold");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{usingGold} ";
             }
             else if(shopProductData.BuyType == Define.EShopBuyType.Ad)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text = "광고를 보고 ";
+                var watchingAds = Managers.GetText("WatchingAds");
+                GetText((int)Texts.Text_UpgradeDiscribe).text = $"{watchingAds} ";
                 GetImage((int)Images.Image_CostType).sprite = null;
             }
 
@@ -212,18 +227,21 @@ public class UI_UpgradeSubItem : UI_SubItem
 
             if (shopProductData.StatType == Define.EShopProductType.BuyIron)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text += "재료를 구매 합니다.";
+                var toBuyMaterials = Managers.GetText("ToBuyMaterials");
+                GetText((int)Texts.Text_UpgradeDiscribe).text += $"{toBuyMaterials}.";
                 maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Iron);
                 
             }
             else if (shopProductData.StatType == Define.EShopProductType.BuyCoal)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text += "연료를 구매 합니다.";
+                var toBuyFuel = Managers.GetText("ToBuyFuel");
+                GetText((int)Texts.Text_UpgradeDiscribe).text += $"{toBuyFuel}.";
                 maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Coal);
             }
             else if (shopProductData.StatType == Define.EShopProductType.BuyGold)
             {
-                GetText((int)Texts.Text_UpgradeDiscribe).text += "골드를 구매 합니다.";
+                var toBuyGold = Managers.GetText("ToBuyGold");
+                GetText((int)Texts.Text_UpgradeDiscribe).text += $"toBuyGold.";
                 maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Gold);
             }
 

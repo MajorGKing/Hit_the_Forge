@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 using UnityEngine;
 
@@ -13,6 +13,7 @@ public class SaveData
     public List<int> ownedWeapons;
     public int clearedWeaponCount;
     public int stage;
+    public Define.ELanguage language;
 }
 
 public class SaveManager

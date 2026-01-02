@@ -37,6 +37,7 @@ public class UI_GameScene : UI_Scene
     {
         Button_ForgeEnhancement,
         Button_ForgeSell,
+        Button_Language,
     }
 
     enum Texts
@@ -48,7 +49,16 @@ public class UI_GameScene : UI_Scene
         Text_EnhancementCountDown,
         Text_EnhancementPercent,
         Text_SellPrice,
-        Text_ClearWeaponCount, 
+        Text_ClearWeaponCount,
+        Text_ButtonLanguage,
+        Text_PlayerUpgradeBackToggle,
+        Text_ForgeUpgradeBackToggle,
+        Text_TownUpgradeBackToggle,
+        Text_ShopUpgradeBackToggle,
+        Text_PlayerUpgradeToggle,
+        Text_ForgeUpgradeToggle,
+        Text_TownUpgradeToggle,
+        Text_ShopUpgradeToggle,
     }
 
     enum Sliders
@@ -87,6 +97,7 @@ public class UI_GameScene : UI_Scene
 
         GetButton((int)Buttons.Button_ForgeEnhancement).gameObject.BindEvent(OnClickedForgeEnhancementButton);
         GetButton((int)Buttons.Button_ForgeSell).gameObject.BindEvent(OnClickedForgeSellButton);
+        GetButton((int)Buttons.Button_Language).gameObject.BindEvent(OnClickedLanguageButton);
 
         GetToggle((int)Toggles.Toggle_PlayerUpgrade).gameObject.BindEvent(OnClickPlayerToogle);
         GetToggle((int)Toggles.Toggle_ForgeUpgrade).gameObject.BindEvent(OnClickForgeToogle);
@@ -135,6 +146,8 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnNewWeaponAdded += WeaponSelectReset;
         Managers.Game.OnNewWeaponAdded -= RefreshUI;
         Managers.Game.OnNewWeaponAdded += RefreshUI;
+        Managers.Player.OnLanguageChange -= RefreshUI;
+        Managers.Player.OnLanguageChange += RefreshUI;
     }
 
     private void OnDisable()
@@ -145,6 +158,7 @@ public class UI_GameScene : UI_Scene
         Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
         Managers.Game.OnNewWeaponAdded -= WeaponSelectReset;
         Managers.Game.OnNewWeaponAdded -= RefreshUI;
+        Managers.Player.OnLanguageChange -= RefreshUI;
     }
 
     public void SetInfo()
@@ -163,8 +177,23 @@ public class UI_GameScene : UI_Scene
             totalWeapons = stageWeapons.Count;
 
         GetText((int)Texts.Text_ClearWeaponCount).text = $"{Managers.Player.ClearedWeaponCount} / {totalWeapons}";
+        GetText((int)Texts.Text_ButtonLanguage).text = Managers.GetText("GameLanguage");
+        
+        GetText((int)Texts.Text_PlayerUpgradeBackToggle).text = Managers.GetText("PlayerUpgradeToggle");
+        GetText((int)Texts.Text_PlayerUpgradeToggle).text = Managers.GetText("PlayerUpgradeToggle");
+
+        GetText((int)Texts.Text_ForgeUpgradeBackToggle).text = Managers.GetText("ForgeUpgradeToggle");
+        GetText((int)Texts.Text_ForgeUpgradeToggle).text = Managers.GetText("ForgeUpgradeToggle");
+
+        GetText((int)Texts.Text_TownUpgradeBackToggle).text = Managers.GetText("TownUpgradeToggle");
+        GetText((int)Texts.Text_TownUpgradeToggle).text = Managers.GetText("TownUpgradeToggle");
+
+        GetText((int)Texts.Text_ShopUpgradeBackToggle).text = Managers.GetText("ShopUpgradeToggle");
+        GetText((int)Texts.Text_ShopUpgradeToggle).text = Managers.GetText("ShopUpgradeToggle");
+
 
         var countTime = Managers.Game.GetEnhancementCount();
+
         if(countTime < 0)
         {
             GetImage((int)Images.Image_EnhancementCountDown).gameObject.SetActive(false);
@@ -291,6 +320,11 @@ public class UI_GameScene : UI_Scene
     private void OnClickedForgeSellButton(PointerEventData eventData)
     {
         Managers.Game.SellWeapon();
+    }
+
+    private void OnClickedLanguageButton(PointerEventData eventData)
+    {
+        Managers.Player.ChangeLanguage();
     }
 
     #region Toggle
