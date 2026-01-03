@@ -60,12 +60,15 @@ public class Managers : MonoBehaviour
 
     public static string GetText(string textId)
     {
+        if (Data.TextDict.TryGetValue(textId, out var textData) == false)
+            return "";
+
         switch (_language)
         {
             case Define.ELanguage.Korean:
-                return Data.TextDict[textId].KOR;
+                return textData.KOR;
             case Define.ELanguage.English:
-                return Data.TextDict[textId].ENG;
+                return textData.ENG;
             case Define.ELanguage.French:
                 break;
             case Define.ELanguage.SimplifiedChinese:

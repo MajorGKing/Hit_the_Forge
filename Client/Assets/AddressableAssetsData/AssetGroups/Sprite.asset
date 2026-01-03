@@ -15,6 +15,12 @@ MonoBehaviour:
   m_GroupName: Sprite
   m_GUID: e838eaf0fdd6b2c45ab065dfc4950a7d
   m_SerializeEntries:
+  - m_GUID: 031e8c2afcb6047fc84714c5f5649cd8
+    m_Address: Ehelp07
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 0bf1b767a8552441db9c8feeb4b5cdc4
     m_Address: help03
     m_ReadOnly: 0
@@ -33,6 +39,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3d4b37ed83b8048a9a360c320e0f5275
+    m_Address: Ehelp05
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4e36a7bd4a468470fa30b5c74f40dfc7
     m_Address: Longsword
     m_ReadOnly: 0
@@ -47,6 +59,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 70211099f4d9f4ef888d6bd78610ded0
     m_Address: help06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 78589dfd1da12439a8de4ce062a18618
+    m_Address: Ehelp01
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
@@ -87,6 +105,24 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b4e7dec8e75c647ffb9e1af4257972b3
+    m_Address: Ehelp04
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d496cd332e6174688aba5fb4c2603d60
+    m_Address: Ehelp02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8f571f78710047a4b7a37a9c00535aa
+    m_Address: Ehelp06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: dffe49a3f7a5249689aa52737370035a
     m_Address: Battleaxe
     m_ReadOnly: 0
@@ -107,6 +143,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: e2a9fbaaf5219466881c4a64529d4fa3
     m_Address: Mace
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e8fb5153f497c4b6795444c66c2452aa
+    m_Address: Ehelp03
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload

@@ -26,7 +26,14 @@ public class UI_HelpPopup : UI_Popup
     {
         helpStep = 1;
 
-        GetGameObject((int)GameObjects.BackGround).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>("help01");
+        if(Managers.Language == Define.ELanguage.Korean)
+        {
+            GetGameObject((int)GameObjects.BackGround).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>("help01");
+        }
+        else if(Managers.Language == Define.ELanguage.English)
+        {
+            GetGameObject((int)GameObjects.BackGround).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>("Ehelp01");
+        }
     }
 
     private void OnClickedBack(PointerEventData eventData)
@@ -40,6 +47,13 @@ public class UI_HelpPopup : UI_Popup
         }
 
         var helpName = "help0" + helpStep.ToString();
+        
+        if(Managers.Language == Define.ELanguage.English)
+        {
+            Debug.Log("Eng");
+            helpName = "Ehelp0" + helpStep.ToString();
+        }
+        
         //Debug.Log(helpName);
 
         GetGameObject((int)GameObjects.BackGround).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(helpName);

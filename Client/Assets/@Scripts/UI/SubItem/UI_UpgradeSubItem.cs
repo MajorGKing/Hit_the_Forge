@@ -241,7 +241,7 @@ public class UI_UpgradeSubItem : UI_SubItem
             else if (shopProductData.StatType == Define.EShopProductType.BuyGold)
             {
                 var toBuyGold = Managers.GetText("ToBuyGold");
-                GetText((int)Texts.Text_UpgradeDiscribe).text += $"toBuyGold.";
+                GetText((int)Texts.Text_UpgradeDiscribe).text += $"{toBuyGold}.";
                 maxValue = Managers.Player.GetCurrenyMax(Define.ECurrency.Gold);
             }
 
