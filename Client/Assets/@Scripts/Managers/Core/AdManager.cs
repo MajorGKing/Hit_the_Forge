@@ -476,7 +476,7 @@ public class AdManager
     static string GetAppKey()
     {
 #if UNITY_ANDROID
-        return "24948f305";
+        return "24cb6c015";
 #elif UNITY_IPHONE
             return "8545d445";
 #else
@@ -487,7 +487,7 @@ public class AdManager
     static string GetBannerAdUnitId()
     {
 #if UNITY_ANDROID
-        return "bwdq9r9c6nw4d7t9";
+        return "nfi0jvmj7xp3gdg7";
 #elif UNITY_IPHONE
             return "iep3rxsyp9na3rw8";
 #else
@@ -509,11 +509,11 @@ public class AdManager
     {
 #if UNITY_ANDROID
         if (currency == Define.ECurrency.Gold)
-            return "nqtypyp6wpx0i4f5";
+            return "vmc8wq6i7qj8h2rg";
         else if (currency == Define.ECurrency.Iron)
-            return "rhftz04os3wbbimo";
+            return "80ib4d3rfkj5lzc2";
         else if (currency == Define.ECurrency.Coal)
-            return "xmsw7fw2utqqmtw2";
+            return "gt8bnxhu4h6vty8e";
         else return null;
 #elif UNITY_IPHONE
             return "qwouvdrkuwivay5q";
