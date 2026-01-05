@@ -14,19 +14,19 @@ GoldMax,골드가 최대치입니다,Gold is maxed out
 MaterialMax,재료가 최대치입니다,Material is maxed out
 FuelMax,연료가 최대치입니다,Fuel is maxed out
 ResourcesMax,자원이 가득합니다,Resources are maxed out
-IncreasesAttackPower,터치시 공격력을 올립니다,Increases attack power when tapped
-IncreasesProductQuality,제품의 품질을 높입니다,Increases product quality
-IncreasesEnhancementSuccessRate,강화 성공확률을 높입니다,Increases enhancement success rate
-ExtendsFuelUsageTime,연료 사용시간을 늘립니다,Extends fuel usage time
-IncreasesMaxGoldCapacity,골드 최대 소유량을 늘립니다,Increases max gold capacity
-IncreasesMaxMaterialCapacity,자원 최대 소유량을 늘립니다,Increases max material capacity
-IncreasesMaterialProduction,자원 생산량을 늘립니다,Increases material production
-IncreasesMaxFuelCapacity,연로 최대 소유량을 늘립니다,Increases max fuel capacity
-IncreasesFuelProduction,연로 생산량을 늘립니다,Increases fuel production
-IncreasesGoldBonuswhenSellingItems,판매시 받는 골드 보너스를 늘립니다,Increases gold bonus when selling items
-IncreasesPurchaseAmountFromtheShop,상점 구매시 받는 구매량을 늘립니다,Increases purchase amount from the shop
+IncreasesAttackPower,터치시 공격력을 올립니다,Increase attack power
+IncreasesProductQuality,제품의 품질을 높입니다,Increase product quality
+IncreasesEnhancementSuccessRate,강화 성공확률을 높입니다,Increase enhancement success rate
+ExtendsFuelUsageTime,연료 사용시간을 늘립니다,Extend fuel usage time
+IncreasesMaxGoldCapacity,골드 최대 소유량을 늘립니다,Increase max gold capacity
+IncreasesMaxMaterialCapacity,자원 최대 소유량을 늘립니다,Increase max material capacity
+IncreasesMaterialProduction,자원 생산량을 늘립니다,Increase material production
+IncreasesMaxFuelCapacity,연로 최대 소유량을 늘립니다,Increase max fuel capacity
+IncreasesFuelProduction,연로 생산량을 늘립니다,Increase fuel production
+IncreasesGoldBonuswhenSellingItems,판매시 받는 골드 보너스를 늘립니다,Increase gold bonus when selling items
+IncreasesPurchaseAmountFromtheShop,상점 구매시 받는 구매량을 늘립니다,Increase purchase amount from the shop
 UsingGold,골드를 사용해,Using gold
-WatchingAds,광고를 보고,Watching ads
-ToBuyGold,골드를 구매 합니다,to buy gold
-ToBuyMaterials,재료를 구매 합니다,to buy materials
-ToBuyFuel,연료를 구매 합니다,to buy fuel
+WatchingAds,광고를 보고,Watch ads
+ToBuyGold,골드를 구매 합니다,to get gold
+ToBuyMaterials,재료를 구매 합니다,to get materials
+ToBuyFuel,연료를 구매 합니다,to get fuel

@@ -78,57 +78,57 @@
     {
       "DataId": "IncreasesAttackPower",
       "KOR": "터치시 공격력을 올립니다",
-      "ENG": "Increases attack power when tapped"
+      "ENG": "Increase attack power"
     },
     {
       "DataId": "IncreasesProductQuality",
       "KOR": "제품의 품질을 높입니다",
-      "ENG": "Increases product quality"
+      "ENG": "Increase product quality"
     },
     {
       "DataId": "IncreasesEnhancementSuccessRate",
       "KOR": "강화 성공확률을 높입니다",
-      "ENG": "Increases enhancement success rate"
+      "ENG": "Increase enhancement success rate"
     },
     {
       "DataId": "ExtendsFuelUsageTime",
       "KOR": "연료 사용시간을 늘립니다",
-      "ENG": "Extends fuel usage time"
+      "ENG": "Extend fuel usage time"
     },
     {
       "DataId": "IncreasesMaxGoldCapacity",
       "KOR": "골드 최대 소유량을 늘립니다",
-      "ENG": "Increases max gold capacity"
+      "ENG": "Increase max gold capacity"
     },
     {
       "DataId": "IncreasesMaxMaterialCapacity",
       "KOR": "자원 최대 소유량을 늘립니다",
-      "ENG": "Increases max material capacity"
+      "ENG": "Increase max material capacity"
     },
     {
       "DataId": "IncreasesMaterialProduction",
       "KOR": "자원 생산량을 늘립니다",
-      "ENG": "Increases material production"
+      "ENG": "Increase material production"
     },
     {
       "DataId": "IncreasesMaxFuelCapacity",
       "KOR": "연로 최대 소유량을 늘립니다",
-      "ENG": "Increases max fuel capacity"
+      "ENG": "Increase max fuel capacity"
     },
     {
       "DataId": "IncreasesFuelProduction",
       "KOR": "연로 생산량을 늘립니다",
-      "ENG": "Increases fuel production"
+      "ENG": "Increase fuel production"
     },
     {
       "DataId": "IncreasesGoldBonuswhenSellingItems",
       "KOR": "판매시 받는 골드 보너스를 늘립니다",
-      "ENG": "Increases gold bonus when selling items"
+      "ENG": "Increase gold bonus when selling items"
     },
     {
       "DataId": "IncreasesPurchaseAmountFromtheShop",
       "KOR": "상점 구매시 받는 구매량을 늘립니다",
-      "ENG": "Increases purchase amount from the shop"
+      "ENG": "Increase purchase amount from the shop"
     },
     {
       "DataId": "UsingGold",
@@ -138,22 +138,22 @@
     {
       "DataId": "WatchingAds",
       "KOR": "광고를 보고",
-      "ENG": "Watching ads"
+      "ENG": "Watch ads"
     },
     {
       "DataId": "ToBuyGold",
       "KOR": "골드를 구매 합니다",
-      "ENG": "to buy gold"
+      "ENG": "to get gold"
     },
     {
       "DataId": "ToBuyMaterials",
       "KOR": "재료를 구매 합니다",
-      "ENG": "to buy materials"
+      "ENG": "to get materials"
     },
     {
       "DataId": "ToBuyFuel",
       "KOR": "연료를 구매 합니다",
-      "ENG": "to buy fuel"
+      "ENG": "to get fuel"
     }
   ]
 }
