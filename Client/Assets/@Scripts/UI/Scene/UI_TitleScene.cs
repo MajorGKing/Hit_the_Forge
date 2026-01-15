@@ -66,13 +66,13 @@ public class UI_TitleScene : UI_Scene
 
 		// GetText((int)Texts.StartText).gameObject.BindEvent((evt) =>
 		// {
-		// 	Debug.Log("OnClick");
+		// 	Log.Log("OnClick");
 		// 	Managers.Scene.LoadScene(EScene.LoadingScene);
 		// });
 
 		GetGameObject((int)GameObjects.Object_Start).BindEvent((evt) =>
 		{
-			Debug.Log("OnClick");
+			LogMessage.Log("OnClick");
 			Managers.Scene.LoadScene(EScene.LoadingScene);
 		});
 
@@ -90,7 +90,7 @@ public class UI_TitleScene : UI_Scene
 		Managers.Resource.LoadAllAsync<Object>("Preload", (key, count, totalCount) =>
 		{
 			//GetText((int)Texts.StatusText).text = $"TODO �ε��� : {key} {count}/{totalCount}";
-            //Debug.Log(GetText((int)Texts.StatusText).text);
+            //Log.Log(GetText((int)Texts.StatusText).text);
 
             if (count == totalCount)
 			{
@@ -107,7 +107,7 @@ public class UI_TitleScene : UI_Scene
 		//State = TitleSceneState.AssetLoaded;
 		//Managers.Data.Init();
 
-		//Debug.Log("Connecting To Server");
+		//Log.Log("Connecting To Server");
 		//State = TitleSceneState.ConnectingToServer;
 
 		//IPAddress ipAddr = IPAddress.Parse("127.0.0.1");
@@ -119,7 +119,7 @@ public class UI_TitleScene : UI_Scene
 
 	private void OnConnectionSuccess()
 	{
-		Debug.Log("Connected To Server");
+		LogMessage.Log("Connected To Server");
 		State = TitleSceneState.ConnectedToServer;
 
 		GetText((int)Texts.StartText).gameObject.SetActive(true);
@@ -130,7 +130,7 @@ public class UI_TitleScene : UI_Scene
 
 	private void OnConnectionFailed()
 	{
-		Debug.Log("Failed To Connect To Server");
+		LogMessage.Log("Failed To Connect To Server");
 		State = TitleSceneState.FailedToConnectToServer;
 	}
 

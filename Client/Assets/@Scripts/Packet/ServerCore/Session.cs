@@ -122,7 +122,7 @@ namespace ServerCore
 			}
 			catch (Exception e)
 			{
-				Debug.Log(e);
+				LogMessage.Log(e);
 			}
 		}
 
@@ -154,7 +154,7 @@ namespace ServerCore
 			}
 			catch (Exception e)
 			{
-				Debug.Log($"RegisterSend Failed {e}");
+				LogMessage.Log($"RegisterSend Failed {e}");
 			}
 		}
 
@@ -176,7 +176,7 @@ namespace ServerCore
 					}
 					catch (Exception e)
 					{
-						Debug.Log($"OnSendCompleted Failed {e}");
+						LogMessage.Log($"OnSendCompleted Failed {e}");
 					}
 				}
 				else
@@ -203,7 +203,7 @@ namespace ServerCore
 			}
 			catch (Exception e)
 			{
-				Debug.Log($"RegisterRecv Failed {e}");
+				LogMessage.Log($"RegisterRecv Failed {e}");
 			}
 		}
 
@@ -239,7 +239,7 @@ namespace ServerCore
 				}
 				catch (Exception e)
 				{
-					Debug.Log($"OnRecvCompleted Failed {e}");
+					LogMessage.Log($"OnRecvCompleted Failed {e}");
 				}
 			}
 			else

@@ -13,7 +13,7 @@ public class GameScene : BaseScene
         gameObject.AddComponent<CaptureScreenShot>();
 #endif
 
-        Debug.Log("@>> GameScene Init()");
+        LogMessage.Log("@>> GameScene Init()");
         SceneType = Define.EScene.GameScene;
     }
 

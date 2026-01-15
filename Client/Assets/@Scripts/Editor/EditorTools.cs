@@ -12,11 +12,11 @@ public class EditorTools : EditorWindow
         {
             PlayerPrefs.DeleteKey("SaveData");
             PlayerPrefs.Save();
-            Debug.Log("SaveData (PlayerPrefs) Deleted Successfully.");
+            LogMessage.Log("SaveData (PlayerPrefs) Deleted Successfully.");
         }
         else
         {
-            Debug.Log("No SaveData found in PlayerPrefs.");
+            LogMessage.Log("No SaveData found in PlayerPrefs.");
         }
     }
     
@@ -24,7 +24,7 @@ public class EditorTools : EditorWindow
     public static void OpenSaveLocation()
     {
         // PlayerPrefs 위치 관련 정보 출력 (OS별로 상이함)
-        Debug.Log($"Persistent Data Path: {Application.persistentDataPath}");
+        LogMessage.Log($"Persistent Data Path: {Application.persistentDataPath}");
         // Mac에서는 ~/Library/Preferences/unity.CompanyName.ProductName.plist 에 저장됨
     }
 #endif

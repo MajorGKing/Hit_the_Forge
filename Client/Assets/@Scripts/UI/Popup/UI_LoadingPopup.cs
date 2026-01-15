@@ -24,7 +24,7 @@ public class UI_LoadingPopup : UI_Popup
 
     public void SetSliderValue(float sliderValue)
     {
-        //Debug.Log(sliderValue);
+        //Log.Log(sliderValue);
         GetSlider((int)Sliders.LoadingSlider).value = sliderValue;
     }
 

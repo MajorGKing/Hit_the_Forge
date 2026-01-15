@@ -42,7 +42,7 @@ namespace ServerCore
 			}
 			catch (Exception ex)
 			{
-				Debug.Log($"ConnectAsync Failed {ex}");
+				LogMessage.Log($"ConnectAsync Failed {ex}");
 			}
 		}
 
@@ -54,12 +54,12 @@ namespace ServerCore
 				session.Start(args.ConnectSocket);
 				session.OnConnected(args.RemoteEndPoint);
 
-				Debug.Log($"OnConnectCompleted");
+				LogMessage.Log($"OnConnectCompleted");
 				OnSuccessCallback?.Invoke();
 			}
 			else
 			{
-				Debug.Log($"OnConnectCompleted Fail: {args.SocketError}");
+				LogMessage.Log($"OnConnectCompleted Fail: {args.SocketError}");
 				OnFailedCallback?.Invoke();
 			}
 		}

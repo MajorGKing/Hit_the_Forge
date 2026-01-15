@@ -66,14 +66,14 @@ public class GameManager
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            //Debug.Log("Touch Position: " + Input.mousePosition);
+            //Log.Log("Touch Position: " + Input.mousePosition);
 
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit2D hit = Physics2D.GetRayIntersection(ray);
 
             if (hit.collider != null)
             {
-                //Debug.Log(hit.transform.name);
+                //Log.Log(hit.transform.name);
 
                 if (hit.transform.TryGetComponent<ForgeController>(out var forge))
                 {
@@ -430,7 +430,7 @@ public class GameManager
             WeaponHp = currentWeaponHp;
         }
 
-        //Debug.Log(weaponHp);
+        //Log.Log(weaponHp);
 
         return;
     }

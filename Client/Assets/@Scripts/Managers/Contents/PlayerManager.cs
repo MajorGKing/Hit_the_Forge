@@ -66,7 +66,7 @@ public class PlayerManager
     {
         if (stage < 1)
         {
-            Debug.LogError($"[PlayerManager] Invalid Stage set: {stage}. Stage must be at least 1.");
+            LogMessage.LogError($"[PlayerManager] Invalid Stage set: {stage}. Stage must be at least 1.");
         }
         Stage = stage;
     }
@@ -408,7 +408,7 @@ public class PlayerManager
             return;
         }
 
-        Debug.Log($"get currencyType {currencyType}");
+        LogMessage.Log($"get currencyType {currencyType}");
 
         // 기존 클래스를 그대로 쓰기 때문에 CurrentValue는 몇 % 획득인지를 의미함
         long addValue = maxStock * dataValue.CurrentValue / 100;
@@ -477,7 +477,7 @@ public class PlayerManager
         long bonusPercent = GetTownStat(Define.EPlayerTownStat.ShopBuyBonus);
         long bonusValue = (long)Mathf.Floor(addValue * (bonusPercent / 1000f));
 
-        Debug.Log($"Currency : {currencyType} Value : {addValue + bonusValue}");
+        LogMessage.Log($"Currency : {currencyType} Value : {addValue + bonusValue}");
 
         CurrencyAdd(currencyType, addValue + bonusValue);
         
@@ -540,7 +540,7 @@ public class PlayerManager
     {
         if (data.stage < 1)
         {
-            Debug.LogError($"[PlayerManager] RestoreFromSaveData failed: Invalid stage {data.stage} in save data.");
+            LogMessage.LogError($"[PlayerManager] RestoreFromSaveData failed: Invalid stage {data.stage} in save data.");
             return;
         }
 

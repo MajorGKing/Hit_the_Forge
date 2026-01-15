@@ -42,14 +42,14 @@ public class AdManager
 
         try
         {
-            Debug.Log("LevelPlay Init Failed. Retrying in 5 seconds...");
+            LogMessage.Log("LevelPlay Init Failed. Retrying in 5 seconds...");
             await UniTask.Delay(TimeSpan.FromSeconds(5), cancellationToken: token);
-            Debug.Log("Retrying LevelPlay Init...");
+            LogMessage.Log("Retrying LevelPlay Init...");
             LevelPlay.Init(AppKey);
         }
         catch (OperationCanceledException)
         {
-            Debug.Log("LevelPlay Initialization retry cancelled.");
+            LogMessage.Log("LevelPlay Initialization retry cancelled.");
         }
     }
 
@@ -105,7 +105,7 @@ public class AdManager
                 continue;
 
             string adUnitId = RewardedVideoAdUnitId(currency);
-            Debug.Log($"adUnitId : {adUnitId}");
+            LogMessage.Log($"adUnitId : {adUnitId}");
             if (string.IsNullOrEmpty(adUnitId))
                 continue;
 
@@ -140,12 +140,12 @@ public class AdManager
 
         bannerAd.OnAdLoaded += (info) =>
         {
-            Debug.Log("Banner Ad Loaded Success");
+            LogMessage.Log("Banner Ad Loaded Success");
         };
 
         bannerAd.OnAdLoadFailed += (error) =>
         {
-            Debug.LogError($"Banner Load Failed: {error}");
+            LogMessage.LogError($"Banner Load Failed: {error}");
         };
 
         // 설정 단계에서는 직접 LoadAd를 호출하지 않음 (LoadBanner에서 호출)
@@ -165,7 +165,7 @@ public class AdManager
                 {
                     if (bannerAd == null)
                     {
-                        Debug.Log("Banner Ad object lost. Recreating...");
+                        LogMessage.Log("Banner Ad object lost. Recreating...");
                         CreateBanner();
                         bannerAd?.LoadAd();
                     }
@@ -183,35 +183,35 @@ public class AdManager
     {
         var ad = new LevelPlayRewardedAd(adUnitId);
 
-        Debug.Log($"Initializing Ad for: {currency}");
+        LogMessage.Log($"Initializing Ad for: {currency}");
         ad.OnAdLoaded += (adInfo) =>
         {
-            Debug.Log($"{currency} Ad Loaded");
+            LogMessage.Log($"{currency} Ad Loaded");
             retrying[(int)currency] = false;
             OnRewardedLoaded?.Invoke(currency, adInfo);
         };
         ad.OnAdLoadFailed += error =>
         {
-            Debug.LogError($"{currency} rewarded load failed: {error}");
+            LogMessage.LogError($"{currency} rewarded load failed: {error}");
             OnRewardedLoadFailed?.Invoke(currency, error.ToString());
 
             RetryLoadRewardedAd(ad, currency, token).Forget();
         };
         ad.OnAdClosed += (adInfo) =>
         {
-            Debug.Log($"{currency} rewarded ad closed");
+            LogMessage.Log($"{currency} rewarded ad closed");
             OnRewardedClosed?.Invoke(currency, adInfo);
             ad.LoadAd();
         };
         ad.OnAdDisplayFailed += (adInfo, error) =>
         {
-            Debug.LogError($"{currency} rewarded ad display failed: {error}");
+            LogMessage.LogError($"{currency} rewarded ad display failed: {error}");
             OnRewardedLoadFailed?.Invoke(currency, error.ToString());
             ad.LoadAd();
         };
         ad.OnAdRewarded += (adInfo, reward) =>
         {
-            Debug.Log($"{currency} rewarded ad earned: {reward.Amount}");
+            LogMessage.Log($"{currency} rewarded ad earned: {reward.Amount}");
             OnRewardedEarned?.Invoke(currency, adInfo, reward);
         };
         rewardedVideoAds[(int)currency] = ad;
@@ -233,7 +233,7 @@ public class AdManager
             {
                 await UniTask.Delay(TimeSpan.FromSeconds(10), cancellationToken: token);
 
-                Debug.Log($"{currency} rewarded retry load");
+                LogMessage.Log($"{currency} rewarded retry load");
                 ad.LoadAd();
             }
         }
@@ -263,129 +263,129 @@ public class AdManager
 
     private void SdkInitializationFailedEvent(LevelPlayInitError error)
     {
-        Debug.LogError($"LevelPlay Init Failed: {error.ErrorMessage}");
+        LogMessage.LogError($"LevelPlay Init Failed: {error.ErrorMessage}");
         RetryInitialization().Forget();
     }
 
     void RewardedVideoOnLoadedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnLoadedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnLoadedEvent With AdInfo: {adInfo}");
     }
 
     void RewardedVideoOnAdLoadFailedEvent(LevelPlayAdError error)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnAdLoadFailedEvent With Error: {error}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnAdLoadFailedEvent With Error: {error}");
     }
 
     void RewardedVideoOnAdDisplayedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnAdDisplayedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnAdDisplayedEvent With AdInfo: {adInfo}");
     }
 
     void RewardedVideoOnAdDisplayedFailedEvent(LevelPlayAdInfo adInfo, LevelPlayAdError error)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnAdDisplayedFailedEvent With AdInfo: {adInfo} and Error: {error}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnAdDisplayedFailedEvent With AdInfo: {adInfo} and Error: {error}");
     }
 
     void RewardedVideoOnAdRewardedEvent(LevelPlayAdInfo adInfo, LevelPlayReward reward)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnAdRewardedEvent With AdInfo: {adInfo} and Reward: {reward}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnAdRewardedEvent With AdInfo: {adInfo} and Reward: {reward}");
     }
 
     void RewardedVideoOnAdClickedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnAdClickedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnAdClickedEvent With AdInfo: {adInfo}");
     }
 
     void RewardedVideoOnAdClosedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnAdClosedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnAdClosedEvent With AdInfo: {adInfo}");
     }
 
     void RewardedVideoOnAdInfoChangedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received RewardedVideoOnAdInfoChangedEvent With AdInfo {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received RewardedVideoOnAdInfoChangedEvent With AdInfo {adInfo}");
     }
 
     void InterstitialOnAdLoadedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received InterstitialOnAdLoadedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received InterstitialOnAdLoadedEvent With AdInfo: {adInfo}");
     }
 
     void InterstitialOnAdLoadFailedEvent(LevelPlayAdError error)
     {
-        Debug.Log($"[LevelPlaySample] Received InterstitialOnAdLoadFailedEvent With Error: {error}");
+        LogMessage.Log($"[LevelPlaySample] Received InterstitialOnAdLoadFailedEvent With Error: {error}");
     }
 
     void InterstitialOnAdDisplayedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received InterstitialOnAdDisplayedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received InterstitialOnAdDisplayedEvent With AdInfo: {adInfo}");
     }
 
     void InterstitialOnAdDisplayFailedEvent(LevelPlayAdInfo adInfo, LevelPlayAdError error)
     {
-        Debug.Log($"[LevelPlaySample] Received InterstitialOnAdDisplayFailedEvent With AdInfo: {adInfo} and Error: {error}");
+        LogMessage.Log($"[LevelPlaySample] Received InterstitialOnAdDisplayFailedEvent With AdInfo: {adInfo} and Error: {error}");
     }
 
     void InterstitialOnAdClickedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received InterstitialOnAdClickedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received InterstitialOnAdClickedEvent With AdInfo: {adInfo}");
     }
 
     void InterstitialOnAdClosedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received InterstitialOnAdClosedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received InterstitialOnAdClosedEvent With AdInfo: {adInfo}");
     }
 
     void InterstitialOnAdInfoChangedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received InterstitialOnAdInfoChangedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received InterstitialOnAdInfoChangedEvent With AdInfo: {adInfo}");
     }
 
     void BannerOnAdLoadedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdLoadedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdLoadedEvent With AdInfo: {adInfo}");
     }
 
     void BannerOnAdLoadFailedEvent(LevelPlayAdError error)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdLoadFailedEvent With Error: {error}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdLoadFailedEvent With Error: {error}");
     }
 
     void BannerOnAdClickedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdClickedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdClickedEvent With AdInfo: {adInfo}");
     }
 
     void BannerOnAdDisplayedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdDisplayedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdDisplayedEvent With AdInfo: {adInfo}");
     }
 
     void BannerOnAdDisplayFailedEvent(LevelPlayAdInfo adInfo, LevelPlayAdError error)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdDisplayFailedEvent With AdInfo: {adInfo} and Error: {error}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdDisplayFailedEvent With AdInfo: {adInfo} and Error: {error}");
     }
 
     void BannerOnAdCollapsedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdCollapsedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdCollapsedEvent With AdInfo: {adInfo}");
     }
 
     void BannerOnAdLeftApplicationEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdLeftApplicationEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdLeftApplicationEvent With AdInfo: {adInfo}");
     }
 
     void BannerOnAdExpandedEvent(LevelPlayAdInfo adInfo)
     {
-        Debug.Log($"[LevelPlaySample] Received BannerOnAdExpandedEvent With AdInfo: {adInfo}");
+        LogMessage.Log($"[LevelPlaySample] Received BannerOnAdExpandedEvent With AdInfo: {adInfo}");
     }
 
     void ImpressionDataReadyEvent(LevelPlayImpressionData impressionData)
     {
-        Debug.Log($"[LevelPlaySample] Received ImpressionDataReadyEvent ToString(): {impressionData}");
-        Debug.Log($"[LevelPlaySample] Received ImpressionDataReadyEvent allData: {impressionData.AllData}");
+        LogMessage.Log($"[LevelPlaySample] Received ImpressionDataReadyEvent ToString(): {impressionData}");
+        LogMessage.Log($"[LevelPlaySample] Received ImpressionDataReadyEvent allData: {impressionData.AllData}");
     }
     #endregion
 
@@ -421,7 +421,7 @@ public class AdManager
     {
         if (rewardedVideoAds[(int)currency].IsAdReady())
         {
-            Debug.Log($"(int)currency {(int)currency}");
+            LogMessage.Log($"(int)currency {(int)currency}");
             rewardedVideoAds[(int)currency].ShowAd();
         }
     }
@@ -430,12 +430,12 @@ public class AdManager
     {
         if (IsAdsEnabled == false)
         {
-            Debug.Log("RefreshAds: LevelPlay not initialized. Retrying Init...");
+            LogMessage.Log("RefreshAds: LevelPlay not initialized. Retrying Init...");
             Init();
             return;
         }
 
-        Debug.Log("RefreshAds: Refreshing Ads...");
+        LogMessage.Log("RefreshAds: Refreshing Ads...");
 
         // 1. 배너 광고 복구
         if (_isBannerActivated)
@@ -460,7 +460,7 @@ public class AdManager
                 // 광고가 준비되지 않았고, 현재 재시도 루틴이 도는 중이 아니라면 로드 시도
                 if (ad.IsAdReady() == false && (retrying.Length > i && retrying[i] == false))
                 {
-                    Debug.Log($"RefreshAds: Refreshing Rewarded Ad for {currency}");
+                    LogMessage.Log($"RefreshAds: Refreshing Rewarded Ad for {currency}");
                     ad.LoadAd();
                 }
             }

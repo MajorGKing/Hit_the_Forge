@@ -43,7 +43,7 @@ public class MapEditor : MonoBehaviour
             }
         }
 
-        Debug.Log("Map Collision Generation Complete");
+        LogMessage.Log("Map Collision Generation Complete");
     }
    
 

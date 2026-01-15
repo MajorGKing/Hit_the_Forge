@@ -89,6 +89,10 @@ public class Managers : MonoBehaviour
         {
             Initialized = true;
 
+#if !UNITY_EDITOR && !DEVELOPMENT_BUILD
+            Debug.unityLogger.logEnabled = false;
+#endif
+
 			GameObject go = GameObject.Find("@Managers");
             if (go == null)
             {

@@ -50,11 +50,11 @@ public class UI_HelpPopup : UI_Popup
         
         if(Managers.Language == Define.ELanguage.English)
         {
-            Debug.Log("Eng");
+            LogMessage.Log("Eng");
             helpName = "Ehelp0" + helpStep.ToString();
         }
         
-        //Debug.Log(helpName);
+        //Log.Log(helpName);
 
         GetGameObject((int)GameObjects.BackGround).GetComponent<Image>().sprite = Managers.Resource.Load<Sprite>(helpName);
     }

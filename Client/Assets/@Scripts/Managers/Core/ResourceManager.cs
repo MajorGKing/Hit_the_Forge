@@ -42,7 +42,7 @@ public class ResourceManager
         GameObject prefab = Load<GameObject>($"{key}");
         if (prefab == null)
         {
-            Debug.LogError($"Failed to load prefab : {key}");
+            LogMessage.LogError($"Failed to load prefab : {key}");
             return null;
         }
 

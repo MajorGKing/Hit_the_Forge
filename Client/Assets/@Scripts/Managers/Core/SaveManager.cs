@@ -42,7 +42,7 @@ public class SaveManager
         PlayerPrefs.SetString("SaveData", encrypted);
         PlayerPrefs.Save();
         
-        //Debug.Log("Game Saved");
+        //Log.Log("Game Saved");
     }
 
     public bool LoadGame()
@@ -62,20 +62,20 @@ public class SaveManager
                 }
 
                 Managers.Player.RestoreFromSaveData(data);
-                Debug.Log("Game Loaded");
+                LogMessage.Log("Game Loaded");
 
                 return true;
             }
             catch (System.Exception e)
             {
-                Debug.LogError($"Failed to load save data: {e.Message}");
+                LogMessage.LogError($"Failed to load save data: {e.Message}");
                 // Handle corruption (e.g., start fresh or warn user)
                 return false;
             }
         }
         else
         {
-            Debug.Log("No save data found.");
+            LogMessage.Log("No save data found.");
             return false;
         }
     }

@@ -25,7 +25,7 @@ public class DataTransformer : EditorWindow
         ParseExcelDataToJson<ForgeUpgradeDataLoader, ForgeUpgradeData>("ForgeUpgrade");
         ParseExcelDataToJson<TownUpgradeDataLoader, TownUpgradeData>("TownUpgrade");
         ParseExcelDataToJson<ShopProductDataLoader, ShopProductData>("ShopProduct");
-        Debug.Log("Complete DataTransformer");
+        LogMessage.Log("Complete DataTransformer");
     }
 
     #region Helpers
@@ -91,7 +91,7 @@ public class DataTransformer : EditorWindow
                     {
                         if (string.IsNullOrEmpty(rows[i][f + innerFieldCount]))
                             continue;
-                        Debug.Log($"filename = {filename} ,  {field} -> {rows[i][f]}");
+                        LogMessage.Log($"filename = {filename} ,  {field} -> {rows[i][f]}");
                         {
                             bool isCustomClass = valueType.IsClass && !valueType.IsPrimitive && valueType != typeof(string);
 
@@ -149,10 +149,10 @@ public class DataTransformer : EditorWindow
                 }
                 else
                 {
-                    Debug.Log($"filename = {filename} ,  {field} -> {rows[r][f]}");
+                    LogMessage.Log($"filename = {filename} ,  {field} -> {rows[r][f]}");
                     if (rows[r][f].Contains("780"))
                     {
-                        Debug.Log($"filename = {filename} ,  {field} -> {rows[r][f]}");
+                        LogMessage.Log($"filename = {filename} ,  {field} -> {rows[r][f]}");
                     }
 
                     bool isCustomClass = field.FieldType.IsClass && !field.FieldType.IsPrimitive && field.FieldType != typeof(string);

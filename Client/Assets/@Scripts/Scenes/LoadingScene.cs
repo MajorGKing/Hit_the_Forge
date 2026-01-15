@@ -47,7 +47,7 @@ public class LoadingScene : BaseScene
     //    }
     //    else
     //    {
-    //        Debug.LogError("Get Player Failed.");
+    //        Log.LogError("Get Player Failed.");
     //    }
     //}
 
@@ -62,7 +62,7 @@ public class LoadingScene : BaseScene
 
     //    if (res.Success)
     //    {
-    //        Debug.Log($"Currency Gold : {res.currencyData.Gold}");
+    //        Log.Log($"Currency Gold : {res.currencyData.Gold}");
 
     //        // Update local currency data
     //        Managers.Game.UpdateCurrency(res.currencyData);
@@ -72,7 +72,7 @@ public class LoadingScene : BaseScene
     //    }
     //    else
     //    {
-    //        Debug.LogError($"Get Currency Failed.");
+    //        Log.LogError($"Get Currency Failed.");
     //    }
     //}
 
@@ -93,7 +93,7 @@ public class LoadingScene : BaseScene
     //        }
     //        else
     //        {
-    //            Debug.LogError($"Get Hero Failed.");
+    //            Log.LogError($"Get Hero Failed.");
     //        }
     //    }
 
@@ -148,7 +148,7 @@ public class LoadingScene : BaseScene
     //    }
     //    else
     //    {
-    //        Debug.LogError($"Get Stage data Failed.");
+    //        Log.LogError($"Get Stage data Failed.");
     //    }
     //}
 

@@ -26,12 +26,12 @@ public class WebManager
         IPAddress ipv4 = Utils.GetIpv4Address(ip);
         if (ipv4 == null)
         {
-            Debug.LogError("WebServer IPv4 Failed");
+            LogMessage.LogError("WebServer IPv4 Failed");
             return;
         }
 	
         BaseUrl = $"http://{ipv4.ToString()}:{port}";
-        Debug.Log($"WebServer BaseUrl : {BaseUrl}");
+        LogMessage.Log($"WebServer BaseUrl : {BaseUrl}");
     }
 
     // -------- Public API --------
@@ -53,7 +53,7 @@ public class WebManager
 
         //string sendUrl = $"{BaseUrl}/{url}";
         string sendUrl = url.StartsWith("http") ? url : $"{BaseUrl}/{url}";
-        Debug.Log($"Call {sendUrl}");
+        LogMessage.Log($"Call {sendUrl}");
 
         byte[] jsonBytes = null;
         if (obj != null)
@@ -75,7 +75,7 @@ public class WebManager
 
                 if (uwr.result != UnityWebRequest.Result.Success)
                 {
-                    Debug.LogError($"[WebManager] Request Failed: {uwr.error}");
+                    LogMessage.LogError($"[WebManager] Request Failed: {uwr.error}");
                     return default;
                 }
 
@@ -83,7 +83,7 @@ public class WebManager
             }
             catch (Exception ex)
             {
-                Debug.LogError($"[WebManager] Exception: {ex.Message}");
+                LogMessage.LogError($"[WebManager] Exception: {ex.Message}");
                 return default;
             }
         }

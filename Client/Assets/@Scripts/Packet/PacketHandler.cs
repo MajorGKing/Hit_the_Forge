@@ -14,22 +14,22 @@ class PacketHandler
     ///////////////////////////////////// GameServer - Client /////////////////////////////////////
 	public static void S_ConnectedHandler(PacketSession session, IMessage packet)
 	{
-		Debug.Log("S_Connected");
+		LogMessage.Log("S_Connected");
 	}
 	public static void S_EnterGameHandler(PacketSession session, IMessage packet)
 	{
-		Debug.Log("S_Connected");
+		LogMessage.Log("S_Connected");
 		
 		Managers.Scene.LoadScene(EScene.GameScene);
 	}
 
 	public static void S_LeaveGameHandler(PacketSession session, IMessage packet)
 	{
-		Debug.Log("S_Connected");
+		LogMessage.Log("S_Connected");
 	}
 	
 	public static void S_DespawnHandler(PacketSession session, IMessage packet)
 	{
-		Debug.Log("S_Connected");
+		LogMessage.Log("S_Connected");
 	}
 }

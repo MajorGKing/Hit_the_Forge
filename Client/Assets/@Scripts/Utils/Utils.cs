@@ -1,9 +1,37 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Net;
 using UnityEngine;
 using static Define;
 using Object = UnityEngine.Object;
 using Random = UnityEngine.Random;
+
+public static class LogMessage
+{
+    [Conditional("UNITY_EDITOR")]
+    public static void Log(object message)
+    {
+        UnityEngine.Debug.Log(message);
+    }
+
+    [Conditional("UNITY_EDITOR")]
+    public static void Log(string format, params object[] args)
+    {
+        UnityEngine.Debug.Log(string.Format(format, args));
+    }
+
+    [Conditional("UNITY_EDITOR")]
+    public static void LogWarning(object message)
+    {
+        UnityEngine.Debug.LogWarning(message);
+    }
+
+    [Conditional("UNITY_EDITOR")]
+    public static void LogError(object message)
+    {
+        UnityEngine.Debug.LogError(message);
+    }
+}
 
 public static class Utils
 {
@@ -109,7 +137,7 @@ public static class Utils
 
         if (ipAddr.Length == 0)
         {
-            Debug.LogError("AuthServer DNS Failed");
+            LogMessage.LogError("AuthServer DNS Failed");
             return null;
         }
 
@@ -121,7 +149,7 @@ public static class Utils
             }
         }
 
-        Debug.LogError("AuthServer IPv4 Failed");
+        LogMessage.LogError("AuthServer IPv4 Failed");
         return null;
     } 
 }
