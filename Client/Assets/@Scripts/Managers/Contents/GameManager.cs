@@ -342,6 +342,8 @@ public class GameManager
                         var nextWeaponName = nextWeaponData.WeaponName;
                         var addedText = Managers.GetText("AddedText");
                         Managers.UI.ShowToast($"{nextWeaponName} {addedText}.", 1, Define.EToastColor.Blue, Define.EToastPosition.MiddleCenter);
+
+                        currentWeaponInfo = nextWeaponData;
                     }
                 }
 
