@@ -108,6 +108,11 @@ public class UI_GameScene : UI_Scene
 
         TogglesInit();
 
+        GetGameObject((int)GameObjects.Object_PlayerUpgrade).SetActive(true);
+        _isSelectedPlayer = true;
+
+        RefreshUI();
+
         //Managers.Ad.SetBannerPosition(new Vector2(0, 1850));
         //Managers.Ad.SetBannerPosition(GetGameObject((int)GameObjects.BannerPosition).transform.position);
 
