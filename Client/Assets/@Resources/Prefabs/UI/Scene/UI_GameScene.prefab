@@ -205,7 +205,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 4060582654002803791, guid: fc1377f2b5e78284bacf3421c1758b5d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: fc1377f2b5e78284bacf3421c1758b5d, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -785,15 +785,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 21300000, guid: dbc8165ad46f92d4db16eb7b7fb20a39, type: 3}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
+  m_PixelsPerUnitMultiplier: 36.31
 --- !u!1 &1813593028260217995
 GameObject:
   m_ObjectHideFlags: 0
@@ -3676,6 +3676,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\uC0C1\uC810"
       objectReference: {fileID: 0}
+    - target: {fileID: 3794775458396935262, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d94d63002a9353945ab71bf421779b71, type: 3}
     - target: {fileID: 4528920355497060815, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_text
       value: "\uC0C1\uC810"
@@ -3784,6 +3788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image_ShopUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 9088140127566380534, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d94d63002a9353945ab71bf421779b71, type: 3}
     - target: {fileID: 9105092749200082027, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_Name
       value: Image_ShopUpgradeCheckmark
@@ -4993,9 +5001,17 @@ PrefabInstance:
     m_TransformParent: {fileID: 3468115974171687272}
     m_Modifications:
     - target: {fileID: 662562918255217024, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_IsOn
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 662562918255217024, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_Group
       value: 
       objectReference: {fileID: 2626392125454778587}
+    - target: {fileID: 3794775458396935262, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc1377f2b5e78284bacf3421c1758b5d, type: 3}
     - target: {fileID: 7462739110380260013, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_Name
       value: Object_PlayerUpgradeRedDot
@@ -5084,6 +5100,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9088140127566380534, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fc1377f2b5e78284bacf3421c1758b5d, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5648,6 +5668,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\uB9C8\uC744"
       objectReference: {fileID: 0}
+    - target: {fileID: 3794775458396935262, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0f9e530c566a74418ac4076d7fc854f, type: 3}
     - target: {fileID: 4528920355497060815, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_text
       value: "\uB9C8\uC744"
@@ -5756,6 +5780,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image_TownUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 9088140127566380534, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f0f9e530c566a74418ac4076d7fc854f, type: 3}
     - target: {fileID: 9105092749200082027, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_Name
       value: Image_TownUpgradeCheckmark
@@ -5790,6 +5818,10 @@ PrefabInstance:
       propertyPath: m_text
       value: "\uB300\uC7A5\uAC04"
       objectReference: {fileID: 0}
+    - target: {fileID: 3794775458396935262, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bb82e740fded0427798da0f91fb63153, type: 3}
     - target: {fileID: 4528920355497060815, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_text
       value: "\uB300\uC7A5\uAC04"
@@ -5898,6 +5930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Image_ForgeUpgrade
       objectReference: {fileID: 0}
+    - target: {fileID: 9088140127566380534, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bb82e740fded0427798da0f91fb63153, type: 3}
     - target: {fileID: 9105092749200082027, guid: 707ec59ad06b4d947998f52970aeea0b, type: 3}
       propertyPath: m_Name
       value: Image_ForgeUpgradeCheckmark

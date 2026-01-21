@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc1377f2b5e78284bacf3421c1758b5d
+guid: dbc8165ad46f92d4db16eb7b7fb20a39
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4060582654002803791
-    second: sp_ui_ic_enchant_0
+      213: 7140136098599803957
+    second: box_20_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -52,7 +52,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
-  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteBorder: {x: 4, y: 4, z: 4, w: 4}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -113,23 +113,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sp_ui_ic_enchant_0
+      name: box_20_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 132
-        height: 120
+        width: 336
+        height: 568
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4433f0f8661a5830800000000000000
-      internalID: 4060582654002803791
+      spriteID: 53c1cfc93fbd61360800000000000000
+      internalID: 7140136098599803957
       vertices: []
       indices: 
       edges: []
@@ -139,7 +139,7 @@ TextureImporter:
     physicsShape: []
     bones: []
     spriteID: 5e97eb03825dee720800000000000000
-    internalID: 0
+    internalID: 1537655665
     vertices: []
     indices: 
     edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sp_ui_ic_enchant_0: 4060582654002803791
+      box_20_0: 7140136098599803957
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

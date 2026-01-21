@@ -279,6 +279,8 @@ public class GameManager
 
     private IEnumerator CoFinish()
     {
+        useCoal = false;
+
         TryShakeCameraRandom();
         Managers.Sound.Play(Define.ESound.Effect, "FinishEffectSound1");
         OnWeaponFinish?.Invoke();
@@ -414,6 +416,7 @@ public class GameManager
                 return;
             }
 
+            useCoal = true;
             UseCoal().Forget();
         }
 
@@ -575,7 +578,6 @@ public class GameManager
 
         Managers.Player.CurrencySubtract(Define.ECurrency.Coal, currentWeaponInfo.Coal);
 
-        useCoal = true;
 
         try
         {
@@ -585,7 +587,7 @@ public class GameManager
         }
         catch (OperationCanceledException)
         {
-
+            return;
         }
 
         useCoal = false;

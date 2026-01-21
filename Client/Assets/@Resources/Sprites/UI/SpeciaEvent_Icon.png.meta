@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: fc1377f2b5e78284bacf3421c1758b5d
+guid: f0f9e530c566a74418ac4076d7fc854f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4060582654002803791
-    second: sp_ui_ic_enchant_0
+      213: 4115014430687053391
+    second: SpeciaEvent_Icon_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,13 +113,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sp_ui_ic_enchant_0
+      name: SpeciaEvent_Icon_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 132
-        height: 120
+        x: 13
+        y: 15
+        width: 220
+        height: 217
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f4433f0f8661a5830800000000000000
-      internalID: 4060582654002803791
+      spriteID: f4645ba82d77b1930800000000000000
+      internalID: 4115014430687053391
       vertices: []
       indices: 
       edges: []
@@ -148,7 +148,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      sp_ui_ic_enchant_0: 4060582654002803791
+      SpeciaEvent_Icon_0: 4115014430687053391
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

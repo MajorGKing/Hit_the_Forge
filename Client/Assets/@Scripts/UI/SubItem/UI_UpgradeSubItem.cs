@@ -117,6 +117,8 @@ public class UI_UpgradeSubItem : UI_SubItem
             {
                 GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
             }
+
+            GetImage((int)Images.Image_Upgrade).sprite = Managers.Resource.Load<Sprite>("sp_ui_ic_enchant");
         }
         else if (upgradeType == Define.EUpgradeType.Forge)
         {
@@ -149,6 +151,8 @@ public class UI_UpgradeSubItem : UI_SubItem
             {
                 GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
             }
+
+            GetImage((int)Images.Image_Upgrade).sprite = Managers.Resource.Load<Sprite>("anvil2");
         }
         else if (upgradeType == Define.EUpgradeType.Town)
         {
@@ -201,6 +205,8 @@ public class UI_UpgradeSubItem : UI_SubItem
             {
                 GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
             }
+
+            GetImage((int)Images.Image_Upgrade).sprite = Managers.Resource.Load<Sprite>("SpeciaEvent_Icon");
         }
         else if (upgradeType == Define.EUpgradeType.Shop)
         {
@@ -271,6 +277,8 @@ public class UI_UpgradeSubItem : UI_SubItem
                     GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(Managers.Ad.IsRewardedReady(Define.ECurrency.Coal));
                 }
             }
+
+            GetImage((int)Images.Image_Upgrade).sprite = Managers.Resource.Load<Sprite>("Shop_Icon");
         }
     }
 

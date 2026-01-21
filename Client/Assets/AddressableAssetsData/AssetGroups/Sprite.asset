@@ -69,6 +69,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8b66bc700db51414293a23c9b988f678
+    m_Address: anvil1
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 902572cd954aa4b4b8c38bef2442fd8c
     m_Address: help04
     m_ReadOnly: 0
@@ -111,6 +117,12 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bb82e740fded0427798da0f91fb63153
+    m_Address: anvil2
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d496cd332e6174688aba5fb4c2603d60
     m_Address: Ehelp02
     m_ReadOnly: 0
@@ -119,6 +131,12 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d8f571f78710047a4b7a37a9c00535aa
     m_Address: Ehelp06
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d94d63002a9353945ab71bf421779b71
+    m_Address: Shop_Icon
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
@@ -153,8 +171,20 @@ MonoBehaviour:
     m_SerializedLabels:
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0f9e530c566a74418ac4076d7fc854f
+    m_Address: SpeciaEvent_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: facbca727138842888128349f7c41abc
     m_Address: help02
+    m_ReadOnly: 0
+    m_SerializedLabels:
+    - Preload
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fc1377f2b5e78284bacf3421c1758b5d
+    m_Address: sp_ui_ic_enchant
     m_ReadOnly: 0
     m_SerializedLabels:
     - Preload
