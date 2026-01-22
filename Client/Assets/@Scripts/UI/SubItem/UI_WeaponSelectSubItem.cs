@@ -9,6 +9,7 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         Text_NeedCoal,
         Text_GetPrice,
         Text_Name,
+        Text_Touch,
     }
 
     enum Buttons
@@ -26,6 +27,8 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         BindButtons(typeof(Buttons));
 
         GetButton((int)Buttons.Button_Weapon).gameObject.BindEvent(OnClickedWeaponButton);
+
+        GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
     }
 
     public void SetInfo(int weaponNumber)

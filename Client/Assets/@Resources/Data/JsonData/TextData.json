@@ -2,8 +2,8 @@
   "texts": [
     {
       "DataId": "GameLanguage",
-      "KOR": "한",
-      "ENG": "Eng"
+      "KOR": "Eng",
+      "ENG": "한"
     },
     {
       "DataId": "PlayerUpgradeToggle",

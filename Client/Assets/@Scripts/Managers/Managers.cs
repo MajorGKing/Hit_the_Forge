@@ -14,12 +14,14 @@ public class Managers : MonoBehaviour
     private ObjectManager _object = new ObjectManager();
     private MapManager _map = new MapManager();
     private PlayerManager _player = new PlayerManager();
+    private TouchManager _touch = new TouchManager();
 
     public static EventManager Event { get { return Instance?._event; } }
     public static GameManager Game { get { return Instance?._game; } }
     public static ObjectManager Object { get { return Instance?._object; } }
     public static MapManager Map { get { return Instance?._map; } }
     public static PlayerManager Player { get { return Instance?._player; } }
+    public static TouchManager Touch {get { return Instance?._touch;}}
     
     #endregion
 
@@ -106,6 +108,7 @@ public class Managers : MonoBehaviour
             //s_instance._player.Init();
             s_instance._save.Init();
             s_instance._ad.Init();
+            s_instance._touch.Init();
         }		
 	}
 
@@ -129,5 +132,6 @@ public class Managers : MonoBehaviour
         Scene.Clear();
         UI.Clear();
         Pool.Clear();
+        Touch.Clear();
     }
 }

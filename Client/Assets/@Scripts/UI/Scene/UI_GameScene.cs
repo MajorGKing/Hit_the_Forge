@@ -59,6 +59,8 @@ public class UI_GameScene : UI_Scene
         Text_ForgeUpgradeToggle,
         Text_TownUpgradeToggle,
         Text_ShopUpgradeToggle,
+        Text_Touch,
+        Text_Goal,
     }
 
     enum Sliders
@@ -110,6 +112,9 @@ public class UI_GameScene : UI_Scene
 
         GetGameObject((int)GameObjects.Object_PlayerUpgrade).SetActive(true);
         _isSelectedPlayer = true;
+
+        GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
+        GetText((int)Texts.Text_Goal).gameObject.SetActive(false);
 
         RefreshUI();
 
@@ -231,7 +236,6 @@ public class UI_GameScene : UI_Scene
             GetText((int)Texts.Text_SellPrice).text = price.ToAbbreviatedString();
         }
 
-        // �÷��̾� ���׷��̵� ������ ����
         if (_isSelectedPlayer == true)
         {
             GetGameObject((int)GameObjects.PlayerUpgradeContent).DestroyChildren();

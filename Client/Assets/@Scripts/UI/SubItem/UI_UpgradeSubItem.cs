@@ -15,6 +15,7 @@ public class UI_UpgradeSubItem : UI_SubItem
         Text_UpgradeDiscribe,
         Text_UpgradeStat,
         Text_UpgradePrice,
+        Text_Touch,
     }
 
     enum Buttons
@@ -44,6 +45,8 @@ public class UI_UpgradeSubItem : UI_SubItem
         BindButtons(typeof(Buttons));
 
         GetButton((int)Buttons.Button_Upgrade).gameObject.BindEvent(OnClickedUpgradeButton);
+
+        GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
 
         RefreshUI();
     }
