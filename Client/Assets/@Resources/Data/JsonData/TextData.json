@@ -154,6 +154,26 @@
       "DataId": "ToBuyFuel",
       "KOR": "연료를 구매 합니다",
       "ENG": "to get fuel"
+    },
+    {
+      "DataId": "Tutorial1",
+      "KOR": "장비를 터치 합니다",
+      "ENG": "Touch the equipment"
+    },
+    {
+      "DataId": "Tutorial2",
+      "KOR": "모루를 터치 해 장비를 만듭니다",
+      "ENG": "Touch the anvil to craft equipment"
+    },
+    {
+      "DataId": "Tutorial3",
+      "KOR": "공격력을 올려 봅시다",
+      "ENG": "Let’s increase your attack power"
+    },
+    {
+      "DataId": "Tutorial4",
+      "KOR": "이제 모든 장비를 만들어 봅시다",
+      "ENG": "Now let's craft all the equipment"
     }
   ]
 }

@@ -56,6 +56,24 @@ public class UI_WeaponSelectSubItem : UI_SubItem
     private void OnClickedWeaponButton(PointerEventData eventData)
     {
         if (weaponInfo == null) return;
-        Managers.Game.StartWeaponMake(weaponInfo.Stage, weaponInfo.WeaponNumber);
+
+        if(Managers.Game.isTutorial == false)
+        {
+            Managers.Game.StartWeaponMake(weaponInfo.Stage, weaponInfo.WeaponNumber);
+        }
+        else if(Managers.Game.isTutorial == true && Managers.Game.tutorialStep == 1)
+        {
+            Managers.Game.StartWeaponMake(weaponInfo.Stage, weaponInfo.WeaponNumber);
+        }
+    }
+
+    public GameObject ButtonWeapon()
+    {
+        return GetButton((int)Buttons.Button_Weapon).gameObject;
+    }
+
+    public void ShowTouchText(bool isShow)
+    {
+        GetText((int)Texts.Text_Touch).gameObject.SetActive(isShow);
     }
 }

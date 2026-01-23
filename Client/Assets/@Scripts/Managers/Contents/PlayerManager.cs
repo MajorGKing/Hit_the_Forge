@@ -354,6 +354,12 @@ public class PlayerManager
 
         Managers.Sound.Play(Define.ESound.Effect, "UpgradeEffect");
 
+        // Tutorial인 경우
+        if(Managers.Game.isTutorial == true && Managers.Game.tutorialStep == 3)
+        {
+            Debug.Log("Upgrade");
+            Managers.Game.DoNextTutorial();
+        }
 
         OnPlayerUpgradeChanged?.Invoke();
         OnPlayerSave?.Invoke();

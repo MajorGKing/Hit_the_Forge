@@ -3,6 +3,8 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using System.Linq;
 using System.Collections.Generic;
+using NUnit.Framework;
+using Unity.VisualScripting;
 
 
 public class UI_GameScene : UI_Scene
@@ -25,12 +27,15 @@ public class UI_GameScene : UI_Scene
         ShopUpgradeContent,
         WeaponSelect,
         BannerPosition,
+        Image_TutorialFingerEquipment,
+        Image_TutorialFingerAnvil,
+        Image_TutorialFingerUpgrade
     }
 
     enum Images
     {
         Image_EnhancementCountDown,
-        Image_Help,
+        Image_Help,        
     }
 
     enum Buttons
@@ -93,8 +98,6 @@ public class UI_GameScene : UI_Scene
         BindSliders(typeof(Sliders));
         BindToggles(typeof(Toggles));
 
-        RefreshUI();
-
         WeaponSelectReset();
 
         GetButton((int)Buttons.Button_ForgeEnhancement).gameObject.BindEvent(OnClickedForgeEnhancementButton);
@@ -117,11 +120,19 @@ public class UI_GameScene : UI_Scene
         GetText((int)Texts.Text_Goal).gameObject.SetActive(false);
 
         RefreshUI();
+        RefreshUpgradeUI();
+
+        GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(false);
+        GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(false);
+        GetGameObject((int)GameObjects.Image_TutorialFingerUpgrade).gameObject.SetActive(false);
 
         //Managers.Ad.SetBannerPosition(new Vector2(0, 1850));
         //Managers.Ad.SetBannerPosition(GetGameObject((int)GameObjects.BannerPosition).transform.position);
 
         Managers.Ad.LoadBanner();
+
+        // SceneUI
+        Managers.UI.SceneUI = this;
     }
 
     private float elapsedTime;
@@ -152,12 +163,16 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnEnhancementPercentChanged += RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged += RefreshUI;
+        Managers.Player.OnPlayerUpgradeChanged -= RefreshUpgradeUI;
+        Managers.Player.OnPlayerUpgradeChanged += RefreshUpgradeUI;
         Managers.Game.OnNewWeaponAdded -= WeaponSelectReset;
         Managers.Game.OnNewWeaponAdded += WeaponSelectReset;
         Managers.Game.OnNewWeaponAdded -= RefreshUI;
         Managers.Game.OnNewWeaponAdded += RefreshUI;
         Managers.Player.OnLanguageChange -= RefreshUI;
         Managers.Player.OnLanguageChange += RefreshUI;
+        Managers.Player.OnLanguageChange -= RefreshUpgradeUI;
+        Managers.Player.OnLanguageChange += RefreshUpgradeUI;
     }
 
     private void OnDisable()
@@ -166,9 +181,11 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnEnhancementCountChanged -= RefreshUI;
         Managers.Game.OnEnhancementPercentChanged -= RefreshUI;
         Managers.Player.OnPlayerUpgradeChanged -= RefreshUI;
+        Managers.Player.OnPlayerUpgradeChanged -= RefreshUpgradeUI;
         Managers.Game.OnNewWeaponAdded -= WeaponSelectReset;
         Managers.Game.OnNewWeaponAdded -= RefreshUI;
         Managers.Player.OnLanguageChange -= RefreshUI;
+        Managers.Player.OnLanguageChange -= RefreshUpgradeUI;
     }
 
     public void SetInfo()
@@ -235,7 +252,10 @@ public class UI_GameScene : UI_Scene
             var price = Managers.Game.GetSellPrice();
             GetText((int)Texts.Text_SellPrice).text = price.ToAbbreviatedString();
         }
+    }
 
+    private void RefreshUpgradeUI()
+    {
         if (_isSelectedPlayer == true)
         {
             GetGameObject((int)GameObjects.PlayerUpgradeContent).DestroyChildren();
@@ -323,7 +343,11 @@ public class UI_GameScene : UI_Scene
 
     private void OnClickedForgeEnhancementButton(PointerEventData eventData)
     {
-        Managers.Game.DoEnhancemenet();
+        if(Managers.Game.isTutorial == false)
+        {
+            Managers.Game.DoEnhancemenet();
+        }
+        
     }
 
     private void OnClickedForgeSellButton(PointerEventData eventData)
@@ -358,47 +382,155 @@ public class UI_GameScene : UI_Scene
 
     private void OnClickPlayerToogle(PointerEventData eventData)
     {
+        if(Managers.Game.isTutorial)
+            return;
+
         TogglesInit();
 
         GetGameObject((int)GameObjects.Object_PlayerUpgrade).SetActive(true);
         _isSelectedPlayer = true;
 
         RefreshUI();
+        RefreshUpgradeUI();
     }
 
     private void OnClickForgeToogle(PointerEventData eventData)
     {
+        if(Managers.Game.isTutorial)
+            return;
+
         TogglesInit();
 
         GetGameObject((int)GameObjects.Object_ForgeUpgrade).SetActive(true);
         _isSelectedForge = true;
 
         RefreshUI();
+        RefreshUpgradeUI();
     }
 
     private void OnClickTownToogle(PointerEventData eventData)
     {
+        if(Managers.Game.isTutorial)
+            return;
+
         TogglesInit();
 
         GetGameObject((int)GameObjects.Object_TownUpgrade).SetActive(true);
         _isSelectedTown = true;
 
         RefreshUI();
+        RefreshUpgradeUI();
     }
 
     private void OnClickShopToogle(PointerEventData eventData)
     {
+        if(Managers.Game.isTutorial)
+            return;
+
         TogglesInit();
 
         GetGameObject((int)GameObjects.Object_ShopUpgrade).SetActive(true);
         _isSelectedShop = true;
 
         RefreshUI();
+        RefreshUpgradeUI();
     }
 
     private void OnClickedHelp(PointerEventData eventData)
     {
         Managers.UI.ShowPopupUI<UI_HelpPopup>();
+    }
+    #endregion
+
+    #region Tutorial
+    public void DoTutorial(int step)
+    {
+        if(step == 1)
+        {
+            // 무기만 활성화
+            GameObject weaponContent = GetGameObject((int)GameObjects.WeaponContent);
+            List<GameObject> children = new List<GameObject>();
+            foreach (Transform child in weaponContent.transform)
+            {
+                var weapon = child.GetComponent<UI_WeaponSelectSubItem>();
+                var button = weapon.ButtonWeapon();
+                weapon.ShowTouchText(true);
+                children.Add(button);
+            }
+
+            Managers.Touch.AllowOnly(children.ToArray());
+
+            GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
+            GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial1");
+
+            GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(true);
+        }
+        else if(step == 2)
+        {
+            GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(false);
+            GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(true);
+
+            GameObject weaponContent = GetGameObject((int)GameObjects.WeaponContent);
+            foreach (Transform child in weaponContent.transform)
+            {
+                var weapon = child.GetComponent<UI_WeaponSelectSubItem>();
+                weapon.ShowTouchText(false);
+            }
+
+            GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
+            GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial2");
+
+            GetText((int)Texts.Text_Touch).gameObject.SetActive(true);
+        }
+        else if(step == 3)
+        {
+            GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
+            GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial3");
+
+            GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
+
+            // 공격력 업그레이드 에만 터치 텍스트 뜨도록
+            GameObject playerUpgradeContent = GetGameObject((int)GameObjects.PlayerUpgradeContent);
+            List<GameObject> children = new List<GameObject>();
+            foreach (Transform child in playerUpgradeContent.transform)
+            {
+                var upgradeItem = child.GetComponent<UI_UpgradeSubItem>();
+                if (upgradeItem == null) continue;
+
+                if (upgradeItem.UpgradeType == Define.EUpgradeType.Player && 
+                    upgradeItem.PlayerUpgradeData != null && 
+                    upgradeItem.PlayerUpgradeData.StatType == Define.EPlayerStat.Str)
+                {
+                    upgradeItem.ShowTouchText(true);
+                    children.Add(upgradeItem.GetUpgradeButton());
+                }
+            }
+
+            Managers.Touch.AllowOnly(children.ToArray());
+
+            GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(false);
+            GetGameObject((int)GameObjects.Image_TutorialFingerUpgrade).gameObject.SetActive(true);
+        }
+        else if(step == 4)
+        {
+            GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(true);
+            GetGameObject((int)GameObjects.Image_TutorialFingerUpgrade).gameObject.SetActive(false);
+
+            GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
+            GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial4");
+
+            GetText((int)Texts.Text_Touch).gameObject.SetActive(true);
+        }
+        else if(step == 5)
+        {
+            GetText((int)Texts.Text_Goal).gameObject.SetActive(false);
+            GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
+
+            GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(false);
+            GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(false);
+            GetGameObject((int)GameObjects.Image_TutorialFingerUpgrade).gameObject.SetActive(false);
+        }
+
     }
     #endregion
 }

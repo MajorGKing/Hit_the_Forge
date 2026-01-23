@@ -27,6 +27,12 @@ public class GameScene : BaseScene
         //Managers.Game.StartWeaponMake(1);
 
         Managers.Sound.Play(Define.ESound.Bgm, "BGM3", 1f, 0.5f);
+
+        // 튜토리얼 체크 스테이지가 1이고 무기 숫자가 0인 경우
+        if(Managers.Player.Stage == 1 && Managers.Player.ClearedWeaponCount == 0)
+        {
+            Managers.Game.BeginTutorial();
+        }
     }
 
     public override void Clear()
@@ -35,7 +41,7 @@ public class GameScene : BaseScene
 
     public void HitForge()
     {
-        Managers.Game.CalcWeaponHit();
+        Managers.Game.CalcWeaponHit();   
     }
 
 

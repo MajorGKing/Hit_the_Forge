@@ -24,7 +24,15 @@ public class UI_UpgradeSubItem : UI_SubItem
     }
 
     private Define.EUpgradeType upgradeType = Define.EUpgradeType.None;
+    public Define.EUpgradeType UpgradeType
+    {
+        get => upgradeType;
+    }
     private Data.PlayerUpgradeData playerUpgradeData = null;
+    public Data.PlayerUpgradeData PlayerUpgradeData
+    {
+        get => playerUpgradeData;
+    }
     private Data.ForgeUpgradeData forgeUpgradeData = null;
     private Data.TownUpgradeData townUpgradeData = null;
     private Data.ShopProductData shopProductData = null;
@@ -362,4 +370,17 @@ public class UI_UpgradeSubItem : UI_SubItem
             GetButton((int)Buttons.Button_Upgrade).gameObject.SetActive(false);
         }
     }
+
+    #region  Tutorial
+    public GameObject GetUpgradeButton()
+    {
+        return GetButton((int)Buttons.Button_Upgrade).gameObject;
+    }
+
+    public void ShowTouchText(bool enable)
+    {
+        GetText((int)Texts.Text_Touch).gameObject.SetActive(enable);
+        GetButton((int)Buttons.Button_Upgrade).interactable = true;
+    }
+    #endregion
 }

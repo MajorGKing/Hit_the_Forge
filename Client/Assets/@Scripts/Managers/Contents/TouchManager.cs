@@ -5,6 +5,8 @@ using System.Collections.Generic;
 /// <summary>
 /// 터치/클릭 입력을 중앙에서 관리하는 매니저
 /// 특정 시점에 특정 오브젝트만 상호작용 가능하도록 제어
+/// UI관련 제대로 작동하지 않는다
+/// 버튼의 상태를 끄는데 만 사용한다 생각
 /// </summary>
 public class TouchManager
 {
@@ -65,11 +67,21 @@ public class TouchManager
                 _allowedObjects.Add(obj);
         }
         
-        Selectable[] allSelectables = GameObject.FindObjectsOfType<Selectable>(true);
+        RefreshSelectables();
+    }
+
+    /// <summary>
+    /// 현재 상태에 맞춰 모든 Selectable의 interactable 상태를 갱신
+    /// </summary>
+    public void RefreshSelectables()
+    {
+        if (!_isBlocking)
+            return;
+
+        Selectable[] allSelectables = Object.FindObjectsOfType<Selectable>(true);
         foreach (var selectable in allSelectables)
         {
-            bool isAllowed = _allowedObjects.Contains(selectable.gameObject);
-            selectable.interactable = isAllowed;
+            selectable.interactable = IsObjectAllowed(selectable.gameObject);
         }
     }
 
@@ -82,7 +94,7 @@ public class TouchManager
         //RestoreOriginalStates();
         _allowedObjects.Clear();
 
-        Selectable[] allSelectables = GameObject.FindObjectsOfType<Selectable>(true);
+        Selectable[] allSelectables = Object.FindObjectsOfType<Selectable>(true);
         foreach (var selectable in allSelectables)
         {
             selectable.interactable = true;
@@ -98,14 +110,22 @@ public class TouchManager
     }
 
     /// <summary>
-    /// 특정 오브젝트가 현재 허용되었는지 확인
+    /// 특정 오브젝트가 현재 허용되었는지 확인 (부모가 허용되었으면 자식도 허용)
     /// </summary>
     public bool IsObjectAllowed(GameObject obj)
     {
         if (!_isBlocking)
             return true;
         
-        return _allowedObjects.Contains(obj);
+        Transform curr = obj.transform;
+        while (curr != null)
+        {
+            if (_allowedObjects.Contains(curr.gameObject))
+                return true;
+            curr = curr.parent;
+        }
+        
+        return false;
     }
 
     // /// <summary>

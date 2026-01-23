@@ -34,6 +34,10 @@ public class GameManager
     float shakeCooldown = 0.4f;
     float lastShakeTime = -10f;
 
+    public bool isTutorial { get; private set; } = false;
+
+    public int tutorialStep { get; private set; } = 0;
+
     public void Clear()
     {
         regenerateIronCTS?.Cancel();
@@ -267,6 +271,11 @@ public class GameManager
         WeaponHp = 0;
         WeaponMaxHp = currentWeaponInfo.HP;
 
+        if(isTutorial == true)
+        {
+            DoNextTutorial();
+        }
+
         while (makeProcessState == EWeaponMakeProcess.Ready)
             yield return null;
     }
@@ -321,6 +330,11 @@ public class GameManager
     private IEnumerator CoSell()
     {
         EnhancementCountTime = 0;
+
+        if(isTutorial == true)
+        {
+            DoNextTutorial();
+        }
 
         if (currentWeaponInfo != null)
         {
@@ -387,6 +401,11 @@ public class GameManager
     {
         //if (makeProcessState != EWeaponMakeProcess.BeginHold && makeProcessState != EWeaponMakeProcess.Ready && makeProcessState != EWeaponMakeProcess.Progress)
         //    return (float)WeaponHp / WeaponMaxHp;
+
+        if(isTutorial == true && tutorialStep == 4)
+        {
+            DoNextTutorial();
+        }
 
         if(currentWeaponInfo == null)
                 return;
@@ -645,5 +664,57 @@ public class GameManager
 
         return returnValue;
     }
+    #endregion
+
+    #region Tutorial
+    public void BeginTutorial()
+    {
+        isTutorial = true;
+        tutorialStep = 0;
+
+        DoNextTutorial();
+
+        
+    }
+
+    public void DoNextTutorial()
+    {
+        tutorialStep++;
+
+        UI_GameScene sceneUI = Managers.UI.GetSceneUI<UI_GameScene>();
+        if(tutorialStep == 1)
+        {
+            // 무기만 버튼 활성화
+            sceneUI.DoTutorial(tutorialStep);
+        }
+        else if(tutorialStep == 2)
+        {
+            // 모든 버튼 비활성화 & 모루만 작동
+            sceneUI.DoTutorial(tutorialStep);
+            var forge = GameObject.FindWithTag("Forge");
+            Managers.Touch.AllowOnly(forge);
+        }
+        else if(tutorialStep == 3)
+        {
+            // 모든 버튼 비활성화 & 공격력 업그레이드 유도(골드 떄문에 공격업글 밖에 안됨)
+            sceneUI.DoTutorial(tutorialStep);
+            //Managers.Touch.BlockAll();
+        }
+        else if(tutorialStep == 4)
+        {
+            // 두번째 무기를 만드는 거 스타트
+            sceneUI.DoTutorial(tutorialStep);
+            var forge = GameObject.FindWithTag("Forge");
+            Managers.Touch.AllowOnly(forge);
+        }
+        else if(tutorialStep == 5)
+        {
+            sceneUI.DoTutorial(tutorialStep);
+            isTutorial = false;
+            tutorialStep = 0;
+            Managers.Touch.AllowAll();
+        }
+    }
+
     #endregion
 }
