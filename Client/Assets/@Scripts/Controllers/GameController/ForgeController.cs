@@ -17,7 +17,8 @@ public class ForgeController : BaseController
         }
         else
         {
-            if(Managers.Touch.IsObjectAllowed(this.gameObject) == true)
+            //if(Managers.Touch.IsObjectAllowed(gameObject) == true)
+            if(Managers.Game.tutorialStep == 2 || Managers.Game.tutorialStep == 4)
                 gameScene.HitForge();
         }
     }

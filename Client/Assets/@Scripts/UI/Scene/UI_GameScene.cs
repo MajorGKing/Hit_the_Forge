@@ -64,8 +64,10 @@ public class UI_GameScene : UI_Scene
         Text_ForgeUpgradeToggle,
         Text_TownUpgradeToggle,
         Text_ShopUpgradeToggle,
-        Text_Touch,
         Text_Goal,
+        Text_TouchAnvil,
+        Text_TutorialStep,
+        Text_TutorialStepSide,
     }
 
     enum Sliders
@@ -116,16 +118,15 @@ public class UI_GameScene : UI_Scene
         GetGameObject((int)GameObjects.Object_PlayerUpgrade).SetActive(true);
         _isSelectedPlayer = true;
 
-        GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
-        GetText((int)Texts.Text_Goal).gameObject.SetActive(false);
-
-        RefreshUI();
-        RefreshUpgradeUI();
-
         GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(false);
         GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(false);
         GetGameObject((int)GameObjects.Image_TutorialFingerUpgrade).gameObject.SetActive(false);
 
+        GetText((int)Texts.Text_TouchAnvil).gameObject.SetActive(false);
+        GetText((int)Texts.Text_Goal).gameObject.SetActive(false);
+
+        RefreshUI();
+        RefreshUpgradeUI();
         //Managers.Ad.SetBannerPosition(new Vector2(0, 1850));
         //Managers.Ad.SetBannerPosition(GetGameObject((int)GameObjects.BannerPosition).transform.position);
 
@@ -151,6 +152,9 @@ public class UI_GameScene : UI_Scene
 
             elapsedTime = 0;
         }
+
+        GetText((int)Texts.Text_TutorialStep).text = Managers.Game.tutorialStep.ToString();
+        GetText((int)Texts.Text_TutorialStepSide).text = Managers.Game.tutorialStepSide.ToString();
     }
 
     private void OnEnable()
@@ -448,20 +452,22 @@ public class UI_GameScene : UI_Scene
         if(step == 1)
         {
             // 무기만 활성화
-            GameObject weaponContent = GetGameObject((int)GameObjects.WeaponContent);
-            List<GameObject> children = new List<GameObject>();
-            foreach (Transform child in weaponContent.transform)
-            {
-                var weapon = child.GetComponent<UI_WeaponSelectSubItem>();
-                var button = weapon.ButtonWeapon();
-                weapon.ShowTouchText(true);
-                children.Add(button);
-            }
+            // GameObject weaponContent = GetGameObject((int)GameObjects.WeaponContent);
+            // List<GameObject> children = new List<GameObject>();
+            // foreach (Transform child in weaponContent.transform)
+            // {
+            //     var weapon = child.GetComponent<UI_WeaponSelectSubItem>();
+            //     var button = weapon.ButtonWeapon();
+            //     weapon.ShowTouchText(true);
+            //     children.Add(button);
+            // }
 
-            Managers.Touch.AllowOnly(children.ToArray());
+            //Managers.Touch.AllowOnly(children.ToArray());
 
             GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
             GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial1");
+
+            GetText((int)Texts.Text_TouchAnvil).gameObject.SetActive(false);
 
             GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(true);
         }
@@ -470,28 +476,28 @@ public class UI_GameScene : UI_Scene
             GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(false);
             GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(true);
 
-            GameObject weaponContent = GetGameObject((int)GameObjects.WeaponContent);
-            foreach (Transform child in weaponContent.transform)
-            {
-                var weapon = child.GetComponent<UI_WeaponSelectSubItem>();
-                weapon.ShowTouchText(false);
-            }
+            // GameObject weaponContent = GetGameObject((int)GameObjects.WeaponContent);
+            // foreach (Transform child in weaponContent.transform)
+            // {
+            //     var weapon = child.GetComponent<UI_WeaponSelectSubItem>();
+            //     weapon.ShowTouchText(false);
+            // }
 
             GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
             GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial2");
 
-            GetText((int)Texts.Text_Touch).gameObject.SetActive(true);
+            GetText((int)Texts.Text_TouchAnvil).gameObject.SetActive(true);
         }
         else if(step == 3)
         {
             GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
             GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial3");
 
-            GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
+            GetText((int)Texts.Text_TouchAnvil).gameObject.SetActive(false);
 
             // 공격력 업그레이드 에만 터치 텍스트 뜨도록
             GameObject playerUpgradeContent = GetGameObject((int)GameObjects.PlayerUpgradeContent);
-            List<GameObject> children = new List<GameObject>();
+            //List<GameObject> children = new List<GameObject>();
             foreach (Transform child in playerUpgradeContent.transform)
             {
                 var upgradeItem = child.GetComponent<UI_UpgradeSubItem>();
@@ -502,11 +508,11 @@ public class UI_GameScene : UI_Scene
                     upgradeItem.PlayerUpgradeData.StatType == Define.EPlayerStat.Str)
                 {
                     upgradeItem.ShowTouchText(true);
-                    children.Add(upgradeItem.GetUpgradeButton());
+                    //children.Add(upgradeItem.GetUpgradeButton());
                 }
             }
 
-            Managers.Touch.AllowOnly(children.ToArray());
+            //Managers.Touch.AllowOnly(children.ToArray());
 
             GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(false);
             GetGameObject((int)GameObjects.Image_TutorialFingerUpgrade).gameObject.SetActive(true);
@@ -519,12 +525,12 @@ public class UI_GameScene : UI_Scene
             GetText((int)Texts.Text_Goal).gameObject.SetActive(true);
             GetText((int)Texts.Text_Goal).text = Managers.GetText("Tutorial4");
 
-            GetText((int)Texts.Text_Touch).gameObject.SetActive(true);
+            GetText((int)Texts.Text_TouchAnvil).gameObject.SetActive(true);
         }
         else if(step == 5)
         {
             GetText((int)Texts.Text_Goal).gameObject.SetActive(false);
-            GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
+            GetText((int)Texts.Text_TouchAnvil).gameObject.SetActive(false);
 
             GetGameObject((int)GameObjects.Image_TutorialFingerEquipment).gameObject.SetActive(false);
             GetGameObject((int)GameObjects.Image_TutorialFingerAnvil).gameObject.SetActive(false);

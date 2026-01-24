@@ -357,7 +357,6 @@ public class PlayerManager
         // Tutorial인 경우
         if(Managers.Game.isTutorial == true && Managers.Game.tutorialStep == 3)
         {
-            Debug.Log("Upgrade");
             Managers.Game.DoNextTutorial();
         }
 

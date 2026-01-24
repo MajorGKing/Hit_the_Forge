@@ -31,7 +31,7 @@ public class GameScene : BaseScene
         // 튜토리얼 체크 스테이지가 1이고 무기 숫자가 0인 경우
         if(Managers.Player.Stage == 1 && Managers.Player.ClearedWeaponCount == 0)
         {
-            Managers.Game.BeginTutorial();
+            Managers.Game.BeginTutorial().Forget();
         }
     }
 

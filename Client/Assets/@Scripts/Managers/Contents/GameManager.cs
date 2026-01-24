@@ -37,6 +37,7 @@ public class GameManager
     public bool isTutorial { get; private set; } = false;
 
     public int tutorialStep { get; private set; } = 0;
+    public int tutorialStepSide { get; private set; } = 0;
 
     public void Clear()
     {
@@ -333,7 +334,9 @@ public class GameManager
 
         if(isTutorial == true)
         {
+            tutorialStepSide = 1;
             DoNextTutorial();
+            tutorialStepSide = 2;
         }
 
         if (currentWeaponInfo != null)
@@ -342,6 +345,8 @@ public class GameManager
 
             Managers.Player.CurrencyAdd(Define.ECurrency.Gold, price);
             Managers.Sound.Play(Define.ESound.Effect, "SellEffect");
+
+            tutorialStepSide = 3;
         }
 
         if (currentWeaponInfo.NextWeaponNumber > 0)
@@ -364,6 +369,8 @@ public class GameManager
                 }
 
                 OnNewWeaponAdded?.Invoke();
+
+                tutorialStepSide = 4;
             }
         }
         else // currentWeaponInfo.NextTemplateId == 0
@@ -667,19 +674,20 @@ public class GameManager
     #endregion
 
     #region Tutorial
-    public void BeginTutorial()
+    public async UniTaskVoid BeginTutorial()
     {
+        await UniTask.Delay(100);  
+
         isTutorial = true;
         tutorialStep = 0;
 
         DoNextTutorial();
-
-        
     }
 
     public void DoNextTutorial()
     {
         tutorialStep++;
+        tutorialStepSide = 0;
 
         UI_GameScene sceneUI = Managers.UI.GetSceneUI<UI_GameScene>();
         if(tutorialStep == 1)
@@ -691,8 +699,8 @@ public class GameManager
         {
             // 모든 버튼 비활성화 & 모루만 작동
             sceneUI.DoTutorial(tutorialStep);
-            var forge = GameObject.FindWithTag("Forge");
-            Managers.Touch.AllowOnly(forge);
+            // var forge = GameObject.FindWithTag("Forge");
+            // Managers.Touch.AllowOnly(forge);
         }
         else if(tutorialStep == 3)
         {
@@ -704,15 +712,15 @@ public class GameManager
         {
             // 두번째 무기를 만드는 거 스타트
             sceneUI.DoTutorial(tutorialStep);
-            var forge = GameObject.FindWithTag("Forge");
-            Managers.Touch.AllowOnly(forge);
+            // var forge = GameObject.FindWithTag("Forge");
+            // Managers.Touch.AllowOnly(forge);
         }
         else if(tutorialStep == 5)
         {
             sceneUI.DoTutorial(tutorialStep);
             isTutorial = false;
             tutorialStep = 0;
-            Managers.Touch.AllowAll();
+            //Managers.Touch.AllowAll();
         }
     }
 
