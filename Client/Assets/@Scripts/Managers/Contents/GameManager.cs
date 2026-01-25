@@ -37,7 +37,6 @@ public class GameManager
     public bool isTutorial { get; private set; } = false;
 
     public int tutorialStep { get; private set; } = 0;
-    public int tutorialStepSide { get; private set; } = 0;
 
     public void Clear()
     {
@@ -334,9 +333,7 @@ public class GameManager
 
         if(isTutorial == true)
         {
-            tutorialStepSide = 1;
             DoNextTutorial();
-            tutorialStepSide = 2;
         }
 
         if (currentWeaponInfo != null)
@@ -345,8 +342,6 @@ public class GameManager
 
             Managers.Player.CurrencyAdd(Define.ECurrency.Gold, price);
             Managers.Sound.Play(Define.ESound.Effect, "SellEffect");
-
-            tutorialStepSide = 3;
         }
 
         if (currentWeaponInfo.NextWeaponNumber > 0)
@@ -369,8 +364,6 @@ public class GameManager
                 }
 
                 OnNewWeaponAdded?.Invoke();
-
-                tutorialStepSide = 4;
             }
         }
         else // currentWeaponInfo.NextTemplateId == 0
@@ -687,7 +680,6 @@ public class GameManager
     public void DoNextTutorial()
     {
         tutorialStep++;
-        tutorialStepSide = 0;
 
         UI_GameScene sceneUI = Managers.UI.GetSceneUI<UI_GameScene>();
         if(tutorialStep == 1)

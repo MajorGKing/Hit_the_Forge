@@ -66,8 +66,6 @@ public class UI_GameScene : UI_Scene
         Text_ShopUpgradeToggle,
         Text_Goal,
         Text_TouchAnvil,
-        Text_TutorialStep,
-        Text_TutorialStepSide,
     }
 
     enum Sliders
@@ -152,9 +150,6 @@ public class UI_GameScene : UI_Scene
 
             elapsedTime = 0;
         }
-
-        GetText((int)Texts.Text_TutorialStep).text = Managers.Game.tutorialStep.ToString();
-        GetText((int)Texts.Text_TutorialStepSide).text = Managers.Game.tutorialStepSide.ToString();
     }
 
     private void OnEnable()
@@ -256,6 +251,8 @@ public class UI_GameScene : UI_Scene
             var price = Managers.Game.GetSellPrice();
             GetText((int)Texts.Text_SellPrice).text = price.ToAbbreviatedString();
         }
+
+        DoTutorial(Managers.Game.tutorialStep);
     }
 
     private void RefreshUpgradeUI()
