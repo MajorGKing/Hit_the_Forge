@@ -5,6 +5,7 @@ using System.Linq;
 using System.Collections.Generic;
 using NUnit.Framework;
 using Unity.VisualScripting;
+using Cysharp.Threading.Tasks;
 
 
 public class UI_GameScene : UI_Scene
@@ -172,6 +173,8 @@ public class UI_GameScene : UI_Scene
         Managers.Player.OnLanguageChange += RefreshUI;
         Managers.Player.OnLanguageChange -= RefreshUpgradeUI;
         Managers.Player.OnLanguageChange += RefreshUpgradeUI;
+        Managers.Game.OnCurrentWeaponChanged -= WeaponSelectReset;
+        Managers.Game.OnCurrentWeaponChanged += WeaponSelectReset;
     }
 
     private void OnDisable()
@@ -185,6 +188,7 @@ public class UI_GameScene : UI_Scene
         Managers.Game.OnNewWeaponAdded -= RefreshUI;
         Managers.Player.OnLanguageChange -= RefreshUI;
         Managers.Player.OnLanguageChange -= RefreshUpgradeUI;
+        Managers.Game.OnCurrentWeaponChanged -= WeaponSelectReset;
     }
 
     public void SetInfo()
@@ -331,15 +335,22 @@ public class UI_GameScene : UI_Scene
 
     private void WeaponSelectReset()
     {
+        WeaponSelectResetAwait().Forget();
+    }
+
+    private async UniTaskVoid WeaponSelectResetAwait()
+    {
         GetGameObject((int)GameObjects.WeaponContent).DestroyChildren();
 
-        foreach(var weaponId in Managers.Player.GetOwnedWeapons().TakeLast(20))
+        foreach (var weaponId in Managers.Player.GetOwnedWeapons().TakeLast(20))
         {
             var item = Managers.UI.MakeSubItem<UI_WeaponSelectSubItem>(GetGameObject((int)GameObjects.WeaponContent).transform);
             item.SetInfo(weaponId);
         }
 
-        GetGameObject((int)GameObjects.WeaponSelect).GetComponent<ScrollRect>().horizontalNormalizedPosition = 1f; 
+        await UniTask.WaitForEndOfFrame();
+
+        GetGameObject((int)GameObjects.WeaponSelect).GetComponent<ScrollRect>().horizontalNormalizedPosition = 1f;
     }
 
     private void OnClickedForgeEnhancementButton(PointerEventData eventData)

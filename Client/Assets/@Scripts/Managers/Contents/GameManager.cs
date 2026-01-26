@@ -162,6 +162,7 @@ public class GameManager
     public event Action OnDoSave;
     public event Action OnNewWeaponAdded;
     public event Action OnWeaponSelected;
+    public event Action OnCurrentWeaponChanged;
     #endregion
 
     #region Variables
@@ -262,6 +263,8 @@ public class GameManager
     private IEnumerator CoReady()
     {
         Managers.Player.CurrencySubtract(Define.ECurrency.Iron, currentWeaponInfo.Iron);
+
+        OnCurrentWeaponChanged?.Invoke();
 
         coalCTS?.Cancel();
         coalCTS = null;

@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.EventSystems;
 
 public class UI_WeaponSelectSubItem : UI_SubItem
@@ -17,6 +17,11 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         Button_Weapon
     }
 
+    enum Images
+    {
+        Image_Case,
+    }
+
     private Data.WeaponData weaponInfo;
 
     protected override void Awake()
@@ -25,10 +30,13 @@ public class UI_WeaponSelectSubItem : UI_SubItem
 
         BindTexts(typeof(Texts));
         BindButtons(typeof(Buttons));
+        BindImages(typeof(Images));
 
         GetButton((int)Buttons.Button_Weapon).gameObject.BindEvent(OnClickedWeaponButton);
 
         GetText((int)Texts.Text_Touch).gameObject.SetActive(false);
+
+        GetImage((int)Images.Image_Case).gameObject.SetActive(false);
     }
 
     public void SetInfo(int weaponNumber)
@@ -51,6 +59,11 @@ public class UI_WeaponSelectSubItem : UI_SubItem
         GetText((int)Texts.Text_Name).text = weaponInfo.WeaponName;
 
         GetButton((int)Buttons.Button_Weapon).image.sprite = Managers.Resource.Load<Sprite>(weaponInfo.WeaponImage);
+
+        if(Managers.Game.CurrentWeaponInfo != null && Managers.Game.CurrentWeaponInfo.WeaponNumber == weaponInfo.WeaponNumber)
+        {
+            GetImage((int)Images.Image_Case).gameObject.SetActive(true);
+        }
     }
 
     private void OnClickedWeaponButton(PointerEventData eventData)
